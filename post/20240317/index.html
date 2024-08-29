@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <title>自己做字幕和翻译 | qklg</title>
+
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">    
+<meta name="viewport" content="width=device-width,minimum-scale=1">
+<meta name="description" content="总共两大步 生成语音转文字和翻译 一 原文字幕，语音转文字 🔗①下载WhisperDesktop 🔗https://github.com/Const-">
+<meta name="generator" content="Hugo 0.133.1">
+
+
+  <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+
+ 
+  
+  
+    
+      <script async src="https://www.googletagmanager.com/gtag/js?id=your-disqus-shortname"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'your-disqus-shortname');
+        }
+      </script>
+    
+  
+
+
+
+
+
+
+
+
+
+  </head>
+
+  <body>
+    <nav class="navigation">
+	
+		<a href="/"> <span class="arrow">←</span>Home</a>
+	
+	<a href="/posts">Archive</a>
+	<a href="/tags">Tags</a>
+	<a href="/about">About</a>
+
+	
+
+	
+		
+  	
+</nav>	
+
+    <main class="main">
+      
+
+<section id="single">
+    <h1 class="title">自己做字幕和翻译</h1>
+
+    <div class="tip">
+        <time datetime="2024-03-17 10:09:13 &#43;0000 UTC">Mar 17, 2024</time>
+        <span class="split">
+          ·
+        </span>
+        <span>
+          656 words
+        </span>
+        <span class="split">
+          ·
+        </span>
+        <span>
+          2 minute read
+        </span>
+    </div>
+
+    
+    
+        
+  
+    <aside class="toc">
+      <details>
+          <summary>Table of Contents
+          </summary>
+          <div>
+              <nav id="TableOfContents">
+  <ul>
+    <li><a href="#下载whisperdesktop">①下载WhisperDesktop</a></li>
+    <li><a href="#下载模型">②下载模型</a></li>
+    <li><a href="#设置">③设置</a></li>
+    <li><a href="#转换">④转换</a></li>
+  </ul>
+</nav>
+          </div>
+      </details>
+    </aside>
+  
+
+
+    
+
+
+    <div class="content">
+      <p>总共两大步
+生成语音转文字和翻译</p>
+<h1 id="一-原文字幕语音转文字">一 原文字幕，语音转文字 <a href="#%e4%b8%80-%e5%8e%9f%e6%96%87%e5%ad%97%e5%b9%95%e8%af%ad%e9%9f%b3%e8%bd%ac%e6%96%87%e5%ad%97" class="anchor">🔗</a></h1><h2 id="下载whisperdesktop">①下载WhisperDesktop <a href="#%e4%b8%8b%e8%bd%bdwhisperdesktop" class="anchor">🔗</a></h2><p><a href="https://github.com/Const-me/Whisper/releases" target="_blank" rel="noopener">https://github.com/Const-me/Whisper/releases</a>
+<p class="markdown-image">
+  <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202403171010932.webp" alt=""  />
+</p>
+解压缩，打开WhisperDesktop.exe
+<p class="markdown-image">
+  <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202403171010503.webp" alt=""  />
+</p></p>
+<h2 id="下载模型">②下载模型 <a href="#%e4%b8%8b%e8%bd%bd%e6%a8%a1%e5%9e%8b" class="anchor">🔗</a></h2><p><a href="https://huggingface.co/ggerganov/whisper.cpp/tree/main" target="_blank" rel="noopener">https://huggingface.co/ggerganov/whisper.cpp/tree/main</a>
+我用的是medium，够用了一般
+<p class="markdown-image">
+  <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202403171012823.webp" alt=""  />
+</p></p>
+<h2 id="设置">③设置 <a href="#%e8%ae%be%e7%bd%ae" class="anchor">🔗</a></h2><p>然后填上模型文件路径
+Model Implementation选择gpu，amd的也是可以的，我用的6800H的核显，点ok
+这边建议用ffmpeg切成五分钟左右的片段，这样子准确度高很多，到后面有时候会出bug
+如果是视频的话，也可以用ffmpeg把音频提取出来
+<p class="markdown-image">
+  <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202403171010791.webp" alt=""  />
+</p></p>
+<h2 id="转换">④转换 <a href="#%e8%bd%ac%e6%8d%a2" class="anchor">🔗</a></h2><p>language选择你原文的语言，translate别勾
+Transcribe File选择音频文件
+Output Format选择SubRip subtitles的srt格式的文件
+Place that file to the input folder的勾上
+<p class="markdown-image">
+  <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202403171012714.webp" alt=""  />
+</p>
+点完，然后Transcribe开始工作，右上角Debug Console可以看到转换的进度的
+<p class="markdown-image">
+  <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202403171012184.webp" alt=""  />
+</p>
+我的6800H的核显转换一段五分钟的话，大概一分钟左右完成
+<p class="markdown-image">
+  <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202403171012548.webp" alt=""  />
+</p></p>
+<h1 id="二-翻译">二 翻译 <a href="#%e4%ba%8c-%e7%bf%bb%e8%af%91" class="anchor">🔗</a></h1><p>翻译的话直接用chatgpt，3.5够用了
+用api太贵了，直接免费的web版丢进去完事了
+丢给他翻译就完事了，穷人办法，一分钱都不用花
+用下面这段提示的话，能保留原来的日文字幕，英文的话自己把日文改成英文就行了
+如果它停止了的话就发个go on就行了</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>把这个日语的字幕文件转成中日双语，中文在下，日文在下面另起一行，保留原有的日文
+</span></span><span style="display:flex;"><span>字幕文件如下
+</span></span></code></pre></div><p><p class="markdown-image">
+  <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202403171012777.webp" alt=""  />
+</p>
+<p class="markdown-image">
+  <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202403171012028.webp" alt=""  />
+</p></p>
+<p>参考
+<a href="https://www.bilibili.com/video/av268725141/?p=1&amp;t=160" target="_blank" rel="noopener">https://www.bilibili.com/video/av268725141/?p=1&t=160</a>
+<a href="https://www.bilibili.com/read/cv22692287/" target="_blank" rel="noopener">https://www.bilibili.com/read/cv22692287/</a></p>
+
+    </div>
+
+    
+    
+    
+
+</section>
+
+
+    </main>
+    
+    <footer id="footer">
+    
+
+    <div class="copyright">
+    
+        qklg Hosted on   <a href="https://pages.cloudflare.com/" target="_blank">  Cloudflare Pages </a>
+    
+    </div>
+
+    
+      <div class="powerby">
+        Powered by <a href='http://www.gohugo.io/'>Hugo</a> Theme By <a href='https://github.com/nodejh/hugo-theme-mini'>nodejh</a>
+      </div>
+    
+</footer>
+
+
+
+  </body>
+</html>

@@ -1,0 +1,385 @@
+<!doctype html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html
+  class="not-ready lg:text-base"
+  style="--bg: #fff"
+  lang="en"
+  dir="ltr"
+>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=3431&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+
+  
+  <title>publii部署静态博客 - qklg</title>
+
+  
+  <meta name="theme-color" />
+
+  
+  
+  
+  
+  <meta name="description" content="以前哥们写过一篇用gridea部署静态博客的文章 文章链接 https://www.nodeseek.com/post-8624-1
+今天闲着无聊逛老外论坛的时候发现了一个类似的，和gridea一样，不用自己像hexo hugo那样折腾命令 全部可以用gui来完成的博客系统
+一 下载publii 并且汉化 ①下载 https://getpublii.com/download/ 拉到最下面，下载0.45.2的版本，汉化支持最新的版本就是这个 双击打开，点我同意安装就可以了，然后会来到这么个界面，先不要管， ② 汉化 点右上角三个点，选择language
+点击get more language，跳转到 https://github.com/GetPublii/Publii-ui-locales 拉到下面选择zh-cn下载，点下载按钮下载 最高支持到0.45.0，所以刚刚下的旧版本 点击右上角的install language，直接点刚刚的汉化文件就行，不用解压缩,选择就行，如果还是不行，重启下软件 二 配置github ①注册 github https://github.com/join 没号的自己注册一个
+②创建仓库 https://github.com/new
+创建username.github.io的 仓库
+username就是你github的用户名
+其实仓库名字也可以不是这个，随便取个就行，取github.io结尾的，
+是我想同时用cloudflare pages，netlify，vercel之外，还有可以部署到github pages，多个地方
+③申请token https://github.com/settings/tokens/new
+点击链接申请token，期限选择无期限，repo勾上，token只显示一次，记得保存下
+三 配置 publii ①配置服务器 点击左边的服务器，选择 git repository
+里面长这样子
+网址就是你博客的网址，如果你没域名的话就是 username.github.io
+存储库url就是 你刚刚创建github仓库的url，注意，后面加个.git
+如果你和我一样的话应该是 username.github.io仓库的话应该是下面这样子，username改成你自己的
+https://github.com/username/username.github.io.git
+分支 一般为main
+用户名 就是你github的邮箱
+密码/令牌 就是你刚刚创建的github的token
+提交作者 ，提交作者邮箱这两个自己填下就行了
+提交信息不用动
+点击保存，并且测试下连接
+②写文章 文章的话我喜欢markdown，我一般用typora编辑之后复制到其他地方
+③同步 点击左下角的同步您的网站，即可同步到github仓库，然后cf pages等其他地方会自动更新的" />
+  <meta name="author" content="qklg" />
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="preload stylesheet" as="style" href="http://localhost:3431/main.min.css" />
+
+  
+  
+  
+  
+  
+  <link rel="preload" as="image" href="http://localhost:3431/theme.png" />
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  <script
+    defer
+    src="http://localhost:3431/highlight.min.js"
+    onload="hljs.initHighlightingOnLoad();"
+  ></script>
+  
+
+  
+  
+  
+
+  
+  <link
+    rel="icon"
+    href="http://localhost:3431/favicon.ico"
+  />
+  <link
+    rel="apple-touch-icon"
+    href="http://localhost:3431/apple-touch-icon.png"
+  />
+
+  
+  <meta name="generator" content="Hugo 0.133.1">
+
+  
+  
+  
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white">
+    <header class="mx-auto flex h-[4.5rem] max-w-[--w] px-8 lg:justify-center">
+  <div class="relative z-50 ltr:mr-auto rtl:ml-auto flex items-center">
+    <a class="-translate-y-[1px] text-2xl font-medium" href="http://localhost:3431/"
+      >qklg</a
+    >
+    <div
+      class="btn-dark text-[0] ltr:ml-4 rtl:mr-4 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
+      role="button"
+      aria-label="Dark"
+    ></div>
+  </div>
+
+  <div
+    class="btn-menu relative z-50 ltr:-mr-8 rtl:-ml-8 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+    role="button"
+    aria-label="Menu"
+  ></div>
+
+  
+
+  <script>
+    
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => {
+      htmlClass.remove('not-ready');
+    }, 10);
+
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
+
+    
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const lightBg = '#fff'.replace(/"/g, '');
+    const setDark = (isDark) => {
+      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
+      htmlClass[isDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', isDark);
+    };
+
+    
+    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    if (htmlClass.contains('dark')) {
+      setDark(true);
+    } else {
+      const darkVal = localStorage.getItem('dark');
+      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+    }
+
+    
+    darkScheme.addEventListener('change', (event) => {
+      setDark(event.matches);
+    });
+
+    
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(localStorage.getItem('dark') !== 'true');
+    });
+  </script>
+
+  <div
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-black lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"
+  >
+    
+    
+    <nav class="lg:ml-12 lg:flex lg:flex-row lg:items-center lg:space-x-10 rtl:space-x-reverse">
+      
+      <a
+        class="block text-center text-xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/about/"
+        >About</a
+      >
+      
+      <a
+        class="block text-center text-xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/contact/"
+        >Contact</a
+      >
+      
+    </nav>
+    
+
+    
+  </div>
+</header>
+
+
+    <main
+      class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] max-w-[--w] px-8 pb-16 pt-14 dark:prose-invert"
+    >
+      
+
+<article>
+  <header class="mb-14">
+    <h1 class="!my-0 pb-2.5">publii部署静态博客</h1>
+
+    
+    <div class="text-xs antialiased opacity-60">
+      
+      <time>Aug 23, 2024</time>
+      
+      
+      
+      
+    </div>
+    
+  </header>
+
+  <section><p>以前哥们写过一篇用<a href="https://https://github.com/getgridea/gridea">gridea</a>部署静态博客的文章
+文章链接   <a href="https://www.nodeseek.com/post-8624-1">https://www.nodeseek.com/post-8624-1</a></p>
+<p>今天闲着无聊逛老外论坛的时候发现了一个类似的，和gridea一样，不用自己像hexo hugo那样折腾命令
+全部可以用gui来完成的博客系统</p>
+<h1 id="一--下载publii-并且汉化">一  下载publii 并且汉化</h1>
+<h2 id="下载">①下载</h2>
+<p><a href="https://getpublii.com/download/">https://getpublii.com/download/</a>  拉到最下面，下载0.45.2的版本，汉化支持最新的版本就是这个
+<img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202408232158227.webp" alt="">
+双击打开，点我同意安装就可以了，然后会来到这么个界面，先不要管，
+<img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202408232158176.webp" alt=""></p>
+<h2 id="-汉化">② 汉化</h2>
+<p>点右上角三个点，选择language</p>
+<p>点击get more language，跳转到  <a href="https://github.com/GetPublii/Publii-ui-locales">https://github.com/GetPublii/Publii-ui-locales</a>
+拉到下面选择zh-cn下载，点下载按钮下载
+最高支持到0.45.0，所以刚刚下的旧版本
+<img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202408232158603.webp" alt="">
+<img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202408232158657.webp" alt="">
+点击右上角的install language，直接点刚刚的汉化文件就行，不用解压缩,选择就行，如果还是不行，重启下软件
+<img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202408232159054.webp" alt=""></p>
+<h1 id="二--配置github">二  配置github</h1>
+<h2 id="注册-github">①注册 github</h2>
+<p><a href="https://github.com/join">https://github.com/join</a> 没号的自己注册一个</p>
+<h2 id="创建仓库">②创建仓库</h2>
+<p><a href="https://github.com/new">https://github.com/new</a></p>
+<p>创建username.github.io的 仓库</p>
+<p>username就是你github的用户名</p>
+<p>其实仓库名字也可以不是这个，随便取个就行，取github.io结尾的，</p>
+<p>是我想同时用cloudflare pages，netlify，vercel之外，还有可以部署到github pages，多个地方</p>
+<h2 id="申请token">③申请token</h2>
+<p><a href="https://github.com/settings/tokens/new">https://github.com/settings/tokens/new</a></p>
+<p>点击链接申请token，期限选择无期限，repo勾上，token只显示一次，记得保存下</p>
+<p><img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202408232159381.webp" alt=""></p>
+<h1 id="三-配置-publii">三 配置 publii</h1>
+<h2 id="配置服务器">①配置服务器</h2>
+<p>点击左边的服务器，选择 git repository</p>
+<p><img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202408232159146.webp" alt=""></p>
+<p>里面长这样子</p>
+<p>网址就是你博客的网址，如果你没域名的话就是  username.github.io</p>
+<p>存储库url就是 你刚刚创建github仓库的url，注意，后面加个.git</p>
+<p>如果你和我一样的话应该是 username.github.io仓库的话应该是下面这样子，username改成你自己的</p>
+<p><a href="https://github.com/username/username.github.io.git">https://github.com/username/username.github.io.git</a></p>
+<p>分支 一般为main</p>
+<p>用户名 就是你github的邮箱</p>
+<p>密码/令牌 就是你刚刚创建的github的token</p>
+<p>提交作者 ，提交作者邮箱这两个自己填下就行了</p>
+<p>提交信息不用动</p>
+<p>点击保存，并且测试下连接</p>
+<p><img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202408232159796.webp" alt=""></p>
+<p><img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202408232159616.webp" alt=""></p>
+<h2 id="写文章">②写文章</h2>
+<p>文章的话我喜欢markdown，我一般用typora编辑之后复制到其他地方</p>
+<h2 id="同步">③同步</h2>
+<p>点击左下角的同步您的网站，即可同步到github仓库，然后cf pages等其他地方会自动更新的</p>
+<p><img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202408232159678.webp" alt=""></p>
+<h2 id="备份">④备份</h2>
+<p>点击左边的工具&amp;插件,选择别分即可生成备份文件</p>
+<h1 id="四-部署到cloudflare-pages">四 部署到cloudflare pages</h1>
+<h2 id="注册cf账户">①注册cf账户</h2>
+<p><a href="https://cloudflare.com">https://cloudflare.com</a>打开网站，点击注册</p>
+<h2 id="部署到pages">②部署到pages</h2>
+<p>选择左侧的workers和pages，选择创建</p>
+<p><img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202408232200560.webp" alt=""></p>
+<p>连接到git，选择你刚刚的github账户和仓库，然后点击开始设置，保存并部署</p>
+<p><img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202408232200609.webp" alt=""></p>
+<p><img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202408232200494.webp" alt=""></p>
+<p><img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202408232200515.webp" alt=""></p>
+<p>设置自定义域名，默认的pages.dev被墙了，就需要你设置一个自定义域名了</p>
+<p>设置完打开浏览器就能访问了</p>
+<p><img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202408232200295.webp" alt=""></p>
+<p>其他平台可以看我部署到gridea的帖子，是一样的</p>
+<h1 id="五-相关链接">五 相关链接</h1>
+<p>publii的官网  <a href="https://getpublii.com/">https://getpublii.com/</a></p>
+<p>github仓库   <a href="https://github.com/GetPublii/Publii">https://github.com/GetPublii/Publii</a></p>
+<p>文档   <a href="https://getpublii.com/docs/">https://getpublii.com/docs/</a></p>
+</section>
+
+  
+  
+
+  
+  
+  
+  
+  <nav
+    class="mt-24 flex overflow-hidden rounded-xl bg-black/[3%] text-lg !leading-[1.2] *:flex *:w-1/2 *:items-center *:p-5 *:font-medium *:no-underline dark:bg-white/[8%] [&>*:hover]:bg-black/[2%] dark:[&>*:hover]:bg-white/[3%]"
+  >
+    
+    
+    <a class="ltr:ml-auto rtl:mr-auto justify-end pl-3" href="http://localhost:3431/posts/20240517/"
+      ><span>chrome 125禁用新ui</span><span class="ltr:ml-1.5 rtl:mr-1.5">→</span></a
+    >
+    
+  </nav>
+  
+  
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+</article>
+
+
+    </main>
+
+    <footer
+  class="mx-auto flex h-[4.5rem] max-w-[--w] items-center px-8 text-xs uppercase tracking-wider opacity-60"
+>
+  <div class="mr-auto">
+  
+    qklg.net
+  
+  </div>
+  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
+    >powered by hugo️️</a
+  >️
+  <a
+    class="link"
+    href="https://github.com/nanxiaobei/hugo-paper"
+    rel="noopener"
+    target="_blank"
+    >hugo-paper</a
+  >
+</footer>
+
+  </body>
+</html>

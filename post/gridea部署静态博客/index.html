@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=5854&amp;path=livereload" data-no-instant defer></script>
+    <title>gridea部署静态博客 | qklg</title>
+
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">    
+<meta name="viewport" content="width=device-width,minimum-scale=1">
+<meta name="description" content="gridea是一个个静态博客的客户端 相对于hugo和hexo啥的，最大的好处就是简单，不用配置啥复杂的东西 缺点，就是主题很少 本文用githu">
+<meta name="generator" content="Hugo 0.133.1">
+
+
+  <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+
+ 
+  
+  
+    
+      <script async src="https://www.googletagmanager.com/gtag/js?id=your-google-analytics-id"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'your-google-analytics-id');
+        }
+      </script>
+    
+  
+
+
+
+
+
+
+
+
+
+  </head>
+
+  <body>
+    <nav class="navigation">
+	
+		<a href="/"> <span class="arrow">←</span>Home</a>
+	
+	<a href="/posts">Archive</a>
+	<a href="/tags">Tags</a>
+	<a href="/about">About</a>
+
+	
+
+	
+		
+  	
+</nav>	
+
+    <main class="main">
+      
+
+<section id="single">
+    <h1 class="title">gridea部署静态博客</h1>
+
+    <div class="tip">
+        <time datetime="2023-06-11 13:42:51 &#43;0000 UTC">Jun 11, 2023</time>
+        <span class="split">
+          ·
+        </span>
+        <span>
+          1541 words
+        </span>
+        <span class="split">
+          ·
+        </span>
+        <span>
+          4 minute read
+        </span>
+    </div>
+
+    
+    
+        
+  
+
+
+    
+
+
+    <div class="content">
+      <p>gridea是一个个静态博客的客户端
+相对于hugo和hexo啥的，最大的好处就是简单，不用配置啥复杂的东西
+缺点，就是主题很少
+本文用github仓库部署，可以同时直接用仓库部署到github pages，cf pages，vercel，netlify，国内访问推荐vercel
+由于这几个默认域名被墙，绑个自己的域名</p>
+<p>一   配置github
+①没号的先注册一个
+<a href="https://github.com/" target="_blank" rel="noopener">https://github.com/</a>
+点击右上角singup注册一个
+②创建github仓库
+<a href="https://github.com/new" target="_blank" rel="noopener">https://github.com/new</a>
+创建个username.github.io，username就是你用户名，其实也可以不这样子，仓库名随便取，只是没法用github pages而已，不影响部署到cf pages和vercel的
+③申请token
+<a href="https://github.com/settings/tokens/new" target="_blank" rel="noopener">https://github.com/settings/tokens/new</a>
+<p class="markdown-image">
+  <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310241343036.webp" alt=""  />
+</p>
+token时间自己爱要多久，反正我直接永久，repo勾上，token只显示一次，记得保存下</p>
+<p>二 配置gridea
+①下载</p>
+<p><a href="https://github.com/getgridea/gridea/releases" target="_blank" rel="noopener">https://github.com/getgridea/gridea/releases</a>
+自己根据客户端下载
+支持mac，win，linux三大客户端
+②配置
+<p class="markdown-image">
+  <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310241343860.webp" alt=""  />
+</p>
+点击左边的远程，界面长这样子
+选择github pages，
+域名:你要绑的域名
+仓库名称:刚刚建的github的仓库的名字:username.github.io这样子
+分支，现在一般默认是main，自己看下你github仓库
+仓库用户名,你github的user name
+邮箱，你github的邮箱
+令牌，刚刚第三步申请的token
+cname这个不用github page啥的话不用管，要用的话填你要绑的域名</p>
+<p>然后保存，再点下检测远程连接的，显示成功的话就ok了
+③备份
+点击最左边这个按钮，点进去，有个站点源文件路径，那就是gridea的配置文件了，要备份的话直接打包上传到网盘，或者直接整个坚果云或者onedrive啥的同步直接
+<p class="markdown-image">
+  <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310241343543.webp" alt=""  />
+</p>
+④写文章
+支持markdown，点击左边的文章，自己写
+⑤点击左下角同步，同步到你github
+如果没法同步的话，设置里又http代理设置，自己填写</p>
+<p>三 部署到各家平台
+1github pages
+找到你username.github.io的仓库，点击setting，选择pages启用，可以绑定自己的域名，不展开讲了，自己谷歌搜下</p>
+<p>2部署到cf pages（推荐）
+①注册cf账户
+<a href="https://cloudflare.com/" target="_blank" rel="noopener">https://cloudflare.com/</a> 打开网站，点击注册
+②创建pages
+点击workes and pages
+<p class="markdown-image">
+  <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310241343855.webp" alt=""  />
+</p>
+创建应用程序，选择pages
+<p class="markdown-image">
+  <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310241344413.webp" alt=""  />
+</p>
+连接到git
+<p class="markdown-image">
+  <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310241344348.webp" alt=""  />
+</p>
+连接到github账户，选择你刚刚创建的那个github仓库
+<p class="markdown-image">
+  <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310241344500.webp" alt=""  />
+</p>
+然后点开始设置
+<p class="markdown-image">
+  <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310241344990.webp" alt=""  />
+</p>
+保存并部署
+<p class="markdown-image">
+  <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310241344798.webp" alt=""  />
+</p>
+设置自定义域，默认的pages.dev被墙了，输入你在gridea里填的域名
+<p class="markdown-image">
+  <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310241344995.webp" alt=""  />
+</p>
+然后点激活域再等会就ok了
+浏览器打开你的域名就可以访问了</p>
+<p>3部署到vercel
+①<a href="https://vercel.com/" target="_blank" rel="noopener">https://vercel.com/</a>点击右上角singup，再点击用github登录
+②点击add new project,选择你的github仓库，再点击import
+<p class="markdown-image">
+  <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310241345297.webp" alt=""  />
+</p>
+然后点击deploy直接部署
+<p class="markdown-image">
+  <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310241345082.webp" alt=""  />
+</p>
+然后就部署好了
+③设置自定义域，默认的vercel.app被墙了，输入你在gridea里填的域名
+点击setting，选择左边的domains
+在cloudflare或者别的域名解析商那里添加一个A记录到76.76.21.21
+或者cname到cname.vercel-dns.com
+都是可以的，具体怎么操作看vercel的文档
+<a href="https://vercel.com/docs/concepts/projects/domains/working-with-nameservers" target="_blank" rel="noopener">https://vercel.com/docs/concepts/projects/domains/working-with-nameservers</a>
+vercel的亚马逊aga到国内速度明显比其他的快，推荐这个部署，但是免费只有100G的流量，不过个人博客也够用了
+4部署到netlify
+①<a href="https://www.netlify.com/" target="_blank" rel="noopener">https://www.netlify.com/</a>,点击右上角singup，选择github登录
+②点击add new site
+<p class="markdown-image">
+  <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310241345834.webp" alt=""  />
+</p>
+选择import an existing project
+<p class="markdown-image">
+  <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310241345347.webp" alt=""  />
+</p>
+选择你的github仓库，再点deploy site部署
+<p class="markdown-image">
+  <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310241345481.webp" alt=""  />
+</p></p>
+<p>③设置自定义域，默认的netlify.app被墙了，输入你在gridea里填的域名
+点击domain setting，然后把你的域名cname过去就行了，具体怎么弄看netlify的文档
+<a href="https://docs.netlify.com/domains-https/custom-domains/" target="_blank" rel="noopener">https://docs.netlify.com/domains-https/custom-domains/</a></p>
+
+    </div>
+
+    
+    
+    
+
+</section>
+
+
+    </main>
+    
+    <footer id="footer">
+    
+
+    <div class="copyright">
+    
+        qklg
+    
+    </div>
+
+    
+      <div class="powerby">
+        Powered by <a href='http://www.gohugo.io/'>Hugo</a> Theme By <a href='https://github.com/nodejh/hugo-theme-mini'>nodejh</a>
+      </div>
+    
+</footer>
+
+
+
+  </body>
+</html>

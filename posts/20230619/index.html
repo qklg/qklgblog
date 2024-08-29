@@ -1,0 +1,359 @@
+<!doctype html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html
+  class="not-ready lg:text-base"
+  style="--bg: #fff"
+  lang="en"
+  dir="ltr"
+>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=3431&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+
+  
+  <title>rclone挂载webdav,以infini-cloud为列 - qklg</title>
+
+  
+  <meta name="theme-color" />
+
+  
+  
+  
+  
+  <meta name="description" content="1安装rclone ①先去rclone官网找到你的版本 官网链接https://rclone.org/downloads/
+②没sudo的话先安装下sudo，我一般用的是debian，直接
+apt install sudo ③然后直接输入，安装rclone
+sudo -v ; curl https://rclone.org/install.sh | sudo bash 安装完成的话长这样子 2 获取infini-cloud的配置 登录状态下打开这个链接 https://infini-cloud.net/en/modules/mypage/usage/ 把Turn on Apps Connection给勾上 记住你的id和密码，密码只会显示一次，记得保存下 三个参数，一个url，一个id，一个password，准备好 url的话下面3④里面用到 Connection ID就是3⑤user Apps Password	的话3 3配置rclone ①在你的ssh中输入
+rclone config 会出来一排参数,中文啥意思，标在后面了，用gpt翻译的
+n) New remote：新建一个远程存储。s) Set configuration password：设置配置文件的密码。q) Quit config：退出配置界面。 ②新建的话输入n,会出现
+Enter name for new remote.name&gt; 这个你直接随便输入就行,我就用这个帖子https://www.nodeseek.com/post-9604-1里的jpwp了 输入完名字会出现一大串的 ③这个infini-cloud的话我们挂载的是webdav的，选择46 webdav，输入46就行了 ④会让你输入url 就是第二部里面的url 直接复制，粘贴进去就行了，然后回车 会出现这个，选择5 ⑤user输入第2部里面的Connection ID 然后回出现下面的
+y) Yes, type in my own password：手动输入密码。g) Generate random password：随机生成密码。n) No, leave this optional password blank (default)：不设置密码 选择y，手动输入第2部里面的那个只出现过一次的密码，复制进去就行了，Linux 终端中输入密码时，密码不会显示在屏幕上 然后bearer token的话直接回车edit advanced config，也是直接回车 然后keep the jpwp remote，也是直接回车 然后选择q，退出就ok了 4① 最后输入https://www." />
+  <meta name="author" content="qklg" />
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="preload stylesheet" as="style" href="http://localhost:3431/main.min.css" />
+
+  
+  
+  
+  
+  
+  <link rel="preload" as="image" href="http://localhost:3431/theme.png" />
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  <script
+    defer
+    src="http://localhost:3431/highlight.min.js"
+    onload="hljs.initHighlightingOnLoad();"
+  ></script>
+  
+
+  
+  
+  
+
+  
+  <link
+    rel="icon"
+    href="http://localhost:3431/favicon.ico"
+  />
+  <link
+    rel="apple-touch-icon"
+    href="http://localhost:3431/apple-touch-icon.png"
+  />
+
+  
+  <meta name="generator" content="Hugo 0.133.1">
+
+  
+  
+  
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white">
+    <header class="mx-auto flex h-[4.5rem] max-w-[--w] px-8 lg:justify-center">
+  <div class="relative z-50 ltr:mr-auto rtl:ml-auto flex items-center">
+    <a class="-translate-y-[1px] text-2xl font-medium" href="http://localhost:3431/"
+      >qklg</a
+    >
+    <div
+      class="btn-dark text-[0] ltr:ml-4 rtl:mr-4 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
+      role="button"
+      aria-label="Dark"
+    ></div>
+  </div>
+
+  <div
+    class="btn-menu relative z-50 ltr:-mr-8 rtl:-ml-8 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+    role="button"
+    aria-label="Menu"
+  ></div>
+
+  
+
+  <script>
+    
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => {
+      htmlClass.remove('not-ready');
+    }, 10);
+
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
+
+    
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const lightBg = '#fff'.replace(/"/g, '');
+    const setDark = (isDark) => {
+      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
+      htmlClass[isDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', isDark);
+    };
+
+    
+    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    if (htmlClass.contains('dark')) {
+      setDark(true);
+    } else {
+      const darkVal = localStorage.getItem('dark');
+      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+    }
+
+    
+    darkScheme.addEventListener('change', (event) => {
+      setDark(event.matches);
+    });
+
+    
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(localStorage.getItem('dark') !== 'true');
+    });
+  </script>
+
+  <div
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-black lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"
+  >
+    
+    
+    <nav class="lg:ml-12 lg:flex lg:flex-row lg:items-center lg:space-x-10 rtl:space-x-reverse">
+      
+      <a
+        class="block text-center text-xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/about/"
+        >About</a
+      >
+      
+      <a
+        class="block text-center text-xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/contact/"
+        >Contact</a
+      >
+      
+    </nav>
+    
+
+    
+  </div>
+</header>
+
+
+    <main
+      class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] max-w-[--w] px-8 pb-16 pt-14 dark:prose-invert"
+    >
+      
+
+<article>
+  <header class="mb-14">
+    <h1 class="!my-0 pb-2.5">rclone挂载webdav,以infini-cloud为列</h1>
+
+    
+    <div class="text-xs antialiased opacity-60">
+      
+      <time>Jun 19, 2023</time>
+      
+      
+      
+      
+    </div>
+    
+  </header>
+
+  <section><p>1安装rclone
+①先去rclone官网找到你的版本
+官网链接<a href="https://rclone.org/downloads/">https://rclone.org/downloads/</a></p>
+<p>②没sudo的话先安装下sudo，我一般用的是debian，直接</p>
+<pre tabindex="0"><code>apt install sudo 
+</code></pre><p>③然后直接输入，安装rclone</p>
+<pre tabindex="0"><code>sudo -v ; curl https://rclone.org/install.sh | sudo bash
+</code></pre><p>安装完成的话长这样子
+<img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310241336616.webp" alt="">
+2
+获取infini-cloud的配置
+登录状态下打开这个链接
+<a href="https://infini-cloud.net/en/modules/mypage/usage/">https://infini-cloud.net/en/modules/mypage/usage/</a>
+<img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310241336878.webp" alt="">
+把Turn on Apps Connection给勾上
+记住你的id和密码，密码只会显示一次，记得保存下
+三个参数，一个url，一个id，一个password，准备好
+url的话下面3④里面用到
+Connection ID就是3⑤user
+Apps Password	的话3
+3配置rclone
+①在你的ssh中输入</p>
+<pre tabindex="0"><code>rclone config
+</code></pre><p>会出来一排参数,中文啥意思，标在后面了，用gpt翻译的</p>
+<pre tabindex="0"><code>n) New remote：新建一个远程存储。
+s) Set configuration password：设置配置文件的密码。
+q) Quit config：退出配置界面。
+</code></pre><p>②新建的话输入n,会出现</p>
+<pre tabindex="0"><code>Enter name for new remote.
+name&gt; 
+</code></pre><p>这个你直接随便输入就行,我就用这个帖子<a href="https://www.nodeseek.com/post-9604-1">https://www.nodeseek.com/post-9604-1</a>里的jpwp了
+输入完名字会出现一大串的
+③这个infini-cloud的话我们挂载的是webdav的，选择46 webdav，输入46就行了
+④会让你输入url
+<img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310241336228.webp" alt="">
+就是第二部里面的url
+直接复制，粘贴进去就行了，然后回车
+会出现这个，选择5
+<img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310241336268.webp" alt="">
+⑤user输入第2部里面的Connection ID
+然后回出现下面的</p>
+<pre tabindex="0"><code>y) Yes, type in my own password：手动输入密码。
+g) Generate random password：随机生成密码。
+n) No, leave this optional password blank (default)：不设置密码
+</code></pre><p>选择y，手动输入第2部里面的那个只出现过一次的密码，复制进去就行了，Linux 终端中输入密码时，密码不会显示在屏幕上
+然后bearer token的话直接回车edit  advanced config，也是直接回车
+然后keep the  jpwp remote，也是直接回车
+然后选择q，退出就ok了
+<img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310241336936.webp" alt=""></p>
+<p>4①
+最后输入<a href="https://www.nodeseek.com/post-9604-1">https://www.nodeseek.com/post-9604-1</a>这个帖子里面的命令挂载就ok了</p>
+<pre tabindex="0"><code>rclone mount jpwp: /mnt/Wanpan --config=/root/.config/rclone/rclone.conf --allow-other --allow-non-empty --vfs-cache-mode full --vfs-cache-max-age 48h --vfs-cache-max-size 5G --cache-dir /tmp/cache --vfs-read-chunk-size 128M --vfs-read-chunk-size-limit 1G --buffer-size 128M --umask 000 &amp;
+</code></pre><p>②如果出现报错的如下报错的话
+<img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310241336998.webp" alt="">
+是没有装fuse3，debian和ubuntu的话直接用下面的命令apt安装，然后再执行上面的命令就行了</p>
+<pre tabindex="0"><code>apt-get install fuse3
+</code></pre><p>③如果出现mount FUSE fs: mountpoint does not exist: /mnt/Wanpan，没有的话，输入下面命令，创建挂载点</p>
+<pre tabindex="0"><code>mkdir -p /mnt/Wanpan
+</code></pre><p>在输入上面的命令挂载4①的命令挂载</p>
+<p>最后输入df-h，显示jpwp的话那就是挂载成功了，1PB是唬人的，实际就是你网盘的容量,其他支持webdav的网盘，也是这样子挂载的，可以试下这个ovh的网盘<a href="https://www.nodeseek.com/post-8887-1">https://www.nodeseek.com/post-8887-1</a>
+<img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310241337653.webp" alt=""></p>
+</section>
+
+  
+  
+
+  
+  
+  
+  
+  <nav
+    class="mt-24 flex overflow-hidden rounded-xl bg-black/[3%] text-lg !leading-[1.2] *:flex *:w-1/2 *:items-center *:p-5 *:font-medium *:no-underline dark:bg-white/[8%] [&>*:hover]:bg-black/[2%] dark:[&>*:hover]:bg-white/[3%]"
+  >
+    
+    <a class="ltr:pr-3 rtl:pl-3" href="http://localhost:3431/posts/20230620/"
+      ><span class="ltr:mr-1.5 rtl:ml-1.5">←</span><span>ihostart罗马尼亚灵车</span></a
+    >
+    
+    
+    <a class="ltr:ml-auto rtl:mr-auto justify-end pl-3" href="http://localhost:3431/posts/20230615/"
+      ><span>virmach究竟发生了啥 </span><span class="ltr:ml-1.5 rtl:mr-1.5">→</span></a
+    >
+    
+  </nav>
+  
+  
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+</article>
+
+
+    </main>
+
+    <footer
+  class="mx-auto flex h-[4.5rem] max-w-[--w] items-center px-8 text-xs uppercase tracking-wider opacity-60"
+>
+  <div class="mr-auto">
+  
+    qklg.net
+  
+  </div>
+  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
+    >powered by hugo️️</a
+  >️
+  <a
+    class="link"
+    href="https://github.com/nanxiaobei/hugo-paper"
+    rel="noopener"
+    target="_blank"
+    >hugo-paper</a
+  >
+</footer>
+
+  </body>
+</html>

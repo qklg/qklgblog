@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=5854&amp;path=livereload" data-no-instant defer></script>
+    <title>最近折腾回家看片，分享点经验 | qklg</title>
+
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">    
+<meta name="viewport" content="width=device-width,minimum-scale=1">
+<meta name="description" content="鉴于移动没公网ipv4，电信联通也在日益收回v4，有兴趣的话可以看下，分享点经验 1怎么回家，我用的ipv6回家的，本人测试了下基于tcp的o">
+<meta name="generator" content="Hugo 0.133.1">
+
+
+  <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+
+ 
+  
+  
+    
+      <script async src="https://www.googletagmanager.com/gtag/js?id=your-google-analytics-id"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'your-google-analytics-id');
+        }
+      </script>
+    
+  
+
+
+
+
+
+
+
+
+
+  </head>
+
+  <body>
+    <nav class="navigation">
+	
+		<a href="/"> <span class="arrow">←</span>Home</a>
+	
+	<a href="/posts">Archive</a>
+	<a href="/tags">Tags</a>
+	<a href="/about">About</a>
+
+	
+
+	
+		
+  	
+</nav>	
+
+    <main class="main">
+      
+
+<section id="single">
+    <h1 class="title">最近折腾回家看片，分享点经验</h1>
+
+    <div class="tip">
+        <time datetime="2023-09-03 23:49:51 &#43;0000 UTC">Sep 3, 2023</time>
+        <span class="split">
+          ·
+        </span>
+        <span>
+          444 words
+        </span>
+        <span class="split">
+          ·
+        </span>
+        <span>
+          1 minute read
+        </span>
+    </div>
+
+    
+    
+        
+  
+
+
+    
+
+
+    <div class="content">
+      <p>鉴于移动没公网ipv4，电信联通也在日益收回v4，有兴趣的话可以看下，分享点经验
+1怎么回家，我用的ipv6回家的，本人测试了下基于tcp的openvpn和基于udp的wireguard
+配置很简单的，谷歌搜下就有了，我是在我本地1000下，100Mbps的上行的宽带下测试的，家里的openwrt的n5105的软路由上建的openwrt
+联通流量的ipv6连回家的
+主要问题就是联通流量到移动宽带的ipv6互联太差了，直接ping过去延迟都有三十多ms，就有点离谱
+不说了，直接上图，wg的qos很严重
+openvpn的多线程和单线程测速
+<p class="markdown-image">
+  <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310212350775.webp" alt=""  />
+</p>
+<p class="markdown-image">
+  <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310212350294.webp" alt=""  />
+</p>
+wiregurad的多线程和单线程测速
+<p class="markdown-image">
+  <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310212351043.webp" alt=""  />
+</p>
+<p class="markdown-image">
+  <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310212351432.webp" alt=""  />
+</p></p>
+<p>多次测试差不多，其实也能用，不过延迟确实有点高，这没办法，v6的互联确实很差</p>
+<p>2打洞
+本来买了个宿迁的nat打洞的，结果老板骚操作，没法用了
+玩玩cf tunnel吧
+cf tunnel国内一般分配的美西的服务器
+我分配的是这几个
+<p class="markdown-image">
+  <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310212351744.webp" alt=""  />
+</p>
+直连过去，一来一回延迟爆炸
+不过速度倒是还不错
+试了下今天刚下的球2，居然能看，原始码率能看，就是拖进度条有点慢
+<p class="markdown-image">
+  <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310212351478.webp" alt=""  />
+</p></p>
+
+    </div>
+
+    
+    
+    
+
+</section>
+
+
+    </main>
+    
+    <footer id="footer">
+    
+
+    <div class="copyright">
+    
+        qklg
+    
+    </div>
+
+    
+      <div class="powerby">
+        Powered by <a href='http://www.gohugo.io/'>Hugo</a> Theme By <a href='https://github.com/nodejh/hugo-theme-mini'>nodejh</a>
+      </div>
+    
+</footer>
+
+
+
+  </body>
+</html>

@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=5854&amp;path=livereload" data-no-instant defer></script>
+    <title>unraid装哪吒探针 | qklg</title>
+
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">    
+<meta name="viewport" content="width=device-width,minimum-scale=1">
+<meta name="description" content="1下载哪吒探针的agent 选择你的客户端下载，unraid的话一般都是linux-amd64 https://github.com/nezhahq/agent/releases 解压缩，将nezha-agent，如果你开sm">
+<meta name="generator" content="Hugo 0.133.1">
+
+
+  <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+
+ 
+  
+  
+    
+      <script async src="https://www.googletagmanager.com/gtag/js?id=your-google-analytics-id"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'your-google-analytics-id');
+        }
+      </script>
+    
+  
+
+
+
+
+
+
+
+
+
+  </head>
+
+  <body>
+    <nav class="navigation">
+	
+		<a href="/"> <span class="arrow">←</span>Home</a>
+	
+	<a href="/posts">Archive</a>
+	<a href="/tags">Tags</a>
+	<a href="/about">About</a>
+
+	
+
+	
+		
+  	
+</nav>	
+
+    <main class="main">
+      
+
+<section id="single">
+    <h1 class="title">unraid装哪吒探针</h1>
+
+    <div class="tip">
+        <time datetime="2023-10-19 23:11:58 &#43;0000 UTC">Oct 19, 2023</time>
+        <span class="split">
+          ·
+        </span>
+        <span>
+          478 words
+        </span>
+        <span class="split">
+          ·
+        </span>
+        <span>
+          1 minute read
+        </span>
+    </div>
+
+    
+    
+        
+  
+
+
+    
+
+
+    <div class="content">
+      <p>1下载哪吒探针的agent
+选择你的客户端下载，unraid的话一般都是linux-amd64
+<a href="https://github.com/nezhahq/agent/releases" target="_blank" rel="noopener">https://github.com/nezhahq/agent/releases</a>
+<p class="markdown-image">
+  <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310212319032.webp" alt=""  />
+</p></p>
+<p>解压缩，将nezha-agent，如果你开smb的话直接用文件管理传上去，或者winscp或者别的什么传到你的nas的任意文件夹下
+我是开的smb，我随手放在第二块硬盘下,路径是/mnt/disk2/download/temp，这个路径随便</p>
+<p>2unraid上应用搜索	User Scripts安装，这个可以执行定时的bash脚本，有点类似于systemctl
+<p class="markdown-image">
+  <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310212319340.webp" alt=""  />
+</p></p>
+<p>插件，这个进去
+<p class="markdown-image">
+  <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310212322032.webp" alt=""  />
+</p></p>
+<p>点击左下角的add new script
+<p class="markdown-image">
+  <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310212322290.webp" alt=""  />
+</p>
+名字随便取一个，点击ok保存
+<p class="markdown-image">
+  <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310212323164.webp" alt=""  />
+</p>
+用winscp，连接unraid，打开</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>/boot/config/plugins/user.scripts/scripts/tanzhen
+</span></span></code></pre></div><p>这个路径</p>
+<p>双击script
+编辑脚本</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#080">#!/bin/bash
+</span></span></span><span style="display:flex;"><span><span style="color:#080"></span><span style="color:#a2f">cd</span> /mnt/disk2/download/temp
+</span></span><span style="display:flex;"><span>chmod +x nezha-agent
+</span></span><span style="display:flex;"><span>./nezha-agent -s 没套cdn的域名:面板rpc端口 -p agnet key
+</span></span></code></pre></div><p>cd 后面的/mnt/disk2/download/temp可以换成上面你自己nezha-agent的文件路径</p>
+<p>第四行的参数除了这些还可以加，可以参考这个
+一般这些就足够了
+<p class="markdown-image">
+  <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310241237565.webp" alt=""  />
+</p></p>
+<p>然后保存
+回到unraid的面板上
+点击run in backgronud 在后台运行
+右边设置成at first array start only开机自启
+<p class="markdown-image">
+  <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310241232422.webp" alt=""  />
+</p>
+点下apply应用，done退出就完事了</p>
+<p>参考教程
+哪吒文档中在群晖中安装
+<a href="https://nezha.wiki/guide/agent.html#%E5%9C%A8-%E7%BE%A4%E6%99%96dsm-%E4%B8%AD%E5%AE%89%E8%A3%85-agent" target="_blank" rel="noopener">https://nezha.wiki/guide/agent.html#%E5%9C%A8-%E7%BE%A4%E6%99%96dsm-%E4%B8%AD%E5%AE%89%E8%A3%85-agent</a></p>
+
+    </div>
+
+    
+    
+    
+
+</section>
+
+
+    </main>
+    
+    <footer id="footer">
+    
+
+    <div class="copyright">
+    
+        qklg
+    
+    </div>
+
+    
+      <div class="powerby">
+        Powered by <a href='http://www.gohugo.io/'>Hugo</a> Theme By <a href='https://github.com/nodejh/hugo-theme-mini'>nodejh</a>
+      </div>
+    
+</footer>
+
+
+
+  </body>
+</html>

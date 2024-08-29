@@ -1,0 +1,311 @@
+<!doctype html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html
+  class="not-ready lg:text-base"
+  style="--bg: #fff"
+  lang="en"
+  dir="ltr"
+>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=2518&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+
+  
+  <title>关于tg收不到短信的一二件事 - qklg</title>
+
+  
+  <meta name="theme-color" />
+
+  
+  
+  
+  
+  <meta name="description" content="1为什么telegram收不到短信 首先，如果你是&#43;86的国内手机号注册的话，多半是运营商原因，请联系你的运营商开通国际短信服务也好，或者别的什么的，具体怎么折腾你可以看下这哥们 https://www.nodeseek.com/post-6982-1
+第二个原因就是你的安卓手机没有safetynet认证，苹果的话没影响
+2为什么会出现这种情况呢 那是因为tg从今年初开始，短信验证码只能由官方客户端发送，而且现在tg的短信是用谷歌的firebase来发的， 安卓手机上是需要过 safetynet的验证，才会给你发
+是不是不理解，一堆新名词，简单来说就是，你的手机要有验证，而且客户端得是官方的，不是第三方的 苹果手机的话都有认证的，完全不用担心，安卓的话国外的话一般都是有认证的，国内的话很多都是没有的 其实这么做的原因就是为了省钱，杜叔叔家也没余粮了
+3什么是safetynet 看一看谷歌的文档https://developer.android.com/training/safetynet?hl=zh-cn 简单来说就是谷歌整的一套验证机制，认证了，你的安卓手机才能装gms，当然你也可以通过特殊手段装上去，或者有gms也有没safeynet的
+4怎么检测有没有呢 首先得是型号，华为用户的话mate30之后机子没有的，不用想了 小米的话一般国行的中高端机子有自带的gms，设置里启用下就有了，实在太低端的机子的话真没有，因为这个得像谷歌交钱的，小米不愿意给 国行没有的话，刷个外版，这种左转隔壁酷安 oppo，vivo和子品牌一般外面有上市的话一般有的，这种你们去酷安搜下 三星，索尼之类的国外手机品牌的话肯定是有的
+很简单，打开谷歌play商店-设置-关于，里面有个play保护机制认证，那个就是，我这台K40有的 如果没有的话收不到短信只是一个，有些第三方的app会下不了 看奈菲的应该都知道，安卓手机上没这个是下不了的，谷歌商店直接会提示您的设备与此不兼容，或者直接搜不到，当然你也可以从其他地方侧载安装 4为什么别人同款的有，我的没有呢，原因很多 ①解锁了，解bl锁之后这个会掉 ②国内版和国际版rom，我之前小米8，国行版的rom就是没有，刷了国际版之后就有了 ③root之后的话，开magisk hide，怎么过自己网上搜下，现在我也不玩机了
+最后总结 苹果没影响 安卓机的话，得看safetynet，国外基本都有，没啥影响 国内的话，这个看品牌，随缘
+参考 https://zhuanlan.zhihu.com/p/142714153 https://t.me/outvivid/4033 https://t.me/tginfoen/1598" />
+  <meta name="author" content="qklg" />
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="preload stylesheet" as="style" href="http://localhost:2518/main.min.css" />
+
+  
+  
+  
+  
+  
+  <link rel="preload" as="image" href="http://localhost:2518/theme.png" />
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  <script
+    defer
+    src="http://localhost:2518/highlight.min.js"
+    onload="hljs.initHighlightingOnLoad();"
+  ></script>
+  
+
+  
+  
+  
+
+  
+  <link
+    rel="icon"
+    href="http://localhost:2518/favicon.ico"
+  />
+  <link
+    rel="apple-touch-icon"
+    href="http://localhost:2518/apple-touch-icon.png"
+  />
+
+  
+  <meta name="generator" content="Hugo 0.133.1">
+
+  
+  
+  
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white">
+    <header class="mx-auto flex h-[4.5rem] max-w-[--w] px-8 lg:justify-center">
+  <div class="relative z-50 ltr:mr-auto rtl:ml-auto flex items-center">
+    <a class="-translate-y-[1px] text-2xl font-medium" href="http://localhost:2518/"
+      >qklg</a
+    >
+    <div
+      class="btn-dark text-[0] ltr:ml-4 rtl:mr-4 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
+      role="button"
+      aria-label="Dark"
+    ></div>
+  </div>
+
+  <div
+    class="btn-menu relative z-50 ltr:-mr-8 rtl:-ml-8 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+    role="button"
+    aria-label="Menu"
+  ></div>
+
+  
+
+  <script>
+    
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => {
+      htmlClass.remove('not-ready');
+    }, 10);
+
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
+
+    
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const lightBg = '#fff'.replace(/"/g, '');
+    const setDark = (isDark) => {
+      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
+      htmlClass[isDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', isDark);
+    };
+
+    
+    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    if (htmlClass.contains('dark')) {
+      setDark(true);
+    } else {
+      const darkVal = localStorage.getItem('dark');
+      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+    }
+
+    
+    darkScheme.addEventListener('change', (event) => {
+      setDark(event.matches);
+    });
+
+    
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(localStorage.getItem('dark') !== 'true');
+    });
+  </script>
+
+  <div
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-black lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"
+  >
+    
+    
+    <nav class="lg:ml-12 lg:flex lg:flex-row lg:items-center lg:space-x-10 rtl:space-x-reverse">
+      
+      <a
+        class="block text-center text-xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/about/"
+        >About</a
+      >
+      
+      <a
+        class="block text-center text-xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/contact/"
+        >Contact</a
+      >
+      
+    </nav>
+    
+
+    
+  </div>
+</header>
+
+
+    <main
+      class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] max-w-[--w] px-8 pb-16 pt-14 dark:prose-invert"
+    >
+      
+
+<article>
+  <header class="mb-14">
+    <h1 class="!my-0 pb-2.5">关于tg收不到短信的一二件事</h1>
+
+    
+  </header>
+
+  <section><h1 id="1为什么telegram收不到短信">1为什么telegram收不到短信</h1>
+<p>首先，如果你是+86的国内手机号注册的话，多半是运营商原因，请联系你的运营商开通国际短信服务也好，或者别的什么的，具体怎么折腾你可以看下这哥们
+<a href="https://www.nodeseek.com/post-6982-1">https://www.nodeseek.com/post-6982-1</a></p>
+<p>第二个原因就是你的安卓手机没有safetynet认证，苹果的话没影响</p>
+<h1 id="2为什么会出现这种情况呢">2为什么会出现这种情况呢</h1>
+<p>那是因为tg从今年初开始，短信验证码只能由官方客户端发送，而且现在tg的短信是用谷歌的firebase来发的，
+安卓手机上是需要过 safetynet的验证，才会给你发</p>
+<p>是不是不理解，一堆新名词，简单来说就是，你的手机要有验证，而且客户端得是官方的，不是第三方的
+苹果手机的话都有认证的，完全不用担心，安卓的话国外的话一般都是有认证的，国内的话很多都是没有的
+其实这么做的原因就是为了省钱，杜叔叔家也没余粮了</p>
+<h1 id="3什么是safetynet">3什么是safetynet</h1>
+<p>看一看谷歌的文档<a href="https://developer.android.com/training/safetynet?hl=zh-cn">https://developer.android.com/training/safetynet?hl=zh-cn</a>
+简单来说就是谷歌整的一套验证机制，认证了，你的安卓手机才能装gms，当然你也可以通过特殊手段装上去，或者有gms也有没safeynet的</p>
+<h1 id="4怎么检测有没有呢">4怎么检测有没有呢</h1>
+<p>首先得是型号，华为用户的话mate30之后机子没有的，不用想了
+小米的话一般国行的中高端机子有自带的gms，设置里启用下就有了，实在太低端的机子的话真没有，因为这个得像谷歌交钱的，小米不愿意给
+国行没有的话，刷个外版，这种左转隔壁酷安
+oppo，vivo和子品牌一般外面有上市的话一般有的，这种你们去酷安搜下
+三星，索尼之类的国外手机品牌的话肯定是有的</p>
+<p>很简单，打开谷歌play商店-设置-关于，里面有个play保护机制认证，那个就是，我这台K40有的
+<img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310241249543.webp" alt=""></p>
+<p>如果没有的话收不到短信只是一个，有些第三方的app会下不了
+看奈菲的应该都知道，安卓手机上没这个是下不了的，谷歌商店直接会提示您的设备与此不兼容，或者直接搜不到，当然你也可以从其他地方侧载安装
+<img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310241249954.webp" alt=""></p>
+<h1 id="4为什么别人同款的有我的没有呢原因很多">4为什么别人同款的有，我的没有呢，原因很多</h1>
+<p>①解锁了，解bl锁之后这个会掉
+②国内版和国际版rom，我之前小米8，国行版的rom就是没有，刷了国际版之后就有了
+③root之后的话，开magisk hide，怎么过自己网上搜下，现在我也不玩机了</p>
+<h1 id="最后总结">最后总结</h1>
+<p>苹果没影响
+安卓机的话，得看safetynet，国外基本都有，没啥影响
+国内的话，这个看品牌，随缘</p>
+<p>参考
+<a href="https://zhuanlan.zhihu.com/p/142714153">https://zhuanlan.zhihu.com/p/142714153</a>
+<a href="https://t.me/outvivid/4033">https://t.me/outvivid/4033</a>
+<a href="https://t.me/tginfoen/1598">https://t.me/tginfoen/1598</a></p>
+</section>
+
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+</article>
+
+
+    </main>
+
+    <footer
+  class="mx-auto flex h-[4.5rem] max-w-[--w] items-center px-8 text-xs uppercase tracking-wider opacity-60"
+>
+  <div class="mr-auto">
+  
+    qklg.net
+  
+  </div>
+  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
+    >powered by hugo️️</a
+  >️
+  <a
+    class="link"
+    href="https://github.com/nanxiaobei/hugo-paper"
+    rel="noopener"
+    target="_blank"
+    >hugo-paper</a
+  >
+</footer>
+
+  </body>
+</html>

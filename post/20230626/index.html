@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <title>那些免费证书 | qklg</title>
+
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">    
+<meta name="viewport" content="width=device-width,minimum-scale=1">
+<meta name="description" content="1 一年的单域名的证书 都是国内云厂商提供的，都是要实名的 第一个是华为云和阿里云的encryption everywhere 华为云的怎么申请看这里 https://www.huaweicloud.com/zhishi/sslfree.html 阿里云的http">
+<meta name="generator" content="Hugo 0.133.1">
+
+
+  <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+
+ 
+  
+  
+    
+      <script async src="https://www.googletagmanager.com/gtag/js?id=your-disqus-shortname"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'your-disqus-shortname');
+        }
+      </script>
+    
+  
+
+
+
+
+
+
+
+
+
+  </head>
+
+  <body>
+    <nav class="navigation">
+	
+		<a href="/"> <span class="arrow">←</span>Home</a>
+	
+	<a href="/posts">Archive</a>
+	<a href="/tags">Tags</a>
+	<a href="/about">About</a>
+
+	
+
+	
+		
+  	
+</nav>	
+
+    <main class="main">
+      
+
+<section id="single">
+    <h1 class="title">那些免费证书</h1>
+
+    <div class="tip">
+        <time datetime="2023-06-26 13:33:59 &#43;0000 UTC">Jun 26, 2023</time>
+        <span class="split">
+          ·
+        </span>
+        <span>
+          919 words
+        </span>
+        <span class="split">
+          ·
+        </span>
+        <span>
+          2 minute read
+        </span>
+    </div>
+
+    
+    
+        
+  
+
+
+    
+
+
+    <div class="content">
+      <p>1   一年的单域名的证书
+都是国内云厂商提供的，都是要实名的
+第一个是华为云和阿里云的encryption everywhere</p>
+<p>华为云的怎么申请看这里
+<a href="https://www.huaweicloud.com/zhishi/sslfree.html" target="_blank" rel="noopener">https://www.huaweicloud.com/zhishi/sslfree.html</a>
+阿里云的<a href="https://developer.aliyun.com/article/875508" target="_blank" rel="noopener">https://developer.aliyun.com/article/875508</a>
+trust asia的，腾讯，宝塔，ucloud,青云，好像还有几个，
+但是记得，同一主域最多只能申请20张
+腾讯<a href="https://console.cloud.tencent.com/ssl" target="_blank" rel="noopener">https://console.cloud.tencent.com/ssl</a>,有个免费证书，点进去
+宝塔直接在面板里就有
+ucloud <a href="https://console.ucloud.cn/ussl/Free" target="_blank" rel="noopener">https://console.ucloud.cn/ussl/Free</a>
+青云<a href="https://www.qingcloud.com/pricing#/SSLCertificate" target="_blank" rel="noopener">https://www.qingcloud.com/pricing#/SSLCertificate</a></p>
+<p>2 acme.sh申请的三个月的通配符证书
+Let&rsquo;s Encrypt ,zerossl和谷歌的三个月的</p>
+<p>系统是debian
+①安装acme.sh</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>curl https://get.acme.sh | sh
+</span></span></code></pre></div><p>如果报错，安装socat</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>apt install socat -y
+</span></span></code></pre></div><p>确认acme.sh已经安装，显示acme.sh版本,如果没反应的话重启下</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>acme.sh -v
+</span></span></code></pre></div><p>②切换默认ca
+切换成Let&rsquo;s encrypt</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>acme.sh --set-default-ca --server letsencrypt
+</span></span></code></pre></div><p>切换成gcp的</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>acme.sh --set-default-ca --server google
+</span></span></code></pre></div><p>切换成zerossl</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>acme.sh --set-default-ca  --server zerossl
+</span></span></code></pre></div><p>zerossl要邮箱的，<a href="https://app.zerossl.com/signup" target="_blank" rel="noopener">https://app.zerossl.com/signup</a>,在这边注册个账户,然后输入下面的命令就行</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>acme.sh --register-account -m my@example.com
+</span></span></code></pre></div><p>②.5 如果用gcp的证书的话申请gcp证书的api
+<a href="https://console.cloud.google.com/" target="_blank" rel="noopener">https://console.cloud.google.com/</a></p>
+<p>cloudshell</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>gcloud beta publicca external-account-keys create
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>acme.sh --register-account --server google -m xxx@gmail.com 
+</span></span><span style="display:flex;"><span>--eab-hmac-key 申请到b64MacKey
+</span></span><span style="display:flex;"><span>--eab-kid 申请到的keyId]
+</span></span></code></pre></div><p>③设置api
+腾讯云dnspod api获取地址
+<a href="https://console.dnspod.cn/account/token/apikey" target="_blank" rel="noopener">https://console.dnspod.cn/account/token/apikey</a></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript3" data-lang="gdscript3"><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">export</span> DP_Id<span style="color:#666">=</span><span style="color:#b44">&#34;123456&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">export</span> DP_Key<span style="color:#666">=</span><span style="color:#b44">&#34;abcdefg&#34;</span>
+</span></span></code></pre></div><p>阿里云dns api
+<a href="https://usercenter.console.aliyun.com/#/manage/ak" target="_blank" rel="noopener">https://usercenter.console.aliyun.com/#/manage/ak</a></p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript3" data-lang="gdscript3"><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">export</span> Ali_Key<span style="color:#666">=</span><span style="color:#b44">&#34;AccessKeyId&#34;</span>
+</span></span><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">export</span> Ali_Secret<span style="color:#666">=</span><span style="color:#b44">&#34;AccessKeySecret&#34;</span>
+</span></span></code></pre></div><p>cloudflare的api的话
+<a href="https://dash.cloudflare.com/profile/api-tokens" target="_blank" rel="noopener">https://dash.cloudflare.com/profile/api-tokens</a>
+申请Global API Key</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-gdscript3" data-lang="gdscript3"><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">export</span> CF_Key<span style="color:#666">=</span><span style="color:#b44">&#34;Global API Key&#34;</span> 
+</span></span><span style="display:flex;"><span><span style="color:#a2f;font-weight:bold">export</span> CF_Email<span style="color:#666">=</span><span style="color:#b44">&#34;你cloudflare邮箱&#34;</span>
+</span></span></code></pre></div><p>④申请证书</p>
+<p>腾讯云dnspod</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>acme.sh --issue --dns dns_dp -d xxx.com -d *.xxx.com
+</span></span></code></pre></div><p>阿里云dns</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>acme.sh --issue --dns dns_ali -d xxx.com -d *.xxx.com
+</span></span></code></pre></div><p>cloudflare</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>acme.sh --issue --dns dns_cf -d *.xxx.com -d xxx.com
+</span></span></code></pre></div><p>还有半年的bypass证书，不过是单域名的，还不如阿里腾讯啥的一年的，我就没申请了
+不想敲命令的话，可以试下这个,在线申请
+<a href="https://letsencrypt.osfipin.com/" target="_blank" rel="noopener">https://letsencrypt.osfipin.com/</a>
+怎么玩的话看imgurl图床作者的博客
+<a href="https://blog.xiaoz.org/archives/18775" target="_blank" rel="noopener">https://blog.xiaoz.org/archives/18775</a>
+3cf的那个15年的是自签证书，要配合他家cdn用的，现在所有浏览器，谷歌chrome，微软edge，苹果safari，火狐，还有那种套壳的，里面的证书通通最多就13个月
+两年的证书已经成历史了
+这15年时给你回源用的，得配合cf的cdn，点亮小云朵才行</p>
+
+    </div>
+
+    
+    
+    
+
+</section>
+
+
+    </main>
+    
+    <footer id="footer">
+    
+
+    <div class="copyright">
+    
+        qklg Hosted on   <a href="https://pages.cloudflare.com/" target="_blank">  Cloudflare Pages </a>
+    
+    </div>
+
+    
+      <div class="powerby">
+        Powered by <a href='http://www.gohugo.io/'>Hugo</a> Theme By <a href='https://github.com/nodejh/hugo-theme-mini'>nodejh</a>
+      </div>
+    
+</footer>
+
+
+
+  </body>
+</html>

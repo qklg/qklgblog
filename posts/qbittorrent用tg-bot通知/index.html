@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=5854&amp;path=livereload" data-no-instant defer></script>
+    <title>qbittorrent用tg bot通知 | qklg</title>
+
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">    
+<meta name="viewport" content="width=device-width,minimum-scale=1">
+<meta name="description" content="如果你想用tg bot来管理你的qbittorrent的话 可以试下下面这两个 https://github.com/zeroone2numeral2/qbittorrent-bot 开源项目：用telegramBot控制qbittorrent https://hostloc.com/thread-1192407-1-1.html (">
+<meta name="generator" content="Hugo 0.133.1">
+
+
+  <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+
+ 
+  
+  
+    
+      <script async src="https://www.googletagmanager.com/gtag/js?id=your-google-analytics-id"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'your-google-analytics-id');
+        }
+      </script>
+    
+  
+
+
+
+
+
+
+
+
+
+  </head>
+
+  <body>
+    <nav class="navigation">
+	
+		<a href="/"> <span class="arrow">←</span>Home</a>
+	
+	<a href="/posts">Archive</a>
+	<a href="/tags">Tags</a>
+	<a href="/about">About</a>
+
+	
+
+	
+		
+  	
+</nav>	
+
+    <main class="main">
+      
+
+<section id="single">
+    <h1 class="title">qbittorrent用tg bot通知</h1>
+
+    <div class="tip">
+        <time datetime="2023-08-20 13:03:08 &#43;0000 UTC">Aug 20, 2023</time>
+        <span class="split">
+          ·
+        </span>
+        <span>
+          478 words
+        </span>
+        <span class="split">
+          ·
+        </span>
+        <span>
+          1 minute read
+        </span>
+    </div>
+
+    
+    
+        
+  
+
+
+    
+
+
+    <div class="content">
+      <p>如果你想用tg bot来管理你的qbittorrent的话
+可以试下下面这两个
+<a href="https://github.com/zeroone2numeral2/qbittorrent-bot" target="_blank" rel="noopener">https://github.com/zeroone2numeral2/qbittorrent-bot</a>
+开源项目：用telegramBot控制qbittorrent
+<a href="https://hostloc.com/thread-1192407-1-1.html" target="_blank" rel="noopener">https://hostloc.com/thread-1192407-1-1.html</a>
+(出处: 全球主机交流论坛)</p>
+<p>1
+botfather  <a href="https://t.me/BotFather" target="_blank" rel="noopener">https://t.me/BotFather</a>点击
+/newbot命令创建bot，按照提示创建bot的名字和用户名
+然后会有一个tokern在Use this token to access the HTTP API:后面，复制下</p>
+<p>2获取telgram的user id
+<a href="https://t.me/getidsbot" target="_blank" rel="noopener">https://t.me/getidsbot</a>，点击开始，
+id:后面的就是你的id了
+<p class="markdown-image">
+  <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310241303492.webp" alt=""  />
+</p>
+3打开qbittorrent设置-下载，拉到下面，运行外部程序
+<p class="markdown-image">
+  <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310241303465.webp" alt=""  />
+</p>
+新增 torrent 时运行外部程序</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>curl -X POST &#34;https://api.telegram.org/bot&lt;YourBotToken&gt;/sendMessage&#34; -d &#34;chat_id=&lt;ChatID&gt;&amp;text=text=%N正在下载.&#34;
+</span></span></code></pre></div><p>torrent 完成时运行外部程序</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>curl -X POST &#34;https://api.telegram.org/bot&lt;YourBotToken&gt;/sendMessage&#34; -d &#34;chat_id=&lt;ChatID&gt;&amp;text=text=%N完成下载.&#34;
+</span></span></code></pre></div><p><YourBotToken>换成1里面的botfather那里获取的token，<ChatID>换成2里面的id后面的那串数字
+点击保存，就好了
+其他的参数自己根据需要调，我只是用来下载时候通知下的
+最后效果如图
+<p class="markdown-image">
+  <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310241303088.webp" alt=""  />
+</p></p>
+
+    </div>
+
+    
+    
+    
+
+</section>
+
+
+    </main>
+    
+    <footer id="footer">
+    
+
+    <div class="copyright">
+    
+        qklg
+    
+    </div>
+
+    
+      <div class="powerby">
+        Powered by <a href='http://www.gohugo.io/'>Hugo</a> Theme By <a href='https://github.com/nodejh/hugo-theme-mini'>nodejh</a>
+      </div>
+    
+</footer>
+
+
+
+  </body>
+</html>

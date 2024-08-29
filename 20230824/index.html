@@ -1,0 +1,290 @@
+<!doctype html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html
+  class="not-ready lg:text-base"
+  style="--bg: #fff"
+  lang="en"
+  dir="ltr"
+>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=2518&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+
+  
+  <title>win10使用杜比视界 - qklg</title>
+
+  
+  <meta name="theme-color" />
+
+  
+  
+  
+  
+  <meta name="description" content="最近闲着无聊，折腾影音，来分享下win10怎么用杜比视界
+1hevc扩展 https://apps.microsoft.com/store/detail/%E6%9D%A5%E8%87%AA%E8%AE%BE%E5%A4%87%E5%88%B6%E9%80%A0%E5%95%86%E7%9A%84-hevc-%E8%A7%86%E9%A2%91%E6%89%A9%E5%B1%95/9N4WGH0Z6VHQ?hl=zh-cn&amp;gl=cn 点击这个直接安装 还不行的话，打开https://store.rg-adguard.net/,左边的上面的url link输入进去，或者Produc tId改成9N4WGH0Z6VHQ 然后选择8M的那个下载下来，手动安装 2Dolby Vision https://apps.microsoft.com/store/detail/dolby-vision/9MVMZ93N61T9 两个插件装好了，然后用win10自带的电影与电视打开就可以看杜比视界的视频了
+3怎么测支持不支持
+昨天我帖子里那个视频，我扒下来传google drive上了，没声音的，油管那个有问题，坛友反馈支持不支持都是蓝色的， https://drive.google.com/file/d/127yA0HCrB4vamveJ5zTWSJ5i73cAuqUL/view?usp=drive_link 下载下来视频，用win10自带的电影与电视打开，球是蓝色的话支持，绿色的话就是不支持 支持 不支持 装完还可以试下Netflix，俺这联想的笔记本整完可以点亮双杜比了，还要装个dolby access " />
+  <meta name="author" content="qklg" />
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="preload stylesheet" as="style" href="http://localhost:2518/main.min.css" />
+
+  
+  
+  
+  
+  
+  <link rel="preload" as="image" href="http://localhost:2518/theme.png" />
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  <script
+    defer
+    src="http://localhost:2518/highlight.min.js"
+    onload="hljs.initHighlightingOnLoad();"
+  ></script>
+  
+
+  
+  
+  
+
+  
+  <link
+    rel="icon"
+    href="http://localhost:2518/favicon.ico"
+  />
+  <link
+    rel="apple-touch-icon"
+    href="http://localhost:2518/apple-touch-icon.png"
+  />
+
+  
+  <meta name="generator" content="Hugo 0.133.1">
+
+  
+  
+  
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white">
+    <header class="mx-auto flex h-[4.5rem] max-w-[--w] px-8 lg:justify-center">
+  <div class="relative z-50 ltr:mr-auto rtl:ml-auto flex items-center">
+    <a class="-translate-y-[1px] text-2xl font-medium" href="http://localhost:2518/"
+      >qklg</a
+    >
+    <div
+      class="btn-dark text-[0] ltr:ml-4 rtl:mr-4 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
+      role="button"
+      aria-label="Dark"
+    ></div>
+  </div>
+
+  <div
+    class="btn-menu relative z-50 ltr:-mr-8 rtl:-ml-8 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+    role="button"
+    aria-label="Menu"
+  ></div>
+
+  
+
+  <script>
+    
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => {
+      htmlClass.remove('not-ready');
+    }, 10);
+
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
+
+    
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const lightBg = '#fff'.replace(/"/g, '');
+    const setDark = (isDark) => {
+      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
+      htmlClass[isDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', isDark);
+    };
+
+    
+    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    if (htmlClass.contains('dark')) {
+      setDark(true);
+    } else {
+      const darkVal = localStorage.getItem('dark');
+      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+    }
+
+    
+    darkScheme.addEventListener('change', (event) => {
+      setDark(event.matches);
+    });
+
+    
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(localStorage.getItem('dark') !== 'true');
+    });
+  </script>
+
+  <div
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-black lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"
+  >
+    
+    
+    <nav class="lg:ml-12 lg:flex lg:flex-row lg:items-center lg:space-x-10 rtl:space-x-reverse">
+      
+      <a
+        class="block text-center text-xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/about/"
+        >About</a
+      >
+      
+      <a
+        class="block text-center text-xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/contact/"
+        >Contact</a
+      >
+      
+    </nav>
+    
+
+    
+  </div>
+</header>
+
+
+    <main
+      class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] max-w-[--w] px-8 pb-16 pt-14 dark:prose-invert"
+    >
+      
+
+<article>
+  <header class="mb-14">
+    <h1 class="!my-0 pb-2.5">win10使用杜比视界</h1>
+
+    
+  </header>
+
+  <section><p>最近闲着无聊，折腾影音，来分享下win10怎么用杜比视界</p>
+<p>1hevc扩展
+<a href="https://apps.microsoft.com/store/detail/%E6%9D%A5%E8%87%AA%E8%AE%BE%E5%A4%87%E5%88%B6%E9%80%A0%E5%95%86%E7%9A%84-hevc-%E8%A7%86%E9%A2%91%E6%89%A9%E5%B1%95/9N4WGH0Z6VHQ?hl=zh-cn&amp;gl=cn">https://apps.microsoft.com/store/detail/%E6%9D%A5%E8%87%AA%E8%AE%BE%E5%A4%87%E5%88%B6%E9%80%A0%E5%95%86%E7%9A%84-hevc-%E8%A7%86%E9%A2%91%E6%89%A9%E5%B1%95/9N4WGH0Z6VHQ?hl=zh-cn&amp;gl=cn</a>
+点击这个直接安装
+还不行的话，打开<a href="https://store.rg-adguard.net/">https://store.rg-adguard.net/</a>,左边的上面的url link输入进去，或者Produc tId改成9N4WGH0Z6VHQ
+然后选择8M的那个下载下来，手动安装
+<img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310241257895.webp" alt="">
+2Dolby Vision
+<a href="https://apps.microsoft.com/store/detail/dolby-vision/9MVMZ93N61T9">https://apps.microsoft.com/store/detail/dolby-vision/9MVMZ93N61T9</a>
+两个插件装好了，然后用win10自带的电影与电视打开就可以看杜比视界的视频了</p>
+<p>3怎么测支持不支持</p>
+<p>昨天我帖子里那个视频，我扒下来传google drive上了，没声音的，油管那个有问题，坛友反馈支持不支持都是蓝色的，
+<a href="https://drive.google.com/file/d/127yA0HCrB4vamveJ5zTWSJ5i73cAuqUL/view?usp=drive_link">https://drive.google.com/file/d/127yA0HCrB4vamveJ5zTWSJ5i73cAuqUL/view?usp=drive_link</a>
+下载下来视频，用win10自带的电影与电视打开，球是蓝色的话支持，绿色的话就是不支持
+支持
+<img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310241257658.webp" alt="">
+不支持
+<img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310241257208.webp" alt="">
+装完还可以试下Netflix，俺这联想的笔记本整完可以点亮双杜比了，还要装个dolby access
+<img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310241257301.webp" alt=""></p>
+</section>
+
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+</article>
+
+
+    </main>
+
+    <footer
+  class="mx-auto flex h-[4.5rem] max-w-[--w] items-center px-8 text-xs uppercase tracking-wider opacity-60"
+>
+  <div class="mr-auto">
+  
+    qklg.net
+  
+  </div>
+  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
+    >powered by hugo️️</a
+  >️
+  <a
+    class="link"
+    href="https://github.com/nanxiaobei/hugo-paper"
+    rel="noopener"
+    target="_blank"
+    >hugo-paper</a
+  >
+</footer>
+
+  </body>
+</html>

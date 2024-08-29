@@ -1,0 +1,305 @@
+<!doctype html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html
+  class="not-ready lg:text-base"
+  style="--bg: #fff"
+  lang="en"
+  dir="ltr"
+>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=2518&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+
+  
+  <title>vir东京37号母鸡的v6解决了 - qklg</title>
+
+  
+  <meta name="theme-color" />
+
+  
+  
+  
+  
+  <meta name="description" content="感谢[url=home.php?mod=space&amp;uid=26740]@IDC888[/url] 和 [url=home.php?mod=space&amp;uid=45426]@landscape[/url] 大佬
+virmach东京的ipv6有能用的吗？ https://hostloc.com/thread-1186369-1-1.html (出处: 全球主机交流论坛) 看这个帖子的7楼landscape 大佬的办法 就是网关的问题 我37号母鸡，这个网关是2a12:a300:3700::1 其他母鸡应该是把37换成你所在母鸡的编号 群友29母鸡的网关是2a12:a300:2900::1
+37号母鸡的作业在下面，第一行的ip adr不要动，我的是/64，不知道为啥landscape大佬的是/40的，我没动 把第二行和第三行换成下面的，然后ssh打service networking restart就可以了，v6就出来了
+up ip addr add 2a12:a301:0:4::xxxx:xxxx/64 dev eth0up ip -6 route add 2a12:a300:3700::1 dev eth0up ip -6 route add default via 2a12:a300:3700::1 顺带测了下流媒体解锁 最后感谢一波vir胖子，本来买vir什么都不会的，现在啥也学会了，什么救援模式dd系统，vnc配网，还顺带学了个英语，pending这个单词以前不怎么认识，现在印象深刻，还可以享受性欲不加，还能帮胖子买跑车，做慈善，vir真是太棒了
+自己要dd的话用，我用的萌咖的dd脚本，这是debian10的，要11的话把-d后面的10换成11，12的话也行，前几天试了下，太吃内存了，就d回去了
+bash &lt;(wget --no-check-certificate -qO- &#39;https://raw.githubusercontent.com/MoeClub/Note/master/InstallNET.sh&#39;) -d 10 -v 64 -p &#34;密码&#34; -port &#34;端口&#34; dd完后，进 /etc/network/interfaces
+再后面加这几个，加完保存，reboot重启下就ok了,其他的有ipv6的小鸡也可以dd完这么加，ovh的0.97就能用
+iface ens3 inet6 staticaddress 2a12:a301:0:4::xxxx:xxxxnetmask 64gateway 2a12:a300:3700::1dns-nameservers 2001:4860:4860::8888 2001:4860:4860::8844 ens3的话改成你文件里前面IPV4中&quot;iface xxxx inet static&quot; address的话你vir面板的ipv6地址 netmask的话我的是64，也有40的，这个看你原版系统里的吧应该 gateway的话就是前面的网关，我37号母鸡的是2a12:a300:3700::1，群友的29号的是2a12:a300:2900::1，改成你自己所在母鸡的 dns的话我用谷歌的，你用cf的话也行，随便了" />
+  <meta name="author" content="qklg" />
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="preload stylesheet" as="style" href="http://localhost:2518/main.min.css" />
+
+  
+  
+  
+  
+  
+  <link rel="preload" as="image" href="http://localhost:2518/theme.png" />
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  <script
+    defer
+    src="http://localhost:2518/highlight.min.js"
+    onload="hljs.initHighlightingOnLoad();"
+  ></script>
+  
+
+  
+  
+  
+
+  
+  <link
+    rel="icon"
+    href="http://localhost:2518/favicon.ico"
+  />
+  <link
+    rel="apple-touch-icon"
+    href="http://localhost:2518/apple-touch-icon.png"
+  />
+
+  
+  <meta name="generator" content="Hugo 0.133.1">
+
+  
+  
+  
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white">
+    <header class="mx-auto flex h-[4.5rem] max-w-[--w] px-8 lg:justify-center">
+  <div class="relative z-50 ltr:mr-auto rtl:ml-auto flex items-center">
+    <a class="-translate-y-[1px] text-2xl font-medium" href="http://localhost:2518/"
+      >qklg</a
+    >
+    <div
+      class="btn-dark text-[0] ltr:ml-4 rtl:mr-4 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
+      role="button"
+      aria-label="Dark"
+    ></div>
+  </div>
+
+  <div
+    class="btn-menu relative z-50 ltr:-mr-8 rtl:-ml-8 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+    role="button"
+    aria-label="Menu"
+  ></div>
+
+  
+
+  <script>
+    
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => {
+      htmlClass.remove('not-ready');
+    }, 10);
+
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
+
+    
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const lightBg = '#fff'.replace(/"/g, '');
+    const setDark = (isDark) => {
+      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
+      htmlClass[isDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', isDark);
+    };
+
+    
+    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    if (htmlClass.contains('dark')) {
+      setDark(true);
+    } else {
+      const darkVal = localStorage.getItem('dark');
+      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+    }
+
+    
+    darkScheme.addEventListener('change', (event) => {
+      setDark(event.matches);
+    });
+
+    
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(localStorage.getItem('dark') !== 'true');
+    });
+  </script>
+
+  <div
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-black lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"
+  >
+    
+    
+    <nav class="lg:ml-12 lg:flex lg:flex-row lg:items-center lg:space-x-10 rtl:space-x-reverse">
+      
+      <a
+        class="block text-center text-xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/about/"
+        >About</a
+      >
+      
+      <a
+        class="block text-center text-xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/contact/"
+        >Contact</a
+      >
+      
+    </nav>
+    
+
+    
+  </div>
+</header>
+
+
+    <main
+      class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] max-w-[--w] px-8 pb-16 pt-14 dark:prose-invert"
+    >
+      
+
+<article>
+  <header class="mb-14">
+    <h1 class="!my-0 pb-2.5">vir东京37号母鸡的v6解决了</h1>
+
+    
+  </header>
+
+  <section><p>感谢[url=home.php?mod=space&amp;uid=26740]@IDC888[/url] 和 [url=home.php?mod=space&amp;uid=45426]@landscape[/url] 大佬</p>
+<p>virmach东京的ipv6有能用的吗？
+<a href="https://hostloc.com/thread-1186369-1-1.html">https://hostloc.com/thread-1186369-1-1.html</a>
+(出处: 全球主机交流论坛)
+看这个帖子的7楼landscape 大佬的办法
+就是网关的问题
+我37号母鸡，这个网关是2a12:a300:3700::1
+其他母鸡应该是把37换成你所在母鸡的编号
+群友29母鸡的网关是2a12:a300:2900::1</p>
+<p>37号母鸡的作业在下面，第一行的ip adr不要动，我的是/64，不知道为啥landscape大佬的是/40的，我没动
+把第二行和第三行换成下面的，然后ssh打service networking restart就可以了，v6就出来了</p>
+<pre tabindex="0"><code>   up ip addr add 2a12:a301:0:4::xxxx:xxxx/64 dev eth0
+   up ip -6 route add 2a12:a300:3700::1 dev eth0
+   up ip -6 route add default via 2a12:a300:3700::1
+</code></pre><p>顺带测了下流媒体解锁
+<img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310241320986.webp" alt=""></p>
+<p>最后感谢一波vir胖子，本来买vir什么都不会的，现在啥也学会了，什么救援模式dd系统，vnc配网，还顺带学了个英语，pending这个单词以前不怎么认识，现在印象深刻，还可以享受性欲不加，还能帮胖子买跑车，做慈善，vir真是太棒了</p>
+<p>自己要dd的话用，我用的萌咖的dd脚本，这是debian10的，要11的话把-d后面的10换成11，12的话也行，前几天试了下，太吃内存了，就d回去了</p>
+<pre tabindex="0"><code>bash &lt;(wget --no-check-certificate -qO- &#39;https://raw.githubusercontent.com/MoeClub/Note/master/InstallNET.sh&#39;) -d 10 -v 64 -p &#34;密码&#34; -port &#34;端口&#34;
+</code></pre><p>dd完后，进 /etc/network/interfaces</p>
+<p>再后面加这几个，加完保存，reboot重启下就ok了,其他的有ipv6的小鸡也可以dd完这么加，ovh的0.97就能用</p>
+<pre tabindex="0"><code>iface ens3 inet6 static
+address 2a12:a301:0:4::xxxx:xxxx
+netmask 64
+gateway 2a12:a300:3700::1
+dns-nameservers 2001:4860:4860::8888 2001:4860:4860::8844
+</code></pre><p>ens3的话改成你文件里前面IPV4中&quot;iface xxxx inet static&quot;
+address的话你vir面板的ipv6地址
+netmask的话我的是64，也有40的，这个看你原版系统里的吧应该
+gateway的话就是前面的网关，我37号母鸡的是2a12:a300:3700::1，群友的29号的是2a12:a300:2900::1，改成你自己所在母鸡的
+dns的话我用谷歌的，你用cf的话也行，随便了</p>
+</section>
+
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+</article>
+
+
+    </main>
+
+    <footer
+  class="mx-auto flex h-[4.5rem] max-w-[--w] items-center px-8 text-xs uppercase tracking-wider opacity-60"
+>
+  <div class="mr-auto">
+  
+    qklg.net
+  
+  </div>
+  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
+    >powered by hugo️️</a
+  >️
+  <a
+    class="link"
+    href="https://github.com/nanxiaobei/hugo-paper"
+    rel="noopener"
+    target="_blank"
+    >hugo-paper</a
+  >
+</footer>
+
+  </body>
+</html>

@@ -1,0 +1,333 @@
+<!doctype html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html
+  class="not-ready lg:text-base"
+  style="--bg: #fff"
+  lang="en"
+  dir="ltr"
+>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=3431&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+
+  
+  <title>搬瓦工vps的一点小建议 - qklg</title>
+
+  
+  <meta name="theme-color" />
+
+  
+  
+  
+  
+  <meta name="description" content="论坛现在全是瓦工aff， 我来说下瓦工有啥，该怎么买
+这是the plan的切机房的图，我把优化线路都表了下
+去掉普通线路和日本和香港的贵族gia，还有垃圾gt的话别买了
+瓦工现在其他的优化线路，我来捋一遍
+xtom下游的 香港cmi 日本软银 澳洲9929 荷兰9929 还有新上的加拿大的gia，上游也是xtom
+dc6和dc9的洛杉矶gia
+爬墙的话，怎么选 联通上日本软银，移动上香港的cmi，电信的话dc6和9的gia 其实联通的话ntt，iij，软银，这三个你真用不出来什么区别的，反正就那速度上去了，也没啥区别 你油管三十万和三四万，没区别，都能看4K,何况很多人屏幕还是1080P 爬墙的话电信还是高贵的gia吧，联通的话随便是个机都能起飞，移动拿cf救下，是个机也能起飞的， 胖子10刀的iij才是mjj的快乐老家
+不急的话等黑五，五折云的小秘书估计又得出来了，你只爬墙的话真不如直接买小秘书，虽然小秘书口碑不好，3年和5年容易当韭菜，但是便宜啊 3年45欧，mjj还是香喷喷
+46刀的怎么评价 1核512M内存10G硬盘500G流量 外面写着软银和dc6，但是进去还有dc9和荷兰9929，和原来的传家宝一样 流量小的可以上，500G你用不完的话可以上，差个香港cmi，不然真的是神机了 荷兰9929可以用来反代你德国hz，法国ovh的杜甫，美西的dc6和9可以电信爬墙，也可以反代你美西的杜甫，不过流量就500G 软银可以联通用来爬墙，唯一的缺少的就是个香港cmi了 你要流量大的话，性价比不如the plan，去收一个，或者等一等有没有the plan v3 这款后面应该是可以溢价的 记得准备出的话一定要准备个新邮箱，以后带邮箱出
+69刀那个只有软银的，和89刀的FREEDOM PLAN 那几个套餐别买了，不如the plan" />
+  <meta name="author" content="qklg" />
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="preload stylesheet" as="style" href="http://localhost:3431/main.min.css" />
+
+  
+  
+  
+  
+  
+  <link rel="preload" as="image" href="http://localhost:3431/theme.png" />
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  <script
+    defer
+    src="http://localhost:3431/highlight.min.js"
+    onload="hljs.initHighlightingOnLoad();"
+  ></script>
+  
+
+  
+  
+  
+
+  
+  <link
+    rel="icon"
+    href="http://localhost:3431/favicon.ico"
+  />
+  <link
+    rel="apple-touch-icon"
+    href="http://localhost:3431/apple-touch-icon.png"
+  />
+
+  
+  <meta name="generator" content="Hugo 0.133.1">
+
+  
+  
+  
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white">
+    <header class="mx-auto flex h-[4.5rem] max-w-[--w] px-8 lg:justify-center">
+  <div class="relative z-50 ltr:mr-auto rtl:ml-auto flex items-center">
+    <a class="-translate-y-[1px] text-2xl font-medium" href="http://localhost:3431/"
+      >qklg</a
+    >
+    <div
+      class="btn-dark text-[0] ltr:ml-4 rtl:mr-4 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
+      role="button"
+      aria-label="Dark"
+    ></div>
+  </div>
+
+  <div
+    class="btn-menu relative z-50 ltr:-mr-8 rtl:-ml-8 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+    role="button"
+    aria-label="Menu"
+  ></div>
+
+  
+
+  <script>
+    
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => {
+      htmlClass.remove('not-ready');
+    }, 10);
+
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
+
+    
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const lightBg = '#fff'.replace(/"/g, '');
+    const setDark = (isDark) => {
+      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
+      htmlClass[isDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', isDark);
+    };
+
+    
+    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    if (htmlClass.contains('dark')) {
+      setDark(true);
+    } else {
+      const darkVal = localStorage.getItem('dark');
+      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+    }
+
+    
+    darkScheme.addEventListener('change', (event) => {
+      setDark(event.matches);
+    });
+
+    
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(localStorage.getItem('dark') !== 'true');
+    });
+  </script>
+
+  <div
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-black lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"
+  >
+    
+    
+    <nav class="lg:ml-12 lg:flex lg:flex-row lg:items-center lg:space-x-10 rtl:space-x-reverse">
+      
+      <a
+        class="block text-center text-xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/about/"
+        >About</a
+      >
+      
+      <a
+        class="block text-center text-xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/contact/"
+        >Contact</a
+      >
+      
+    </nav>
+    
+
+    
+  </div>
+</header>
+
+
+    <main
+      class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] max-w-[--w] px-8 pb-16 pt-14 dark:prose-invert"
+    >
+      
+
+<article>
+  <header class="mb-14">
+    <h1 class="!my-0 pb-2.5">搬瓦工vps的一点小建议</h1>
+
+    
+    <div class="text-xs antialiased opacity-60">
+      
+      <time>Sep 12, 2023</time>
+      
+      
+      
+      
+    </div>
+    
+  </header>
+
+  <section><p>论坛现在全是瓦工aff，
+我来说下瓦工有啥，该怎么买</p>
+<p><img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310212340390.webp" alt="">
+这是the plan的切机房的图，我把优化线路都表了下</p>
+<p>去掉普通线路和日本和香港的贵族gia，还有垃圾gt的话别买了</p>
+<p>瓦工现在其他的优化线路，我来捋一遍</p>
+<p>xtom下游的
+香港cmi
+日本软银
+澳洲9929
+荷兰9929
+还有新上的加拿大的gia，上游也是xtom</p>
+<p>dc6和dc9的洛杉矶gia</p>
+<p>爬墙的话，怎么选
+联通上日本软银，移动上香港的cmi，电信的话dc6和9的gia
+其实联通的话ntt，iij，软银，这三个你真用不出来什么区别的，反正就那速度上去了，也没啥区别
+你油管三十万和三四万，没区别，都能看4K,何况很多人屏幕还是1080P
+爬墙的话电信还是高贵的gia吧，联通的话随便是个机都能起飞，移动拿cf救下，是个机也能起飞的，
+胖子10刀的iij才是mjj的快乐老家</p>
+<p>不急的话等黑五，五折云的小秘书估计又得出来了，你只爬墙的话真不如直接买小秘书，虽然小秘书口碑不好，3年和5年容易当韭菜，但是便宜啊
+3年45欧，mjj还是香喷喷</p>
+<p>46刀的怎么评价
+1核512M内存10G硬盘500G流量
+外面写着软银和dc6，但是进去还有dc9和荷兰9929，和原来的传家宝一样
+流量小的可以上，500G你用不完的话可以上，差个香港cmi，不然真的是神机了
+荷兰9929可以用来反代你德国hz，法国ovh的杜甫，美西的dc6和9可以电信爬墙，也可以反代你美西的杜甫，不过流量就500G
+软银可以联通用来爬墙，唯一的缺少的就是个香港cmi了
+你要流量大的话，性价比不如the plan，去收一个，或者等一等有没有the plan v3
+<img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310212340952.webp" alt=""></p>
+<p>这款后面应该是可以溢价的
+记得准备出的话一定要准备个新邮箱，以后带邮箱出</p>
+<p>69刀那个只有软银的，和89刀的FREEDOM PLAN
+那几个套餐别买了，不如the plan</p>
+</section>
+
+  
+  
+
+  
+  
+  
+  
+  <nav
+    class="mt-24 flex overflow-hidden rounded-xl bg-black/[3%] text-lg !leading-[1.2] *:flex *:w-1/2 *:items-center *:p-5 *:font-medium *:no-underline dark:bg-white/[8%] [&>*:hover]:bg-black/[2%] dark:[&>*:hover]:bg-white/[3%]"
+  >
+    
+    <a class="ltr:pr-3 rtl:pl-3" href="http://localhost:3431/posts/20230913/"
+      ><span class="ltr:mr-1.5 rtl:ml-1.5">←</span><span>国际出口18Tbps</span></a
+    >
+    
+    
+    <a class="ltr:ml-auto rtl:mr-auto justify-end pl-3" href="http://localhost:3431/posts/20230910/"
+      ><span>ios,安卓和win跑流媒体解锁检测脚本</span><span class="ltr:ml-1.5 rtl:mr-1.5">→</span></a
+    >
+    
+  </nav>
+  
+  
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+</article>
+
+
+    </main>
+
+    <footer
+  class="mx-auto flex h-[4.5rem] max-w-[--w] items-center px-8 text-xs uppercase tracking-wider opacity-60"
+>
+  <div class="mr-auto">
+  
+    qklg.net
+  
+  </div>
+  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
+    >powered by hugo️️</a
+  >️
+  <a
+    class="link"
+    href="https://github.com/nanxiaobei/hugo-paper"
+    rel="noopener"
+    target="_blank"
+    >hugo-paper</a
+  >
+</footer>
+
+  </body>
+</html>

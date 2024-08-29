@@ -1,0 +1,291 @@
+<!doctype html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html
+  class="not-ready lg:text-base"
+  style="--bg: #fff"
+  lang="en"
+  dir="ltr"
+>
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=2518&amp;path=livereload" data-no-instant defer></script>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, shrink-to-fit=no"
+  />
+
+  
+  <title>最近折腾回家看片，分享点经验 - qklg</title>
+
+  
+  <meta name="theme-color" />
+
+  
+  
+  
+  
+  <meta name="description" content="鉴于移动没公网ipv4，电信联通也在日益收回v4，有兴趣的话可以看下，分享点经验 1怎么回家，我用的ipv6回家的，本人测试了下基于tcp的openvpn和基于udp的wireguard 配置很简单的，谷歌搜下就有了，我是在我本地1000下，100Mbps的上行的宽带下测试的，家里的openwrt的n5105的软路由上建的openwrt 联通流量的ipv6连回家的 主要问题就是联通流量到移动宽带的ipv6互联太差了，直接ping过去延迟都有三十多ms，就有点离谱 不说了，直接上图，wg的qos很严重 openvpn的多线程和单线程测速 wiregurad的多线程和单线程测速 多次测试差不多，其实也能用，不过延迟确实有点高，这没办法，v6的互联确实很差
+2打洞 本来买了个宿迁的nat打洞的，结果老板骚操作，没法用了 玩玩cf tunnel吧 cf tunnel国内一般分配的美西的服务器 我分配的是这几个 直连过去，一来一回延迟爆炸 不过速度倒是还不错 试了下今天刚下的球2，居然能看，原始码率能看，就是拖进度条有点慢 " />
+  <meta name="author" content="qklg" />
+  
+
+  
+  
+  
+  
+  
+  
+  <link rel="preload stylesheet" as="style" href="http://localhost:2518/main.min.css" />
+
+  
+  
+  
+  
+  
+  <link rel="preload" as="image" href="http://localhost:2518/theme.png" />
+
+  
+  
+  
+  
+  
+
+  
+  
+  
+
+  
+  
+  <script
+    defer
+    src="http://localhost:2518/highlight.min.js"
+    onload="hljs.initHighlightingOnLoad();"
+  ></script>
+  
+
+  
+  
+  
+
+  
+  <link
+    rel="icon"
+    href="http://localhost:2518/favicon.ico"
+  />
+  <link
+    rel="apple-touch-icon"
+    href="http://localhost:2518/apple-touch-icon.png"
+  />
+
+  
+  <meta name="generator" content="Hugo 0.133.1">
+
+  
+  
+  
+</head>
+
+  <body class="text-black duration-200 ease-out dark:text-white">
+    <header class="mx-auto flex h-[4.5rem] max-w-[--w] px-8 lg:justify-center">
+  <div class="relative z-50 ltr:mr-auto rtl:ml-auto flex items-center">
+    <a class="-translate-y-[1px] text-2xl font-medium" href="http://localhost:2518/"
+      >qklg</a
+    >
+    <div
+      class="btn-dark text-[0] ltr:ml-4 rtl:mr-4 h-6 w-6 shrink-0 cursor-pointer [background:url(./theme.png)_left_center/_auto_theme('spacing.6')_no-repeat] [transition:_background-position_0.4s_steps(5)] dark:[background-position:right]"
+      role="button"
+      aria-label="Dark"
+    ></div>
+  </div>
+
+  <div
+    class="btn-menu relative z-50 ltr:-mr-8 rtl:-ml-8 flex h-[4.5rem] w-[5rem] shrink-0 cursor-pointer flex-col items-center justify-center gap-2.5 lg:hidden"
+    role="button"
+    aria-label="Menu"
+  ></div>
+
+  
+
+  <script>
+    
+    const htmlClass = document.documentElement.classList;
+    setTimeout(() => {
+      htmlClass.remove('not-ready');
+    }, 10);
+
+    
+    const btnMenu = document.querySelector('.btn-menu');
+    btnMenu.addEventListener('click', () => {
+      htmlClass.toggle('open');
+    });
+
+    
+    const metaTheme = document.querySelector('meta[name="theme-color"]');
+    const lightBg = '#fff'.replace(/"/g, '');
+    const setDark = (isDark) => {
+      metaTheme.setAttribute('content', isDark ? '#000' : lightBg);
+      htmlClass[isDark ? 'add' : 'remove']('dark');
+      localStorage.setItem('dark', isDark);
+    };
+
+    
+    const darkScheme = window.matchMedia('(prefers-color-scheme: dark)');
+    if (htmlClass.contains('dark')) {
+      setDark(true);
+    } else {
+      const darkVal = localStorage.getItem('dark');
+      setDark(darkVal ? darkVal === 'true' : darkScheme.matches);
+    }
+
+    
+    darkScheme.addEventListener('change', (event) => {
+      setDark(event.matches);
+    });
+
+    
+    const btnDark = document.querySelector('.btn-dark');
+    btnDark.addEventListener('click', () => {
+      setDark(localStorage.getItem('dark') !== 'true');
+    });
+  </script>
+
+  <div
+    class="nav-wrapper fixed inset-x-0 top-full z-40 flex h-full select-none flex-col justify-center pb-16 duration-200 dark:bg-black lg:static lg:h-auto lg:flex-row lg:!bg-transparent lg:pb-0 lg:transition-none"
+  >
+    
+    
+    <nav class="lg:ml-12 lg:flex lg:flex-row lg:items-center lg:space-x-10 rtl:space-x-reverse">
+      
+      <a
+        class="block text-center text-xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/about/"
+        >About</a
+      >
+      
+      <a
+        class="block text-center text-xl leading-[5rem] lg:text-base lg:font-normal"
+        href="/contact/"
+        >Contact</a
+      >
+      
+    </nav>
+    
+
+    
+  </div>
+</header>
+
+
+    <main
+      class="prose prose-neutral relative mx-auto min-h-[calc(100%-9rem)] max-w-[--w] px-8 pb-16 pt-14 dark:prose-invert"
+    >
+      
+
+<article>
+  <header class="mb-14">
+    <h1 class="!my-0 pb-2.5">最近折腾回家看片，分享点经验</h1>
+
+    
+  </header>
+
+  <section><p>鉴于移动没公网ipv4，电信联通也在日益收回v4，有兴趣的话可以看下，分享点经验
+1怎么回家，我用的ipv6回家的，本人测试了下基于tcp的openvpn和基于udp的wireguard
+配置很简单的，谷歌搜下就有了，我是在我本地1000下，100Mbps的上行的宽带下测试的，家里的openwrt的n5105的软路由上建的openwrt
+联通流量的ipv6连回家的
+主要问题就是联通流量到移动宽带的ipv6互联太差了，直接ping过去延迟都有三十多ms，就有点离谱
+不说了，直接上图，wg的qos很严重
+openvpn的多线程和单线程测速
+<img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310212350775.webp" alt="">
+<img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310212350294.webp" alt="">
+wiregurad的多线程和单线程测速
+<img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310212351043.webp" alt="">
+<img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310212351432.webp" alt=""></p>
+<p>多次测试差不多，其实也能用，不过延迟确实有点高，这没办法，v6的互联确实很差</p>
+<p>2打洞
+本来买了个宿迁的nat打洞的，结果老板骚操作，没法用了
+玩玩cf tunnel吧
+cf tunnel国内一般分配的美西的服务器
+我分配的是这几个
+<img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310212351744.webp" alt="">
+直连过去，一来一回延迟爆炸
+不过速度倒是还不错
+试了下今天刚下的球2，居然能看，原始码率能看，就是拖进度条有点慢
+<img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310212351478.webp" alt=""></p>
+</section>
+
+  
+  
+
+  
+  
+  
+  
+  
+
+  
+  
+
+  
+  
+
+  
+
+
+  
+</article>
+
+
+    </main>
+
+    <footer
+  class="mx-auto flex h-[4.5rem] max-w-[--w] items-center px-8 text-xs uppercase tracking-wider opacity-60"
+>
+  <div class="mr-auto">
+  
+    qklg.net
+  
+  </div>
+  <a class="link mx-6" href="https://gohugo.io/" rel="noopener" target="_blank"
+    >powered by hugo️️</a
+  >️
+  <a
+    class="link"
+    href="https://github.com/nanxiaobei/hugo-paper"
+    rel="noopener"
+    target="_blank"
+    >hugo-paper</a
+  >
+</footer>
+
+  </body>
+</html>

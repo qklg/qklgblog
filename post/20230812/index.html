@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <title>【宝典在手,江山我有】小白闯江湖之常用一键脚本! | qklg</title>
+
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">    
+<meta name="viewport" content="width=device-width,minimum-scale=1">
+<meta name="description" content="termius订阅掉了 换到新账户，把老的资料备份下 顺带发给给位mjj，常用的应该都有了 根据@Kdkdk 大佬的意见，修改了下，做了下分类，并且">
+<meta name="generator" content="Hugo 0.133.1">
+
+
+  <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+
+ 
+  
+  
+    
+      <script async src="https://www.googletagmanager.com/gtag/js?id=your-disqus-shortname"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'your-disqus-shortname');
+        }
+      </script>
+    
+  
+
+
+
+
+
+
+
+
+
+  </head>
+
+  <body>
+    <nav class="navigation">
+	
+		<a href="/"> <span class="arrow">←</span>Home</a>
+	
+	<a href="/posts">Archive</a>
+	<a href="/tags">Tags</a>
+	<a href="/about">About</a>
+
+	
+
+	
+		
+  	
+</nav>	
+
+    <main class="main">
+      
+
+<section id="single">
+    <h1 class="title">【宝典在手,江山我有】小白闯江湖之常用一键脚本!</h1>
+
+    <div class="tip">
+        <time datetime="2023-08-12 13:07:50 &#43;0000 UTC">Aug 12, 2023</time>
+        <span class="split">
+          ·
+        </span>
+        <span>
+          1093 words
+        </span>
+        <span class="split">
+          ·
+        </span>
+        <span>
+          3 minute read
+        </span>
+    </div>
+
+    
+    
+        
+  
+    <aside class="toc">
+      <details>
+          <summary>Table of Contents
+          </summary>
+          <div>
+              <nav id="TableOfContents">
+  <ul>
+    <li><a href="#三网测速">三网测速</a></li>
+    <li><a href="#hyperspeed">Hyperspeed</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#geekbench和yabs">geekbench和yabs</a></li>
+    <li><a href="#benchsh">bench.sh</a></li>
+    <li><a href="#硬盘测试">硬盘测试</a></li>
+    <li><a href="#超售检测">超售检测</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#流媒体检测">流媒体检测</a></li>
+    <li><a href="#四网回程测试">四网回程测试</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#warp">warp</a></li>
+  </ul>
+</nav>
+          </div>
+      </details>
+    </aside>
+  
+
+
+    
+
+
+    <div class="content">
+      <p>termius订阅掉了
+换到新账户，把老的资料备份下
+<p class="markdown-image">
+  <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310241308286.webp" alt=""  />
+</p>
+顺带发给给位mjj，常用的应该都有了
+根据@Kdkdk 大佬的意见，修改了下，做了下分类，并且加上了来源</p>
+<h1 id="网络测试类脚本">网络测试类脚本 <a href="#%e7%bd%91%e7%bb%9c%e6%b5%8b%e8%af%95%e7%b1%bb%e8%84%9a%e6%9c%ac" class="anchor">🔗</a></h1><h2 id="三网测速">三网测速 <a href="#%e4%b8%89%e7%bd%91%e6%b5%8b%e9%80%9f" class="anchor">🔗</a></h2><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>bash &lt;(curl -Lso- https://www.infski.com/files/superspeed.sh)
+</span></span></code></pre></div><p>来源:<a href="https://www.hostloc.com/thread-1076459-1-1.html" target="_blank" rel="noopener">https://www.hostloc.com/thread-1076459-1-1.html</a>
+用途:三网多线程测速</p>
+<h2 id="hyperspeed">Hyperspeed <a href="#hyperspeed" class="anchor">🔗</a></h2><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>bash &lt;(curl -Lso- https://bench.im/hyperspeed)
+</span></span></code></pre></div><p>来源:<a href="https://hostloc.com/thread-1076585-1-1.html" target="_blank" rel="noopener">https://hostloc.com/thread-1076585-1-1.html</a>
+用途:测试三网单线程测速，比方说油管速度就是单线程</p>
+<h1 id="硬件测试类脚本">硬件测试类脚本 <a href="#%e7%a1%ac%e4%bb%b6%e6%b5%8b%e8%af%95%e7%b1%bb%e8%84%9a%e6%9c%ac" class="anchor">🔗</a></h1><h2 id="geekbench和yabs">geekbench和yabs <a href="#geekbench%e5%92%8cyabs" class="anchor">🔗</a></h2><p>geekbench5</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>curl -sL yabs.sh|bash -s -- -if -fdi5
+</span></span></code></pre></div><p>yabs</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>curl -sL yabs.sh | bash
+</span></span></code></pre></div><p>来源:<a href="https://github.com/masonr/yet-another-bench-script" target="_blank" rel="noopener">https://github.com/masonr/yet-another-bench-script</a>
+用途:geekbench5只测试小鸡的cpu的geekbench5的跑分，去掉了网络和硬盘测试
+现在的yabs默认是6，yabs同时还提供小鸡的硬盘和网络测试，具体详细的参数看作者github的readme</p>
+<h2 id="benchsh">bench.sh <a href="#benchsh" class="anchor">🔗</a></h2><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>wget -qO- bench.sh | bash
+</span></span></code></pre></div><p>来源:<a href="https://teddysun.com/444.html" target="_blank" rel="noopener">https://teddysun.com/444.html</a>
+用途:秋水大佬的脚本，可以显示linux小鸡的详细信息，以及硬盘和网络的测试
+如果要测试小鸡国外的速度的话，用这个</p>
+<h2 id="硬盘测试">硬盘测试 <a href="#%e7%a1%ac%e7%9b%98%e6%b5%8b%e8%af%95" class="anchor">🔗</a></h2><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>dd bs=64k count=4k if=/dev/zero of=test oflag=dsync
+</span></span></code></pre></div><p>用途:用dd命令测试小鸡的硬盘性能</p>
+<h2 id="超售检测">超售检测 <a href="#%e8%b6%85%e5%94%ae%e6%a3%80%e6%b5%8b" class="anchor">🔗</a></h2><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>curl https://raw.githubusercontent.com/uselibrary/memoryCheck/main/memoryCheck.sh | bash
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>wget --no-check-certificate -O memoryCheck.sh https://raw.githubusercontent.com/uselibrary/memoryCheck/main/memoryCheck.sh &amp;&amp; chmod +x memoryCheck.sh &amp;&amp; bash memoryCheck.sh
+</span></span></code></pre></div><p>来源:<a href="https://hostloc.com/thread-1187330-1-1.html" target="_blank" rel="noopener">https://hostloc.com/thread-1187330-1-1.html</a>
+用途：检测小鸡是否超售，不过其实自己买小鸡那价格超没超售，都应该心知肚明了
+有钱还是上杜甫</p>
+<h1 id="ip检测">ip检测 <a href="#ip%e6%a3%80%e6%b5%8b" class="anchor">🔗</a></h1><h2 id="流媒体检测">流媒体检测 <a href="#%e6%b5%81%e5%aa%92%e4%bd%93%e6%a3%80%e6%b5%8b" class="anchor">🔗</a></h2><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>bash &lt;(curl -L -s https://raw.githubusercontent.com/lmc999/RegionRestrictionCheck/main/check.sh)
+</span></span></code></pre></div><p>来源:<a href="https://github.com/lmc999/RegionRestrictionCheck" target="_blank" rel="noopener">https://github.com/lmc999/RegionRestrictionCheck</a>
+用途:测试小鸡ip的流媒体以及chatgpt解锁，同时这个脚本在安卓的temux，ios上ish，mac的终端上也是能用的，可以用来判断机场的节点是否支持解锁
+windows的话可以用linux子系统</p>
+<h2 id="四网回程测试">四网回程测试 <a href="#%e5%9b%9b%e7%bd%91%e5%9b%9e%e7%a8%8b%e6%b5%8b%e8%af%95" class="anchor">🔗</a></h2><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>wget -O jcnf.sh https://raw.githubusercontent.com/Netflixxp/jcnfbesttrace/main/jcnf.sh &amp;&amp; chmod +x jcnf.sh &amp;&amp; clear &amp;&amp;./jcnf.sh
+</span></span></code></pre></div><p>来源:<a href="https://github.com/Netflixxp/jcnfbesttrace" target="_blank" rel="noopener">https://github.com/Netflixxp/jcnfbesttrace</a>
+用途:测试小鸡的四网回程路由，三大运营商和教育网的路由</p>
+<h1 id="综合脚本">综合脚本 <a href="#%e7%bb%bc%e5%90%88%e8%84%9a%e6%9c%ac" class="anchor">🔗</a></h1><p>融合怪</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>bash &lt;(wget -qO- --no-check-certificate https://gitlab.com/spiritysdx/za/-/raw/main/ecs.sh)
+</span></span></code></pre></div><p>来源:<a href="https://github.com/spiritLHLS/ecs" target="_blank" rel="noopener">https://github.com/spiritLHLS/ecs</a></p>
+<p>lemonbench</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>wget -qO- https://raw.githubusercontent.com/LemonBench/LemonBench/main/LemonBench.sh | bash -s -- --fast
+</span></span></code></pre></div><p>来源:<a href="https://github.com/LemonBench/LemonBench" target="_blank" rel="noopener">https://github.com/LemonBench/LemonBench</a></p>
+<p>用途：上面两个都是综合测试小鸡的各项性能，怎么用看作者的readme</p>
+<h2 id="warp">warp <a href="#warp" class="anchor">🔗</a></h2><p>wgcf</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>wget -N https://gitlab.com/fscarmen/warp/-/raw/main/menu.sh &amp;&amp; bash menu.sh
+</span></span></code></pre></div><p>Warp-go</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>wget -N https://gitlab.com/fscarmen/warp/-/raw/main/warp-go.sh &amp;&amp; bash warp-go.sh
+</span></span></code></pre></div>
+    </div>
+
+    
+    
+    
+
+</section>
+
+
+    </main>
+    
+    <footer id="footer">
+    
+
+    <div class="copyright">
+    
+        qklg Hosted on   <a href="https://pages.cloudflare.com/" target="_blank">  Cloudflare Pages </a>
+    
+    </div>
+
+    
+      <div class="powerby">
+        Powered by <a href='http://www.gohugo.io/'>Hugo</a> Theme By <a href='https://github.com/nodejh/hugo-theme-mini'>nodejh</a>
+      </div>
+    
+</footer>
+
+
+
+  </body>
+</html>

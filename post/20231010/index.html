@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <title>分享个ping主机，通知telegram bot的脚本 | qklg</title>
+
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">    
+<meta name="viewport" content="width=device-width,minimum-scale=1">
+<meta name="description" content="家里的黑群晖老是宕机，每次宕机都没意识到， 所以用chatgpt写了个小东西，这玩意别说还真挺好用的 直接ping主机，每隔15秒ping一次，">
+<meta name="generator" content="Hugo 0.133.1">
+
+
+  <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+
+ 
+  
+  
+    
+      <script async src="https://www.googletagmanager.com/gtag/js?id=your-disqus-shortname"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'your-disqus-shortname');
+        }
+      </script>
+    
+  
+
+
+
+
+
+
+
+
+
+  </head>
+
+  <body>
+    <nav class="navigation">
+	
+		<a href="/"> <span class="arrow">←</span>Home</a>
+	
+	<a href="/posts">Archive</a>
+	<a href="/tags">Tags</a>
+	<a href="/about">About</a>
+
+	
+
+	
+		
+  	
+</nav>	
+
+    <main class="main">
+      
+
+<section id="single">
+    <h1 class="title">分享个ping主机，通知telegram bot的脚本</h1>
+
+    <div class="tip">
+        <time datetime="2023-10-10 23:30:38 &#43;0000 UTC">Oct 10, 2023</time>
+        <span class="split">
+          ·
+        </span>
+        <span>
+          488 words
+        </span>
+        <span class="split">
+          ·
+        </span>
+        <span>
+          1 minute read
+        </span>
+    </div>
+
+    
+    
+        
+  
+
+
+    
+
+
+    <div class="content">
+      <p>家里的黑群晖老是宕机，每次宕机都没意识到，
+所以用chatgpt写了个小东西，这玩意别说还真挺好用的
+直接ping主机，每隔15秒ping一次，ping不通就通知tg的bot
+确保小鸡安装了python，还有subprocess和requests，time模块
+本着留着也没啥用，发出来也许有mjj用得上呢
+如果想功能多的话试下uptime-kuma或者直接挂探针
+脚本如下
+bot_token和chat id替换成自己的
+hostname的192.168.1.90换成自己的ip
+群晖nas宕机了，自己换成别的
+time的15秒，自己换成自己需要的</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>import subprocess
+</span></span><span style="display:flex;"><span>import requests
+</span></span><span style="display:flex;"><span>import time
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>def send_notification(message):
+</span></span><span style="display:flex;"><span>    # 替换为你的Telegram Bot的API令牌和聊天ID
+</span></span><span style="display:flex;"><span>    bot_token = &#39;&#39;
+</span></span><span style="display:flex;"><span>    chat_id = &#39;&#39;
+</span></span><span style="display:flex;"><span>    
+</span></span><span style="display:flex;"><span>    # 发送通知到Telegram
+</span></span><span style="display:flex;"><span>    url = f&#39;https://api.telegram.org/bot{bot_token}/sendMessage&#39;
+</span></span><span style="display:flex;"><span>    params = {&#39;chat_id&#39;: chat_id, &#39;text&#39;: message}
+</span></span><span style="display:flex;"><span>    response = requests.get(url, params=params)
+</span></span><span style="display:flex;"><span>    if response.status_code != 200:
+</span></span><span style="display:flex;"><span>        print(&#39;无法发送通知到Telegram&#39;)
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>def check_host():
+</span></span><span style="display:flex;"><span>    hostname = &#39;192.168.1.90&#39;
+</span></span><span style="display:flex;"><span>    while True:
+</span></span><span style="display:flex;"><span>        result = subprocess.run([&#39;ping&#39;, &#39;-c&#39;, &#39;1&#39;, hostname], stdout=subprocess.DEVNULL)
+</span></span><span style="display:flex;"><span>        if result.returncode != 0:
+</span></span><span style="display:flex;"><span>            send_notification(&#39;群晖nas宕机了&#39;)
+</span></span><span style="display:flex;"><span>        time.sleep(15)  # 每隔15秒执行一次ping
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>check_host()
+</span></span></code></pre></div><p>命名为ping_notify.py
+随便往小鸡的etc里一堆，设置下后台运行就可以了</p>
+<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>python3 /etc/ping_notify.py &amp;
+</span></span></code></pre></div><p>效果如图
+<p class="markdown-image">
+  <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310212330311.webp" alt=""  />
+</p></p>
+
+    </div>
+
+    
+    
+    
+
+</section>
+
+
+    </main>
+    
+    <footer id="footer">
+    
+
+    <div class="copyright">
+    
+        qklg Hosted on   <a href="https://pages.cloudflare.com/" target="_blank">  Cloudflare Pages </a>
+    
+    </div>
+
+    
+      <div class="powerby">
+        Powered by <a href='http://www.gohugo.io/'>Hugo</a> Theme By <a href='https://github.com/nodejh/hugo-theme-mini'>nodejh</a>
+      </div>
+    
+</footer>
+
+
+
+  </body>
+</html>

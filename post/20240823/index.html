@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <title>publii部署静态博客 | qklg</title>
+
+    <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">    
+<meta name="viewport" content="width=device-width,minimum-scale=1">
+<meta name="description" content="以前哥们写过一篇用gridea部署静态博客的文章 文章链接 https://www.nodeseek.com/post-8624-1 今天闲着无聊逛老外论坛的时候发现了一个类似的，和gridea一样，不用自己像hex">
+<meta name="generator" content="Hugo 0.133.1">
+
+
+  <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+
+
+<link rel="stylesheet" href="/css/style.css">
+
+
+
+<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+
+ 
+  
+  
+    
+      <script async src="https://www.googletagmanager.com/gtag/js?id=your-disqus-shortname"></script>
+      <script>
+        var doNotTrack = false;
+        if ( false ) {
+          var dnt = (navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack);
+          var doNotTrack = (dnt == "1" || dnt == "yes");
+        }
+        if (!doNotTrack) {
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'your-disqus-shortname');
+        }
+      </script>
+    
+  
+
+
+
+
+
+
+
+
+
+  </head>
+
+  <body>
+    <nav class="navigation">
+	
+		<a href="/"> <span class="arrow">←</span>Home</a>
+	
+	<a href="/posts">Archive</a>
+	<a href="/tags">Tags</a>
+	<a href="/about">About</a>
+
+	
+
+	
+		
+  	
+</nav>	
+
+    <main class="main">
+      
+
+<section id="single">
+    <h1 class="title">publii部署静态博客</h1>
+
+    <div class="tip">
+        <time datetime="2024-08-23 21:55:30 &#43;0000 UTC">Aug 23, 2024</time>
+        <span class="split">
+          ·
+        </span>
+        <span>
+          1248 words
+        </span>
+        <span class="split">
+          ·
+        </span>
+        <span>
+          3 minute read
+        </span>
+    </div>
+
+    
+    
+        
+  
+    <aside class="toc">
+      <details>
+          <summary>Table of Contents
+          </summary>
+          <div>
+              <nav id="TableOfContents">
+  <ul>
+    <li><a href="#下载">①下载</a></li>
+    <li><a href="#-汉化">② 汉化</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#注册-github">①注册 github</a></li>
+    <li><a href="#创建仓库">②创建仓库</a></li>
+    <li><a href="#申请token">③申请token</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#配置服务器">①配置服务器</a></li>
+    <li><a href="#写文章">②写文章</a></li>
+    <li><a href="#同步">③同步</a></li>
+    <li><a href="#备份">④备份</a></li>
+  </ul>
+
+  <ul>
+    <li><a href="#注册cf账户">①注册cf账户</a></li>
+    <li><a href="#部署到pages">②部署到pages</a></li>
+  </ul>
+</nav>
+          </div>
+      </details>
+    </aside>
+  
+
+
+    
+
+
+    <div class="content">
+      <p>以前哥们写过一篇用<a href="https://https://github.com/getgridea/gridea" target="_blank" rel="noopener">gridea</a>部署静态博客的文章
+文章链接   <a href="https://www.nodeseek.com/post-8624-1" target="_blank" rel="noopener">https://www.nodeseek.com/post-8624-1</a></p>
+<p>今天闲着无聊逛老外论坛的时候发现了一个类似的，和gridea一样，不用自己像hexo hugo那样折腾命令
+全部可以用gui来完成的博客系统</p>
+<h1 id="一--下载publii-并且汉化">一  下载publii 并且汉化 <a href="#%e4%b8%80--%e4%b8%8b%e8%bd%bdpublii-%e5%b9%b6%e4%b8%94%e6%b1%89%e5%8c%96" class="anchor">🔗</a></h1><h2 id="下载">①下载 <a href="#%e4%b8%8b%e8%bd%bd" class="anchor">🔗</a></h2><p><a href="https://getpublii.com/download/" target="_blank" rel="noopener">https://getpublii.com/download/</a>  拉到最下面，下载0.45.2的版本，汉化支持最新的版本就是这个
+<p class="markdown-image">
+  <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202408232158227.webp" alt=""  />
+</p>
+双击打开，点我同意安装就可以了，然后会来到这么个界面，先不要管，
+<p class="markdown-image">
+  <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202408232158176.webp" alt=""  />
+</p></p>
+<h2 id="-汉化">② 汉化 <a href="#-%e6%b1%89%e5%8c%96" class="anchor">🔗</a></h2><p>点右上角三个点，选择language</p>
+<p>点击get more language，跳转到  <a href="https://github.com/GetPublii/Publii-ui-locales" target="_blank" rel="noopener">https://github.com/GetPublii/Publii-ui-locales</a>
+拉到下面选择zh-cn下载，点下载按钮下载
+最高支持到0.45.0，所以刚刚下的旧版本
+<p class="markdown-image">
+  <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202408232158603.webp" alt=""  />
+</p>
+<p class="markdown-image">
+  <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202408232158657.webp" alt=""  />
+</p>
+点击右上角的install language，直接点刚刚的汉化文件就行，不用解压缩,选择就行，如果还是不行，重启下软件
+<p class="markdown-image">
+  <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202408232159054.webp" alt=""  />
+</p></p>
+<h1 id="二--配置github">二  配置github <a href="#%e4%ba%8c--%e9%85%8d%e7%bd%aegithub" class="anchor">🔗</a></h1><h2 id="注册-github">①注册 github <a href="#%e6%b3%a8%e5%86%8c-github" class="anchor">🔗</a></h2><p><a href="https://github.com/join" target="_blank" rel="noopener">https://github.com/join</a> 没号的自己注册一个</p>
+<h2 id="创建仓库">②创建仓库 <a href="#%e5%88%9b%e5%bb%ba%e4%bb%93%e5%ba%93" class="anchor">🔗</a></h2><p><a href="https://github.com/new" target="_blank" rel="noopener">https://github.com/new</a></p>
+<p>创建username.github.io的 仓库</p>
+<p>username就是你github的用户名</p>
+<p>其实仓库名字也可以不是这个，随便取个就行，取github.io结尾的，</p>
+<p>是我想同时用cloudflare pages，netlify，vercel之外，还有可以部署到github pages，多个地方</p>
+<h2 id="申请token">③申请token <a href="#%e7%94%b3%e8%af%b7token" class="anchor">🔗</a></h2><p><a href="https://github.com/settings/tokens/new" target="_blank" rel="noopener">https://github.com/settings/tokens/new</a></p>
+<p>点击链接申请token，期限选择无期限，repo勾上，token只显示一次，记得保存下</p>
+<p><p class="markdown-image">
+  <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202408232159381.webp" alt=""  />
+</p></p>
+<h1 id="三-配置-publii">三 配置 publii <a href="#%e4%b8%89-%e9%85%8d%e7%bd%ae-publii" class="anchor">🔗</a></h1><h2 id="配置服务器">①配置服务器 <a href="#%e9%85%8d%e7%bd%ae%e6%9c%8d%e5%8a%a1%e5%99%a8" class="anchor">🔗</a></h2><p>点击左边的服务器，选择 git repository</p>
+<p><p class="markdown-image">
+  <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202408232159146.webp" alt=""  />
+</p></p>
+<p>里面长这样子</p>
+<p>网址就是你博客的网址，如果你没域名的话就是  username.github.io</p>
+<p>存储库url就是 你刚刚创建github仓库的url，注意，后面加个.git</p>
+<p>如果你和我一样的话应该是 username.github.io仓库的话应该是下面这样子，username改成你自己的</p>
+<p><a href="https://github.com/username/username.github.io.git" target="_blank" rel="noopener">https://github.com/username/username.github.io.git</a></p>
+<p>分支 一般为main</p>
+<p>用户名 就是你github的邮箱</p>
+<p>密码/令牌 就是你刚刚创建的github的token</p>
+<p>提交作者 ，提交作者邮箱这两个自己填下就行了</p>
+<p>提交信息不用动</p>
+<p>点击保存，并且测试下连接</p>
+<p><p class="markdown-image">
+  <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202408232159796.webp" alt=""  />
+</p></p>
+<p><p class="markdown-image">
+  <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202408232159616.webp" alt=""  />
+</p></p>
+<h2 id="写文章">②写文章 <a href="#%e5%86%99%e6%96%87%e7%ab%a0" class="anchor">🔗</a></h2><p>文章的话我喜欢markdown，我一般用typora编辑之后复制到其他地方</p>
+<h2 id="同步">③同步 <a href="#%e5%90%8c%e6%ad%a5" class="anchor">🔗</a></h2><p>点击左下角的同步您的网站，即可同步到github仓库，然后cf pages等其他地方会自动更新的</p>
+<p><p class="markdown-image">
+  <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202408232159678.webp" alt=""  />
+</p></p>
+<h2 id="备份">④备份 <a href="#%e5%a4%87%e4%bb%bd" class="anchor">🔗</a></h2><p>点击左边的工具&amp;插件,选择别分即可生成备份文件</p>
+<h1 id="四-部署到cloudflare-pages">四 部署到cloudflare pages <a href="#%e5%9b%9b-%e9%83%a8%e7%bd%b2%e5%88%b0cloudflare-pages" class="anchor">🔗</a></h1><h2 id="注册cf账户">①注册cf账户 <a href="#%e6%b3%a8%e5%86%8ccf%e8%b4%a6%e6%88%b7" class="anchor">🔗</a></h2><p><a href="https://cloudflare.com" target="_blank" rel="noopener">https://cloudflare.com</a>打开网站，点击注册</p>
+<h2 id="部署到pages">②部署到pages <a href="#%e9%83%a8%e7%bd%b2%e5%88%b0pages" class="anchor">🔗</a></h2><p>选择左侧的workers和pages，选择创建</p>
+<p><p class="markdown-image">
+  <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202408232200560.webp" alt=""  />
+</p></p>
+<p>连接到git，选择你刚刚的github账户和仓库，然后点击开始设置，保存并部署</p>
+<p><p class="markdown-image">
+  <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202408232200609.webp" alt=""  />
+</p></p>
+<p><p class="markdown-image">
+  <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202408232200494.webp" alt=""  />
+</p></p>
+<p><p class="markdown-image">
+  <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202408232200515.webp" alt=""  />
+</p></p>
+<p>设置自定义域名，默认的pages.dev被墙了，就需要你设置一个自定义域名了</p>
+<p>设置完打开浏览器就能访问了</p>
+<p><p class="markdown-image">
+  <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202408232200295.webp" alt=""  />
+</p></p>
+<p>其他平台可以看我部署到gridea的帖子，是一样的</p>
+<h1 id="五-相关链接">五 相关链接 <a href="#%e4%ba%94-%e7%9b%b8%e5%85%b3%e9%93%be%e6%8e%a5" class="anchor">🔗</a></h1><p>publii的官网  <a href="https://getpublii.com/" target="_blank" rel="noopener">https://getpublii.com/</a></p>
+<p>github仓库   <a href="https://github.com/GetPublii/Publii" target="_blank" rel="noopener">https://github.com/GetPublii/Publii</a></p>
+<p>文档   <a href="https://getpublii.com/docs/" target="_blank" rel="noopener">https://getpublii.com/docs/</a></p>
+
+    </div>
+
+    
+    
+    
+
+</section>
+
+
+    </main>
+    
+    <footer id="footer">
+    
+
+    <div class="copyright">
+    
+        qklg Hosted on   <a href="https://pages.cloudflare.com/" target="_blank">  Cloudflare Pages </a>
+    
+    </div>
+
+    
+      <div class="powerby">
+        Powered by <a href='http://www.gohugo.io/'>Hugo</a> Theme By <a href='https://github.com/nodejh/hugo-theme-mini'>nodejh</a>
+      </div>
+    
+</footer>
+
+
+
+  </body>
+</html>
