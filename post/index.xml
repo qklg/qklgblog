@@ -2,12 +2,19 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on qklg</title>
-    <link>https://blog.qklg.net/posts/</link>
+    <link>https://blog.qklg.net/post/</link>
     <description>Recent content in Posts on qklg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 23 Aug 2024 21:55:30 +0000</lastBuildDate>
-    <atom:link href="https://blog.qklg.net/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 29 Aug 2024 11:49:40 +0000</lastBuildDate>
+    <atom:link href="https://blog.qklg.net/post/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在无人关注的角落里，cf的ipfs公共网关无了</title>
+      <link>https://blog.qklg.net/post/20240829/</link>
+      <pubDate>Thu, 29 Aug 2024 11:49:40 +0000</pubDate>
+      <guid>https://blog.qklg.net/post/20240829/</guid>
+      <description>我的签名的博客本来about里有段 可以通过Cloudflare的公共网关来访问 https://cloudflare-ipfs.com/ipfs/QmUf7b6tiz3nbxQbtcTo7e2FABn52AmZTLsBMRGzxKrJb3/ 今天博客搬家从gridea搬家到hugo上 结果点进去发现居然</description>
+    </item>
     <item>
       <title>publii部署静态博客</title>
       <link>https://blog.qklg.net/post/20240823/</link>

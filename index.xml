@@ -6,8 +6,15 @@
     <description>Recent content on qklg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 23 Aug 2024 21:55:30 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 29 Aug 2024 11:49:40 +0000</lastBuildDate>
     <atom:link href="https://blog.qklg.net/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>在无人关注的角落里，cf的ipfs公共网关无了</title>
+      <link>https://blog.qklg.net/post/20240829/</link>
+      <pubDate>Thu, 29 Aug 2024 11:49:40 +0000</pubDate>
+      <guid>https://blog.qklg.net/post/20240829/</guid>
+      <description>我的签名的博客本来about里有段 可以通过Cloudflare的公共网关来访问 https://cloudflare-ipfs.com/ipfs/QmUf7b6tiz3nbxQbtcTo7e2FABn52AmZTLsBMRGzxKrJb3/ 今天博客搬家从gridea搬家到hugo上 结果点进去发现居然</description>
+    </item>
     <item>
       <title>publii部署静态博客</title>
       <link>https://blog.qklg.net/post/20240823/</link>
@@ -503,7 +510,7 @@
       <link>https://blog.qklg.net/about/</link>
       <pubDate>Fri, 25 Jan 2019 19:09:48 +0000</pubDate>
       <guid>https://blog.qklg.net/about/</guid>
-      <description>qklg.net by andylee 🔗📧 邮箱: qklg@qklg.net 🌐 探针: https://status.qklg.net/ 本站支持ipfs访问ipfs://QmUf7b6tiz3nbxQbtcTo7e2FABn52AmZTLsBMRG</description>
+      <description>qklg.net by andylee 🔗📧 邮箱: qklg@qklg.net 🌐 探针: https://status.qklg.net/ 本站托管于Cloudflare Pages https://pages.cloudflare.com/</description>
     </item>
   </channel>
 </rss>
