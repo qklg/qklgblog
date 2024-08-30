@@ -79,34 +79,34 @@
 
 
     <div class="content">
-      <p>如果你想用tg bot来管理你的qbittorrent的话
-可以试下下面这两个
-<a href="https://github.com/zeroone2numeral2/qbittorrent-bot" target="_blank" rel="noopener">https://github.com/zeroone2numeral2/qbittorrent-bot</a>
-开源项目：用telegramBot控制qbittorrent
-<a href="https://hostloc.com/thread-1192407-1-1.html" target="_blank" rel="noopener">https://hostloc.com/thread-1192407-1-1.html</a>
+      <p>如果你想用tg bot来管理你的qbittorrent的话<br>
+可以试下下面这两个<br>
+<a href="https://github.com/zeroone2numeral2/qbittorrent-bot" target="_blank" rel="noopener">https://github.com/zeroone2numeral2/qbittorrent-bot</a><br>
+开源项目：用telegramBot控制qbittorrent<br>
+<a href="https://hostloc.com/thread-1192407-1-1.html" target="_blank" rel="noopener">https://hostloc.com/thread-1192407-1-1.html</a><br>
 (出处: 全球主机交流论坛)</p>
-<p>1
-botfather  <a href="https://t.me/BotFather" target="_blank" rel="noopener">https://t.me/BotFather</a>点击
-/newbot命令创建bot，按照提示创建bot的名字和用户名
+<p>1<br>
+botfather  <a href="https://t.me/BotFather" target="_blank" rel="noopener">https://t.me/BotFather</a>点击<br>
+/newbot命令创建bot，按照提示创建bot的名字和用户名<br>
 然后会有一个tokern在Use this token to access the HTTP API:后面，复制下</p>
-<p>2获取telgram的user id
-<a href="https://t.me/getidsbot" target="_blank" rel="noopener">https://t.me/getidsbot</a>，点击开始，
-id:后面的就是你的id了
+<p>2获取telgram的user id<br>
+<a href="https://t.me/getidsbot" target="_blank" rel="noopener">https://t.me/getidsbot</a>，点击开始，<br>
+id:后面的就是你的id了<br>
 <p class="markdown-image">
   <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310241303492.webp" alt=""  />
-</p>
-3打开qbittorrent设置-下载，拉到下面，运行外部程序
+</p><br>
+3打开qbittorrent设置-下载，拉到下面，运行外部程序<br>
 <p class="markdown-image">
   <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310241303465.webp" alt=""  />
-</p>
+</p><br>
 新增 torrent 时运行外部程序</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>curl -X POST &#34;https://api.telegram.org/bot&lt;YourBotToken&gt;/sendMessage&#34; -d &#34;chat_id=&lt;ChatID&gt;&amp;text=text=%N正在下载.&#34;
-</span></span></code></pre></div><p>torrent 完成时运行外部程序</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>curl -X POST &#34;https://api.telegram.org/bot&lt;YourBotToken&gt;/sendMessage&#34; -d &#34;chat_id=&lt;ChatID&gt;&amp;text=text=%N完成下载.&#34;
-</span></span></code></pre></div><p><YourBotToken>换成1里面的botfather那里获取的token，<ChatID>换成2里面的id后面的那串数字
-点击保存，就好了
-其他的参数自己根据需要调，我只是用来下载时候通知下的
-最后效果如图
+<pre tabindex="0"><code>curl -X POST &#34;https://api.telegram.org/bot&lt;YourBotToken&gt;/sendMessage&#34; -d &#34;chat_id=&lt;ChatID&gt;&amp;text=text=%N正在下载.&#34;
+</code></pre><p>torrent 完成时运行外部程序</p>
+<pre tabindex="0"><code>curl -X POST &#34;https://api.telegram.org/bot&lt;YourBotToken&gt;/sendMessage&#34; -d &#34;chat_id=&lt;ChatID&gt;&amp;text=text=%N完成下载.&#34;
+</code></pre><p><!-- raw HTML omitted -->换成1里面的botfather那里获取的token，<!-- raw HTML omitted -->换成2里面的id后面的那串数字<br>
+点击保存，就好了<br>
+其他的参数自己根据需要调，我只是用来下载时候通知下的<br>
+最后效果如图<br>
 <p class="markdown-image">
   <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310241303088.webp" alt=""  />
 </p></p>
@@ -127,7 +127,7 @@ id:后面的就是你的id了
 
     <div class="copyright">
     
-        qklg Hosted on <a href="https://pages.cloudflare.com/" target="_blank">  Cloudflare Pages </a>
+        qklg Hosted on <!-- raw HTML omitted -->  Cloudflare Pages <!-- raw HTML omitted -->
     
     </div>
 

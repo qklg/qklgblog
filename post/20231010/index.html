@@ -79,46 +79,46 @@
 
 
     <div class="content">
-      <p>家里的黑群晖老是宕机，每次宕机都没意识到，
-所以用chatgpt写了个小东西，这玩意别说还真挺好用的
-直接ping主机，每隔15秒ping一次，ping不通就通知tg的bot
-确保小鸡安装了python，还有subprocess和requests，time模块
-本着留着也没啥用，发出来也许有mjj用得上呢
-如果想功能多的话试下uptime-kuma或者直接挂探针
-脚本如下
-bot_token和chat id替换成自己的
-hostname的192.168.1.90换成自己的ip
-群晖nas宕机了，自己换成别的
+      <p>家里的黑群晖老是宕机，每次宕机都没意识到，<br>
+所以用chatgpt写了个小东西，这玩意别说还真挺好用的<br>
+直接ping主机，每隔15秒ping一次，ping不通就通知tg的bot<br>
+确保小鸡安装了python，还有subprocess和requests，time模块<br>
+本着留着也没啥用，发出来也许有mjj用得上呢<br>
+如果想功能多的话试下uptime-kuma或者直接挂探针<br>
+脚本如下<br>
+bot_token和chat id替换成自己的<br>
+hostname的192.168.1.90换成自己的ip<br>
+群晖nas宕机了，自己换成别的<br>
 time的15秒，自己换成自己需要的</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>import subprocess
-</span></span><span style="display:flex;"><span>import requests
-</span></span><span style="display:flex;"><span>import time
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>def send_notification(message):
-</span></span><span style="display:flex;"><span>    # 替换为你的Telegram Bot的API令牌和聊天ID
-</span></span><span style="display:flex;"><span>    bot_token = &#39;&#39;
-</span></span><span style="display:flex;"><span>    chat_id = &#39;&#39;
-</span></span><span style="display:flex;"><span>    
-</span></span><span style="display:flex;"><span>    # 发送通知到Telegram
-</span></span><span style="display:flex;"><span>    url = f&#39;https://api.telegram.org/bot{bot_token}/sendMessage&#39;
-</span></span><span style="display:flex;"><span>    params = {&#39;chat_id&#39;: chat_id, &#39;text&#39;: message}
-</span></span><span style="display:flex;"><span>    response = requests.get(url, params=params)
-</span></span><span style="display:flex;"><span>    if response.status_code != 200:
-</span></span><span style="display:flex;"><span>        print(&#39;无法发送通知到Telegram&#39;)
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>def check_host():
-</span></span><span style="display:flex;"><span>    hostname = &#39;192.168.1.90&#39;
-</span></span><span style="display:flex;"><span>    while True:
-</span></span><span style="display:flex;"><span>        result = subprocess.run([&#39;ping&#39;, &#39;-c&#39;, &#39;1&#39;, hostname], stdout=subprocess.DEVNULL)
-</span></span><span style="display:flex;"><span>        if result.returncode != 0:
-</span></span><span style="display:flex;"><span>            send_notification(&#39;群晖nas宕机了&#39;)
-</span></span><span style="display:flex;"><span>        time.sleep(15)  # 每隔15秒执行一次ping
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span>check_host()
-</span></span></code></pre></div><p>命名为ping_notify.py
+<pre tabindex="0"><code>import subprocess
+import requests
+import time
+
+def send_notification(message):
+    # 替换为你的Telegram Bot的API令牌和聊天ID
+    bot_token = &#39;&#39;
+    chat_id = &#39;&#39;
+    
+    # 发送通知到Telegram
+    url = f&#39;https://api.telegram.org/bot{bot_token}/sendMessage&#39;
+    params = {&#39;chat_id&#39;: chat_id, &#39;text&#39;: message}
+    response = requests.get(url, params=params)
+    if response.status_code != 200:
+        print(&#39;无法发送通知到Telegram&#39;)
+
+def check_host():
+    hostname = &#39;192.168.1.90&#39;
+    while True:
+        result = subprocess.run([&#39;ping&#39;, &#39;-c&#39;, &#39;1&#39;, hostname], stdout=subprocess.DEVNULL)
+        if result.returncode != 0:
+            send_notification(&#39;群晖nas宕机了&#39;)
+        time.sleep(15)  # 每隔15秒执行一次ping
+
+check_host()
+</code></pre><p>命名为ping_notify.py<br>
 随便往小鸡的etc里一堆，设置下后台运行就可以了</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>python3 /etc/ping_notify.py &amp;
-</span></span></code></pre></div><p>效果如图
+<pre tabindex="0"><code>python3 /etc/ping_notify.py &amp;
+</code></pre><p>效果如图<br>
 <p class="markdown-image">
   <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310212330311.webp" alt=""  />
 </p></p>
@@ -139,7 +139,7 @@ time的15秒，自己换成自己需要的</p>
 
     <div class="copyright">
     
-        qklg Hosted on <a href="https://pages.cloudflare.com/" target="_blank">  Cloudflare Pages </a>
+        qklg Hosted on <!-- raw HTML omitted -->  Cloudflare Pages <!-- raw HTML omitted -->
     
     </div>
 

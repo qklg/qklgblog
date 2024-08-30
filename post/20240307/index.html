@@ -79,25 +79,25 @@
 
 
     <div class="content">
-      <h1 id="1-avif的好处">1 avif的好处 <a href="#1-avif%e7%9a%84%e5%a5%bd%e5%a4%84" class="anchor">🔗</a></h1><p>avif最大的好处就是更高的压缩性，从而省流量和存储
-我的博客已经是纯静态化的了，主要的大头是图片，变小可以更加快的打开博客
-之前的png格式的，现在转换成avif，大小只有原来21%
+      <h1 id="1-avif的好处">1 avif的好处 <a href="#1-avif%e7%9a%84%e5%a5%bd%e5%a4%84" class="anchor">🔗</a></h1><p>avif最大的好处就是更高的压缩性，从而省流量和存储<br>
+我的博客已经是纯静态化的了，主要的大头是图片，变小可以更加快的打开博客<br>
+之前的png格式的，现在转换成avif，大小只有原来21%<br>
 <p class="markdown-image">
   <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202403071657600.webp" alt=""  />
-</p>
+</p><br>
 <p class="markdown-image">
   <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202403071657238.webp" alt=""  />
 </p></p>
 <p>压缩性比webp更加好</p>
-<h1 id="2主流浏览器已经支持">2主流浏览器已经支持 <a href="#2%e4%b8%bb%e6%b5%81%e6%b5%8f%e8%a7%88%e5%99%a8%e5%b7%b2%e7%bb%8f%e6%94%af%e6%8c%81" class="anchor">🔗</a></h1><p>Microsoft Edge在从2024年1月开始的121版本也开始支持了
-其他的浏览器safari和firefox也早就支持了
+<h1 id="2主流浏览器已经支持">2主流浏览器已经支持 <a href="#2%e4%b8%bb%e6%b5%81%e6%b5%8f%e8%a7%88%e5%99%a8%e5%b7%b2%e7%bb%8f%e6%94%af%e6%8c%81" class="anchor">🔗</a></h1><p>Microsoft Edge在从2024年1月开始的121版本也开始支持了<br>
+其他的浏览器safari和firefox也早就支持了<br>
 chrome的话早在2020年的chrome85就支持了</p>
-<p>具体支持度可以看这个
+<p>具体支持度可以看这个<br>
 <a href="https://caniuse.com/?search=avif" target="_blank" rel="noopener">https://caniuse.com/?search=avif</a></p>
-<h1 id="3用ffmpeg转换">3用ffmpeg转换 <a href="#3%e7%94%a8ffmpeg%e8%bd%ac%e6%8d%a2" class="anchor">🔗</a></h1><div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span> for %%i in (&#34;D:\blog\png\*.png&#34;) do ffmpeg -i &#34;%%i&#34; -c:v av1 -strict experimental -b:v 0 -crf 30 &#34;D:\blog\avif\%%~ni.avif&#34;
-</span></span></code></pre></div><p>将我D:\blog\png下的png文件全转成了avif</p>
-<h1 id="4更多">4更多 <a href="#4%e6%9b%b4%e5%a4%9a" class="anchor">🔗</a></h1><p>如果你想更加了解avif的话
-<a href="https://blog.cloudflare.com/generate-avif-images-with-image-resizing" target="_blank" rel="noopener">https://blog.cloudflare.com/generate-avif-images-with-image-resizing</a>
+<h1 id="3用ffmpeg转换">3用ffmpeg转换 <a href="#3%e7%94%a8ffmpeg%e8%bd%ac%e6%8d%a2" class="anchor">🔗</a></h1><pre tabindex="0"><code> for %%i in (&#34;D:\blog\png\*.png&#34;) do ffmpeg -i &#34;%%i&#34; -c:v av1 -strict experimental -b:v 0 -crf 30 &#34;D:\blog\avif\%%~ni.avif&#34;
+</code></pre><p>将我D:\blog\png下的png文件全转成了avif</p>
+<h1 id="4更多">4更多 <a href="#4%e6%9b%b4%e5%a4%9a" class="anchor">🔗</a></h1><p>如果你想更加了解avif的话<br>
+<a href="https://blog.cloudflare.com/generate-avif-images-with-image-resizing" target="_blank" rel="noopener">https://blog.cloudflare.com/generate-avif-images-with-image-resizing</a><br>
 <a href="https://developer.aliyun.com/article/1147111" target="_blank" rel="noopener">https://developer.aliyun.com/article/1147111</a></p>
 
     </div>
@@ -116,7 +116,7 @@ chrome的话早在2020年的chrome85就支持了</p>
 
     <div class="copyright">
     
-        qklg Hosted on <a href="https://pages.cloudflare.com/" target="_blank">  Cloudflare Pages </a>
+        qklg Hosted on <!-- raw HTML omitted -->  Cloudflare Pages <!-- raw HTML omitted -->
     
     </div>
 

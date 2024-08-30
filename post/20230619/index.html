@@ -79,78 +79,78 @@
 
 
     <div class="content">
-      <p>1安装rclone
-①先去rclone官网找到你的版本
+      <p>1安装rclone<br>
+①先去rclone官网找到你的版本<br>
 官网链接<a href="https://rclone.org/downloads/" target="_blank" rel="noopener">https://rclone.org/downloads/</a></p>
 <p>②没sudo的话先安装下sudo，我一般用的是debian，直接</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>apt install sudo 
-</span></span></code></pre></div><p>③然后直接输入，安装rclone</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>sudo -v ; curl https://rclone.org/install.sh | sudo bash
-</span></span></code></pre></div><p>安装完成的话长这样子
+<pre tabindex="0"><code>apt install sudo 
+</code></pre><p>③然后直接输入，安装rclone</p>
+<pre tabindex="0"><code>sudo -v ; curl https://rclone.org/install.sh | sudo bash
+</code></pre><p>安装完成的话长这样子<br>
 <p class="markdown-image">
   <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310241336616.webp" alt=""  />
-</p>
-2
-获取infini-cloud的配置
-登录状态下打开这个链接
-<a href="https://infini-cloud.net/en/modules/mypage/usage/" target="_blank" rel="noopener">https://infini-cloud.net/en/modules/mypage/usage/</a>
+</p><br>
+2<br>
+获取infini-cloud的配置<br>
+登录状态下打开这个链接<br>
+<a href="https://infini-cloud.net/en/modules/mypage/usage/" target="_blank" rel="noopener">https://infini-cloud.net/en/modules/mypage/usage/</a><br>
 <p class="markdown-image">
   <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310241336878.webp" alt=""  />
-</p>
-把Turn on Apps Connection给勾上
-记住你的id和密码，密码只会显示一次，记得保存下
-三个参数，一个url，一个id，一个password，准备好
-url的话下面3④里面用到
-Connection ID就是3⑤user
-Apps Password	的话3
-3配置rclone
+</p><br>
+把Turn on Apps Connection给勾上<br>
+记住你的id和密码，密码只会显示一次，记得保存下<br>
+三个参数，一个url，一个id，一个password，准备好<br>
+url的话下面3④里面用到<br>
+Connection ID就是3⑤user<br>
+Apps Password	的话3<br>
+3配置rclone<br>
 ①在你的ssh中输入</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>rclone config
-</span></span></code></pre></div><p>会出来一排参数,中文啥意思，标在后面了，用gpt翻译的</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>n) New remote：新建一个远程存储。
-</span></span><span style="display:flex;"><span>s) Set configuration password：设置配置文件的密码。
-</span></span><span style="display:flex;"><span>q) Quit config：退出配置界面。
-</span></span></code></pre></div><p>②新建的话输入n,会出现</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>Enter name for new remote.
-</span></span><span style="display:flex;"><span>name&gt; 
-</span></span></code></pre></div><p>这个你直接随便输入就行,我就用这个帖子<a href="https://www.nodeseek.com/post-9604-1" target="_blank" rel="noopener">https://www.nodeseek.com/post-9604-1</a>里的jpwp了
-输入完名字会出现一大串的
-③这个infini-cloud的话我们挂载的是webdav的，选择46 webdav，输入46就行了
-④会让你输入url
+<pre tabindex="0"><code>rclone config
+</code></pre><p>会出来一排参数,中文啥意思，标在后面了，用gpt翻译的</p>
+<pre tabindex="0"><code>n) New remote：新建一个远程存储。
+s) Set configuration password：设置配置文件的密码。
+q) Quit config：退出配置界面。
+</code></pre><p>②新建的话输入n,会出现</p>
+<pre tabindex="0"><code>Enter name for new remote.
+name&gt; 
+</code></pre><p>这个你直接随便输入就行,我就用这个帖子<a href="https://www.nodeseek.com/post-9604-1" target="_blank" rel="noopener">https://www.nodeseek.com/post-9604-1</a>里的jpwp了<br>
+输入完名字会出现一大串的<br>
+③这个infini-cloud的话我们挂载的是webdav的，选择46 webdav，输入46就行了<br>
+④会让你输入url<br>
 <p class="markdown-image">
   <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310241336228.webp" alt=""  />
-</p>
-就是第二部里面的url
-直接复制，粘贴进去就行了，然后回车
-会出现这个，选择5
+</p><br>
+就是第二部里面的url<br>
+直接复制，粘贴进去就行了，然后回车<br>
+会出现这个，选择5<br>
 <p class="markdown-image">
   <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310241336268.webp" alt=""  />
-</p>
-⑤user输入第2部里面的Connection ID
+</p><br>
+⑤user输入第2部里面的Connection ID<br>
 然后回出现下面的</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>y) Yes, type in my own password：手动输入密码。
-</span></span><span style="display:flex;"><span>g) Generate random password：随机生成密码。
-</span></span><span style="display:flex;"><span>n) No, leave this optional password blank (default)：不设置密码
-</span></span></code></pre></div><p>选择y，手动输入第2部里面的那个只出现过一次的密码，复制进去就行了，Linux 终端中输入密码时，密码不会显示在屏幕上
-然后bearer token的话直接回车edit  advanced config，也是直接回车
-然后keep the  jpwp remote，也是直接回车
-然后选择q，退出就ok了
+<pre tabindex="0"><code>y) Yes, type in my own password：手动输入密码。
+g) Generate random password：随机生成密码。
+n) No, leave this optional password blank (default)：不设置密码
+</code></pre><p>选择y，手动输入第2部里面的那个只出现过一次的密码，复制进去就行了，Linux 终端中输入密码时，密码不会显示在屏幕上<br>
+然后bearer token的话直接回车edit  advanced config，也是直接回车<br>
+然后keep the  jpwp remote，也是直接回车<br>
+然后选择q，退出就ok了<br>
 <p class="markdown-image">
   <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310241336936.webp" alt=""  />
 </p></p>
-<p>4①
+<p>4①<br>
 最后输入<a href="https://www.nodeseek.com/post-9604-1" target="_blank" rel="noopener">https://www.nodeseek.com/post-9604-1</a>这个帖子里面的命令挂载就ok了</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>rclone mount jpwp: /mnt/Wanpan --config=/root/.config/rclone/rclone.conf --allow-other --allow-non-empty --vfs-cache-mode full --vfs-cache-max-age 48h --vfs-cache-max-size 5G --cache-dir /tmp/cache --vfs-read-chunk-size 128M --vfs-read-chunk-size-limit 1G --buffer-size 128M --umask 000 &amp;
-</span></span></code></pre></div><p>②如果出现报错的如下报错的话
+<pre tabindex="0"><code>rclone mount jpwp: /mnt/Wanpan --config=/root/.config/rclone/rclone.conf --allow-other --allow-non-empty --vfs-cache-mode full --vfs-cache-max-age 48h --vfs-cache-max-size 5G --cache-dir /tmp/cache --vfs-read-chunk-size 128M --vfs-read-chunk-size-limit 1G --buffer-size 128M --umask 000 &amp;
+</code></pre><p>②如果出现报错的如下报错的话<br>
 <p class="markdown-image">
   <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310241336998.webp" alt=""  />
-</p>
+</p><br>
 是没有装fuse3，debian和ubuntu的话直接用下面的命令apt安装，然后再执行上面的命令就行了</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>apt-get install fuse3
-</span></span></code></pre></div><p>③如果出现mount FUSE fs: mountpoint does not exist: /mnt/Wanpan，没有的话，输入下面命令，创建挂载点</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>mkdir -p /mnt/Wanpan
-</span></span></code></pre></div><p>在输入上面的命令挂载4①的命令挂载</p>
-<p>最后输入df-h，显示jpwp的话那就是挂载成功了，1PB是唬人的，实际就是你网盘的容量,其他支持webdav的网盘，也是这样子挂载的，可以试下这个ovh的网盘<a href="https://www.nodeseek.com/post-8887-1" target="_blank" rel="noopener">https://www.nodeseek.com/post-8887-1</a>
+<pre tabindex="0"><code>apt-get install fuse3
+</code></pre><p>③如果出现mount FUSE fs: mountpoint does not exist: /mnt/Wanpan，没有的话，输入下面命令，创建挂载点</p>
+<pre tabindex="0"><code>mkdir -p /mnt/Wanpan
+</code></pre><p>在输入上面的命令挂载4①的命令挂载</p>
+<p>最后输入df-h，显示jpwp的话那就是挂载成功了，1PB是唬人的，实际就是你网盘的容量,其他支持webdav的网盘，也是这样子挂载的，可以试下这个ovh的网盘<a href="https://www.nodeseek.com/post-8887-1" target="_blank" rel="noopener">https://www.nodeseek.com/post-8887-1</a><br>
 <p class="markdown-image">
   <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310241337653.webp" alt=""  />
 </p></p>
@@ -171,7 +171,7 @@ Apps Password	的话3
 
     <div class="copyright">
     
-        qklg Hosted on <a href="https://pages.cloudflare.com/" target="_blank">  Cloudflare Pages </a>
+        qklg Hosted on <!-- raw HTML omitted -->  Cloudflare Pages <!-- raw HTML omitted -->
     
     </div>
 

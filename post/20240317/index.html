@@ -96,58 +96,58 @@
 
 
     <div class="content">
-      <p>总共两大步
+      <p>总共两大步<br>
 生成语音转文字和翻译</p>
-<h1 id="一-原文字幕语音转文字">一 原文字幕，语音转文字 <a href="#%e4%b8%80-%e5%8e%9f%e6%96%87%e5%ad%97%e5%b9%95%e8%af%ad%e9%9f%b3%e8%bd%ac%e6%96%87%e5%ad%97" class="anchor">🔗</a></h1><h2 id="下载whisperdesktop">①下载WhisperDesktop <a href="#%e4%b8%8b%e8%bd%bdwhisperdesktop" class="anchor">🔗</a></h2><p><a href="https://github.com/Const-me/Whisper/releases" target="_blank" rel="noopener">https://github.com/Const-me/Whisper/releases</a>
+<h1 id="一-原文字幕语音转文字">一 原文字幕，语音转文字 <a href="#%e4%b8%80-%e5%8e%9f%e6%96%87%e5%ad%97%e5%b9%95%e8%af%ad%e9%9f%b3%e8%bd%ac%e6%96%87%e5%ad%97" class="anchor">🔗</a></h1><h2 id="下载whisperdesktop">①下载WhisperDesktop <a href="#%e4%b8%8b%e8%bd%bdwhisperdesktop" class="anchor">🔗</a></h2><p><a href="https://github.com/Const-me/Whisper/releases" target="_blank" rel="noopener">https://github.com/Const-me/Whisper/releases</a><br>
 <p class="markdown-image">
   <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202403171010932.webp" alt=""  />
-</p>
-解压缩，打开WhisperDesktop.exe
+</p><br>
+解压缩，打开WhisperDesktop.exe<br>
 <p class="markdown-image">
   <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202403171010503.webp" alt=""  />
 </p></p>
-<h2 id="下载模型">②下载模型 <a href="#%e4%b8%8b%e8%bd%bd%e6%a8%a1%e5%9e%8b" class="anchor">🔗</a></h2><p><a href="https://huggingface.co/ggerganov/whisper.cpp/tree/main" target="_blank" rel="noopener">https://huggingface.co/ggerganov/whisper.cpp/tree/main</a>
-我用的是medium，够用了一般
+<h2 id="下载模型">②下载模型 <a href="#%e4%b8%8b%e8%bd%bd%e6%a8%a1%e5%9e%8b" class="anchor">🔗</a></h2><p><a href="https://huggingface.co/ggerganov/whisper.cpp/tree/main" target="_blank" rel="noopener">https://huggingface.co/ggerganov/whisper.cpp/tree/main</a><br>
+我用的是medium，够用了一般<br>
 <p class="markdown-image">
   <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202403171012823.webp" alt=""  />
 </p></p>
-<h2 id="设置">③设置 <a href="#%e8%ae%be%e7%bd%ae" class="anchor">🔗</a></h2><p>然后填上模型文件路径
-Model Implementation选择gpu，amd的也是可以的，我用的6800H的核显，点ok
-这边建议用ffmpeg切成五分钟左右的片段，这样子准确度高很多，到后面有时候会出bug
-如果是视频的话，也可以用ffmpeg把音频提取出来
+<h2 id="设置">③设置 <a href="#%e8%ae%be%e7%bd%ae" class="anchor">🔗</a></h2><p>然后填上模型文件路径<br>
+Model Implementation选择gpu，amd的也是可以的，我用的6800H的核显，点ok<br>
+这边建议用ffmpeg切成五分钟左右的片段，这样子准确度高很多，到后面有时候会出bug<br>
+如果是视频的话，也可以用ffmpeg把音频提取出来<br>
 <p class="markdown-image">
   <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202403171010791.webp" alt=""  />
 </p></p>
-<h2 id="转换">④转换 <a href="#%e8%bd%ac%e6%8d%a2" class="anchor">🔗</a></h2><p>language选择你原文的语言，translate别勾
-Transcribe File选择音频文件
-Output Format选择SubRip subtitles的srt格式的文件
-Place that file to the input folder的勾上
+<h2 id="转换">④转换 <a href="#%e8%bd%ac%e6%8d%a2" class="anchor">🔗</a></h2><p>language选择你原文的语言，translate别勾<br>
+Transcribe File选择音频文件<br>
+Output Format选择SubRip subtitles的srt格式的文件<br>
+Place that file to the input folder的勾上<br>
 <p class="markdown-image">
   <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202403171012714.webp" alt=""  />
-</p>
-点完，然后Transcribe开始工作，右上角Debug Console可以看到转换的进度的
+</p><br>
+点完，然后Transcribe开始工作，右上角Debug Console可以看到转换的进度的<br>
 <p class="markdown-image">
   <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202403171012184.webp" alt=""  />
-</p>
-我的6800H的核显转换一段五分钟的话，大概一分钟左右完成
+</p><br>
+我的6800H的核显转换一段五分钟的话，大概一分钟左右完成<br>
 <p class="markdown-image">
   <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202403171012548.webp" alt=""  />
 </p></p>
-<h1 id="二-翻译">二 翻译 <a href="#%e4%ba%8c-%e7%bf%bb%e8%af%91" class="anchor">🔗</a></h1><p>翻译的话直接用chatgpt，3.5够用了
-用api太贵了，直接免费的web版丢进去完事了
-丢给他翻译就完事了，穷人办法，一分钱都不用花
-用下面这段提示的话，能保留原来的日文字幕，英文的话自己把日文改成英文就行了
+<h1 id="二-翻译">二 翻译 <a href="#%e4%ba%8c-%e7%bf%bb%e8%af%91" class="anchor">🔗</a></h1><p>翻译的话直接用chatgpt，3.5够用了<br>
+用api太贵了，直接免费的web版丢进去完事了<br>
+丢给他翻译就完事了，穷人办法，一分钱都不用花<br>
+用下面这段提示的话，能保留原来的日文字幕，英文的话自己把日文改成英文就行了<br>
 如果它停止了的话就发个go on就行了</p>
-<div class="highlight"><pre tabindex="0" style="background-color:#f8f8f8;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>把这个日语的字幕文件转成中日双语，中文在下，日文在下面另起一行，保留原有的日文
-</span></span><span style="display:flex;"><span>字幕文件如下
-</span></span></code></pre></div><p><p class="markdown-image">
+<pre tabindex="0"><code>把这个日语的字幕文件转成中日双语，中文在下，日文在下面另起一行，保留原有的日文
+字幕文件如下
+</code></pre><p><p class="markdown-image">
   <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202403171012777.webp" alt=""  />
-</p>
+</p><br>
 <p class="markdown-image">
   <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202403171012028.webp" alt=""  />
 </p></p>
-<p>参考
-<a href="https://www.bilibili.com/video/av268725141/?p=1&amp;t=160" target="_blank" rel="noopener">https://www.bilibili.com/video/av268725141/?p=1&t=160</a>
+<p>参考<br>
+<a href="https://www.bilibili.com/video/av268725141/?p=1&amp;t=160" target="_blank" rel="noopener">https://www.bilibili.com/video/av268725141/?p=1&t=160</a><br>
 <a href="https://www.bilibili.com/read/cv22692287/" target="_blank" rel="noopener">https://www.bilibili.com/read/cv22692287/</a></p>
 
     </div>
@@ -166,7 +166,7 @@ Place that file to the input folder的勾上
 
     <div class="copyright">
     
-        qklg Hosted on <a href="https://pages.cloudflare.com/" target="_blank">  Cloudflare Pages </a>
+        qklg Hosted on <!-- raw HTML omitted -->  Cloudflare Pages <!-- raw HTML omitted -->
     
     </div>
 
