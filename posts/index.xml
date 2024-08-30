@@ -2,12 +2,12 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on qklg</title>
-    <link>https://blog.qklg.net/post/</link>
+    <link>https://blog.qklg.net/posts/</link>
     <description>Recent content in Posts on qklg</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 29 Aug 2024 11:49:40 +0000</lastBuildDate>
-    <atom:link href="https://blog.qklg.net/post/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blog.qklg.net/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>在无人关注的角落里，cf的ipfs公共网关无了</title>
       <link>https://blog.qklg.net/post/20240829/</link>
