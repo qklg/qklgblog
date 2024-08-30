@@ -1,197 +1,113 @@
-<!DOCTYPE html>
-<html lang="en-us">
-  <head>
-    <title>ios,安卓和win跑流媒体解锁检测脚本 | qklg</title>
-
-    <meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">    
-<meta name="viewport" content="width=device-width,minimum-scale=1">
-<meta name="description" content="本文使用脚本 github链接:https://github.com/lmc999/RegionRestrictionCheck 脚本 bash &lt;(curl -L -s https://raw.githubusercontent.com/lmc999/RegionRestrictionCheck/main/check.sh)">
-<meta name="generator" content="Hugo 0.123.8">
-
-
-  <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
-
-
-<link rel="stylesheet" href="/css/style.css">
-
-
-
-<link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
-
- 
-  
-
-
-
-
-
-
-
-  </head>
-
-  <body>
-    <nav class="navigation">
-	
-		<a href="/"> <span class="arrow">←</span>Home</a>
-	
-	<a href="/posts">Archive</a>
-	<a href="/tags">Tags</a>
-	<a href="/about">About</a>
-
-	
-
-	
-		
-  	
-</nav>
-
-
-    <main class="main">
-      
-
-<section id="single">
-    <h1 class="title">ios,安卓和win跑流媒体解锁检测脚本</h1>
-
-    <div class="tip">
-        <time datetime="2023-09-10 23:43:32 &#43;0000 UTC">Sep 10, 2023</time>
-        <span class="split">
-          ·
-        </span>
-        <span>
-          867 words
-        </span>
-        <span class="split">
-          ·
-        </span>
-        <span>
-          2 minute read
-        </span>
-    </div>
-
-    
-    
-        
-  
-
-
-    
-
-
-    <div class="content">
-      <p>本文使用脚本<br>
-github链接:<a href="https://github.com/lmc999/RegionRestrictionCheck" target="_blank" rel="noopener">https://github.com/lmc999/RegionRestrictionCheck</a><br>
-脚本</p>
-<pre tabindex="0"><code>bash &lt;(curl -L -s https://raw.githubusercontent.com/lmc999/RegionRestrictionCheck/main/check.sh)
-</code></pre><p>如果github的raw无法访问，可以采用下面jsdelivr加速的</p>
-<pre tabindex="0"><code>bash &lt;(curl -L -s https://testingcf.jsdelivr.net/gh/lmc999/RegionRestrictionCheck@main/check.sh)
-</code></pre><p>这个脚本支持：CentOS 6+, Ubuntu 14.04+, Debian 8+, MacOS, Android with Termux</p>
-<p>linux直接运行就可以了，mac的话本人没有</p>
-<h1 id="android">android <a href="#android" class="anchor">🔗</a></h1><p>下载temux终端<br>
-官网<a href="https://termux.dev/en/" target="_blank" rel="noopener">https://termux.dev/en/</a><br>
-github下载链接:<a href="https://github.com/termux/termux-app/releases" target="_blank" rel="noopener">https://github.com/termux/termux-app/releases</a><br>
-不要从google play下，google play的已经不更新了</p>
-<p>然后复制粘贴运行脚本就好<br>
-首次运行，需要安装python，需要等待一段时间，大概几分钟吧<br>
-<p class="markdown-image">
-  <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310212344255.webp" alt=""  />
-</p><br>
-安装完之后点击你所需的地区，我代理是hytron香港的，选择2,然后回车就行了，结果就会出来了<br>
-<p class="markdown-image">
-  <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310212344162.webp" alt=""  />
-</p><br>
-<p class="markdown-image">
-  <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310212344835.webp" alt=""  />
-</p></p>
-<h1 id="windows">windows <a href="#windows" class="anchor">🔗</a></h1><p>安装ubuntu子系统<br>
-应用商店搜ubuntu，我喜欢20.04，我直接装的20.04，<br>
-<p class="markdown-image">
-  <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310212344602.webp" alt=""  />
-</p><br>
-第一次登录需要设置<br>
-自己设置下用户名和密码，用户名叫啥都行，记得linux输入密码是不显示的<br>
-然后输入sudo -i，切换到root，记得输入密码</p>
-<p>接着直接复制粘贴脚本运行就可以了<br>
-<p class="markdown-image">
-  <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310212345519.webp" alt=""  />
-</p></p>
-<h1 id="ios">ios <a href="#ios" class="anchor">🔗</a></h1><p>ios可以直接用quan x，stash，loon，surge等检测，甚至可以执行脚本来自动切换，这各自己搜下，网上有教程</p>
-<p>参考原作者github上的，我把他写的稍微详细了点<br>
-<a href="https://github.com/lmc999/RegionRestrictionCheck/wiki/iOS%E8%BF%90%E8%A1%8C%E8%84%9A%E6%9C%AC%E6%96%B9%E6%B3%95" target="_blank" rel="noopener">https://github.com/lmc999/RegionRestrictionCheck/wiki/iOS%E8%BF%90%E8%A1%8C%E8%84%9A%E6%9C%AC%E6%96%B9%E6%B3%95</a><br>
-1下载ish<br>
-<a href="https://apps.apple.com/au/app/ish-shell/id1436902243" target="_blank" rel="noopener">https://apps.apple.com/au/app/ish-shell/id1436902243</a></p>
-<p>2下载alpine linux的mini root filesystem到文件 app<br>
-地址:<a href="https://dl-cdn.alpinelinux.org/alpine/v3.13/releases/x86/alpine-minirootfs-3.13.6-x86.tar.gz" target="_blank" rel="noopener">https://dl-cdn.alpinelinux.org/alpine/v3.13/releases/x86/alpine-minirootfs-3.13.6-x86.tar.gz</a><br>
-打开上面链接，点击更多-储存到文件<br>
-<p class="markdown-image">
-  <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310212345565.webp" alt=""  />
-</p><br>
-<p class="markdown-image">
-  <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310212345546.webp" alt=""  />
-</p></p>
-<p>3打开ish app，点击右小角的设置<br>
-<p class="markdown-image">
-  <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310212345678.webp" alt=""  />
-</p><br>
-点filesystems<br>
-<p class="markdown-image">
-  <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310212345001.webp" alt=""  />
-</p><br>
-点右上角import导入<br>
-<p class="markdown-image">
-  <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310212345291.webp" alt=""  />
-</p><br>
-选择第二部下载的tar.gz包<br>
-<p class="markdown-image">
-  <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310212346746.webp" alt=""  />
-</p><br>
-然后不重启的话，选择Boot From This Filesystem<br>
-<p class="markdown-image">
-  <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310212346284.webp" alt=""  />
-</p></p>
-<p>4安装依赖<br>
-重启完进入ish，点右小角剪贴输入下面命令安装依赖<br>
-<p class="markdown-image">
-  <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310212346279.webp" alt=""  />
-</p></p>
-<pre tabindex="0"><code>apk add curl bash gawk python3
-</code></pre><p>5运行脚本</p>
-<pre tabindex="0"><code>curl -L -s -o ./check.sh https://git.io/JRw8R &amp;&amp; chmod +x ./check.sh &amp;&amp; bash ./check.sh
-</code></pre><p><p class="markdown-image">
-  <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310212347588.webp" alt=""  />
-</p><br>
-<p class="markdown-image">
-  <img src="https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310212347082.webp" alt=""  />
-</p></p>
-
-    </div>
-
-    
-    
-    
-
-</section>
-
-
-    </main>
-    
-    <footer id="footer">
-    
-
-    <div class="copyright">
-    
-        qklg Hosted on <!-- raw HTML omitted -->  Cloudflare Pages <!-- raw HTML omitted -->
-    
-    </div>
-
-    
-      <div class="powerby">
-        Powered by <a href='http://www.gohugo.io/'>Hugo</a> Theme By <a href='https://github.com/nodejh/hugo-theme-mini'>nodejh</a>
-      </div>
-    
-</footer>
-
-
-
-  </body>
-</html>
+<!doctype html><html lang=en dir=auto><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>ios,安卓和win跑流媒体解锁检测脚本 | qklg</title>
+<meta name=keywords content><meta name=description content="本文使用脚本
+github链接:https://github.com/lmc999/RegionRestrictionCheck
+脚本
+bash <(curl -L -s https://raw.githubusercontent.com/lmc999/RegionRestrictionCheck/main/check.sh) 如果github的raw无法访问，可以采用下面jsdelivr加速的
+bash <(curl -L -s https://testingcf.jsdelivr.net/gh/lmc999/RegionRestrictionCheck@main/check.sh) 这个脚本支持：CentOS 6+, Ubuntu 14.04+, Debian 8+, MacOS, Android with Termux
+linux直接运行就可以了，mac的话本人没有
+android 下载temux终端
+官网https://termux.dev/en/
+github下载链接:https://github.com/termux/termux-app/releases
+不要从google play下，google play的已经不更新了
+然后复制粘贴运行脚本就好
+首次运行，需要安装python，需要等待一段时间，大概几分钟吧
+安装完之后点击你所需的地区，我代理是hytron香港的，选择2,然后回车就行了，结果就会出来了
+windows 安装ubuntu子系统
+应用商店搜ubuntu，我喜欢20.04，我直接装的20.04，
+第一次登录需要设置
+自己设置下用户名和密码，用户名叫啥都行，记得linux输入密码是不显示的
+然后输入sudo -i，切换到root，记得输入密码
+接着直接复制粘贴脚本运行就可以了
+ios ios可以直接用quan x，stash，loon，surge等检测，甚至可以执行脚本来自动切换，这各自己搜下，网上有教程
+参考原作者github上的，我把他写的稍微详细了点
+https://github.com/lmc999/RegionRestrictionCheck/wiki/iOS%E8%BF%90%E8%A1%8C%E8%84%9A%E6%9C%AC%E6%96%B9%E6%B3%95
+1下载ish
+https://apps.apple.com/au/app/ish-shell/id1436902243
+2下载alpine linux的mini root filesystem到文件 app
+地址:https://dl-cdn.alpinelinux.org/alpine/v3.13/releases/x86/alpine-minirootfs-3.13.6-x86.tar.gz
+打开上面链接，点击更多-储存到文件
+3打开ish app，点击右小角的设置
+点filesystems
+点右上角import导入
+选择第二部下载的tar.gz包
+然后不重启的话，选择Boot From This Filesystem
+4安装依赖
+重启完进入ish，点右小角剪贴输入下面命令安装依赖
+apk add curl bash gawk python3 5运行脚本"><meta name=author content="Me"><link rel=canonical href=https://blog.qklg.net/post/20230910/><meta name=google-site-verification content="XYZabc"><meta name=yandex-verification content="XYZabc"><meta name=msvalidate.01 content="XYZabc"><link crossorigin=anonymous href=/assets/css/stylesheet.fc220c15db4aef0318bbf30adc45d33d4d7c88deff3238b23eb255afdc472ca6.css integrity="sha256-/CIMFdtK7wMYu/MK3EXTPU18iN7/MjiyPrJVr9xHLKY=" rel="preload stylesheet" as=style><link rel=icon href=https://blog.qklg.net/%3Clink%20/%20abs%20url%3E><link rel=icon type=image/png sizes=16x16 href=https://blog.qklg.net/%3Clink%20/%20abs%20url%3E><link rel=icon type=image/png sizes=32x32 href=https://blog.qklg.net/%3Clink%20/%20abs%20url%3E><link rel=apple-touch-icon href=https://blog.qklg.net/%3Clink%20/%20abs%20url%3E><link rel=mask-icon href=https://blog.qklg.net/%3Clink%20/%20abs%20url%3E><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate hreflang=en href=https://blog.qklg.net/post/20230910/><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--code-block-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><meta property="og:title" content="ios,安卓和win跑流媒体解锁检测脚本"><meta property="og:description" content="本文使用脚本
+github链接:https://github.com/lmc999/RegionRestrictionCheck
+脚本
+bash <(curl -L -s https://raw.githubusercontent.com/lmc999/RegionRestrictionCheck/main/check.sh) 如果github的raw无法访问，可以采用下面jsdelivr加速的
+bash <(curl -L -s https://testingcf.jsdelivr.net/gh/lmc999/RegionRestrictionCheck@main/check.sh) 这个脚本支持：CentOS 6+, Ubuntu 14.04+, Debian 8+, MacOS, Android with Termux
+linux直接运行就可以了，mac的话本人没有
+android 下载temux终端
+官网https://termux.dev/en/
+github下载链接:https://github.com/termux/termux-app/releases
+不要从google play下，google play的已经不更新了
+然后复制粘贴运行脚本就好
+首次运行，需要安装python，需要等待一段时间，大概几分钟吧
+安装完之后点击你所需的地区，我代理是hytron香港的，选择2,然后回车就行了，结果就会出来了
+windows 安装ubuntu子系统
+应用商店搜ubuntu，我喜欢20.04，我直接装的20.04，
+第一次登录需要设置
+自己设置下用户名和密码，用户名叫啥都行，记得linux输入密码是不显示的
+然后输入sudo -i，切换到root，记得输入密码
+接着直接复制粘贴脚本运行就可以了
+ios ios可以直接用quan x，stash，loon，surge等检测，甚至可以执行脚本来自动切换，这各自己搜下，网上有教程
+参考原作者github上的，我把他写的稍微详细了点
+https://github.com/lmc999/RegionRestrictionCheck/wiki/iOS%E8%BF%90%E8%A1%8C%E8%84%9A%E6%9C%AC%E6%96%B9%E6%B3%95
+1下载ish
+https://apps.apple.com/au/app/ish-shell/id1436902243
+2下载alpine linux的mini root filesystem到文件 app
+地址:https://dl-cdn.alpinelinux.org/alpine/v3.13/releases/x86/alpine-minirootfs-3.13.6-x86.tar.gz
+打开上面链接，点击更多-储存到文件
+3打开ish app，点击右小角的设置
+点filesystems
+点右上角import导入
+选择第二部下载的tar.gz包
+然后不重启的话，选择Boot From This Filesystem
+4安装依赖
+重启完进入ish，点右小角剪贴输入下面命令安装依赖
+apk add curl bash gawk python3 5运行脚本"><meta property="og:type" content="article"><meta property="og:url" content="https://blog.qklg.net/post/20230910/"><meta property="og:image" content="https://blog.qklg.net/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E"><meta property="article:section" content="posts"><meta property="article:published_time" content="2023-09-10T23:43:32+00:00"><meta property="article:modified_time" content="2023-09-10T23:43:32+00:00"><meta property="og:site_name" content="qklg"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://blog.qklg.net/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E"><meta name=twitter:title content="ios,安卓和win跑流媒体解锁检测脚本"><meta name=twitter:description content="本文使用脚本
+github链接:https://github.com/lmc999/RegionRestrictionCheck
+脚本
+bash <(curl -L -s https://raw.githubusercontent.com/lmc999/RegionRestrictionCheck/main/check.sh) 如果github的raw无法访问，可以采用下面jsdelivr加速的
+bash <(curl -L -s https://testingcf.jsdelivr.net/gh/lmc999/RegionRestrictionCheck@main/check.sh) 这个脚本支持：CentOS 6+, Ubuntu 14.04+, Debian 8+, MacOS, Android with Termux
+linux直接运行就可以了，mac的话本人没有
+android 下载temux终端
+官网https://termux.dev/en/
+github下载链接:https://github.com/termux/termux-app/releases
+不要从google play下，google play的已经不更新了
+然后复制粘贴运行脚本就好
+首次运行，需要安装python，需要等待一段时间，大概几分钟吧
+安装完之后点击你所需的地区，我代理是hytron香港的，选择2,然后回车就行了，结果就会出来了
+windows 安装ubuntu子系统
+应用商店搜ubuntu，我喜欢20.04，我直接装的20.04，
+第一次登录需要设置
+自己设置下用户名和密码，用户名叫啥都行，记得linux输入密码是不显示的
+然后输入sudo -i，切换到root，记得输入密码
+接着直接复制粘贴脚本运行就可以了
+ios ios可以直接用quan x，stash，loon，surge等检测，甚至可以执行脚本来自动切换，这各自己搜下，网上有教程
+参考原作者github上的，我把他写的稍微详细了点
+https://github.com/lmc999/RegionRestrictionCheck/wiki/iOS%E8%BF%90%E8%A1%8C%E8%84%9A%E6%9C%AC%E6%96%B9%E6%B3%95
+1下载ish
+https://apps.apple.com/au/app/ish-shell/id1436902243
+2下载alpine linux的mini root filesystem到文件 app
+地址:https://dl-cdn.alpinelinux.org/alpine/v3.13/releases/x86/alpine-minirootfs-3.13.6-x86.tar.gz
+打开上面链接，点击更多-储存到文件
+3打开ish app，点击右小角的设置
+点filesystems
+点右上角import导入
+选择第二部下载的tar.gz包
+然后不重启的话，选择Boot From This Filesystem
+4安装依赖
+重启完进入ish，点右小角剪贴输入下面命令安装依赖
+apk add curl bash gawk python3 5运行脚本"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://blog.qklg.net/posts/"},{"@type":"ListItem","position":2,"name":"ios,安卓和win跑流媒体解锁检测脚本","item":"https://blog.qklg.net/post/20230910/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"ios,安卓和win跑流媒体解锁检测脚本","name":"ios,安卓和win跑流媒体解锁检测脚本","description":"本文使用脚本\ngithub链接:https://github.com/lmc999/RegionRestrictionCheck\n脚本\nbash \u0026lt;(curl -L -s https://raw.githubusercontent.com/lmc999/RegionRestrictionCheck/main/check.sh) 如果github的raw无法访问，可以采用下面jsdelivr加速的\nbash \u0026lt;(curl -L -s https://testingcf.jsdelivr.net/gh/lmc999/RegionRestrictionCheck@main/check.sh) 这个脚本支持：CentOS 6+, Ubuntu 14.04+, Debian 8+, MacOS, Android with Termux\nlinux直接运行就可以了，mac的话本人没有\nandroid 下载temux终端\n官网https://termux.dev/en/\ngithub下载链接:https://github.com/termux/termux-app/releases\n不要从google play下，google play的已经不更新了\n然后复制粘贴运行脚本就好\n首次运行，需要安装python，需要等待一段时间，大概几分钟吧\n安装完之后点击你所需的地区，我代理是hytron香港的，选择2,然后回车就行了，结果就会出来了\nwindows 安装ubuntu子系统\n应用商店搜ubuntu，我喜欢20.04，我直接装的20.04，\n第一次登录需要设置\n自己设置下用户名和密码，用户名叫啥都行，记得linux输入密码是不显示的\n然后输入sudo -i，切换到root，记得输入密码\n接着直接复制粘贴脚本运行就可以了\nios ios可以直接用quan x，stash，loon，surge等检测，甚至可以执行脚本来自动切换，这各自己搜下，网上有教程\n参考原作者github上的，我把他写的稍微详细了点\nhttps://github.com/lmc999/RegionRestrictionCheck/wiki/iOS%E8%BF%90%E8%A1%8C%E8%84%9A%E6%9C%AC%E6%96%B9%E6%B3%95\n1下载ish\nhttps://apps.apple.com/au/app/ish-shell/id1436902243\n2下载alpine linux的mini root filesystem到文件 app\n地址:https://dl-cdn.alpinelinux.org/alpine/v3.13/releases/x86/alpine-minirootfs-3.13.6-x86.tar.gz\n打开上面链接，点击更多-储存到文件\n3打开ish app，点击右小角的设置\n点filesystems\n点右上角import导入\n选择第二部下载的tar.gz包\n然后不重启的话，选择Boot From This Filesystem\n4安装依赖\n重启完进入ish，点右小角剪贴输入下面命令安装依赖\napk add curl bash gawk python3 5运行脚本","keywords":[],"articleBody":"本文使用脚本\ngithub链接:https://github.com/lmc999/RegionRestrictionCheck\n脚本\nbash \u003c(curl -L -s https://raw.githubusercontent.com/lmc999/RegionRestrictionCheck/main/check.sh) 如果github的raw无法访问，可以采用下面jsdelivr加速的\nbash \u003c(curl -L -s https://testingcf.jsdelivr.net/gh/lmc999/RegionRestrictionCheck@main/check.sh) 这个脚本支持：CentOS 6+, Ubuntu 14.04+, Debian 8+, MacOS, Android with Termux\nlinux直接运行就可以了，mac的话本人没有\nandroid 下载temux终端\n官网https://termux.dev/en/\ngithub下载链接:https://github.com/termux/termux-app/releases\n不要从google play下，google play的已经不更新了\n然后复制粘贴运行脚本就好\n首次运行，需要安装python，需要等待一段时间，大概几分钟吧\n安装完之后点击你所需的地区，我代理是hytron香港的，选择2,然后回车就行了，结果就会出来了\nwindows 安装ubuntu子系统\n应用商店搜ubuntu，我喜欢20.04，我直接装的20.04，\n第一次登录需要设置\n自己设置下用户名和密码，用户名叫啥都行，记得linux输入密码是不显示的\n然后输入sudo -i，切换到root，记得输入密码\n接着直接复制粘贴脚本运行就可以了\nios ios可以直接用quan x，stash，loon，surge等检测，甚至可以执行脚本来自动切换，这各自己搜下，网上有教程\n参考原作者github上的，我把他写的稍微详细了点\nhttps://github.com/lmc999/RegionRestrictionCheck/wiki/iOS%E8%BF%90%E8%A1%8C%E8%84%9A%E6%9C%AC%E6%96%B9%E6%B3%95\n1下载ish\nhttps://apps.apple.com/au/app/ish-shell/id1436902243\n2下载alpine linux的mini root filesystem到文件 app\n地址:https://dl-cdn.alpinelinux.org/alpine/v3.13/releases/x86/alpine-minirootfs-3.13.6-x86.tar.gz\n打开上面链接，点击更多-储存到文件\n3打开ish app，点击右小角的设置\n点filesystems\n点右上角import导入\n选择第二部下载的tar.gz包\n然后不重启的话，选择Boot From This Filesystem\n4安装依赖\n重启完进入ish，点右小角剪贴输入下面命令安装依赖\napk add curl bash gawk python3 5运行脚本\ncurl -L -s -o ./check.sh https://git.io/JRw8R \u0026\u0026 chmod +x ./check.sh \u0026\u0026 bash ./check.sh ","wordCount":"88","inLanguage":"en","image":"https://blog.qklg.net/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E","datePublished":"2023-09-10T23:43:32Z","dateModified":"2023-09-10T23:43:32Z","author":{"@type":"Person","name":"Me"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://blog.qklg.net/post/20230910/"},"publisher":{"@type":"Organization","name":"qklg","logo":{"@type":"ImageObject","url":"https://blog.qklg.net/%3Clink%20/%20abs%20url%3E"}}}</script></head><body id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add("dark"):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove("dark"):window.matchMedia("(prefers-color-scheme: dark)").matches&&document.body.classList.add("dark")</script><header class=header><nav class=nav><div class=logo><a href=https://blog.qklg.net/ accesskey=h title="qklg (Alt + H)"><img src=https://blog.qklg.net/apple-touch-icon.png alt aria-label=logo height=35>qklg</a><div class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu><li><a href=https://blog.qklg.net/archives/ title=Archives><span>Archives</span></a></li><li><a href=https://blog.qklg.net/tags/ title=Tags><span>Tags</span></a></li><li><a href=https://blog.qklg.net/about/ title=About><span>About</span></a></li><li><a href=https://blog.qklg.net/search/ title="Search (Alt + /)" accesskey=/><span>Search</span></a></li><li><a href=https://blog.qklg.net/index.xml title=RSS><span>RSS</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><div class=breadcrumbs><a href=https://blog.qklg.net/>Home</a>&nbsp;»&nbsp;<a href=https://blog.qklg.net/posts/>Posts</a></div><h1 class="post-title entry-hint-parent">ios,安卓和win跑流媒体解锁检测脚本</h1><div class=post-meta><span title='2023-09-10 23:43:32 +0000 UTC'>2023-09-10</span>&nbsp;·&nbsp;Me</div></header><div class=toc><details><summary accesskey=c title="(Alt + C)"><span class=details>Table of Contents</span></summary><div class=inner><nav id=TableOfContents></nav></div></details></div><div class=post-content><p>本文使用脚本<br>github链接:<a href=https://github.com/lmc999/RegionRestrictionCheck>https://github.com/lmc999/RegionRestrictionCheck</a><br>脚本</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>bash &lt;(curl -L -s https://raw.githubusercontent.com/lmc999/RegionRestrictionCheck/main/check.sh)
+</span></span></code></pre></div><p>如果github的raw无法访问，可以采用下面jsdelivr加速的</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>bash &lt;(curl -L -s https://testingcf.jsdelivr.net/gh/lmc999/RegionRestrictionCheck@main/check.sh)
+</span></span></code></pre></div><p>这个脚本支持：CentOS 6+, Ubuntu 14.04+, Debian 8+, MacOS, Android with Termux</p><p>linux直接运行就可以了，mac的话本人没有</p><h1 id=android>android<a hidden class=anchor aria-hidden=true href=#android>#</a></h1><p>下载temux终端<br>官网<a href=https://termux.dev/en/>https://termux.dev/en/</a><br>github下载链接:<a href=https://github.com/termux/termux-app/releases>https://github.com/termux/termux-app/releases</a><br>不要从google play下，google play的已经不更新了</p><p>然后复制粘贴运行脚本就好<br>首次运行，需要安装python，需要等待一段时间，大概几分钟吧<br><img loading=lazy src=https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310212344255.webp alt><br>安装完之后点击你所需的地区，我代理是hytron香港的，选择2,然后回车就行了，结果就会出来了<br><img loading=lazy src=https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310212344162.webp alt><br><img loading=lazy src=https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310212344835.webp alt></p><h1 id=windows>windows<a hidden class=anchor aria-hidden=true href=#windows>#</a></h1><p>安装ubuntu子系统<br>应用商店搜ubuntu，我喜欢20.04，我直接装的20.04，<br><img loading=lazy src=https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310212344602.webp alt><br>第一次登录需要设置<br>自己设置下用户名和密码，用户名叫啥都行，记得linux输入密码是不显示的<br>然后输入sudo -i，切换到root，记得输入密码</p><p>接着直接复制粘贴脚本运行就可以了<br><img loading=lazy src=https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310212345519.webp alt></p><h1 id=ios>ios<a hidden class=anchor aria-hidden=true href=#ios>#</a></h1><p>ios可以直接用quan x，stash，loon，surge等检测，甚至可以执行脚本来自动切换，这各自己搜下，网上有教程</p><p>参考原作者github上的，我把他写的稍微详细了点<br><a href=https://github.com/lmc999/RegionRestrictionCheck/wiki/iOS%E8%BF%90%E8%A1%8C%E8%84%9A%E6%9C%AC%E6%96%B9%E6%B3%95>https://github.com/lmc999/RegionRestrictionCheck/wiki/iOS%E8%BF%90%E8%A1%8C%E8%84%9A%E6%9C%AC%E6%96%B9%E6%B3%95</a><br>1下载ish<br><a href=https://apps.apple.com/au/app/ish-shell/id1436902243>https://apps.apple.com/au/app/ish-shell/id1436902243</a></p><p>2下载alpine linux的mini root filesystem到文件 app<br>地址:<a href=https://dl-cdn.alpinelinux.org/alpine/v3.13/releases/x86/alpine-minirootfs-3.13.6-x86.tar.gz>https://dl-cdn.alpinelinux.org/alpine/v3.13/releases/x86/alpine-minirootfs-3.13.6-x86.tar.gz</a><br>打开上面链接，点击更多-储存到文件<br><img loading=lazy src=https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310212345565.webp alt><br><img loading=lazy src=https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310212345546.webp alt></p><p>3打开ish app，点击右小角的设置<br><img loading=lazy src=https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310212345678.webp alt><br>点filesystems<br><img loading=lazy src=https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310212345001.webp alt><br>点右上角import导入<br><img loading=lazy src=https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310212345291.webp alt><br>选择第二部下载的tar.gz包<br><img loading=lazy src=https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310212346746.webp alt><br>然后不重启的话，选择Boot From This Filesystem<br><img loading=lazy src=https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310212346284.webp alt></p><p>4安装依赖<br>重启完进入ish，点右小角剪贴输入下面命令安装依赖<br><img loading=lazy src=https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310212346279.webp alt></p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>apk add curl bash gawk python3
+</span></span></code></pre></div><p>5运行脚本</p><div class=highlight><pre tabindex=0 class=chroma><code class=language-fallback data-lang=fallback><span class=line><span class=cl>curl -L -s -o ./check.sh https://git.io/JRw8R &amp;&amp; chmod +x ./check.sh &amp;&amp; bash ./check.sh
+</span></span></code></pre></div><p><img loading=lazy src=https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310212347588.webp alt><br><img loading=lazy src=https://testingcf.jsdelivr.net/gh/qklg/pic/webp/202310212347082.webp alt></p></div><footer class=post-footer><ul class=post-tags></ul><nav class=paginav><a class=prev href=https://blog.qklg.net/post/20230912/><span class=title>« Prev</span><br><span>搬瓦工vps的一点小建议</span>
+</a><a class=next href=https://blog.qklg.net/post/20230904/><span class=title>Next »</span><br><span>分享个可以看到ip的bt下载记录的网站</span></a></nav></footer></article></main><footer class=footer><span>qklg Hosted on <a href=https://pages.cloudflare.com/ target=_blank>Cloudflare Pages </a></span>·
+<span>Powered by
+<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
+        <a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg>
+</a><script>let menu=document.getElementById("menu");menu&&(menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}),document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove("dark"),localStorage.setItem("pref-theme","light")):(document.body.classList.add("dark"),localStorage.setItem("pref-theme","dark"))})</script><script>document.querySelectorAll("pre > code").forEach(e=>{const n=e.parentNode.parentNode,t=document.createElement("button");t.classList.add("copy-code"),t.innerHTML="copy";function s(){t.innerHTML="copied!",setTimeout(()=>{t.innerHTML="copy"},2e3)}t.addEventListener("click",t=>{if("clipboard"in navigator){navigator.clipboard.writeText(e.textContent),s();return}const n=document.createRange();n.selectNodeContents(e);const o=window.getSelection();o.removeAllRanges(),o.addRange(n);try{document.execCommand("copy"),s()}catch{}o.removeRange(n)}),n.classList.contains("highlight")?n.appendChild(t):n.parentNode.firstChild==n||(e.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName=="TABLE"?e.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(t):e.parentNode.appendChild(t))})</script></body></html>

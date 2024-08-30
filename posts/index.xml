@@ -1,11 +1,17 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>Posts on qklg</title>
     <link>https://blog.qklg.net/posts/</link>
     <description>Recent content in Posts on qklg</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <image>
+      <title>qklg</title>
+      <url>https://blog.qklg.net/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://blog.qklg.net/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+    </image>
+    <generator>Hugo -- 0.123.8</generator>
+    <language>en</language>
+    <copyright>qklg Hosted on Cloudflare Pages </copyright>
     <lastBuildDate>Thu, 29 Aug 2024 11:49:40 +0000</lastBuildDate>
     <atom:link href="https://blog.qklg.net/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
@@ -13,357 +19,1175 @@
       <link>https://blog.qklg.net/post/20240829/</link>
       <pubDate>Thu, 29 Aug 2024 11:49:40 +0000</pubDate>
       <guid>https://blog.qklg.net/post/20240829/</guid>
-      <description>我的签名的博客本来about里有段 可以通过Cloudflare的公共网关来访问 https://cloudflare-ipfs.com/ipfs/QmUf7b6tiz3nbxQbtcTo7e2FABn52AmZTLsBMRGzxKrJb3/ 今天博客搬家从gridea搬家到hugo上 结果点进去发现居然</description>
+      <description>我的签名的博客本来about里有段
+可以通过Cloudflare的公共网关来访问 https://cloudflare-ipfs.com/ipfs/QmUf7b6tiz3nbxQbtcTo7e2FABn52AmZTLsBMRGzxKrJb3/ 今天博客搬家从gridea搬家到hugo上
+结果点进去发现居然打不开了
+于是搜了下，发现去年就有帖子说cf的web3按钮没了，换成AI了
+这边的ai本来是web3的，果然热度没了，以前热度是web3 元宇宙，现在是ai了
+然后cf的官网找到了篇博客
+https://blog.cloudflare.com/cloudflares-public-ipfs-gateways-and-supporting-interplanetary-shipyard/
+里面有说
+所有使用cloudflare-ipfs.com或cf-ipfs.com主机名的流量将继续不间断地工作， 并重定向到 ipfs.io 或 dweb.link，直到 2024 年 8 月 14 日，届时 Cloudflare 主机名将不再连接到 IPFS，所有用户必须将他们使用的主机名切换到ipfs.io或dweb.link 以确保不会发生服务中断。如果您正在使用任何一个 Cloudflare 主机名， 请务必在过渡日期之前尽快切换到新的主机名之一，以避免任何服务中断！ 在无人关注的角落里，cf的ipfs公共网关无了
+现在隔一段时间久一个热点，过去源于元宇宙 web3 nft ，现在ai
+过段时间又可能是别的什么了
+大家又有新的玩具玩了</description>
     </item>
     <item>
       <title>publii部署静态博客</title>
       <link>https://blog.qklg.net/post/20240823/</link>
       <pubDate>Fri, 23 Aug 2024 21:55:30 +0000</pubDate>
       <guid>https://blog.qklg.net/post/20240823/</guid>
-      <description>以前哥们写过一篇用gridea部署静态博客的文章 文章链接 https://www.nodeseek.com/post-8624-1 今天闲着无聊逛老外论坛的时候发现了一个类似的，和gridea一样，不用自己像hex</description>
+      <description>以前哥们写过一篇用gridea部署静态博客的文章
+文章链接 https://www.nodeseek.com/post-8624-1
+今天闲着无聊逛老外论坛的时候发现了一个类似的，和gridea一样，不用自己像hexo hugo那样折腾命令
+全部可以用gui来完成的博客系统
+一 下载publii 并且汉化 ①下载 https://getpublii.com/download/ 拉到最下面，下载0.45.2的版本，汉化支持最新的版本就是这个
+双击打开，点我同意安装就可以了，然后会来到这么个界面，先不要管，
+② 汉化 点右上角三个点，选择language
+点击get more language，跳转到 https://github.com/GetPublii/Publii-ui-locales
+拉到下面选择zh-cn下载，点下载按钮下载
+最高支持到0.45.0，所以刚刚下的旧版本
+点击右上角的install language，直接点刚刚的汉化文件就行，不用解压缩,选择就行，如果还是不行，重启下软件
+二 配置github ①注册 github https://github.com/join 没号的自己注册一个
+②创建仓库 https://github.com/new
+创建username.github.io的 仓库
+username就是你github的用户名
+其实仓库名字也可以不是这个，随便取个就行，取github.io结尾的，
+是我想同时用cloudflare pages，netlify，vercel之外，还有可以部署到github pages，多个地方
+③申请token https://github.com/settings/tokens/new
+点击链接申请token，期限选择无期限，repo勾上，token只显示一次，记得保存下
+三 配置 publii ①配置服务器 点击左边的服务器，选择 git repository
+里面长这样子
+网址就是你博客的网址，如果你没域名的话就是 username.github.io
+存储库url就是 你刚刚创建github仓库的url，注意，后面加个.git
+如果你和我一样的话应该是 username.github.io仓库的话应该是下面这样子，username改成你自己的
+https://github.com/username/username.github.io.git
+分支 一般为main
+用户名 就是你github的邮箱
+密码/令牌 就是你刚刚创建的github的token
+提交作者 ，提交作者邮箱这两个自己填下就行了
+提交信息不用动
+点击保存，并且测试下连接
+②写文章 文章的话我喜欢markdown，我一般用typora编辑之后复制到其他地方
+③同步 点击左下角的同步您的网站，即可同步到github仓库，然后cf pages等其他地方会自动更新的</description>
     </item>
     <item>
       <title>chrome 125禁用新ui</title>
       <link>https://blog.qklg.net/post/20240517/</link>
       <pubDate>Fri, 17 May 2024 13:52:49 +0000</pubDate>
       <guid>https://blog.qklg.net/post/20240517/</guid>
-      <description>chrome更新125了，没法在chrome://flags 里面禁用新界面了 新界面这个右键这真的垃圾，学什么不好，学win11 哥们找了好久,</description>
+      <description>chrome更新125了，没法在chrome://flags 里面禁用新界面了
+新界面这个右键这真的垃圾，学什么不好，学win11
+哥们找了好久,reddit上老外找的办法，快捷方式里面加一个这个
+“C:\Program Files\Google\Chrome\Application\chrome.exe” --disable-features=CustomizeChromeSidePanel 参考https://www.reddit.com/r/chrome/comments/1c8sthv/as_of_chrome_ver_125_the_customizechromesidepanel/</description>
     </item>
     <item>
       <title>分享下自己用的win软件</title>
       <link>https://blog.qklg.net/post/20240329/</link>
       <pubDate>Fri, 29 Mar 2024 18:27:58 +0000</pubDate>
       <guid>https://blog.qklg.net/post/20240329/</guid>
-      <description>分享下自己用的win软件 我的软件都在开始菜单里，打开很方便 google chrome上网用的，电脑浏览器用的最多了 office三件套+onenote，用</description>
+      <description>分享下自己用的win软件
+我的软件都在开始菜单里，打开很方便
+google chrome上网用的，电脑浏览器用的最多了
+office三件套+onenote，用的不多，电脑必备，365家庭车+1T OneDrive一年40多
+clash for windows，之前一直用机场的这个，挺好用的
+steam 其实是csgo启动器，我已经很久没买游戏了，每天打两把csgo，现在已经是cs2了
+steam++，之前配steam用的
+share x截图软件
+picgo截图图床，这两个我picgo用的比较多，配合typora很好用
+网易云，用来听音乐
+potplayer，mpv都是看视频的，我用potplayer比较多，MadVR+SVP4的话挺好用的
+教程看的b站这个 https://www.bilibili.com/video/av314120135/
+mpv用的lazy https://github.com/hooke007/MPV_lazy
+自己稍微改了下
+contextmenu_gui用的这个 https://github.com/hooke007/MPV_lazy/discussions/60
+配置用的这个优化了下 https://vcb-s.com/archives/7594
+主要是配emby用的，
+浏览器用这个下面可以从emby跳转上去 https://github.com/akiirui/mpv-handler
+emby配合油猴脚本启动potplayer和mpv，脚本链接https://github.com/bpking1/embyExternalUrl
+弹弹play，看二次元番剧加载弹幕用的
+obs主要来录屏
+kodo rader看电子书比较多，我平时主要看一些轻小说和漫画
+calibre，编辑书的
+idm 之前104买的，下载和资源嗅探很好用
+win自带的天气
+tg，大家都有
+spotify听歌和播客的
+tim，qq的办公版本
+aida64看电脑各硬件的
+core temp主要是看温度的
+best trace测路由的，用旧版本就不需要设置api了
+speedtest 测网速的
+lenovo hotkeys控制联想笔记本的快捷键的
+lenovo vantage控制联想笔记本的
+v2rayng，主要用的自己的节点用这个，机场用clash比较多
+termius，只用来ssh，我常用的脚本在这里https://www.nodeseek.com/post-18637-1
+winscp，主要用来弄小鸡上文件的，本人懒狗，懒得用vim，直接用winscp
+grdiea写博客的，教程看我这个文章https://www.nodeseek.com/post-8624-1
+微信，大家都用
+geek卸载软件用的
+typora用来写markdown的
+usbeam改hosts很好用的
+ubuntu的子系统
+Whisperdesktop可以语音转文字，自己做字幕，教程看这里https://www.nodeseek.com/post-80841-1
+mkvtoolnix+gmkvextractgui，可以把字幕从mkv提取，封装mkv之类的
+下面一堆win自带的，照片，uwp的邮箱很好用，计算器，终端和相机
+电影和电视，配合杜比视界和杜比全景声，hevc插件很好用
+https://www.nodeseek.com/post-21191-1
+traffic moitor右下角现实网速的
+openvpn我出门在外回家用的</description>
     </item>
     <item>
       <title>自己做字幕和翻译</title>
       <link>https://blog.qklg.net/post/20240317/</link>
       <pubDate>Sun, 17 Mar 2024 10:09:13 +0000</pubDate>
       <guid>https://blog.qklg.net/post/20240317/</guid>
-      <description>总共两大步 生成语音转文字和翻译 一 原文字幕，语音转文字 🔗①下载WhisperDesktop 🔗https://github.com/Const-</description>
+      <description>总共两大步
+生成语音转文字和翻译
+一 原文字幕，语音转文字 ①下载WhisperDesktop https://github.com/Const-me/Whisper/releases
+解压缩，打开WhisperDesktop.exe
+②下载模型 https://huggingface.co/ggerganov/whisper.cpp/tree/main
+我用的是medium，够用了一般
+③设置 然后填上模型文件路径
+Model Implementation选择gpu，amd的也是可以的，我用的6800H的核显，点ok
+这边建议用ffmpeg切成五分钟左右的片段，这样子准确度高很多，到后面有时候会出bug
+如果是视频的话，也可以用ffmpeg把音频提取出来
+④转换 language选择你原文的语言，translate别勾
+Transcribe File选择音频文件
+Output Format选择SubRip subtitles的srt格式的文件
+Place that file to the input folder的勾上
+点完，然后Transcribe开始工作，右上角Debug Console可以看到转换的进度的
+我的6800H的核显转换一段五分钟的话，大概一分钟左右完成
+二 翻译 翻译的话直接用chatgpt，3.5够用了
+用api太贵了，直接免费的web版丢进去完事了
+丢给他翻译就完事了，穷人办法，一分钱都不用花
+用下面这段提示的话，能保留原来的日文字幕，英文的话自己把日文改成英文就行了
+如果它停止了的话就发个go on就行了
+把这个日语的字幕文件转成中日双语，中文在下，日文在下面另起一行，保留原有的日文 字幕文件如下 参考
+https://www.bilibili.com/video/av268725141/?p=1&amp;amp;t=160
+https://www.bilibili.com/read/cv22692287/</description>
     </item>
     <item>
       <title>将我博客的图片都转换成avif</title>
       <link>https://blog.qklg.net/post/20240307/</link>
       <pubDate>Thu, 07 Mar 2024 16:56:22 +0000</pubDate>
       <guid>https://blog.qklg.net/post/20240307/</guid>
-      <description>1 avif的好处 🔗avif最大的好处就是更高的压缩性，从而省流量和存储 我的博客已经是纯静态化的了，主要的大头是图片，变小可以更加快的打开博客</description>
+      <description>1 avif的好处 avif最大的好处就是更高的压缩性，从而省流量和存储
+我的博客已经是纯静态化的了，主要的大头是图片，变小可以更加快的打开博客
+之前的png格式的，现在转换成avif，大小只有原来21%
+压缩性比webp更加好
+2主流浏览器已经支持 Microsoft Edge在从2024年1月开始的121版本也开始支持了
+其他的浏览器safari和firefox也早就支持了
+chrome的话早在2020年的chrome85就支持了
+具体支持度可以看这个
+https://caniuse.com/?search=avif
+3用ffmpeg转换 for %%i in (&amp;#34;D:\blog\png\*.png&amp;#34;) do ffmpeg -i &amp;#34;%%i&amp;#34; -c:v av1 -strict experimental -b:v 0 -crf 30 &amp;#34;D:\blog\avif\%%~ni.avif&amp;#34; 将我D:\blog\png下的png文件全转成了avif
+4更多 如果你想更加了解avif的话
+https://blog.cloudflare.com/generate-avif-images-with-image-resizing
+https://developer.aliyun.com/article/1147111</description>
     </item>
     <item>
       <title> 2023年看番总结</title>
       <link>https://blog.qklg.net/post/20231222/</link>
       <pubDate>Fri, 22 Dec 2023 01:54:28 +0000</pubDate>
       <guid>https://blog.qklg.net/post/20231222/</guid>
-      <description>总结下今年看过的番剧 我每季度追是十部左右 看番就图一乐 1月 🔗这季度还行 ①妖幻三重奏 看了前面六集，结果停播了，后面重新播，还没去补，我刚下了前面</description>
+      <description>总结下今年看过的番剧
+我每季度追是十部左右
+看番就图一乐
+1月 这季度还行
+①妖幻三重奏
+看了前面六集，结果停播了，后面重新播，还没去补，我刚下了前面6级的bd，还没补上去，漫画也完结了，矢吹老师卖肉的，还是开放式结局
+②久保同学不放过我
+为了香菜去看的，高木同学香菜版，漫画也完结了，补完了我，反正有情人终成眷属
+③间谍教室
+声优教室，卖点就是美少女+声优，反正随便看看
+④别当哥哥了
+画面很美，剧情看不懂，我就图一乐
+⑤冰属性男子与酷酷女同事
+衣服很漂亮，剧情我也懒得看懂，反正漫画我最近补完了，有情人终成眷属
+⑥为了养老金 去异界存八万金
+异世界番，图一乐
+⑦虚构推理
+女主cv鬼头明里在鬼灭里没说的话，这里面全说完了，女主车速太快
+⑧变成狗后被喜欢的人捡走了
+刚下bd，等有空再补一遍没圣光的
+⑨小智是女生
+剧情也没看懂，反正最后有情人终成眷属
+⑩邻家天使
+小说真不错，可惜遇到p9，这玩意居然还有第二季就很离谱
+4月 全是恋爱番
+①公爵的契约未婚妻
+日本改的韩漫，反正最后有情人总成眷属了
+②放学后失眠的你
+画面很美，但是当时b站追的时候，删减让我很不爽，那季度唯一在b站看的番，大会员就是大韭菜
+情感描写很细致，原作漫画也完结了，作者作者还有个知恩姐，超级好看
+③跃动青春
+这个番的人居然要学习，还要考试，反正就是很好看，漫画还在连载，我懒得追了
+④为美好的世界献上爆焰
+图一乐，为了李依李看的，还行
+⑤魔法使的新娘
+今天刚更完第二部分24集，不如第一季，华哥牛逼
+⑥总之就是非常可爱
+挺好看，图一乐
+⑦小鸟之翼
+百合赛高
+⑧和山田进行Lv999的恋爱
+男的很帅，女的漂亮，不是我这种死宅所能比的
+⑨我心里危险的东西
+还没看，等最近有空了补一补，这季据说不错的，
+⑩邻人似银河
+还行，追完了
+⑪蓝色管弦乐
+音乐番，太小众了
+⑫推子
+大赤老师牛逼，我是骨科党
+7月 这季度真没啥好看的
+挑了几个看看
+①喜欢的人忘记戴眼镜了
+还行，有人说工业糖浆，看个乐，我近视600多，但是没女主这么离谱啊
+②我的幸福婚姻
+原作小说我补完了，反正就是男女主都是牛逼的，最后有情人终成眷属
+③转生产贩卖机
+看完了，只能说现在转生的越来越奇怪了，10月还有个转生成猪的
+④BanG Dream!It&amp;rsquo;s MyGO!!!!!
+看了乐，这季超级不错的一部
+⑤能干的猫今天也忧郁
+挺有代入感的，我也是一个人住，可惜没这大猫
+⑥堀与宫村
+可以，看完真不错</description>
     </item>
     <item>
       <title>我该不该需要奈飞</title>
       <link>https://blog.qklg.net/post/20240119/</link>
       <pubDate>Tue, 19 Dec 2023 21:27:56 +0000</pubDate>
       <guid>https://blog.qklg.net/post/20240119/</guid>
-      <description>前言 最近奈飞把埃及，土耳其，尼日利亚，巴基斯坦等低价区的“垃圾客户”给清退了 楼主就是受害者之一，今天闲着无聊，写篇帖子来讨论下我们需要奈飞吗</description>
+      <description>前言
+最近奈飞把埃及，土耳其，尼日利亚，巴基斯坦等低价区的“垃圾客户”给清退了
+楼主就是受害者之一，今天闲着无聊，写篇帖子来讨论下我们需要奈飞吗
+为啥要清退?有人觉得我给你奈飞送钱，你都不要，很多人是这么想的
+楼主订的埃及4K套餐才165 EGP，换算过去才5刀多点，美国的4K套餐讲过多次涨价后要23美金，差了好几倍价格
+爆不了金币了，影响赚钱了
+流媒体现在涨价很猛，除了奈飞，别家也在涨价，导致看盗版的人数都上涨了好多
+奈飞的好处就是随时都能看，不需要下载，这个确实好，这也是流媒体的好处
+但是奈飞的麻烦其实也很多
+①网速，网速会影响画质，你的买个速度很好的小鸡才能看,具体看官网
+https://help.netflix.com/zh-cn/node/306
+②解锁，小鸡得解锁才能看，而且中文资源分布在香港台湾新加坡这三个地方，小鸡解锁也是个卖点
+这里可以查到奈飞各区的版权和字幕解锁情况
+https://unogs.com/
+③设备
+电视国产的得配合apple tv，fire tv 4K，google tv 4K之类的才能看4K，而且杜比视界和杜比全景声也得设备支持，盒子也得支持才行
+pc这边得用edge和奈飞uwp才能看4K,chrome只能1080P，而且设备也得支持，不然得折腾插件啥的，mac上也得safari才能放4K
+怎么用edge启用4K双杜比，可以看我以前的帖子
+https://www.nodeseek.com/post-21191-1
+手机平板安卓的得给奈飞去认证，解锁root也会掉这个
+不认证只有540P，认证之后L1才有1080P，hdr，双杜比啥的还得给奈飞另外交钱
+④套餐，最贵的套餐才能看，普通只能1080P，当然mjj合租一般都是最贵的
+以上四个，却已不可，4K套餐，设备支持，小鸡网速给力加解锁，才能看4K
+当然最为下载党，以上都不在，下载的好处就是不需要这么麻烦，下载下来直接看
+下载党的话也得分清楚资源的来源
+很多剧和电影的资源是蓝光原盘，这些肯定比流媒体的好
+你下载的时候上面会写分辨率，还有来源的，比方blue-ray啥的是蓝光，bdrip是转码过的蓝光
+wb-dl啥的是在线流媒体上扒下来的，后面有个nf是从奈菲上下载下来的
+奈飞的剧基本上资源当天就有了，所以我不准备续费了
+奈飞的好处就是打开就能看，折腾起来其实也挺麻烦的
+要买套餐，要找车友，要设备支持，还要折腾小鸡解锁啥的
+下载的话，我直接看就完事了，就是找资源麻烦点，我也不玩pt，我就看看热门剧我bt都足够用了</description>
     </item>
     <item>
       <title>阿里云香港测试</title>
       <link>https://blog.qklg.net/post/a-li-yun-xiang-gang-ce-shi/</link>
       <pubDate>Wed, 01 Nov 2023 22:48:10 +0000</pubDate>
       <guid>https://blog.qklg.net/post/a-li-yun-xiang-gang-ce-shi/</guid>
-      <description>[Info] 测试路由 到 上海电信(天翼云) 中 &amp;hellip; traceroute to 101.227.255.45 (101.227.255.45), 30 hops max, 32 byte packets 1 * 2 * 3 11.16.2.182 1.92 ms AS749 美国, defense.gov 4 47.246.116.153 1.33 ms * 中国, 香港, aliyun.com, 阿里云 5 11.94.177.130 1.48 ms AS749 美国, defense.gov 6 47.246.114.1 2.03 ms * 中</description>
+      <description>[Info] 测试路由 到 上海电信(天翼云) 中 &amp;hellip;
+traceroute to 101.227.255.45 (101.227.255.45), 30 hops max, 32 byte packets
+1 *
+2 *
+3 11.16.2.182 1.92 ms AS749 美国, defense.gov
+4 47.246.116.153 1.33 ms * 中国, 香港, aliyun.com, 阿里云
+5 11.94.177.130 1.48 ms AS749 美国, defense.gov
+6 47.246.114.1 2.03 ms * 中国, 香港, aliyun.com, 阿里云
+7 61.14.203.13 1.77 ms * 中国, 香港, chinaunicom.com, 联通
+8 203.160.84.121 2.22 ms AS10099 中国, 香港, chinaunicom.com, 联通</description>
     </item>
     <item>
       <title>将我的博客部署到ipfs上</title>
       <link>https://blog.qklg.net/post/20231029/</link>
       <pubDate>Sun, 29 Oct 2023 03:22:55 +0000</pubDate>
       <guid>https://blog.qklg.net/post/20231029/</guid>
-      <description>试着将签名的博客部署到ipfs上 如果你的浏览器是支持ipfs的brave浏览器的话，可以直接点下面的跳转 ipfs://QmVSEaN34kaZpf8CbpkWyLmTobn4gr7JQe9JZghL4AsDRt 如果不是的话，可以使用公共网关 cf</description>
+      <description>试着将签名的博客部署到ipfs上
+如果你的浏览器是支持ipfs的brave浏览器的话，可以直接点下面的跳转
+ipfs://QmVSEaN34kaZpf8CbpkWyLmTobn4gr7JQe9JZghL4AsDRt
+如果不是的话，可以使用公共网关
+cf的
+https://cloudflare-ipfs.com/ipfs/QmVSEaN34kaZpf8CbpkWyLmTobn4gr7JQe9JZghL4AsDRt/
+https://cf-ipfs.com/ipfs/QmVSEaN34kaZpf8CbpkWyLmTobn4gr7JQe9JZghL4AsDRt/
+web3.storage的网关
+https://w3s.link/ipfs/QmVKLMAuGtbaK8QXneedHzdXynuea7x5gnnyYrnxwo2kkP/
+当然，也可以用别的网关
+下面网址，可以检测下各个网关的速度和连通性
+https://ipfs.github.io/public-gateway-checker/
+我用的是fleek https://fleek.co/来部署的
+类似的平台还有这些，都可以试下
+https://dashboard.4everland.org/login
+https://app.pinata.cloud/pinmanager
+部署教程十分简单，本地用jekyll，hexo，hugo，gridea等生成静态博客，同步到github仓库
+然后用上面的平台，直接用github仓库部署就可以了
+你有mac的话也可以试下隔壁v2ex站长做的planet
+https://www.planetable.xyz/
+有条件的话还是自建网关比较靠谱，ipfs并不保证数据的丢失</description>
     </item>
     <item>
       <title>分享几个可以看全球海缆的网站</title>
       <link>https://blog.qklg.net/post/20231022/</link>
       <pubDate>Sun, 22 Oct 2023 12:36:44 +0000</pubDate>
       <guid>https://blog.qklg.net/post/20231022/</guid>
-      <description>https://www.submarinecablemap.com/ https://www.infrapedia.com/ https://submarine-cable-map-2023.telegeography.com/</description>
+      <description>https://www.submarinecablemap.com/
+https://www.infrapedia.com/
+https://submarine-cable-map-2023.telegeography.com/</description>
     </item>
     <item>
       <title>unraid装哪吒探针</title>
       <link>https://blog.qklg.net/post/20231019/</link>
       <pubDate>Thu, 19 Oct 2023 23:11:58 +0000</pubDate>
       <guid>https://blog.qklg.net/post/20231019/</guid>
-      <description>1下载哪吒探针的agent 选择你的客户端下载，unraid的话一般都是linux-amd64 https://github.com/nezhahq/agent/releases 解压缩，将nezha-agent，如果你开sm</description>
+      <description>1下载哪吒探针的agent
+选择你的客户端下载，unraid的话一般都是linux-amd64
+https://github.com/nezhahq/agent/releases
+解压缩，将nezha-agent，如果你开smb的话直接用文件管理传上去，或者winscp或者别的什么传到你的nas的任意文件夹下
+我是开的smb，我随手放在第二块硬盘下,路径是/mnt/disk2/download/temp，这个路径随便
+2unraid上应用搜索	User Scripts安装，这个可以执行定时的bash脚本，有点类似于systemctl
+插件，这个进去
+点击左下角的add new script
+名字随便取一个，点击ok保存
+用winscp，连接unraid，打开
+/boot/config/plugins/user.scripts/scripts/tanzhen 这个路径
+双击script
+编辑脚本
+#!/bin/bash cd /mnt/disk2/download/temp chmod +x nezha-agent ./nezha-agent -s 没套cdn的域名:面板rpc端口 -p agnet key cd 后面的/mnt/disk2/download/temp可以换成上面你自己nezha-agent的文件路径
+第四行的参数除了这些还可以加，可以参考这个
+一般这些就足够了
+然后保存
+回到unraid的面板上
+点击run in backgronud 在后台运行
+右边设置成at first array start only开机自启
+点下apply应用，done退出就完事了
+参考教程
+哪吒文档中在群晖中安装
+https://nezha.wiki/guide/agent.html#%E5%9C%A8-%E7%BE%A4%E6%99%96dsm-%E4%B8%AD%E5%AE%89%E8%A3%85-agent</description>
     </item>
     <item>
       <title>cc新ip，来波测试</title>
       <link>https://blog.qklg.net/post/20231014/</link>
       <pubDate>Sat, 14 Oct 2023 23:26:49 +0000</pubDate>
       <guid>https://blog.qklg.net/post/20231014/</guid>
-      <description>cc新ip，来波测试 cc的8.79，性能什么的没必要测了，就那样，ipv6让我关了，不用管 204.15换的148.135的ip 怎么启用新ip</description>
+      <description>cc新ip，来波测试
+cc的8.79，性能什么的没必要测了，就那样，ipv6让我关了，不用管
+204.15换的148.135的ip
+怎么启用新ip，可以看这个帖子https://www.nodeseek.com/post-28303-1，
+我直接重新d了个
+d的时候ip加进去，面板有的
+网关是把ip的d段改成1或者129，我第一次d的时候用1直接失联了，后面缓存129就好了
+子网掩码的话和原来一样
+1流媒体解锁
+2三网去程
+电信
+联通
+移动
+3三网回程
+电信
+联通
+移动
+现在八点多晚高峰三网多线程测速</description>
     </item>
     <item>
       <title>推荐下我正在用的docker</title>
       <link>https://blog.qklg.net/post/20231011/</link>
       <pubDate>Wed, 11 Oct 2023 23:29:46 +0000</pubDate>
       <guid>https://blog.qklg.net/post/20231011/</guid>
-      <description>我目前用的这几个，推荐给各位mjj 还有没有好玩的，推荐下 1 qbittorrnet 我主要是配合autobangumi来下bt的 https://hub.docker.com/r/linuxserver/qbittorrent 2 qbittorrnet-bot 作者githubhttps:/</description>
+      <description>我目前用的这几个，推荐给各位mjj
+还有没有好玩的，推荐下
+1 qbittorrnet
+我主要是配合autobangumi来下bt的
+https://hub.docker.com/r/linuxserver/qbittorrent
+2 qbittorrnet-bot
+作者githubhttps://github.com/zeroone2numeral2/qbittorrent-bot
+这个大佬的博客上看到的https://syq.pub/archives/138/,
+配合tg bot控制qbittorrnet，真的挺好用的
+3 aria2
+我主要是配合油猴脚本和alist下网盘里东西的
+https://hub.docker.com/r/p3terx/aria2-pro
+4 aria2 bot
+用tg bot来控制aria2，aria2群内看到的
+https://t.me/Aria2c/111793
+真的挺好用的
+5 emby
+拿来看片的
+https://hub.docker.com/r/emby/embyserver
+6 nastool
+第三方的nastool，我主要下完片之后拿来刮削的
+https://hub.docker.com/r/hsuyelin/nas-tools
+github链接https://github.com/hsuyelin/nas-tools
+7 auto_bangumi
+配合qbittorrnet自动下番剧用的
+https://hub.docker.com/r/estrellaxd/auto_bangumi
+github链接https://github.com/EstrellaXD/Auto_Bangumi
+8 chatgpt next
+本地部署chatgpt，真的挺好用的
+https://hub.docker.com/r/yidadaa/chatgpt-next-web/tags
+github链接https://github.com/Yidadaa/ChatGPT-Next-Web
+9 uptime kuma
+拿来ping自己的小鸡，或者别的啥的，挺好用的
+https://hub.docker.com/r/louislam/uptime-kuma
+github链接https://github.com/louislam/uptime-kuma
+10 homarr
+主页，我拿来当导航页用的
+https://github.com/ajnart/homarr
+教程可以看下这个https://www.bilibili.com/video/BV1jh4y1X7fZ/
+这个哥们还整了一堆图标，挺好用的
+https://github.com/xushier/HD-Icons
+我的完全体
+这个可以配合dash dot看机子状况</description>
     </item>
     <item>
       <title>分享个ping主机，通知telegram bot的脚本</title>
       <link>https://blog.qklg.net/post/20231010/</link>
       <pubDate>Tue, 10 Oct 2023 23:30:38 +0000</pubDate>
       <guid>https://blog.qklg.net/post/20231010/</guid>
-      <description>家里的黑群晖老是宕机，每次宕机都没意识到， 所以用chatgpt写了个小东西，这玩意别说还真挺好用的 直接ping主机，每隔15秒ping一次，</description>
+      <description>家里的黑群晖老是宕机，每次宕机都没意识到，
+所以用chatgpt写了个小东西，这玩意别说还真挺好用的
+直接ping主机，每隔15秒ping一次，ping不通就通知tg的bot
+确保小鸡安装了python，还有subprocess和requests，time模块
+本着留着也没啥用，发出来也许有mjj用得上呢
+如果想功能多的话试下uptime-kuma或者直接挂探针
+脚本如下
+bot_token和chat id替换成自己的
+hostname的192.168.1.90换成自己的ip
+群晖nas宕机了，自己换成别的
+time的15秒，自己换成自己需要的
+import subprocess import requests import time def send_notification(message): # 替换为你的Telegram Bot的API令牌和聊天ID bot_token = &amp;#39;&amp;#39; chat_id = &amp;#39;&amp;#39; # 发送通知到Telegram url = f&amp;#39;https://api.telegram.org/bot{bot_token}/sendMessage&amp;#39; params = {&amp;#39;chat_id&amp;#39;: chat_id, &amp;#39;text&amp;#39;: message} response = requests.get(url, params=params) if response.status_code != 200: print(&amp;#39;无法发送通知到Telegram&amp;#39;) def check_host(): hostname = &amp;#39;192.168.1.90&amp;#39; while True: result = subprocess.run([&amp;#39;ping&amp;#39;, &amp;#39;-c&amp;#39;, &amp;#39;1&amp;#39;, hostname], stdout=subprocess.DEVNULL) if result.returncode != 0: send_notification(&amp;#39;群晖nas宕机了&amp;#39;) time.sleep(15) # 每隔15秒执行一次ping check_host() 命名为ping_notify.</description>
     </item>
     <item>
       <title>newbing还挺好用的</title>
       <link>https://blog.qklg.net/post/20231005/</link>
       <pubDate>Thu, 05 Oct 2023 23:31:49 +0000</pubDate>
       <guid>https://blog.qklg.net/post/20231005/</guid>
-      <description>最近更新 支持gpt 4和图片识别了 玩了下还挺好玩的</description>
+      <description>最近更新
+支持gpt 4和图片识别了
+玩了下还挺好玩的</description>
     </item>
     <item>
       <title>infuse替代品VidHub的ios版已上线</title>
       <link>https://blog.qklg.net/post/20230928/</link>
       <pubDate>Thu, 28 Sep 2023 12:40:06 +0000</pubDate>
       <guid>https://blog.qklg.net/post/20230928/</guid>
-      <description>https://apps.apple.com/cn/app/id1659622164 ios版上线了，mac之前就有了，apple tv暂时还没有 免费，infuse要订阅，而且支持阿里云盘， 支持，本地视频，NAS 视频，SMB、</description>
+      <description>https://apps.apple.com/cn/app/id1659622164
+ios版上线了，mac之前就有了，apple tv暂时还没有
+免费，infuse要订阅，而且支持阿里云盘，
+支持，本地视频，NAS 视频，SMB、WebDAV 协议
+Dropbox，OneDrive，Google Drive，百度网盘。阿里云盘等云盘
+支持emby
+ios的可以试下，和infuse一样，客户端刮削的，我是拿来看emby的话，体验还不错，免费的要啥自行车</description>
     </item>
     <item>
       <title>内网穿透还是cf tunnel好用</title>
       <link>https://blog.qklg.net/post/20230927/</link>
       <pubDate>Wed, 27 Sep 2023 23:33:18 +0000</pubDate>
       <guid>https://blog.qklg.net/post/20230927/</guid>
-      <description>1 frp，结果宿迁nat老板骚操作，搞得俺不用了 2 zerotier设置太难搞了，还要搞客户端，俺就外面拿来看片用，用不着 3 ipv6 ddns，单位没</description>
+      <description>1 frp，结果宿迁nat老板骚操作，搞得俺不用了
+2 zerotier设置太难搞了，还要搞客户端，俺就外面拿来看片用，用不着
+3 ipv6 ddns，单位没ipv6，难搞
+4花生壳，要实名，带宽还太烂了
+5腾讯云，带宽太低
+最后还是cf tunnel，国内pop全是美西的，饶了一个太平洋回来，
+速度是能上去，测了下速看4K都没问，就是延迟有点爆炸,而且不要钱，真的香，cf良心企业</description>
     </item>
     <item>
       <title>江苏移动自己换光猫记录下</title>
       <link>https://blog.qklg.net/post/20230926/</link>
       <pubDate>Tue, 26 Sep 2023 23:35:50 +0000</pubDate>
       <guid>https://blog.qklg.net/post/20230926/</guid>
-      <description>前提准备 ①vlan id，这个原来光猫里面有，vid后面的数字就是vlan id ②宽带账户和密码，账户时手机号，密码直接打10086重置下就可以了</description>
+      <description>前提准备
+①vlan id，这个原来光猫里面有，vid后面的数字就是vlan id
+②宽带账户和密码，账户时手机号，密码直接打10086重置下就可以了，6位数字短信发给你的
+③sn码，这个光猫后面有
+江苏移动的认证方式是password认证，密码是手机号后面10位数字，sn直接填你原来光猫的sn码就可以了，设置好点应用就可以了
+我家是光猫拨号的，路由器拨号老是折腾，这猫是华为界面的hs8145x6，10Gpon的，你买的时候闲鱼上说清楚
+按照下面图上填好就ok了
+二级路由要ddns的话，光猫要改配置文件关闭防火墙的，看chinadsl的这个帖子的18楼
+把防火墙的配置里全给关了
+新人求助 8145V的IPv6防火墙问题
+https://www.chinadsl.net/thread-166819-1-1.html
+(出处: 宽带技术网)
+openwrt路由器怎么设置的话看恩山上这篇
+https://www.right.com.cn/FORUM/thread-8247221-1-1.html</description>
     </item>
     <item>
       <title>国际出口18Tbps</title>
       <link>https://blog.qklg.net/post/20230913/</link>
       <pubDate>Wed, 13 Sep 2023 23:38:16 +0000</pubDate>
       <guid>https://blog.qklg.net/post/20230913/</guid>
-      <description>之前两年没公布 今年公布了，还把20和21年的补上去了 https://cnnic.net.cn/NMediaFile/2023/0908/MAIN1694151810549M3LV0UWOAV.pdf 我顺带补充下ipv6的国际出口带宽 来源 https://www.china-ipv6.cn/#/networkReady/networkReadySimple 简单做了个表 顺带提下，国际出口，只有5%左右是</description>
+      <description>之前两年没公布
+今年公布了，还把20和21年的补上去了
+https://cnnic.net.cn/NMediaFile/2023/0908/MAIN1694151810549M3LV0UWOAV.pdf
+我顺带补充下ipv6的国际出口带宽
+来源
+https://www.china-ipv6.cn/#/networkReady/networkReadySimple
+简单做了个表
+顺带提下，国际出口，只有5%左右是ipv6</description>
     </item>
     <item>
       <title>搬瓦工vps的一点小建议</title>
       <link>https://blog.qklg.net/post/20230912/</link>
       <pubDate>Tue, 12 Sep 2023 23:40:20 +0000</pubDate>
       <guid>https://blog.qklg.net/post/20230912/</guid>
-      <description>论坛现在全是瓦工aff， 我来说下瓦工有啥，该怎么买 这是the plan的切机房的图，我把优化线路都表了下 去掉普通线路和日本和香港的贵族gia，</description>
+      <description>论坛现在全是瓦工aff，
+我来说下瓦工有啥，该怎么买
+这是the plan的切机房的图，我把优化线路都表了下
+去掉普通线路和日本和香港的贵族gia，还有垃圾gt的话别买了
+瓦工现在其他的优化线路，我来捋一遍
+xtom下游的
+香港cmi
+日本软银
+澳洲9929
+荷兰9929
+还有新上的加拿大的gia，上游也是xtom
+dc6和dc9的洛杉矶gia
+爬墙的话，怎么选
+联通上日本软银，移动上香港的cmi，电信的话dc6和9的gia
+其实联通的话ntt，iij，软银，这三个你真用不出来什么区别的，反正就那速度上去了，也没啥区别
+你油管三十万和三四万，没区别，都能看4K,何况很多人屏幕还是1080P
+爬墙的话电信还是高贵的gia吧，联通的话随便是个机都能起飞，移动拿cf救下，是个机也能起飞的，
+胖子10刀的iij才是mjj的快乐老家
+不急的话等黑五，五折云的小秘书估计又得出来了，你只爬墙的话真不如直接买小秘书，虽然小秘书口碑不好，3年和5年容易当韭菜，但是便宜啊
+3年45欧，mjj还是香喷喷
+46刀的怎么评价
+1核512M内存10G硬盘500G流量
+外面写着软银和dc6，但是进去还有dc9和荷兰9929，和原来的传家宝一样
+流量小的可以上，500G你用不完的话可以上，差个香港cmi，不然真的是神机了
+荷兰9929可以用来反代你德国hz，法国ovh的杜甫，美西的dc6和9可以电信爬墙，也可以反代你美西的杜甫，不过流量就500G
+软银可以联通用来爬墙，唯一的缺少的就是个香港cmi了
+你要流量大的话，性价比不如the plan，去收一个，或者等一等有没有the plan v3
+这款后面应该是可以溢价的
+记得准备出的话一定要准备个新邮箱，以后带邮箱出
+69刀那个只有软银的，和89刀的FREEDOM PLAN
+那几个套餐别买了，不如the plan</description>
     </item>
     <item>
       <title>ios,安卓和win跑流媒体解锁检测脚本</title>
       <link>https://blog.qklg.net/post/20230910/</link>
       <pubDate>Sun, 10 Sep 2023 23:43:32 +0000</pubDate>
       <guid>https://blog.qklg.net/post/20230910/</guid>
-      <description>本文使用脚本 github链接:https://github.com/lmc999/RegionRestrictionCheck 脚本 bash &amp;lt;(curl -L -s https://raw.githubusercontent.com/lmc999/RegionRestrictionCheck/main/check.sh)</description>
+      <description>本文使用脚本
+github链接:https://github.com/lmc999/RegionRestrictionCheck
+脚本
+bash &amp;lt;(curl -L -s https://raw.githubusercontent.com/lmc999/RegionRestrictionCheck/main/check.sh) 如果github的raw无法访问，可以采用下面jsdelivr加速的
+bash &amp;lt;(curl -L -s https://testingcf.jsdelivr.net/gh/lmc999/RegionRestrictionCheck@main/check.sh) 这个脚本支持：CentOS 6+, Ubuntu 14.04+, Debian 8+, MacOS, Android with Termux
+linux直接运行就可以了，mac的话本人没有
+android 下载temux终端
+官网https://termux.dev/en/
+github下载链接:https://github.com/termux/termux-app/releases
+不要从google play下，google play的已经不更新了
+然后复制粘贴运行脚本就好
+首次运行，需要安装python，需要等待一段时间，大概几分钟吧
+安装完之后点击你所需的地区，我代理是hytron香港的，选择2,然后回车就行了，结果就会出来了
+windows 安装ubuntu子系统
+应用商店搜ubuntu，我喜欢20.04，我直接装的20.04，
+第一次登录需要设置
+自己设置下用户名和密码，用户名叫啥都行，记得linux输入密码是不显示的
+然后输入sudo -i，切换到root，记得输入密码
+接着直接复制粘贴脚本运行就可以了
+ios ios可以直接用quan x，stash，loon，surge等检测，甚至可以执行脚本来自动切换，这各自己搜下，网上有教程
+参考原作者github上的，我把他写的稍微详细了点
+https://github.com/lmc999/RegionRestrictionCheck/wiki/iOS%E8%BF%90%E8%A1%8C%E8%84%9A%E6%9C%AC%E6%96%B9%E6%B3%95
+1下载ish
+https://apps.apple.com/au/app/ish-shell/id1436902243
+2下载alpine linux的mini root filesystem到文件 app
+地址:https://dl-cdn.alpinelinux.org/alpine/v3.13/releases/x86/alpine-minirootfs-3.13.6-x86.tar.gz
+打开上面链接，点击更多-储存到文件
+3打开ish app，点击右小角的设置
+点filesystems
+点右上角import导入
+选择第二部下载的tar.gz包
+然后不重启的话，选择Boot From This Filesystem
+4安装依赖
+重启完进入ish，点右小角剪贴输入下面命令安装依赖
+apk add curl bash gawk python3 5运行脚本</description>
     </item>
     <item>
       <title>分享个可以看到ip的bt下载记录的网站</title>
       <link>https://blog.qklg.net/post/20230904/</link>
       <pubDate>Mon, 04 Sep 2023 23:49:02 +0000</pubDate>
       <guid>https://blog.qklg.net/post/20230904/</guid>
-      <description>https://iknowwhatyoudownload.com/ 原理就是记录几个大的tracker，然后你bt下载的时候连那几个tracker 你可以看到按照国家和地区的每天下啥，也能看到你邻居的口味,还</description>
+      <description>https://iknowwhatyoudownload.com/
+原理就是记录几个大的tracker，然后你bt下载的时候连那几个tracker
+你可以看到按照国家和地区的每天下啥，也能看到你邻居的口味,还有每年和每日的统计，很有趣
+只有ipv4，没有ipv6，然后国内家宽一般都是nat，不一定是你下的</description>
     </item>
     <item>
       <title>最近折腾回家看片，分享点经验</title>
       <link>https://blog.qklg.net/post/20230903/</link>
       <pubDate>Sun, 03 Sep 2023 23:49:51 +0000</pubDate>
       <guid>https://blog.qklg.net/post/20230903/</guid>
-      <description>鉴于移动没公网ipv4，电信联通也在日益收回v4，有兴趣的话可以看下，分享点经验 1怎么回家，我用的ipv6回家的，本人测试了下基于tcp的o</description>
+      <description>鉴于移动没公网ipv4，电信联通也在日益收回v4，有兴趣的话可以看下，分享点经验
+1怎么回家，我用的ipv6回家的，本人测试了下基于tcp的openvpn和基于udp的wireguard
+配置很简单的，谷歌搜下就有了，我是在我本地1000下，100Mbps的上行的宽带下测试的，家里的openwrt的n5105的软路由上建的openwrt
+联通流量的ipv6连回家的
+主要问题就是联通流量到移动宽带的ipv6互联太差了，直接ping过去延迟都有三十多ms，就有点离谱
+不说了，直接上图，wg的qos很严重
+openvpn的多线程和单线程测速
+wiregurad的多线程和单线程测速
+多次测试差不多，其实也能用，不过延迟确实有点高，这没办法，v6的互联确实很差
+2打洞
+本来买了个宿迁的nat打洞的，结果老板骚操作，没法用了
+玩玩cf tunnel吧
+cf tunnel国内一般分配的美西的服务器
+我分配的是这几个
+直连过去，一来一回延迟爆炸
+不过速度倒是还不错
+试了下今天刚下的球2，居然能看，原始码率能看，就是拖进度条有点慢</description>
     </item>
     <item>
       <title>给用emby的推荐几个好用的东西</title>
       <link>https://blog.qklg.net/post/20230831/</link>
       <pubDate>Thu, 31 Aug 2023 12:43:53 +0000</pubDate>
       <guid>https://blog.qklg.net/post/20230831/</guid>
-      <description>最近折腾emby，找到了几个好东西，推荐给各位mjj试下 1emby crx 🔗给emby首页美化的 github链接 https://github.com/Nolovenodie/emby-crx 效果如图 2embyExternalUrl 🔗直接调用外部播放器油猴脚本 g</description>
+      <description>最近折腾emby，找到了几个好东西，推荐给各位mjj试下
+1emby crx 给emby首页美化的
+github链接
+https://github.com/Nolovenodie/emby-crx
+效果如图
+2embyExternalUrl 直接调用外部播放器油猴脚本
+github链接
+https://github.com/bpking1/embyExternalUrl
+油猴脚本链接https://greasyfork.org/en/scripts/459297-embylaunchpotplayer
+效果如图
+3embyDouban emby 里增加：豆瓣 Bangumi bgm.tv 评分
+油猴脚本链接https://greasyfork.org/zh-CN/scripts/449894-embydouban
+效果如图
+4Emby.Plugin.TelegramNotification Emby 服务器插件，用于向 Telegram 机器人发送通知。
+github链接https://github.com/bjoerns1983/Emby.Plugin.TelegramNotification
+怎么用的话作者github的readme里有
+后台长这样子，装好后填写bot token和user id然后重启下就行了
+tg的bot的话通知长这样，自己库里更新了，很快就能通知了
+5Emby.MeiamSub.DevTool emby的插件，支持 迅雷看看 射手影音 字幕下载 Hash匹配
+github链接https://github.com/91270/MeiamSubtitles</description>
     </item>
     <item>
       <title>关于rn dc2变成亚马逊-只是ip所有权变了</title>
       <link>https://blog.qklg.net/post/20230830/</link>
       <pubDate>Wed, 30 Aug 2023 12:47:03 +0000</pubDate>
       <guid>https://blog.qklg.net/post/20230830/</guid>
-      <description>我rn dc2出掉了 但是我这台cc的8.79，ip段是204.15的，也变成亚马逊了 测了下回程的三网路由 去程 电信 联通 移动 回程也没变 [Info] 测试路由 到</description>
+      <description>我rn dc2出掉了
+但是我这台cc的8.79，ip段是204.15的，也变成亚马逊了
+测了下回程的三网路由
+去程
+电信
+联通
+移动
+回程也没变
+[Info] 测试路由 到 上海电信(天翼云) 中 ... traceroute to 101.227.255.45 (101.227.255.45), 30 hops max, 32 byte packets 1 173.82.153.1 0.86 ms AS35916 美国, 加利福尼亚州, 洛杉矶, amazon.com 2 multacom.com (96.45.162.9) 0.82 ms AS35916 美国, 加利福尼亚州, 洛杉矶, amazon.com 3 los-edge-07.inet.qwest.net (65.153.29.221) 0.45 ms AS209 美国, 加利福尼亚州, 洛杉矶, centurylink.com 4 los-edge-08.inet.qwest.net (67.14.22.202) 11.11 ms AS209 美国, 加利福尼亚州, 洛杉矶, centurylink.com 5 * 6 * 7 4.15.125.54 12.</description>
     </item>
     <item>
       <title>关于tg收不到短信的一二件事</title>
       <link>https://blog.qklg.net/post/20230828/</link>
       <pubDate>Mon, 28 Aug 2023 12:49:14 +0000</pubDate>
       <guid>https://blog.qklg.net/post/20230828/</guid>
-      <description>1为什么telegram收不到短信 🔗首先，如果你是+86的国内手机号注册的话，多半是运营商原因，请联系你的运营商开通国际短信服务也好，或者别</description>
+      <description>1为什么telegram收不到短信 首先，如果你是+86的国内手机号注册的话，多半是运营商原因，请联系你的运营商开通国际短信服务也好，或者别的什么的，具体怎么折腾你可以看下这哥们
+https://www.nodeseek.com/post-6982-1
+第二个原因就是你的安卓手机没有safetynet认证，苹果的话没影响
+2为什么会出现这种情况呢 那是因为tg从今年初开始，短信验证码只能由官方客户端发送，而且现在tg的短信是用谷歌的firebase来发的，
+安卓手机上是需要过 safetynet的验证，才会给你发
+是不是不理解，一堆新名词，简单来说就是，你的手机要有验证，而且客户端得是官方的，不是第三方的
+苹果手机的话都有认证的，完全不用担心，安卓的话国外的话一般都是有认证的，国内的话很多都是没有的
+其实这么做的原因就是为了省钱，杜叔叔家也没余粮了
+3什么是safetynet 看一看谷歌的文档https://developer.android.com/training/safetynet?hl=zh-cn
+简单来说就是谷歌整的一套验证机制，认证了，你的安卓手机才能装gms，当然你也可以通过特殊手段装上去，或者有gms也有没safeynet的
+4怎么检测有没有呢 首先得是型号，华为用户的话mate30之后机子没有的，不用想了
+小米的话一般国行的中高端机子有自带的gms，设置里启用下就有了，实在太低端的机子的话真没有，因为这个得像谷歌交钱的，小米不愿意给
+国行没有的话，刷个外版，这种左转隔壁酷安
+oppo，vivo和子品牌一般外面有上市的话一般有的，这种你们去酷安搜下
+三星，索尼之类的国外手机品牌的话肯定是有的
+很简单，打开谷歌play商店-设置-关于，里面有个play保护机制认证，那个就是，我这台K40有的
+如果没有的话收不到短信只是一个，有些第三方的app会下不了
+看奈菲的应该都知道，安卓手机上没这个是下不了的，谷歌商店直接会提示您的设备与此不兼容，或者直接搜不到，当然你也可以从其他地方侧载安装
+4为什么别人同款的有，我的没有呢，原因很多 ①解锁了，解bl锁之后这个会掉
+②国内版和国际版rom，我之前小米8，国行版的rom就是没有，刷了国际版之后就有了
+③root之后的话，开magisk hide，怎么过自己网上搜下，现在我也不玩机了
+最后总结 苹果没影响
+安卓机的话，得看safetynet，国外基本都有，没啥影响
+国内的话，这个看品牌，随缘
+参考
+https://zhuanlan.zhihu.com/p/142714153
+https://t.me/outvivid/4033
+https://t.me/tginfoen/1598</description>
     </item>
     <item>
       <title>cloudflare停止颁发 DigiCert的证书</title>
       <link>https://blog.qklg.net/post/20230827/</link>
       <pubDate>Sun, 27 Aug 2023 12:51:55 +0000</pubDate>
       <guid>https://blog.qklg.net/post/20230827/</guid>
-      <description>来源https://t.me/xhqcankao/6043 Cloudflare弃用DigiCert作为所有SSL证书的证书颁发机构 在 2023 年下半</description>
+      <description>来源https://t.me/xhqcankao/6043
+Cloudflare弃用DigiCert作为所有SSL证书的证书颁发机构
+在 2023 年下半年，Cloudflare 将开始弃用 DigiCert 作为所有 SSL 证书产品(通用证书、高级证书、SSL for SaaS)的证书颁发机构。
+这一变化不会影响 Cloudflare 目前正在使用的 DigiCert 颁发的现有证书，但会影响新的证书订单和续订。
+在 DigiCert 停用后，证书将开始使用 Let&amp;rsquo;s Encrypt 或 Google Trust Services 作为颁发 CA。如果您有 CA 偏好，Cloudflare 建议在停用日期之前采取行动，以指定首选 CA 。
+详细说明可以看
+cf文档https://developers.cloudflare.com/ssl/reference/migration-guides/digicert-update/
+cf社区https://community.cloudflare.com/t/community-update-deprecating-digicert-as-a-certificate-authority-for-all-ssl/547436
+总结
+和普通用户没啥关系，就是一年证书没有了
+如果要切证书的话可以看我之前的帖子https://www.nodeseek.com/post-10862-1</description>
     </item>
     <item>
       <title>win 10上Netflix开启4K&#43;双杜比</title>
       <link>https://blog.qklg.net/post/20230825/</link>
       <pubDate>Fri, 25 Aug 2023 12:54:13 +0000</pubDate>
       <guid>https://blog.qklg.net/post/20230825/</guid>
-      <description>前言 你套餐还有网速得达标才能放4K和双杜比，chrome对Netflix支持很差，别试了 需要edge 1安装解锁4K的插件 🔗这个插件可以让不是</description>
+      <description>前言
+你套餐还有网速得达标才能放4K和双杜比，chrome对Netflix支持很差，别试了
+需要edge
+1安装解锁4K的插件 这个插件可以让不是4K的设备强制开4K，
+我在这大佬频道发现了个好用的插件:https://t.me/GodlyNews1/961
+github链接:https://github.com/lkmvip/netflix-4K-DDplus
+选择code-download zip
+解压
+打开edge的扩展界面edge://extensions/
+左下角的来自开发人员模式和允许来自其他应用商店都打开
+再把解压好的文件夹整个拖进edge的扩展
+然后插件就装好了，然后启用
+2安装hevc扩展 https://apps.microsoft.com/store/detail/%E6%9D%A5%E8%87%AA%E8%AE%BE%E5%A4%87%E5%88%B6%E9%80%A0%E5%95%86%E7%9A%84-hevc-%E8%A7%86%E9%A2%91%E6%89%A9%E5%B1%95/9N4WGH0Z6VHQ?hl=zh-cn&amp;amp;gl=cn
+点击这个直接安装
+还不行的话，打开https://store.rg-adguard.net/,左边的上面的url link输入进去，或者Produc tId改成9N4WGH0Z6VHQ
+然后选择8M的那个下载下来，手动安装
+3安装Dolby Vision（杜比视界） https://apps.microsoft.com/store/detail/dolby-vision/9MVMZ93N61T9
+4安装Dobly Atoms（杜比全景声） https://apps.microsoft.com/store/detail/dolby-access/9N0866FS04W8
+然后右键点击右下角的音量，空间音效，选择dobly atoms，杜比全景声尽量带耳机用，做到沉浸感
+这样子就启用了
+tips:直接买很贵，某宝就十块钱
+有些设备自带Dolby Atmos，应该是可以不用下access，我的被我删掉了,
+5测试 打开Netflix,直接用这个尸战朝鲜:雅信传测就可以了
+https://www.netflix.com/sg-zh/title/81312457
+点亮双杜比的话会有这个标志的，但是不知道为啥没4K标志，实际播放时候是有的
+点击播放，播放时候同时按住ctrl+shift+alt+D 四个按键，就可以显示参数了
+有这三个就表示，成功点亮4K+双杜比了，
+6 最后废话几句 自己组装的pc具体支持不支持双杜比，自己看，反正按照这个步骤走，还是不支持，俺也没办法
+杜比视界和杜比全景声这两东西是需要厂商花钱，才能用的，我是拿我的联想thinkbook 14+试的，联想应该是给钱了的
+其实pc不适合流媒体，要看的话买个火棒或者google tv，apple tv啥的，插家里的4K电视上看，现在电视一般都支持的
+还有杜比视界是有双层和单层的，双层的得那些碟机才行，流媒体的都是单层的</description>
     </item>
     <item>
       <title>win10使用杜比视界</title>
       <link>https://blog.qklg.net/post/20230824/</link>
       <pubDate>Thu, 24 Aug 2023 12:57:17 +0000</pubDate>
       <guid>https://blog.qklg.net/post/20230824/</guid>
-      <description>最近闲着无聊，折腾影音，来分享下win10怎么用杜比视界 1hevc扩展 https://apps.microsoft.com/store/detail/%E6%9D%A5%E8%87%AA%E8%AE%BE%E5%A4%87%E5%88%B6%E9%80%A0%E5%95%86%E7%9A%84-hevc-%E8%A7%86%E9%A2%91%E6%89%A9%E5%B1%95/9N4WGH0Z6VHQ?hl=zh-cn&amp;gl=cn 点击这个直接安装 还不行的话，打开https://store.rg-a</description>
+      <description>最近闲着无聊，折腾影音，来分享下win10怎么用杜比视界
+1hevc扩展
+https://apps.microsoft.com/store/detail/%E6%9D%A5%E8%87%AA%E8%AE%BE%E5%A4%87%E5%88%B6%E9%80%A0%E5%95%86%E7%9A%84-hevc-%E8%A7%86%E9%A2%91%E6%89%A9%E5%B1%95/9N4WGH0Z6VHQ?hl=zh-cn&amp;amp;gl=cn
+点击这个直接安装
+还不行的话，打开https://store.rg-adguard.net/,左边的上面的url link输入进去，或者Produc tId改成9N4WGH0Z6VHQ
+然后选择8M的那个下载下来，手动安装
+2Dolby Vision
+https://apps.microsoft.com/store/detail/dolby-vision/9MVMZ93N61T9
+两个插件装好了，然后用win10自带的电影与电视打开就可以看杜比视界的视频了
+3怎么测支持不支持
+昨天我帖子里那个视频，我扒下来传google drive上了，没声音的，油管那个有问题，坛友反馈支持不支持都是蓝色的，
+https://drive.google.com/file/d/127yA0HCrB4vamveJ5zTWSJ5i73cAuqUL/view?usp=drive_link
+下载下来视频，用win10自带的电影与电视打开，球是蓝色的话支持，绿色的话就是不支持
+支持
+不支持
+装完还可以试下Netflix，俺这联想的笔记本整完可以点亮双杜比了，还要装个dolby access</description>
     </item>
     <item>
       <title>来试下你的设备支持不支持杜比视界</title>
       <link>https://blog.qklg.net/post/20230823/</link>
       <pubDate>Wed, 23 Aug 2023 13:00:51 +0000</pubDate>
       <guid>https://blog.qklg.net/post/20230823/</guid>
-      <description>B站https://www.bilibili.com/video/av419059870/ 要大会员 支持的话球是蓝色的， 不支持的话是绿色的 很容</description>
+      <description>B站https://www.bilibili.com/video/av419059870/ 要大会员
+支持的话球是蓝色的，
+不支持的话是绿色的
+很容易分辨的
+当然色盲当我没说
+油管那个有问题，我把b站的扒下来了，没声音的啊，他音轨和声轨是分开的，我没合起来,来试下
+win10下载下来，装好hevc和dollby vision的插件，拿电视电影播就可以了
+https://drive.google.com/file/d/127yA0HCrB4vamveJ5zTWSJ5i73cAuqUL/view?usp=drive_link</description>
     </item>
     <item>
       <title>BitRemote -苹果上管理下载神器</title>
       <link>https://blog.qklg.net/post/20230822/</link>
       <pubDate>Tue, 22 Aug 2023 13:01:47 +0000</pubDate>
       <guid>https://blog.qklg.net/post/20230822/</guid>
-      <description>可以在 Mac、iPhone、iPad 上 管理 BT、PT 下载任务 支持 qBittorrent Transmission 群晖 Synology Download Station 威联通 QNAP Download Station testflight链接 https://testflight.apple.com/join/yOuPRI3A 具体怎么样看小众软件上这</description>
+      <description>可以在 Mac、iPhone、iPad 上 管理 BT、PT 下载任务
+支持
+qBittorrent
+Transmission
+群晖 Synology Download Station
+威联通 QNAP Download Station
+testflight链接
+https://testflight.apple.com/join/yOuPRI3A
+具体怎么样看小众软件上这个帖子
+https://www.appinn.com/bitremote-for-apple/</description>
     </item>
     <item>
       <title>百年域名</title>
       <link>https://blog.qklg.net/post/20230821/</link>
       <pubDate>Mon, 21 Aug 2023 13:02:25 +0000</pubDate>
       <guid>https://blog.qklg.net/post/20230821/</guid>
-      <description>WordPress 宣布提供 100 年域名托管服务 WordPress宣布提供100年的域名托管服务，包括24小时协助和托管网站服务。 域名注册期限最长为十年，但 WordPress 这个</description>
+      <description>WordPress 宣布提供 100 年域名托管服务
+WordPress宣布提供100年的域名托管服务，包括24小时协助和托管网站服务。
+域名注册期限最长为十年，但 WordPress 这个“百年计划”将提供 100 年的域名和 WordPress 托管，每个计划的费用为 38,000 美元。
+WordPress 表示，该计划是为了想终生保护自己的在线遗产的人设计的。注册该计划非常简单，只需在WordPress.com网站上填写表格即可。
+来源
+https://t.me/xhqcankao/6035
+详细信息：https://wordpress.com/blog/2023/08/25/introducing-the-100-year-plan/</description>
     </item>
     <item>
       <title>qbittorrent用tg bot通知</title>
       <link>https://blog.qklg.net/post/20230820/</link>
       <pubDate>Sun, 20 Aug 2023 13:03:08 +0000</pubDate>
       <guid>https://blog.qklg.net/post/20230820/</guid>
-      <description>如果你想用tg bot来管理你的qbittorrent的话 可以试下下面这两个 https://github.com/zeroone2numeral2/qbittorrent-bot 开源项目：用telegramBot控制qbittorrent https://hostloc.com/thread-1192407-1-1.html (</description>
+      <description>如果你想用tg bot来管理你的qbittorrent的话
+可以试下下面这两个
+https://github.com/zeroone2numeral2/qbittorrent-bot
+开源项目：用telegramBot控制qbittorrent
+https://hostloc.com/thread-1192407-1-1.html
+(出处: 全球主机交流论坛)
+1
+botfather https://t.me/BotFather点击
+/newbot命令创建bot，按照提示创建bot的名字和用户名
+然后会有一个tokern在Use this token to access the HTTP API:后面，复制下
+2获取telgram的user id
+https://t.me/getidsbot，点击开始，
+id:后面的就是你的id了
+3打开qbittorrent设置-下载，拉到下面，运行外部程序
+新增 torrent 时运行外部程序
+curl -X POST &amp;#34;https://api.telegram.org/bot&amp;lt;YourBotToken&amp;gt;/sendMessage&amp;#34; -d &amp;#34;chat_id=&amp;lt;ChatID&amp;gt;&amp;amp;text=text=%N正在下载.&amp;#34; torrent 完成时运行外部程序
+curl -X POST &amp;#34;https://api.telegram.org/bot&amp;lt;YourBotToken&amp;gt;/sendMessage&amp;#34; -d &amp;#34;chat_id=&amp;lt;ChatID&amp;gt;&amp;amp;text=text=%N完成下载.&amp;#34; 换成1里面的botfather那里获取的token，换成2里面的id后面的那串数字
+点击保存，就好了
+其他的参数自己根据需要调，我只是用来下载时候通知下的
+最后效果如图</description>
     </item>
     <item>
       <title>给各位用安卓的推荐个infuse的替代品</title>
       <link>https://blog.qklg.net/post/20230819/</link>
       <pubDate>Sat, 19 Aug 2023 13:04:28 +0000</pubDate>
       <guid>https://blog.qklg.net/post/20230819/</guid>
-      <description>链接:https://github.com/nova-video-player/aos-AVP github上直接下或者google play下</description>
+      <description>链接:https://github.com/nova-video-player/aos-AVP
+github上直接下或者google play下也行
+一般手机下arm-v8的64位的，电视机下arm-v7的32位的
+1支持webdav，能播alist里各种网盘，也支持smb，ftp，sftp，sshj啥的
+2支持infuse一样的刮削，海报墙
+3支持手机和电视两种模式，设置里可以切的
+4注册下OpenSubtitles ，可以从那边自动下字幕
+mjj可以试下
+免费的，挺好用的</description>
     </item>
     <item>
       <title>高级电视用户</title>
       <link>https://blog.qklg.net/post/20230818/</link>
       <pubDate>Fri, 18 Aug 2023 13:06:09 +0000</pubDate>
       <guid>https://blog.qklg.net/post/20230818/</guid>
-      <description></description>
+      <description> </description>
     </item>
     <item>
       <title>【宝典在手,江山我有】小白闯江湖之常用一键脚本!</title>
       <link>https://blog.qklg.net/post/20230812/</link>
       <pubDate>Sat, 12 Aug 2023 13:07:50 +0000</pubDate>
       <guid>https://blog.qklg.net/post/20230812/</guid>
-      <description>termius订阅掉了 换到新账户，把老的资料备份下 顺带发给给位mjj，常用的应该都有了 根据@Kdkdk 大佬的意见，修改了下，做了下分类，并且</description>
+      <description>termius订阅掉了
+换到新账户，把老的资料备份下
+顺带发给给位mjj，常用的应该都有了
+根据@Kdkdk 大佬的意见，修改了下，做了下分类，并且加上了来源
+网络测试类脚本 三网测速 bash &amp;lt;(curl -Lso- https://www.infski.com/files/superspeed.sh) 来源:https://www.hostloc.com/thread-1076459-1-1.html
+用途:三网多线程测速
+Hyperspeed bash &amp;lt;(curl -Lso- https://bench.im/hyperspeed) 来源:https://hostloc.com/thread-1076585-1-1.html
+用途:测试三网单线程测速，比方说油管速度就是单线程
+硬件测试类脚本 geekbench和yabs geekbench5
+curl -sL yabs.sh|bash -s -- -if -fdi5 yabs
+curl -sL yabs.sh | bash 来源:https://github.com/masonr/yet-another-bench-script
+用途:geekbench5只测试小鸡的cpu的geekbench5的跑分，去掉了网络和硬盘测试
+现在的yabs默认是6，yabs同时还提供小鸡的硬盘和网络测试，具体详细的参数看作者github的readme
+bench.sh wget -qO- bench.sh | bash 来源:https://teddysun.com/444.html
+用途:秋水大佬的脚本，可以显示linux小鸡的详细信息，以及硬盘和网络的测试
+如果要测试小鸡国外的速度的话，用这个
+硬盘测试 dd bs=64k count=4k if=/dev/zero of=test oflag=dsync 用途:用dd命令测试小鸡的硬盘性能
+超售检测 curl https://raw.githubusercontent.com/uselibrary/memoryCheck/main/memoryCheck.sh | bash wget --no-check-certificate -O memoryCheck.sh https://raw.githubusercontent.com/uselibrary/memoryCheck/main/memoryCheck.sh &amp;amp;&amp;amp; chmod +x memoryCheck.sh &amp;amp;&amp;amp; bash memoryCheck.</description>
     </item>
     <item>
       <title>给各位二次元推荐个好东西</title>
       <link>https://blog.qklg.net/post/20230808/</link>
       <pubDate>Tue, 08 Aug 2023 13:09:20 +0000</pubDate>
       <guid>https://blog.qklg.net/post/20230808/</guid>
-      <description>AutoBangumi 全自动追番工具 github地址https://github.com/EstrellaXD/Auto_Bangumi 官网https://ww</description>
+      <description>AutoBangumi
+全自动追番工具
+github地址https://github.com/EstrellaXD/Auto_Bangumi
+官网https://www.autobangumi.org/
+直接小鸡上docker撸就可以了，教程官方文档就有
+https://www.autobangumi.org/deploy/quick-start.html
+当然你小鸡得能下bt，不然的话当心被删鸡，建议家里nas上用
+拿来nas上看番，挺好用的
+我是给陈叔叔冲了好几年大会员的大韭菜</description>
     </item>
     <item>
       <title>将博客部署到ipfs</title>
       <link>https://blog.qklg.net/post/20230807/</link>
       <pubDate>Mon, 07 Aug 2023 13:11:52 +0000</pubDate>
       <guid>https://blog.qklg.net/post/20230807/</guid>
-      <description>最近几天在玩ipfs，一直想把自己的博客部署到ipfs上 看了一堆文章，发现两好玩的东西，类似于github pages，cf pages之类的静</description>
+      <description>最近几天在玩ipfs，一直想把自己的博客部署到ipfs上
+看了一堆文章，发现两好玩的东西，类似于github pages，cf pages之类的静态托管站点，但是区别于他们的就是，可以把博客托管到ipfs上
+直接用github仓库部署静态博客就行
+https://fleek.co/
+https://dashboard.4everland.org/login
+https://app.pinata.cloud/pinmanager
+你要玩ipfs静态博客，有mac的话可以直接试下这个
+隔壁v2ex站长做的
+https://github.com/Planetable/Planet</description>
     </item>
     <item>
       <title>分享个web检测工具</title>
       <link>https://blog.qklg.net/post/20230804/</link>
       <pubDate>Fri, 04 Aug 2023 14:02:11 +0000</pubDate>
       <guid>https://blog.qklg.net/post/20230804/</guid>
-      <description>hack news看到的，超级酷炫 IP信息、SSL、DNS记录、Cookies、标头、域名信息等一堆内容 网址:https://web-check.x</description>
+      <description>hack news看到的，超级酷炫
+IP信息、SSL、DNS记录、Cookies、标头、域名信息等一堆内容
+网址:https://web-check.xyz/
+作者github:https://github.com/lissy93/web-check
+可以自建，作者的readme里有自建的办法的
+用docker就行</description>
     </item>
     <item>
       <title>关于红米ax6000的一点小小的经验</title>
       <link>https://blog.qklg.net/post/20230730/</link>
       <pubDate>Sun, 30 Jul 2023 13:12:59 +0000</pubDate>
       <guid>https://blog.qklg.net/post/20230730/</guid>
-      <description>1这款路由器怎么样 很牛逼，堪称千兆毕业机，缺点也就是后面只有千兆口子，没2.5G，它那颗四2.0Ghz的a53，跑千兆稍微有点浪费 2拿来科学</description>
+      <description>1这款路由器怎么样
+很牛逼，堪称千兆毕业机，缺点也就是后面只有千兆口子，没2.5G，它那颗四2.0Ghz的a53，跑千兆稍微有点浪费
+2拿来科学怎么样
+我试过我的红米ax6000刷openwrt，恩山一个大佬编译的
+瓦工hk cmi加我移动千兆宽带，ssrp+用naive proxy
+只能跑到五百多，看了下后台cpu他占用就上不去，我感觉软件问题，我没管
+后面用我的n5105的软路由是可以跑到七八百的
+但是你500Mbps能几个小鸡跑得动啊
+我感觉应该是navie proxy的问题，后面我用我朋友借给我的机场，用ss就可以，八百多没啥问题
+不过你根本不用管这些，因为正常科学用不到这么高的速度
+3购买意见
+家里千兆内网，不上2.5G的，只拿来爬墙的完全足够用了
+只爬墙的话解锁ssh上个shellclash也足够用了
+4提醒
+别买成小米的ax6000，那个cpu很弱鸡，只能当ap，不过是个很好的ap，不过直接加钱卖小米那个新的7000更香
+苹果全家桶的尽量别上，联发科和苹果有点互斥，尽量买高通soc的路由器
+具体怎么玩，还有啥左转隔壁恩山，我只是分享下我的感受，我最后还是刷回官网做ap了，实在有点浪费</description>
     </item>
     <item>
       <title>移动宽带的一点小小的经验</title>
       <link>https://blog.qklg.net/post/20230727/</link>
       <pubDate>Thu, 27 Jul 2023 13:13:36 +0000</pubDate>
       <guid>https://blog.qklg.net/post/20230727/</guid>
-      <description>凌晨睡不着，醒来，随便写点什么 1怎么办便宜 某宝或者你所在省份的运营商的贴吧去找找，有优惠 比直接去营业厅问便宜很多很多，我也不知道他们怎么做到</description>
+      <description>凌晨睡不着，醒来，随便写点什么
+1怎么办便宜
+某宝或者你所在省份的运营商的贴吧去找找，有优惠
+比直接去营业厅问便宜很多很多，我也不知道他们怎么做到的
+我用的某宝，20多一个月就能开千兆，不限制套餐，我是八元保号都能开，上行是100M的也够用了
+2国内上网怎么样
+国内大的网站，没啥问题，现在大网站一般都是三网bgp，或者接入网宿腾讯阿里等大cdn，没啥问题
+小网站的话，国内电信或者联通单线的，也没啥实际问题，一般这种网站都得开，不过偶尔个别确实遇到过打不开，不过一般人也不会上吧
+3打游戏怎么样
+有国服的话，基本上体验没啥，我lol和csgo都玩，有国服的都没啥问题
+外服的话该上加速器还是加速器，氪金uu没啥问题，雷神我这没啥问题
+4没公网ip怎么办
+我这电信的老宽带是有公网ip的，新办的也没了，只有ipv6公网，所以还不如直接移动了
+ipv6的话你得自己折腾，改桥接，换光猫，上软路由啥的都得整好
+5出国留学怎么样
+这个比电信爽很多，亚太小鸡很容易起飞，不过最近广州出口出问题了，三个多月都没修好，绕上海,我在上海周边没啥影响，广州的mjj可能有点影响，特别是去hk的延迟大了很多
+不行还有万精油，cf自选ipv6去hkg，基本上拉得动一堆小鸡
+6三个运营商怎么选
+我这联通覆盖很少小区有，我这小区有电信移动，长城宽带和江苏有线这两都有，就是没联通，有条件的话还是联通优选
+我这19块钱的王卡+20就可以整个千兆宽带了，可惜小区没有，很难搞
+江苏联通低消19千兆宽带240/年
+https://hostloc.com/thread-1133561-1-1.html
+(出处: 全球主机交流论坛)
+7怎么折腾
+自带的猫得换了，我这自带的猫某鱼十几块钱一个垃圾猫，没换之前一堆问题，
+我换了个华为hs8145x6的10Gpon的猫，可惜后面四个都是千兆口
+现在有条件上千兆宽带的还是上个2.5G口子的猫，现在很便宜了，我是前年换的，所以一直用，也懒得换了，现在2.5G猫很便宜，200左右就有了
+也可以上猫棒，见过网上有哥们用猫棒+tp的xdr 5480，突破千兆的
+不过这些体验真没啥提升，千兆足够用了
+出了测速，真没啥提升
+软路由，我是一台n5105的软路由，之前隔壁路由器群开车时候500买的准系统，内存，之前旧笔记本里的8G条子，固态用的某多多十几块钱的16G傲腾，不过问题很多，断流遇到好几次了，n5105+i225这两玩意凑一起真的很难受
+刷了个opnewrt，上面就只跑了个科学和alist，其他都没用
+固件之前自己编译的，现在懒狗一个，直接用的这个高大全https://openwrt.mpdn.fun:8443/
+科学用的passwall，可以直接用这个装https://github.com/xiaorouji/openwrt-passwall/releases
+然后ipv6的ddns也在上面，我装了个openvpn ipv6回家，我这wireguard被qos很严重
+后面的路由器是红米ax6+ax6000做ap
+ax6刷的openwrt，ax6000刷了openwrt，又被我刷回去了，做ap原厂系统就可以了
+5105后面挂了个n5095的台电的小主机，装了个pve，里面一个黑群晖，本来还有个windows的，但是没啥用，被我删了
+家里的网络 拓扑挺简单的
+hs8145x6 光猫-n5105软路由拨号科学-ax6和ax6000两硬路由做ap</description>
     </item>
     <item>
       <title>serverbox-一个探针类的app</title>
       <link>https://blog.qklg.net/post/20230725/</link>
       <pubDate>Tue, 25 Jul 2023 13:14:19 +0000</pubDate>
       <guid>https://blog.qklg.net/post/20230725/</guid>
-      <description>前几天看到的，各位mjj可以试下 github地址 https://github.com/lollipopkit/flutter_server_box 开源免费（ios要1刀） 可以监控linux服务器的状态，还有docker容器的状态 还能当s</description>
+      <description>前几天看到的，各位mjj可以试下
+github地址
+https://github.com/lollipopkit/flutter_server_box
+开源免费（ios要1刀）
+可以监控linux服务器的状态，还有docker容器的状态
+还能当ssh终端</description>
     </item>
     <item>
       <title>pr靓仔，七毛鸡测试</title>
       <link>https://blog.qklg.net/post/20230719/</link>
       <pubDate>Wed, 19 Jul 2023 13:16:30 +0000</pubDate>
       <guid>https://blog.qklg.net/post/20230719/</guid>
-      <description>前言 玩具鸡，劝你们别上车，隔壁已经有人才刚买就被靓仔干了 不过就七毛钱，买来当玩具也不错 pr的0.1刀一个月也就是七毛钱的机子 1核1G内存10</description>
+      <description>前言
+玩具鸡，劝你们别上车，隔壁已经有人才刚买就被靓仔干了
+不过就七毛钱，买来当玩具也不错
+pr的0.1刀一个月也就是七毛钱的机子
+1核1G内存10G硬盘100G流量
+流媒体
+yabs
+# Yet-Another-Bench-Script # # v2023-04-23 # # https://github.com/masonr/yet-another-bench-script # # ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## # Tue 18 Jul 2023 10:26:48 PM UTC Basic System Information: --------------------------------- Uptime : 0 days, 0 hours, 14 minutes Processor : Intel(R) Xeon(R) CPU E5-2650 v2 @ 2.60GHz CPU cores : 1 @ 2599.998 MHz AES-NI : ✔ Enabled VM-x/AMD-V : ✔ Enabled RAM : 989.</description>
     </item>
     <item>
       <title>mjj综合症候群</title>
       <link>https://blog.qklg.net/post/20230713/</link>
       <pubDate>Thu, 13 Jul 2023 13:17:57 +0000</pubDate>
       <guid>https://blog.qklg.net/post/20230713/</guid>
-      <description>症状1 仓鼠症 不停买小鸡，买了又吃灰 买完鸡，付完款，测速性能测试跑一波，挂上探针，走一波流程然后吃灰 或者干脆直接买完就吃灰 症状2 刷子症 刷刷刷，</description>
+      <description>症状1 仓鼠症
+不停买小鸡，买了又吃灰
+买完鸡，付完款，测速性能测试跑一波，挂上探针，走一波流程然后吃灰
+或者干脆直接买完就吃灰
+症状2 刷子症
+刷刷刷，刷pt，刷bt，刷完不看，放着吃灰
+症状3 用不完就亏了症
+相对于吃灰，这类mjj的话是流量不用玩，就觉得自己亏了，商家赚钱了，一定要跑完才行
+症状4 免费就冲症
+这个免费了，这个小鸡好便宜，冲冲冲
+本人以上症状都有，是不是无可救药了</description>
     </item>
     <item>
       <title>那些外币借记卡</title>
       <link>https://blog.qklg.net/post/20230712/</link>
       <pubDate>Wed, 12 Jul 2023 13:19:06 +0000</pubDate>
       <guid>https://blog.qklg.net/post/20230712/</guid>
-      <description>本贴写给那些办不了信用卡的学生，或者不想办信用卡的 1中国银行的visa和master card借记卡 mjj常用的非人哉，莫奈卡，这两是mast</description>
+      <description>本贴写给那些办不了信用卡的学生，或者不想办信用卡的
+1中国银行的visa和master card借记卡
+mjj常用的非人哉，莫奈卡，这两是master
+目前就上海分行的莫奈和非人哉可以网申，不过这一会行，一会不行的，其他的得去线下，一般得地级市的分行估计才有
+得配一张银联的借记卡，购汇才能用
+没年费
+具体怎么玩可以看这个大佬的这个博客
+链接
+2美国运通的借记卡
+主要3家，广发，兴业 中信
+直接人民币入账，不需要购汇，在国内还能绑支付宝微信云闪付
+具体怎么玩看这个
+https://t.me/DocOfCard/1643
+3其他
+工商的牡丹卡，这玩意只能线下开，而且网点很少，有条件的话可以去试下
+中信的visa和master card坑太多，不推荐了
+其他的卡啥的看这个大佬的博客
+https://docofcard.com/archives/foreign-debit-card/
+这个大佬总结的很详细
+目前国内开的非银联借记卡就2种值的推荐的，一个中行的非人哉和莫奈卡和运通的借记卡，尽量两个都办了，运通支持的地方比visa和master card少，而且国内的运通人民币卡是和连连支付合作的，卡段都很特殊，很容易拒付，我的兴业的运通卡试过，很多地方都不行，visa和master card的适用性肯定比运通强的，借记卡一般大部分地方都能支付，还有能走PayPal就走PayPal，汇率设置下没啥问题，还能争议，避免被坑，不过有条件还是上信用卡吧</description>
     </item>
     <item>
       <title>vir东京37号母鸡的v6解决了</title>
       <link>https://blog.qklg.net/post/20230711/</link>
       <pubDate>Tue, 11 Jul 2023 13:20:38 +0000</pubDate>
       <guid>https://blog.qklg.net/post/20230711/</guid>
-      <description>感谢[url=home.php?mod=space&amp;amp;uid=26740]@IDC888[/url] 和 [url=home.php?mod=space&amp;amp;uid=45426]@landscape[/url] 大佬 virmach东京的ipv</description>
+      <description>感谢[url=home.php?mod=space&amp;amp;uid=26740]@IDC888[/url] 和 [url=home.php?mod=space&amp;amp;uid=45426]@landscape[/url] 大佬
+virmach东京的ipv6有能用的吗？
+https://hostloc.com/thread-1186369-1-1.html
+(出处: 全球主机交流论坛)
+看这个帖子的7楼landscape 大佬的办法
+就是网关的问题
+我37号母鸡，这个网关是2a12:a300:3700::1
+其他母鸡应该是把37换成你所在母鸡的编号
+群友29母鸡的网关是2a12:a300:2900::1
+37号母鸡的作业在下面，第一行的ip adr不要动，我的是/64，不知道为啥landscape大佬的是/40的，我没动
+把第二行和第三行换成下面的，然后ssh打service networking restart就可以了，v6就出来了
+up ip addr add 2a12:a301:0:4::xxxx:xxxx/64 dev eth0 up ip -6 route add 2a12:a300:3700::1 dev eth0 up ip -6 route add default via 2a12:a300:3700::1 顺带测了下流媒体解锁
+最后感谢一波vir胖子，本来买vir什么都不会的，现在啥也学会了，什么救援模式dd系统，vnc配网，还顺带学了个英语，pending这个单词以前不怎么认识，现在印象深刻，还可以享受性欲不加，还能帮胖子买跑车，做慈善，vir真是太棒了
+自己要dd的话用，我用的萌咖的dd脚本，这是debian10的，要11的话把-d后面的10换成11，12的话也行，前几天试了下，太吃内存了，就d回去了
+bash &amp;lt;(wget --no-check-certificate -qO- &amp;#39;https://raw.githubusercontent.com/MoeClub/Note/master/InstallNET.sh&amp;#39;) -d 10 -v 64 -p &amp;#34;密码&amp;#34; -port &amp;#34;端口&amp;#34; dd完后，进 /etc/network/interfaces
+再后面加这几个，加完保存，reboot重启下就ok了,其他的有ipv6的小鸡也可以dd完这么加，ovh的0.97就能用
+iface ens3 inet6 static address 2a12:a301:0:4::xxxx:xxxx netmask 64 gateway 2a12:a300:3700::1 dns-nameservers 2001:4860:4860::8888 2001:4860:4860::8844 ens3的话改成你文件里前面IPV4中&amp;quot;iface xxxx inet static&amp;quot;</description>
     </item>
     <item>
       <title>用cloudflare tunnel把你的博客放在你的路由器上</title>
       <link>https://blog.qklg.net/post/20230709/</link>
       <pubDate>Sun, 09 Jul 2023 13:21:50 +0000</pubDate>
       <guid>https://blog.qklg.net/post/20230709/</guid>
-      <description>1cf官网 ①打开cloudflare的控制台，选择左边的zero trust，选择计划免费就行，绑完支付方式就能用了，不会扣费的，放心好了，只</description>
+      <description>1cf官网
+①打开cloudflare的控制台，选择左边的zero trust，选择计划免费就行，绑完支付方式就能用了，不会扣费的，放心好了，只用tunnel的话，绑完可以去账单，付款方式里把卡删掉就可以了
+②点击左边access-tunnels
+③选择creat a tunnel，tunnel name随便去个名字就行,然后点击save tunnel
+这边准备工作就完成了
+2本地设备
+①如果你用的是openwrt路由器的话，直接参考这位大佬的教程
+https://hostloc.com/thread-1154840-1-1.html
+其他各平台的cf那边都有怎么做的
+②如果你是和我一样的懒狗，选择docker，然后复制下面的install and run，直接进路由器或者别的支持docker的平台上ssh进去直接一键梭哈就行了
+如果成功的话，回到之前的界面
+这边status会变成绿色healty，这表示隧道创建成功了
+3搭建博客
+①我选择halo，还是因为我是懒狗，可以直接dcoker一键梭哈，不用配置乱七八糟的
+参考halo官网的文档，直接运行以下命令就行就行，记得把P@88w0rd改成自己的密码，复杂点的尽量
+具体参数啥的文档里都有
+https://docs.halo.run/getting-started/install/docker
+docker run \ -it -d \ --name halo \ -p 8090:8090 \ -v ~/.halo2:/root/.halo2 \ halohub/halo:2.7 \ --halo.external-url=http://localhost:8090/ \ --halo.security.initializer.superadminusername=admin \ --halo.security.initializer.superadminpassword=P@88w0rd ②输入你路由器ip:8090端口就可以访问你的halo的博客了
+输入账户admin，密码就行了，站点名称，随便取个就行了
+③回到cloudflare官网
+access-tunnels
+右边三个点，选择configure
+选择public hostname，再点add a public hostanme
+选择你想访问的域名，然后按照下面的输入就行了
+hostname就是你公网访问的域名，这个自己整
+service就是你路由器局域网访问ip。比方说我的博客是http://192.168.1.1:8090
+选择http,然后后面输192.168.1.1:8090就ok
+然后点击save hostname保存
+浏览器打开你刚刚输入的host name，就可以访问了，也可以把其他的端口弄到公网上
+关于速度，国内访问cf，一般都是到美西的节点，基本上绕了大半个地球回来，所以速度就那样了，当个玩具用用不错</description>
     </item>
     <item>
       <title>Remove-MS-Edge – Windows 下的 Edge 卸载器</title>
       <link>https://blog.qklg.net/post/20230708/</link>
       <pubDate>Sat, 08 Jul 2023 13:25:48 +0000</pubDate>
       <guid>https://blog.qklg.net/post/20230708/</guid>
-      <description>edge最近越来越流氓了 用这个直接让edge滚蛋 怎么用看隔壁小众软件上帖子 https://www.appinn.com/remove-ms-edge/ github项目地址 https://github.com/ShadowWhisperer/Remove-MS-Edge/</description>
+      <description>edge最近越来越流氓了
+用这个直接让edge滚蛋
+怎么用看隔壁小众软件上帖子
+https://www.appinn.com/remove-ms-edge/
+github项目地址
+https://github.com/ShadowWhisperer/Remove-MS-Edge/</description>
     </item>
     <item>
       <title>tabserver,用cf worker转发本地local host</title>
       <link>https://blog.qklg.net/post/20230703/</link>
       <pubDate>Mon, 03 Jul 2023 13:27:16 +0000</pubDate>
       <guid>https://blog.qklg.net/post/20230703/</guid>
-      <description>https://tabserve.dev/ mjj来试下，用cf worker转发本地local host</description>
+      <description>https://tabserve.dev/
+mjj来试下，用cf worker转发本地local host</description>
     </item>
     <item>
       <title>用cloudflare的api，关闭ipv6兼容性</title>
       <link>https://blog.qklg.net/post/20230630/</link>
       <pubDate>Fri, 30 Jun 2023 13:28:40 +0000</pubDate>
       <guid>https://blog.qklg.net/post/20230630/</guid>
-      <description>有时候有些莫名其妙的问题，其实关闭v6就能解决，但是 cloudflare的设置中的IPv6 兼容性开关是动不了的，需要20刀以上pro才能点 但</description>
+      <description>有时候有些莫名其妙的问题，其实关闭v6就能解决，但是
+cloudflare的设置中的IPv6 兼容性开关是动不了的，需要20刀以上pro才能点
+但是我们可以用api来关闭
+参考cloudflare的文档
+需要用的三个参数，1区域id，2邮箱 3global api key
+打开cf你的域名，域名那边有个域名区域id
+申请global api key
+https://dash.cloudflare.com/profile/api-tokens
+然后在linux上打以下命令,就可以关闭ipv6了，要打开的话就把off换成on就可以了
+curl -X PATCH &amp;#34;https://api.cloudflare.com/client/v4/zones/域名区域id/settings/ipv6&amp;#34; \ -H &amp;#34;X-Auth-Email: 你的cf邮箱&amp;#34; \ -H &amp;#34;X-Auth-Key:你的Global API Key&amp;#34; \ -H &amp;#34;Content-Type: application/json&amp;#34; \ --data &amp;#39;{&amp;#34;value&amp;#34;:&amp;#34;off&amp;#34;}&amp;#39; 如果出现以下结果，就是成功了
+{ &amp;#34;errors&amp;#34;: [], &amp;#34;messages&amp;#34;: [], &amp;#34;success&amp;#34;: true, &amp;#34;result&amp;#34;: null } </description>
     </item>
     <item>
       <title>推荐个可以下大图片网站</title>
@@ -377,133 +1201,473 @@
       <link>https://blog.qklg.net/post/20230628/</link>
       <pubDate>Wed, 28 Jun 2023 13:31:34 +0000</pubDate>
       <guid>https://blog.qklg.net/post/20230628/</guid>
-      <description>cloudflare目前的话提供了四种证书，一种是自家一年的，还有let‘s的，谷歌的，都是三个月的，还有setcigo的三个月的，但是怎么</description>
+      <description>cloudflare目前的话提供了四种证书，一种是自家一年的，还有let‘s的，谷歌的，都是三个月的，还有setcigo的三个月的，但是怎么没见到，之前的话一直都是一年的证书，现在基本上都是三个月的，主要是let‘s和谷歌的两种，nodeseek就是谷歌的三个月的，其实我们可以利用api来切换这，参考cloudflare的文档里的[certificate authority]https://developers.cloudflare.com/ssl/reference/certificate-authorities/)
+来切换四种证书，其实也可以完全不管，因为都是自动签的，let&amp;rsquo;s的证书的话可能会导致部分旧平台，比方说旧安卓手机和win7的电脑兼容性不好，还有国产的360浏览器不把它添加进信任列表,所以切不切其实看你自己了
+下面介绍两种办法来切证书，其实都是发起api来的，本质上一样的，只是第一种稍微简单点
+首先都要申请global api key
+https://dash.cloudflare.com/profile/api-tokens
+第一种方法
+dnsfalre，这个是我之前用来修改以前cfp的cname接入的域名时候发现的，具体怎么玩可以参考这个大佬的博客https://luotianyi.vc/6415.html,可以自己部署，我们这次只是用来修改证书
+作者github的项目地址https://github.com/5aaee9/Dnsflare
+我们直接用作者的演示站就行了，是本地浏览器发起api请求的
+打开https://dnsflare-indexyz.vercel.app/，
+输入你的邮箱和global api key
+点击提交登录
+选择你的域名
+点击下面的证书供应商，就可以切换你的域名的证书了，选择digicert就是cf自家的一年的了，let&amp;rsquo;s和谷歌的话就是三个月的，有cf自家当然选cf自家的了
+这时候我们去cf的后台，就可以看到cf的自家的一年证书已经签发了
+第二种，
+打开cf你的域名，域名那边有个域名区域id，要用的
+然后在小鸡的ssh上打下面的命令
+curl -sX PATCH &amp;#34;https://api.cloudflare.com/client/v4/zones/你的域名区域id/ssl/universal/settings&amp;#34; -H &amp;#34;X-Auth-Email:你的邮箱&amp;#34; -H &amp;#34;X-Auth-Key:你的global api key&amp;#34; -H &amp;#34;Content-Type: application/json&amp;#34; --data &amp;#34;{\&amp;#34;certificate_authority\&amp;#34;:\&amp;#34;digicert\&amp;#34;}&amp;#34; 换成谷歌的话就把digicert换成google
+curl -sX PATCH &amp;#34;https://api.cloudflare.com/client/v4/zones/你的域名区域id/ssl/universal/settings&amp;#34; -H &amp;#34;X-Auth-Email:你的邮箱&amp;#34; -H &amp;#34;X-Auth-Key:你的global api key&amp;#34; -H &amp;#34;Content-Type: application/json&amp;#34; --data &amp;#34;{\&amp;#34;certificate_authority\&amp;#34;:\&amp;#34;google\&amp;#34;}&amp;#34; 换成let&amp;rsquo;s的digicert 为 lets_encrypt
+curl -sX PATCH &amp;#34;https://api.cloudflare.com/client/v4/zones/你的域名区域id/ssl/universal/settings&amp;#34; -H &amp;#34;X-Auth-Email:你的邮箱&amp;#34; -H &amp;#34;X-Auth-Key: 你的global api key&amp;#34; -H &amp;#34;Content-Type: application/json&amp;#34; --data &amp;#34;{\&amp;#34;certificate_authority\&amp;#34;:\&amp;#34;lets_encrypt\&amp;#34;}&amp;#34; 如果出现以下结果的话，就是成功了</description>
     </item>
     <item>
       <title>那些免费证书</title>
       <link>https://blog.qklg.net/post/20230626/</link>
       <pubDate>Mon, 26 Jun 2023 13:33:59 +0000</pubDate>
       <guid>https://blog.qklg.net/post/20230626/</guid>
-      <description>1 一年的单域名的证书 都是国内云厂商提供的，都是要实名的 第一个是华为云和阿里云的encryption everywhere 华为云的怎么申请看这里 https://www.huaweicloud.com/zhishi/sslfree.html 阿里云的http</description>
+      <description>1 一年的单域名的证书
+都是国内云厂商提供的，都是要实名的
+第一个是华为云和阿里云的encryption everywhere
+华为云的怎么申请看这里
+https://www.huaweicloud.com/zhishi/sslfree.html
+阿里云的https://developer.aliyun.com/article/875508
+trust asia的，腾讯，宝塔，ucloud,青云，好像还有几个，
+但是记得，同一主域最多只能申请20张
+腾讯https://console.cloud.tencent.com/ssl,有个免费证书，点进去
+宝塔直接在面板里就有
+ucloud https://console.ucloud.cn/ussl/Free
+青云https://www.qingcloud.com/pricing#/SSLCertificate
+2 acme.sh申请的三个月的通配符证书
+Let&amp;rsquo;s Encrypt ,zerossl和谷歌的三个月的
+系统是debian
+①安装acme.sh
+curl https://get.acme.sh | sh 如果报错，安装socat
+apt install socat -y 确认acme.sh已经安装，显示acme.sh版本,如果没反应的话重启下
+acme.sh -v ②切换默认ca
+切换成Let&amp;rsquo;s encrypt
+acme.sh --set-default-ca --server letsencrypt 切换成gcp的
+acme.sh --set-default-ca --server google 切换成zerossl
+acme.sh --set-default-ca --server zerossl zerossl要邮箱的，https://app.zerossl.com/signup,在这边注册个账户,然后输入下面的命令就行
+acme.sh --register-account -m my@example.com ②.5 如果用gcp的证书的话申请gcp证书的api
+https://console.cloud.google.com/
+cloudshell
+gcloud beta publicca external-account-keys create acme.sh --register-account --server google -m xxx@gmail.</description>
     </item>
     <item>
       <title>ihostart罗马尼亚灵车</title>
       <link>https://blog.qklg.net/post/20230620/</link>
       <pubDate>Tue, 20 Jun 2023 13:37:29 +0000</pubDate>
       <guid>https://blog.qklg.net/post/20230620/</guid>
-      <description>ihostart罗马尼亚灵车 论坛25块钱收来的 配置如图，v4被墙了，v6坏了，拿来当玩具用 先来上个geekbench5开开胃，单核300多，</description>
+      <description>ihostart罗马尼亚灵车
+论坛25块钱收来的
+配置如图，v4被墙了，v6坏了，拿来当玩具用
+先来上个geekbench5开开胃，单核300多，也不是不能用
+再来个yabs，石头硬盘
+再来个流媒体
+最后来个bench.sh
+v4被墙了，去回程和国内三网不测了</description>
     </item>
     <item>
       <title>rclone挂载webdav,以infini-cloud为列</title>
       <link>https://blog.qklg.net/post/20230619/</link>
       <pubDate>Mon, 19 Jun 2023 13:35:25 +0000</pubDate>
       <guid>https://blog.qklg.net/post/20230619/</guid>
-      <description>1安装rclone ①先去rclone官网找到你的版本 官网链接https://rclone.org/downloads/ ②没sudo的话先安装</description>
+      <description>1安装rclone
+①先去rclone官网找到你的版本
+官网链接https://rclone.org/downloads/
+②没sudo的话先安装下sudo，我一般用的是debian，直接
+apt install sudo ③然后直接输入，安装rclone
+sudo -v ; curl https://rclone.org/install.sh | sudo bash 安装完成的话长这样子
+2
+获取infini-cloud的配置
+登录状态下打开这个链接
+https://infini-cloud.net/en/modules/mypage/usage/
+把Turn on Apps Connection给勾上
+记住你的id和密码，密码只会显示一次，记得保存下
+三个参数，一个url，一个id，一个password，准备好
+url的话下面3④里面用到
+Connection ID就是3⑤user
+Apps Password	的话3
+3配置rclone
+①在你的ssh中输入
+rclone config 会出来一排参数,中文啥意思，标在后面了，用gpt翻译的
+n) New remote：新建一个远程存储。 s) Set configuration password：设置配置文件的密码。 q) Quit config：退出配置界面。 ②新建的话输入n,会出现
+Enter name for new remote. name&amp;gt; 这个你直接随便输入就行,我就用这个帖子https://www.nodeseek.com/post-9604-1里的jpwp了
+输入完名字会出现一大串的
+③这个infini-cloud的话我们挂载的是webdav的，选择46 webdav，输入46就行了
+④会让你输入url
+就是第二部里面的url
+直接复制，粘贴进去就行了，然后回车
+会出现这个，选择5
+⑤user输入第2部里面的Connection ID
+然后回出现下面的
+y) Yes, type in my own password：手动输入密码。 g) Generate random password：随机生成密码。 n) No, leave this optional password blank (default)：不设置密码 选择y，手动输入第2部里面的那个只出现过一次的密码，复制进去就行了，Linux 终端中输入密码时，密码不会显示在屏幕上</description>
     </item>
     <item>
       <title>virmach究竟发生了啥 </title>
       <link>https://blog.qklg.net/post/20230615/</link>
       <pubDate>Thu, 15 Jun 2023 13:38:57 +0000</pubDate>
       <guid>https://blog.qklg.net/post/20230615/</guid>
-      <description>从https://lowendbox.com/blog/what-happened-to-virmach-anyways/#comments</description>
+      <description>从https://lowendbox.com/blog/what-happened-to-virmach-anyways/#comments
+转载，用chatgpt4翻译
+总结:胖子和cc机房闹掰，人员跑路，胖子买新锐龙服务器要钱，新的机房要钱，胖子可能要跑路
+如果你在低端市场混得久了，你可能听过一个叫做Virmach的公司。
+他们以在假期，特别是黑色星期五期间提供杀手级优惠而闻名。
+他们的成功秘诀很简单：
+从主要的供应商那里租用便宜的服务器，主要是ColoCrossing。
+竞争到底（以非常低的成本提供吸引人的价值）。
+在LowEndTalk上做广告。
+这并不是过度简化。
+早在2019年，就有人发帖问ColoCrossing是否真的拥有Virmach——因为他们变得如此密不可分。
+事实上，这也让他们走得非常远。
+然而，直到他们决定购买自己的设备，并将其分布在全球各地的数据中心……
+随着时间的推移，裂痕逐渐显现
+最初，Virmach离开ColoCrossing的想法基本上受到了欢迎。首先，他们将获得IPv6。其次，他们离开了大坏狼ColoCrossing……最后，但同样重要的是：
+这是新的、令人兴奋的，所以人们纷纷跟风。
+有大量的人预订了这些服务器，Virmach最终创建了一个主题帖，宣布这些全新的自有Ryzen服务器。
+基本上，从这一点开始，Virmach就开始了他们的衰落（这仍在积极发生；还没有到“安息吧”的地步。）
+客户会抱怨延迟，交付的服务器出现问题，IP突然改变等等，这在开始时并不是问题。
+这只看起来像是成长的痛苦，Virmach总是似乎有一个很好的理由来解释为什么会发生这样的事情，以及什么时候会解决……但显然裂痕正在形成
+很多事情同时发生
+大约在2022年7月，管理Virmach在LowEndTalk账户的人说：
+由于我们现在的处境，我不得不每天、整天工作，已经持续一年左右。所以我现在花费的时间被严重偏向我的方向。我们现在有另外两个人和我们一起工作。我们仍然是一个小公司，一直都是，但最近更是如此。大约在COVID开始时，我们的计费人员离开了，我们的硬件人员离开了，还有两个系统管理员离开了。直到我们也必须进行大量的构建，处理老化的硬件，以及在过去的半年多时间里同时进行迁移，一切才变得不好应对。我可能也做了一些恶劣的销售，我们遇到了比预期多得多的新硬件问题，这也没有帮助。但是，你现在正在和一个几乎负责一切，长期以来几乎没有睡觉的人交谈，尤其是因为现在是周末，今天没有其他人在工作
+你卖出了太多产品来交付，你决定移动你的所有客户并投入大量的资金来做这个，现在你的所有员工都辞职了？即使你打算履行早先的承诺，现在也难以做到。
+我认为2022年的夏天左右真的是Virmach的巅峰。 (参见：Virmach在边缘摇摆，2022年8月发表)。
+之后呢？人们只是开始失去希望。它似乎已经变成了一个人的表演。如果有问题出现？祝你好运能得到回复。例如，人们的工单开启的时间超过90天。我现在仍然有一张超过一年的工单没有解决。
+2022年的7月也是Virmach账户最后一次登录LowEndTalk的时间，这是他们的主要业务来源。
+他们在其他论坛仍然活跃，但随着时间的推移，他们变得越来越内向。
+任何新的Virmach帖子通常都是人们谈论他们付费购买的产品的停机时间，Virmach回应说他们的所有数据中心都因为某个原因停机，然后又两个月不回应。
+从技术上讲，这仍然是一个正在被写的故事……但真的是吗？
+整整一年的空洞承诺，停机时间，以及缺乏解决方案。
+虽然我仍然认为完全有可能扭转整个公司的局面，但变革需要立即进行。一年的时间仍然处于同一位置是很长的时间。
+你只能表现得平庸这么久并且提供差的客户服务，最终，客户会找到其他的解决方案。当你的核心卖点仍然锁定在定价上时，你没有太多独特的卖点能在另一个与你价格匹配的人出现……并提供相同甚至更好的体验时，让客户留下来。
+（顺便说一下，你现在在一个找到更便宜、更好体验的地方。）
+总之，就像我之前说的……
+他们还没死。虽然微弱，但仍有脉搏。是Virmach决定他们想要发展还是继续衰落。如果一切都失败了，有一个市场可以提供3.87美元的开发者箱，三年期的可用性服务等级承诺为33%。
+如果他们一开始就和ColoCrossing保持在一起……我们都会有便宜的Buffalo服务器和Virmach的黑色星期五优惠。
+珍惜简单的时光。
+尾声：我们对Virmach有什么期待？
+去年我们发表了一篇文章，强调了Virmach的一些问题，反应主要是“是的，我也遇到了问题”。但也有一些人说“你不应该批评他们/这是一篇攻击性的文章/你为什么对他们不好”之类的评论。
+事实完全不是这样。我们喜欢为我们的社区带来超棒优惠的供应商，而Virmach长时间以来就是这样做的。他们试图通过在支持上设置一些保护措施来弥补他们微薄的利润，但基本上没有足够的收入进来。在面临太多的退款、意外的硬件费用或网络超支之前，微薄的利润很快就会被淹没。
+如果Virmach恢复稳定，客户对他们的服务感到满意，我们很乐意再次展示他们。推动低价托管可能性的供应商就是我们的宗旨！
+所以，我们真诚地祝Virmach一切顺利，希望他们能恢复过来。在此之前，我们会持续关注他们的发展</description>
     </item>
     <item>
       <title>ovh网盘，来试下</title>
       <link>https://blog.qklg.net/post/20230612/</link>
       <pubDate>Mon, 12 Jun 2023 13:40:05 +0000</pubDate>
       <guid>https://blog.qklg.net/post/20230612/</guid>
-      <description>前几天ovh老板的推特上看到的 https://twitte.com/olesovhcom/status/1664227559976869890 官网链接:https://shadow.tech/en-GB 关于 支持webdav 免费20G，各位mjj可以试</description>
+      <description>前几天ovh老板的推特上看到的
+https://twitte.com/olesovhcom/status/1664227559976869890
+官网链接:https://shadow.tech/en-GB
+关于
+支持webdav
+免费20G，各位mjj可以试下
+别存重要数据，毕竟ovh有物理上云的先列</description>
     </item>
     <item>
       <title>gridea部署静态博客</title>
       <link>https://blog.qklg.net/post/20230611/</link>
       <pubDate>Sun, 11 Jun 2023 13:42:51 +0000</pubDate>
       <guid>https://blog.qklg.net/post/20230611/</guid>
-      <description>gridea是一个个静态博客的客户端 相对于hugo和hexo啥的，最大的好处就是简单，不用配置啥复杂的东西 缺点，就是主题很少 本文用githu</description>
+      <description>gridea是一个个静态博客的客户端
+相对于hugo和hexo啥的，最大的好处就是简单，不用配置啥复杂的东西
+缺点，就是主题很少
+本文用github仓库部署，可以同时直接用仓库部署到github pages，cf pages，vercel，netlify，国内访问推荐vercel
+由于这几个默认域名被墙，绑个自己的域名
+一 配置github
+①没号的先注册一个
+https://github.com/
+点击右上角singup注册一个
+②创建github仓库
+https://github.com/new
+创建个username.github.io，username就是你用户名，其实也可以不这样子，仓库名随便取，只是没法用github pages而已，不影响部署到cf pages和vercel的
+③申请token
+https://github.com/settings/tokens/new
+token时间自己爱要多久，反正我直接永久，repo勾上，token只显示一次，记得保存下
+二 配置gridea
+①下载
+https://github.com/getgridea/gridea/releases
+自己根据客户端下载
+支持mac，win，linux三大客户端
+②配置
+点击左边的远程，界面长这样子
+选择github pages，
+域名:你要绑的域名
+仓库名称:刚刚建的github的仓库的名字:username.github.io这样子
+分支，现在一般默认是main，自己看下你github仓库
+仓库用户名,你github的user name
+邮箱，你github的邮箱
+令牌，刚刚第三步申请的token
+cname这个不用github page啥的话不用管，要用的话填你要绑的域名
+然后保存，再点下检测远程连接的，显示成功的话就ok了
+③备份
+点击最左边这个按钮，点进去，有个站点源文件路径，那就是gridea的配置文件了，要备份的话直接打包上传到网盘，或者直接整个坚果云或者onedrive啥的同步直接
+④写文章
+支持markdown，点击左边的文章，自己写
+⑤点击左下角同步，同步到你github
+如果没法同步的话，设置里又http代理设置，自己填写
+三 部署到各家平台
+1github pages
+找到你username.github.io的仓库，点击setting，选择pages启用，可以绑定自己的域名，不展开讲了，自己谷歌搜下
+2部署到cf pages（推荐）
+①注册cf账户
+https://cloudflare.com/ 打开网站，点击注册
+②创建pages
+点击workes and pages
+创建应用程序，选择pages
+连接到git
+连接到github账户，选择你刚刚创建的那个github仓库
+然后点开始设置
+保存并部署
+设置自定义域，默认的pages.dev被墙了，输入你在gridea里填的域名
+然后点激活域再等会就ok了
+浏览器打开你的域名就可以访问了
+3部署到vercel
+①https://vercel.com/点击右上角singup，再点击用github登录</description>
     </item>
     <item>
       <title>ucloud 台北测评</title>
       <link>https://blog.qklg.net/post/20230606/</link>
       <pubDate>Tue, 06 Jun 2023 13:47:05 +0000</pubDate>
       <guid>https://blog.qklg.net/post/20230606/</guid>
-      <description>ucloud台北，刚买的，来品一品 上车地址,没aff https://www.ucloud.cn/site/active/kuaijiesale.html 配置如下 我买的53的，最便宜的，吃灰无所谓 测试ip [code]乌兰察布 117.50.1</description>
+      <description>ucloud台北，刚买的，来品一品
+上车地址,没aff
+https://www.ucloud.cn/site/active/kuaijiesale.html
+配置如下
+我买的53的，最便宜的，吃灰无所谓
+测试ip
+[code]乌兰察布 117.50.162.54（带宽出口在北京，北京BGP）
+北京 106.75.47.147
+上海 106.75.252.202
+广州 106.75.172.214
+台北 103.98.17.12
+日本 152.32.203.164
+韩国 152.32.138.254
+洛杉矶 45.43.58.220
+香港：103.218.242.25
+孟买：123.58.203.38
+曼谷：128.1.79.99
+胡志明：152.32.162.124[/code]
+流媒体
+三网去程
+电线
+联通
+移动
+四网回程
+电信
+联通
+移动
+教育网
+yabs
+[code]# ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## #
+Yet-Another-Bench-Script v2023-04-23 https://github.com/masonr/yet-another-bench-script ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## ## Tue 06 Jun 2023 12:26:05 AM CST</description>
     </item>
     <item>
       <title>google.com跳转解决办法</title>
       <link>https://blog.qklg.net/post/20230528/</link>
       <pubDate>Sun, 28 May 2023 13:49:37 +0000</pubDate>
       <guid>https://blog.qklg.net/post/20230528/</guid>
-      <description>前言:给新手看的，老手应该都知道，别喷我 由于ip被邻居定位到内地，导致https://www.google.com/访问时跳转https:/</description>
+      <description>前言:给新手看的，老手应该都知道，别喷我
+由于ip被邻居定位到内地，导致https://www.google.com/访问时跳转https://www.google.com.hk/并且强制开启安全搜索的几种解决办法
+1ncr下
+直接浏览器输入 https://google.com//ncr就不会跳了
+ncr的全称是No Country Redirect，不进行国家/地区重定向
+2gl大法
+https://www.google.com/?gl=us
+gl后面的us可以换成其他的，比方说日本jp，法国fr啥的
+可以参考维基百科
+https://zh.wikipedia.org/zh-hans/%E5%9C%8B%E5%AE%B6%E5%9C%B0%E5%8D%80%E4%BB%A3%E7%A2%BC
+3location guard插件
+①安装插件，chrome点这里
+https://chrome.google.com/webstore/detail/location-guard/cfohepagpmnodfdmjliccbbigdkfcgia
+②选择Fixed Location-要去哪里就标记哪里,别太离谱，最好小鸡附近
+③option-Default level-used fixed location
+④拉到谷歌搜索的最下面
+更新位置信息
+然后刷新下就可以了
+顺带记得去谷歌这里报告下ip问题
+https://support.google.com/websearch/workflow/9308722</description>
     </item>
     <item>
       <title>分享个可以用chatgpt翻译整本电子书的Calibre 插件</title>
       <link>https://blog.qklg.net/post/20230526/</link>
       <pubDate>Fri, 26 May 2023 13:50:52 +0000</pubDate>
       <guid>https://blog.qklg.net/post/20230526/</guid>
-      <description>隔壁小众软件看到的 怎么玩隔壁都有 https://www.appinn.com/ebook-translator/ github地址 https://github.com/bookfere/Ebook-Translator-Calibre-Plugin/blob/master/README.zh-CN.md 我用的自带的5刀的免费账户，速度有点慢，总共块四千行，2个多小时才翻译了十分之一 之前用过</description>
+      <description>隔壁小众软件看到的
+怎么玩隔壁都有
+https://www.appinn.com/ebook-translator/
+github地址
+https://github.com/bookfere/Ebook-Translator-Calibre-Plugin/blob/master/README.zh-CN.md
+我用的自带的5刀的免费账户，速度有点慢，总共块四千行，2个多小时才翻译了十分之一
+之前用过这个
+https://github.com/yihong0618/bilingual_book_maker
+用python+vscode太折腾了
+这个Calibre 插件简单很多</description>
     </item>
     <item>
       <title>分享个好玩的-curl看天气</title>
       <link>https://blog.qklg.net/post/20230311/</link>
       <pubDate>Sat, 11 Mar 2023 13:52:19 +0000</pubDate>
       <guid>https://blog.qklg.net/post/20230311/</guid>
-      <description>github链接 https://github.com/schachmat/wego 安装curl 然后 curl wttr.in/城市 就可以了 比方说 curl wttr.in/hongkong 三字母机场代码也是可以的 curl wttr.in/hkg</description>
+      <description>github链接
+https://github.com/schachmat/wego
+安装curl
+然后
+curl wttr.in/城市 就可以了
+比方说
+curl wttr.in/hongkong 三字母机场代码也是可以的
+curl wttr.in/hkg </description>
     </item>
     <item>
       <title>google one各地流媒体检测</title>
       <link>https://blog.qklg.net/post/20230205/</link>
       <pubDate>Sun, 05 Feb 2023 14:04:07 +0000</pubDate>
       <guid>https://blog.qklg.net/post/20230205/</guid>
-      <description>前支持地区:奥地利 澳大利亚 比利时 加拿大 丹麦 芬兰 法国 德国 冰岛 爱尔兰 意大利 日本 墨西哥 荷兰 挪威 韩国 西班牙 瑞典 瑞士 台湾 英国 美国 试了下以下几个地方 台湾</description>
+      <description>前支持地区:奥地利 澳大利亚 比利时 加拿大 丹麦 芬兰 法国 德国 冰岛 爱尔兰 意大利 日本 墨西哥 荷兰 挪威 韩国 西班牙 瑞典 瑞士 台湾 英国 美国
+试了下以下几个地方
+台湾
+日本
+美国
+意大利</description>
     </item>
     <item>
       <title>常用的一些在线ping检测的网站</title>
       <link>https://blog.qklg.net/post/20230204/</link>
       <pubDate>Sat, 04 Feb 2023 13:53:32 +0000</pubDate>
       <guid>https://blog.qklg.net/post/20230204/</guid>
-      <description>https://ping.pe/ https://ping.sx/ping https://ping.cn/ping https://tools.ipip.net/ping.php https://ping.chinaz.com/ https://www.itdog.cn/ping/ https://www.17ce.com/ https://www.boce.com/ https://boce.aliyun.com/detect/ping</description>
+      <description>https://ping.pe/
+https://ping.sx/ping
+https://ping.cn/ping
+https://tools.ipip.net/ping.php
+https://ping.chinaz.com/
+https://www.itdog.cn/ping/
+https://www.17ce.com/
+https://www.boce.com/
+https://boce.aliyun.com/detect/ping</description>
     </item>
     <item>
       <title>瓦工软银</title>
       <link>https://blog.qklg.net/post/wa-gong-ruan-yin/</link>
       <pubDate>Thu, 02 Feb 2023 13:55:38 +0000</pubDate>
       <guid>https://blog.qklg.net/post/wa-gong-ruan-yin/</guid>
-      <description>瓦工日本大阪软银，一起来品一品 流媒体 yabs 三网去程 电信 联通 移动 四网回程 电信 cn2 联通 移动 教育网 三网单线程</description>
+      <description>瓦工日本大阪软银，一起来品一品
+流媒体
+yabs
+三网去程
+电信
+联通
+移动
+四网回程
+电信
+cn2
+联通
+移动
+教育网
+三网单线程</description>
     </item>
     <item>
       <title>瓦工香港cmi</title>
       <link>https://blog.qklg.net/post/wa-gong-xiang-gang-cmi/</link>
       <pubDate>Thu, 02 Feb 2023 13:54:48 +0000</pubDate>
       <guid>https://blog.qklg.net/post/wa-gong-xiang-gang-cmi/</guid>
-      <description>瓦工香港cmi，一起来品一品 流媒体 yabs 三网去程 电信 联通 移动 四网回程 电信 cn2 联通 移动 教育网 三网单线程</description>
+      <description>瓦工香港cmi，一起来品一品
+流媒体
+yabs
+三网去程
+电信
+联通
+移动
+四网回程
+电信
+cn2
+联通
+移动
+教育网
+三网单线程</description>
     </item>
     <item>
       <title>瓦工迪拜</title>
       <link>https://blog.qklg.net/post/wa-gong-di-bai/</link>
       <pubDate>Thu, 02 Feb 2023 02:02:23 +0000</pubDate>
       <guid>https://blog.qklg.net/post/wa-gong-di-bai/</guid>
-      <description>瓦工迪拜一起品一品 流媒体 yabs 三网去程 移动 联通 电信 四网回程 电信 cn2 联通 移动 教育网 瓦工流量太少 三网测速不测了</description>
+      <description>瓦工迪拜一起品一品
+流媒体
+yabs
+三网去程
+移动
+联通
+电信
+四网回程
+电信
+cn2
+联通
+移动
+教育网
+瓦工流量太少
+三网测速不测了</description>
     </item>
     <item>
       <title>瓦工悉尼9929</title>
       <link>https://blog.qklg.net/post/wa-gong-xi-ni-9929/</link>
       <pubDate>Thu, 02 Feb 2023 01:53:17 +0000</pubDate>
       <guid>https://blog.qklg.net/post/wa-gong-xi-ni-9929/</guid>
-      <description>瓦工悉尼一起品一品 ping.pe延迟 流媒体 yabs 三网去程 移动 联通 电信 三网回程 电信 cn2 联通 移动 教育网 瓦工流量太少 三网测速不测了</description>
+      <description>瓦工悉尼一起品一品
+ping.pe延迟
+流媒体
+yabs
+三网去程
+移动
+联通
+电信
+三网回程
+电信
+cn2
+联通
+移动
+教育网
+瓦工流量太少
+三网测速不测了</description>
     </item>
     <item>
       <title>分享几个多出口ip查询网站</title>
       <link>https://blog.qklg.net/post/20230201/</link>
       <pubDate>Wed, 01 Feb 2023 13:56:23 +0000</pubDate>
       <guid>https://blog.qklg.net/post/20230201/</guid>
-      <description>https://ip.orz.tools/ http://revproxy.ustc.edu.cn:8000/ https://ip.skk.moe/multi 记录下</description>
+      <description>https://ip.orz.tools/
+http://revproxy.ustc.edu.cn:8000/
+https://ip.skk.moe/multi
+记录下</description>
     </item>
     <item>
       <title>垃圾佬的年末持有小鸡总结</title>
       <link>https://blog.qklg.net/post/20230113/</link>
       <pubDate>Fri, 13 Jan 2023 13:58:59 +0000</pubDate>
       <guid>https://blog.qklg.net/post/20230113/</guid>
-      <description>跟风，年末持有小鸡总结 甲骨文首尔amd，600多天的祖传龟壳 cc8.79 2核1G内存35G硬盘4T流量@1Gbps rn 3台 1台 2022年五一洛杉矶dc 2</description>
+      <description>跟风，年末持有小鸡总结
+甲骨文首尔amd，600多天的祖传龟壳
+cc8.79
+2核1G内存35G硬盘4T流量@1Gbps
+rn 3台
+1台 2022年五一洛杉矶dc 2，年付$15.58
+2核2G内存35G硬盘10T流量@1Gbps（翻倍后)
+1台2022年黑五圣何塞闪购，年付$11
+1核1.3G内存40G硬盘10T流量640 MB（翻倍后）
+1台2021年黑五纽约闪购，年付$6.79
+1核640M内存10G硬盘2T流量@1Gbps(翻倍后)
+vir 2021年黑五花了3刀迁移到日本，年付$6.3
+1核512M内存15G硬盘1T流量@1Gbps
+ovh俄勒冈0.97一个月，年付$11.59
+1核2G内存20G硬盘无限流量 100M口子
+gullo 2刀nat鸡，玩具
+scaleway 0.4欧一个月的，玩具
+8.79+15.58+11+6.79+6.3+11.59+2+星辰0.4欧一个月的话
+差不多快60多刀一年吧
+rn圣何塞和vir日本主力富强，剩下基本上吃灰状态
+总结:最贵的才15刀，我是垃圾佬</description>
     </item>
   </channel>
 </rss>
