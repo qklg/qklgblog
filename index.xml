@@ -12,12 +12,12 @@
     <generator>Hugo -- 0.123.8</generator>
     <language>en</language>
     <copyright>qklg Hosted on Cloudflare Pages </copyright>
-    <lastBuildDate>Thu, 29 Aug 2024 11:49:40 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 29 Aug 2024 23:49:40 +0000</lastBuildDate>
     <atom:link href="https://blog.qklg.net/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>在无人关注的角落里，cf的ipfs公共网关无了</title>
       <link>https://blog.qklg.net/post/20240829/</link>
-      <pubDate>Thu, 29 Aug 2024 11:49:40 +0000</pubDate>
+      <pubDate>Thu, 29 Aug 2024 23:49:40 +0000</pubDate>
       <guid>https://blog.qklg.net/post/20240829/</guid>
       <description>我的签名的博客本来about里有段
 可以通过Cloudflare的公共网关来访问 https://cloudflare-ipfs.com/ipfs/QmUf7b6tiz3nbxQbtcTo7e2FABn52AmZTLsBMRGzxKrJb3/ 今天博客搬家从gridea搬家到hugo上
@@ -27,7 +27,7 @@
 然后cf的官网找到了篇博客
 https://blog.cloudflare.com/cloudflares-public-ipfs-gateways-and-supporting-interplanetary-shipyard/
 里面有说
-所有使用cloudflare-ipfs.com或cf-ipfs.com主机名的流量将继续不间断地工作， 并重定向到 ipfs.io 或 dweb.link，直到 2024 年 8 月 14 日，届时 Cloudflare 主机名将不再连接到 IPFS，所有用户必须将他们使用的主机名切换到ipfs.io或dweb.link 以确保不会发生服务中断。如果您正在使用任何一个 Cloudflare 主机名， 请务必在过渡日期之前尽快切换到新的主机名之一，以避免任何服务中断！ 在无人关注的角落里，cf的ipfs公共网关无了
+所有使用cloudflare-ipfs.com或cf-ipfs.com主机名的流量将继续不间断地工作，并重定向到 ipfs.io 或 dweb.link，直到 2024 年 8 月 14 日，届时 Cloudflare 主机名将不再连接到 IPFS，所有用户必须将他们使用的主机名切换到ipfs.io或dweb.link，以确保不会发生服务中断。如果您正在使用任何一个 Cloudflare 主机名，请务必在过渡日期之前尽快切换到新的主机名之一，以避免任何服务中断！ 在无人关注的角落里，cf的ipfs公共网关无了
 现在隔一段时间久一个热点，过去源于元宇宙 web3 nft ，现在ai
 过段时间又可能是别的什么了
 大家又有新的玩具玩了</description>
