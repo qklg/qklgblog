@@ -12,8 +12,29 @@
     <generator>Hugo -- 0.123.8</generator>
     <language>en</language>
     <copyright>qklg Hosted on Cloudflare Pages </copyright>
-    <lastBuildDate>Thu, 29 Aug 2024 23:49:40 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 22 Sep 2024 17:24:50 +0000</lastBuildDate>
     <atom:link href="https://blog.qklg.net/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cloudflare WARP MASQUE体验分享</title>
+      <link>https://blog.qklg.net/post/20240922/</link>
+      <pubDate>Sun, 22 Sep 2024 17:24:50 +0000</pubDate>
+      <guid>https://blog.qklg.net/post/20240922/</guid>
+      <description>Android 根据隔壁群大佬说的
+google play加入warp的beta测试，把app删了，重新下，下载好之后过个几分钟会有个beta更新，
+更新完之后就行了
+然后app里面，设置-高级-连接选项-tunnel protocol选择MASQUE
+速度还不错，移动甚至能直连cf的hk pop
+Windows 下载新版的，官网就行 https://one.one.one.one/
+安装好之后，
+新建个mdm.xml，放到 C:\ProgramData\Cloudflare 下面
+&amp;lt;dict&amp;gt; &amp;lt;key&amp;gt;warp_tunnel_protocol&amp;lt;/key&amp;gt; &amp;lt;string&amp;gt;masque&amp;lt;/string&amp;gt; &amp;lt;/dict&amp;gt; 连的是洛杉矶的pop
+测了下速度
+油管十万多
+speedtest
+ios ios简单，下好app
+设置-高级-连接选项-tunnel protocol选择MASQUE
+速度还行</description>
+    </item>
     <item>
       <title>在无人关注的角落里，cf的ipfs公共网关无了</title>
       <link>https://blog.qklg.net/post/20240829/</link>
@@ -1361,7 +1382,7 @@ y) Yes, type in my own password：手动输入密码。 g) Generate random passw
       <pubDate>Mon, 12 Jun 2023 13:40:05 +0000</pubDate>
       <guid>https://blog.qklg.net/post/20230612/</guid>
       <description>前几天ovh老板的推特上看到的
-https://twitte.com/olesovhcom/status/1664227559976869890
+https://twitter.com/olesovhcom/status/1664227559976869890
 官网链接:https://shadow.tech/en-GB
 关于
 支持webdav
