@@ -12,8 +12,37 @@
     <generator>Hugo -- 0.123.8</generator>
     <language>en</language>
     <copyright>qklg Hosted on Cloudflare Pages </copyright>
-    <lastBuildDate>Wed, 25 Sep 2024 15:06:41 +0000</lastBuildDate>
+    <lastBuildDate>Wed, 02 Oct 2024 00:57:53 +0000</lastBuildDate>
     <atom:link href="https://blog.qklg.net/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>分享下自用的cloudflare 图片缓存设置</title>
+      <link>https://blog.qklg.net/post/20241002/</link>
+      <pubDate>Wed, 02 Oct 2024 00:57:53 +0000</pubDate>
+      <guid>https://blog.qklg.net/post/20241002/</guid>
+      <description>规则-页面规则
+隔壁论坛抄过来的这个 https://linux.do/t/topic/126107/5
+缓存-Cache Rules-创建规则
+我的图片都是png，所以我只缓存png算了
+效果如下</description>
+    </item>
+    <item>
+      <title>python3搭建http服务器拿来当图床</title>
+      <link>https://blog.qklg.net/post/20241001/</link>
+      <pubDate>Tue, 01 Oct 2024 02:10:30 +0000</pubDate>
+      <guid>https://blog.qklg.net/post/20241001/</guid>
+      <description>本文基于debian
+1 安装python3和python3-pip
+sudo apt update sudo apt install python3 sudo apt install python3-pip 检查下是否安装成功
+python3 --version pip3 --version 2
+python3 -m http.server 8090 这样子 ip:8090就可以访问了,8090可以换成任意端口
+不过这样子的话无法长期使用，所以创建个Systemd ，同时搞个文件夹专门放图片
+先创建文件夹 我是直接在root下创建的，记得文件夹下面随便放个文件任意，不然会遇到无法访问情况
+sudo mkdir -p /root/pic 在 /etc/systemd/system 下创建一个叫python-http.service的文件
+里面填写图下内容，我用chatgpt写的，文件的话我用winscp编辑上传的，你用nano也行，保存退出
+[Unit] Description=Python HTTP Server After=network.target [Service] ExecStart=/usr/bin/python3 -m http.server 8090 WorkingDirectory=/root/pic User=root Restart=always [Install] WantedBy=multi-user.target systemd就下面那么玩呗，分别是 重新加载，启动服务，开机自启
+sudo systemctl daemon-reload sudo systemctl start python-http sudo systemctl enable python-http 检查下状态
+sudo systemctl status python-http 搞完么，拿nginx，caddy或者cloudflare tunnel什么的反代下，就完事了</description>
+    </item>
     <item>
       <title>cloudflare 生日周新功能总结</title>
       <link>https://blog.qklg.net/post/20240925/</link>
@@ -227,9 +256,9 @@ https://www.bilibili.com/read/cv22692287/</description>
     </item>
     <item>
       <title>将我博客的图片都转换成avif</title>
-      <link>https://blog.qklg.net/post/20240307/</link>
+      <link>https://blog.qklg.net/post/jiang-wo-bo-ke-de-tu-pian-dou-zhuan-huan-cheng-avif/</link>
       <pubDate>Thu, 07 Mar 2024 16:56:22 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20240307/</guid>
+      <guid>https://blog.qklg.net/post/jiang-wo-bo-ke-de-tu-pian-dou-zhuan-huan-cheng-avif/</guid>
       <description>1 avif的好处 avif最大的好处就是更高的压缩性，从而省流量和存储
 我的博客已经是纯静态化的了，主要的大头是图片，变小可以更加快的打开博客
 之前的png格式的，现在转换成avif，大小只有原来21%
