@@ -12,8 +12,264 @@
     <generator>Hugo -- 0.123.8</generator>
     <language>en</language>
     <copyright>qklg Hosted on Cloudflare Pages </copyright>
-    <lastBuildDate>Tue, 29 Oct 2024 01:20:48 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 06 Jan 2025 00:35:18 +0000</lastBuildDate>
     <atom:link href="https://blog.qklg.net/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>分享下全球海缆地图</title>
+      <link>https://blog.qklg.net/post/20250106/</link>
+      <pubDate>Mon, 06 Jan 2025 00:35:18 +0000</pubDate>
+      <guid>https://blog.qklg.net/post/20250106/</guid>
+      <description>三大运营商各自官网的，也有陆缆
+移动 https://globalresources.cmi.chinamobile.com/#/
+联通 https://www.cuguplus.com/zh-hant/globalnetwork
+https://www.cuguplus.com/network/
+电信 https://media.chinatelecomeurope.com/view/1056582712/
+https://www.ctamericas.com/company/global-network/
+其他的地图
+全球都有的那种
+https://www.submarinecablemap.com/
+https://www.infrapedia.com/
+https://submarine-cable-map-2024.telegeography.com/</description>
+    </item>
+    <item>
+      <title>我的哪吒探针v1安全措施</title>
+      <link>https://blog.qklg.net/post/20241231/</link>
+      <pubDate>Tue, 31 Dec 2024 19:26:19 +0000</pubDate>
+      <guid>https://blog.qklg.net/post/20241231/</guid>
+      <description>1 tls+cloudflare ①一键脚本搭建设置 请指定安装命令中预设的 nezha-agent 连接地址(例如 example.com:443) 域名和端口选择你套cf的域名 还有443端口
+是否希望通过 TLS 连接 Agent? (影响安装命令)[y/N] 这边输入y 启用tls
+②反代 cf后台打开解析个ip过来，记得云朵直接打开，避免ip泄露，直接ipv6完事
+cf后台的SSL/TLS选择完全严格
+本地用nginx或者caddy反代下
+参考官方文档 https://nezha.wiki/guide/q3.html
+如果你使用1panel的话，可以参考这个大佬的文章 https://misaka.es/archives/42.html
+③ cloudflare后台启用ws和grpc ④ 哪吒后台启动tls连接agent Agent对接地址【域名/IP:端口】 域名:443
+后台的Agent 使用 TLS 连接 勾选上
+2 关闭8008端口的外部访问 打开如下哪吒的compose文件，位置在
+/opt/nezha/dashboard/docker-compose.yaml 端口不要暴露在公网上
+ports: - 127.0.0.1:8008:8008 3 agent上禁用webssh 打开
+/opt/nezha/agent/config.yml 把 disable_command_execute:改成true
+参考哪吒文档 https://nezha.wiki/guide/q7.html
+4 把哪吒后台重定向到首页 如果你和我一样不怎么访问后台的话，直接在cf上用规则把哪吒的后台dashboard给重定向到首页完事了
+或者你自己访问的时候，本地改个host直接访问原站完事了
+cf 后台，规则-重定向规则
+添加如下规则把后台dashboard重定向到首页
+规则名称随便取个
+传入请求匹配选择，通配符模式
+url
+*域名/*dashboard* 目标就是你的首页，状态选择301，保存就完事了
+这样子打开后台的时候就直接跳首页了
+再把api也重定向下
+请求 URL
+https://域名/api/v1/login 其他如图
+​</description>
+    </item>
+    <item>
+      <title>我的年末小鸡总结</title>
+      <link>https://blog.qklg.net/post/20241214/</link>
+      <pubDate>Sat, 14 Dec 2024 09:22:14 +0000</pubDate>
+      <guid>https://blog.qklg.net/post/20241214/</guid>
+      <description>2024已经过去了
+2023年的可以看这里https://www.nodeseek.com/post-583-1
+今年的如下
+丢了的鸡 ①cc 8.79 2核1G内存35G硬盘4T流量@1Gbps
+没啥用，吃灰，90块钱出给坛友了
+②rn的6.79 1台2021年黑五纽约闪购，年付$6.79
+1核640M内存10G硬盘2T流量@1Gbps(翻倍后)
+在线四百多天的鸡，但是也没啥用丢了
+③rn 5刀 达拉斯 1核1G内存10G硬盘2T流量
+没啥用，吃灰，100块钱出给坛友了
+④claw 4刀 玩了一个月，出给坛友三手，收来的二手，结果被人找回，惹得一堆破事
+三网牛逼，但是有点贵只爬墙的话，现在也qos了
+⑤绿云香港 去年100收来的，配置忘记了，有段时间移动能直连，当时搭配nnr落地用的，而且解锁牛逼
+到期的时候丢了，反正也没啥用
+⑥netcup 1欧 没啥用，吃灰放了两个多月，出给坛友了
+⑦ovh0.97年抛英国 没啥用，买了杜甫砍单砍麻了，也直接懒得续费了，玩了一个月
+手头的鸡 见我签名探针
+爬墙用的三台
+①aws首尔 mikyhost分销那买的lightsail， 15刀一年，
+2核512M内存20G硬盘1T流量
+商家口碑不太好，反正PayPal保半年，也还行了
+首尔就移动直连，本来在东京的
+东京三网直连，但是晚上太炸了， 我迁移到首尔好很多了
+可惜首尔落地不如东京，访问一堆东西得去日本，而且看不了色色
+每天奖励自己的时候，还得切别的鸡
+爬墙主力鸡
+②vir 6.3刀日本 1核512M内存15G硬盘1T流量@1Gbps
+2021年黑五花了3刀迁移到日本，年付$6.3
+性欲旺盛的麻秆鸡，iij就移动直连了现在
+躲过了几次遣返，还能PayPal续费，性欲真的旺盛
+主要用来解锁chatgpt
+③hytron 香港年抛鸡 1核1G内存5G硬盘，流量忘记了
+40多收的坛友的，年抛鸡，就移动直连，白天还行
+拿来备用
+干活用的2台
+④ovh俄勒冈0.97一个月 1核2G内存20G硬盘无限流量 100M口子
+目前还在用，性能太弱鸡，目前拿来当博客图床和探针
+性能买来时候gb5 600分不到点，现在400分了，有点太弱鸡，不过稳定性没得说
+⑤firevps的18.95 2核4G内存50G硬盘1T流量，
+收的坛友的，准备替换0.97.先放个一个月看看稳定性再说
+性能无敌，反正也不要求啥了， 网络套cf，稳定性好就行了
+最后总结 目前就5台鸡了
+精简了一堆乱七八糟的玩意，什么rn，cc全丢了，都没啥用，反正吃灰也没啥用</description>
+    </item>
+    <item>
+      <title>unraid安装哪吒 v1版本agent</title>
+      <link>https://blog.qklg.net/post/20241209/</link>
+      <pubDate>Mon, 09 Dec 2024 06:24:57 +0000</pubDate>
+      <guid>https://blog.qklg.net/post/20241209/</guid>
+      <description>v0版本的安装可以参考我博客的旧教程
+https://qklg.net/post/20231019/
+本文参考了哪吒文档中群晖和openwrt的安装
+哪吒文档链接 https://nezha.wiki/guide/agent.html
+1 下载哪吒探针的agent github 链接 https://github.com/nezhahq/agent/releases
+unradi一般为amd64架构
+我喜欢在win上解压之后再用winscp传到unraid上，我和以前一样放在 /mnt/disk1/nezha/ 文件夹下
+或者也可以使用下面的命令直接拉下来
+以下命令请开启unraid的root权限，登录到ssh执行
+wget -O nezha-agent.zip https://github.com/nezhahq/agent/releases/latest/download/nezha-agent_linux_amd64.zip 创建/mnt/disk1/nezha/ 文件夹
+解压缩到该文件夹下
+mkdir -p /mnt/disk1/nezha unzip nezha-agent.zip -d /mnt/disk1/nezha 2 创建配置文件 这个其实可以直接偷懒点，直接从一台已经装了nezha的vps上的config.yml给下载下来
+vps上用一键脚本安装的在/opt/nezha/agent 文件夹下
+直接上传到 /mnt/disk1/nezha/ 文件夹下和agent放在一起
+效果如图
+注意 需要编辑config.yml里的uuid，其他参数不用变
+使用 uuidgen 命令生产uuid，然后把config.yml里uuid替换掉
+哪吒文档里这么说的
+uuid：为该 Agent 生成一个唯一标识符，不要与同一个 Dashboard 中其他的 Agent 重复
+我喜欢把 disable_command_execute: 设置成true开停用webssh
+3 设置定时任务 在unraid的应用中搜索 User Scripts
+这是一个执行bash脚本的工具
+插件，User Scripts 进去
+点击add new script
+取名为nezha
+点击ok确认
+用winscp打开如下路径</description>
+    </item>
+    <item>
+      <title>哪吒v0版本面板安装，agent安装 ，文档</title>
+      <link>https://blog.qklg.net/post/20241203/</link>
+      <pubDate>Tue, 03 Dec 2024 23:48:15 +0000</pubDate>
+      <guid>https://blog.qklg.net/post/20241203/</guid>
+      <description>1 面板部分 ① v0面板安装脚本 curl -L https://raw.githubusercontent.com/nezhahq/scripts/refs/heads/v0/install.sh -o nezha.sh &amp;amp;&amp;amp; chmod +x nezha.sh &amp;amp;&amp;amp; sudo ./nezha.sh ② v0面板禁用更新 打开/opt/nezha/dashboard/docker-compose.yaml
+讲docker固定到:v0.20.13版本
+services: dashboard: image: ghcr.io/naiba/nezha-dashboard:v0.20.13 restart: always 感谢 https://www.nodeseek.com/post-210009-1 老哥
+2 agent部分 agent安装脚本
+把后台复制出来的 main改成v0就可以了
+记得加入&amp;ndash;disable-force-update 禁用更新
+我同时喜欢加入 &amp;ndash;disable-command-execute 禁止web ssh
+curl -L https://raw.githubusercontent.com/nezhahq/scripts/v0/install.sh -o nezha.sh &amp;amp;&amp;amp; chmod +x nezha.sh &amp;amp;&amp;amp; ./nezha.sh install_agent 域名 端口 密钥 --tls --disable-force-update --disable-command-execute 感谢 https://www.nodeseek.com/post-209183-1#7 老哥
+3 v0文档 论坛老哥整的v0文档 https://nezha-v0.mereith.dev/
+感谢https://www.nodeseek.com/post-209098-1 老哥
+github仓库 https://github.com/nezhahq/nezhahq.github.io/tree/v0
+互联网档案馆 https://web.</description>
+    </item>
+    <item>
+      <title>垃圾佬的2.5G 内网升级</title>
+      <link>https://blog.qklg.net/post/20241126/</link>
+      <pubDate>Tue, 26 Nov 2024 21:47:05 +0000</pubDate>
+      <guid>https://blog.qklg.net/post/20241126/</guid>
+      <description>1 硬件 先来说下硬件，东西都是便宜货，螃蟹全家桶
+总成本不超过200块钱
+wifi懒得升级了，就千兆继续用算了
+交换机 某多多的2.5G傻瓜交换机， 螃蟹的RTL 8372N公版方案，四个2.5G网口，还带双万兆SFP光口
+这个价位的四口2.5G的交换机都是这方案的
+六月126买的，现在只要109了，真的白菜价
+2.5G usb网卡 笔记本上外接的2.5G usb网卡，螃蟹的8156b方案的
+某多多 42块钱买的
+自带的驱动很垃圾，记得下载下驱动，自带驱动打完拷文件会蓝屏，螃蟹官网删掉重新打了下驱动就不然会蓝屏
+螃蟹官网下 https://www.realtek.com/Download/List?cate_id=585
+我下的是Win10 Auto Installation Program这个驱动
+直接握手2500Mbps
+pcie网卡 某宝28包邮的8125b网卡，插上去我的unraid能免驱就能点亮了
+不过论坛上说不稳定，我还是装了下驱动，unraid的应用商店直接就能找到了
+2 速度测试 speedtest-x iperf3 拷贝文件 上传文件 3 进阶玩法 把游戏装nas上的固态试了下
+下了个黑神话悟空的benchmark，跑了下，感觉好像还行
+也没遇到什么卡顿，不过我这笔记本核显也不玩游戏，无所谓了 4 总结 200不到，稍微升级了下，后面准备光猫2.5G的猫100块钱，再买个小米的be6500把我的ax6000替换掉，就完事了</description>
+    </item>
+    <item>
+      <title>YouTube 官方的rss</title>
+      <link>https://blog.qklg.net/post/20241121/</link>
+      <pubDate>Thu, 21 Nov 2024 22:20:49 +0000</pubDate>
+      <guid>https://blog.qklg.net/post/20241121/</guid>
+      <description>https://news.ycombinator.com/item?id=32192352
+老外那边学到的新技术
+User : https://www.youtube.com/feeds/videos.xml?user=&amp;lt;XXX&amp;gt; Channel : https://www.youtube.com/feeds/videos.xml?channel_id=&amp;lt;XXX&amp;gt; Playlist : https://www.youtube.com/feeds/videos.xml?playlist_id=&amp;lt;XXX&amp;gt; 以前一直拿rsshub抓的，youtube官方其实是有rss的
+我主要就是抓频道更新的
+user的话直接就是用户名，@ 后面的用户名就是了
+https://www.youtube.com/@LinusTechTips
+https://www.youtube.com/feeds/videos.xml?user=LinusTechTips
+channel_id的话右键查看源代码，Ctrl+F 搜索 externalId后面那串就是
+https://www.youtube.com/feeds/videos.xml?channel_id=UCXuqSBlHAE6Xw-yeJA0Tunw
+Playlist的话打开播放列表，list= 后面的那串就是
+https://www.youtube.com/watch?v=apdZ7xmytiQ&amp;amp;list=PL8mG-RkN2uTyZZ00ObwZxxoG_nJbs3qec
+https://www.youtube.com/feeds/videos.xml?playlist_id=PL8mG-RkN2uTyZZ00ObwZxxoG_nJbs3qec
+其他的还是拿rsshub抓吧
+https://docs.rsshub.app/routes/social-media#youtube</description>
+    </item>
+    <item>
+      <title>给mjj看看你的hetzner的杜甫长啥样子</title>
+      <link>https://blog.qklg.net/post/20241119/</link>
+      <pubDate>Tue, 19 Nov 2024 22:14:48 +0000</pubDate>
+      <guid>https://blog.qklg.net/post/20241119/</guid>
+      <description>刚油管刷到的视频
+买了的mjj说下使用体验，我玩鸡好几年现在还没体验过杜甫
+顺带看看你的大杜甫长啥样子
+没买的mjj的话祝各位mjj发大财，早点买到
+https://youtu.be/V2P8mjWRqpk
+1 ax52的配置 https://www.hetzner.com/dedicated-rootserver/ax52/
+2 主板 华硕的 Pro WS 665 ACE,主板是定做的，
+看了下十二项供电，四条内存槽，pice通道和家用也没啥区别
+最大区别就是旋转了90度，好处就是内存不影响风道
+芯片组用的是B665，和家用的b650换皮，只有pcie4.0
+没m.2 ，多了两个oculink，家用的话现在很少见啊，笔记本上倒是有的
+oculink的话是pcie4.0x4的，速度是64Gbps，比雷电4和usb4的40Gbps快，但是不如雷电5
+而且成本更低，不用专门芯片，我看了下显卡扩展坞的话真的便宜，不过不能一线通和热插拔
+可以看下这个视频了解下https://www.bilibili.com/video/av1550700758/
+下面还有个debug灯
+上代ax41的主板，B565 ，是家用的b550换皮
+3 散热器 大铝块散热
+放进去长这样子的
+拆下来是这样子的，全靠暴力扇
+4 固态硬盘 固态硬盘是扩展卡插上去的
+这块是永擎的RB4M2_G4转接卡，转上去的
+查了下这卡是pcie4.0x16转成4个pcie4.0x4的
+固态型号不知道，有没有买过的mjj说下
+5 CPU 7700
+跑在90瓦上
+性能释放90瓦，温度86度
+没跑太高，不然功耗要多20%-30%，电费吃不消
+R20多核7200
+6 内存 4800频率的内存，时序C40,共64G
+7 华擎版的b665主板 </description>
+    </item>
+    <item>
+      <title>小钢炮变大钢炮历险记</title>
+      <link>https://blog.qklg.net/post/20241110/</link>
+      <pubDate>Sun, 10 Nov 2024 20:43:34 +0000</pubDate>
+      <guid>https://blog.qklg.net/post/20241110/</guid>
+      <description>小钢炮变大钢炮历险记
+1 前后对比 配置 小钢炮 大钢炮 跑分 小钢炮 https://browser.geekbench.com/v5/cpu/23042098
+大钢炮W https://browser.geekbench.com/v5/cpu/23045171
+2 配置 用的旧电脑配置，凑合用了下，显卡cpu是被我卖掉换成2400G了
+cpu 从小钢炮N5095升级成了amd的5600，b2步进，拼多多514买的b2的散片
+主板 用的之前旧电脑上的b450迫击炮，升级了下bios
+用的m-flash刷的新bios，不然点不亮
+教程这边
+https://www.bilibili.com/video/av682122112/
+bios微星官网下的最新的
+https://www.msi.cn/Motherboard/B450M-mortar/support#bios
+散热器 旧电脑上的玄冰400，俗称反人类400，装的时候累死我了
+内存 从原来小钢炮笔记本的两根2666的升级成了3600 C18的cjr颗粒的条子，旧的两根过几天挂皇上鱼
+京东279买的，好评可以返现10块钱，
+想2019年我一根8G的 2666条子都要299，现在条子真的白菜价
+硬盘 还是原来的两块，1快256G的pm981，1快3T的机械硬盘，够用了，懒得升级
+3 无显卡启动 微星bios里 顺带说下主板除了开了xmp，其他的我都默认了
+unraid里 主界面-Flash-Syslinux 配置-菜单视图
+选择unraid os启动，默认应该就是这个
+目前就这样子先用着吧
+跑了下docker，其他好像也没啥用</description>
+    </item>
     <item>
       <title>分享下怎么看你小鸡ip前任干过啥</title>
       <link>https://blog.qklg.net/post/20241029/</link>
@@ -27,11 +283,23 @@ https://www.abuseipdb.com/check/
 https://iknowwhatyoudownload.com/
 3 ip以前有哪些网站
 https://site.ip138.com/
+https://tools.ipip.net/ipdomain.php
 4 查询网站长啥样
 https://web.archive.org/
 https://archive.md/
 5 查询网站以前解析的ip
 https://viewdns.info/iphistory/?domain</description>
+    </item>
+    <item>
+      <title>哪吒探针关闭webssh  ＆ openwrt版的网速设置</title>
+      <link>https://blog.qklg.net/post/20241028/</link>
+      <pubDate>Mon, 28 Oct 2024 23:24:36 +0000</pubDate>
+      <guid>https://blog.qklg.net/post/20241028/</guid>
+      <description>1 关闭webssh 安装agent时一键命令后加入
+--disable-command-execute 参考https://www.nodeseek.com/post-31986-1
+2 opnewrt版哪吒网速设置 openwrt nezha ipk 下载地址 https://github.com/Erope/openwrt_nezha/releases/
+ssh输入如下，我默认是eth0，空格选择，回车确认
+/usr/bin/nezha-agent edit 参考 https://www.nodeseek.com/post-28904-1</description>
     </item>
     <item>
       <title>哪吒探针关闭webssh  ＆ openwrt版的网速设置</title>
