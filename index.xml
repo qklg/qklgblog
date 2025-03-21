@@ -2,23 +2,23 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/">
   <channel>
     <title>qklg</title>
-    <link>https://blog.qklg.net/</link>
+    <link>https://qklgblog.pages.dev/</link>
     <description>Recent content on qklg</description>
     <image>
       <title>qklg</title>
-      <url>https://blog.qklg.net/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
-      <link>https://blog.qklg.net/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
+      <url>https://qklgblog.pages.dev/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</url>
+      <link>https://qklgblog.pages.dev/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E</link>
     </image>
     <generator>Hugo -- 0.123.8</generator>
     <language>en</language>
     <copyright>qklg Hosted on Cloudflare Pages </copyright>
     <lastBuildDate>Mon, 10 Mar 2025 15:01:55 +0000</lastBuildDate>
-    <atom:link href="https://blog.qklg.net/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://qklgblog.pages.dev/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>用api切换cf的证书</title>
-      <link>https://blog.qklg.net/post/20250310/</link>
+      <link>https://qklgblog.pages.dev/post/20250310/</link>
       <pubDate>Mon, 10 Mar 2025 15:01:55 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20250310/</guid>
+      <guid>https://qklgblog.pages.dev/post/20250310/</guid>
       <description>1 前言 之前写过一篇 用api把cloudflare的证书换成自家一年的
 https://qklg.net/post/20230628/
 cf的一年的digicert已经没有了， 现在多了一种三个月的ssl.com的，
@@ -30,9 +30,9 @@ https://developers.cloudflare.com/api/resources/acm/subresources/total_tls/metho
     </item>
     <item>
       <title>NodeSeek-PicGo图床上传油猴脚本</title>
-      <link>https://blog.qklg.net/post/20250309/</link>
+      <link>https://qklgblog.pages.dev/post/20250309/</link>
       <pubDate>Sun, 09 Mar 2025 02:07:11 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20250309/</guid>
+      <guid>https://qklgblog.pages.dev/post/20250309/</guid>
       <description>1 前言 先感谢 @哆啦B梦 大佬
 用的这个大佬的油猴脚本，拿ai稍微改了下
 https://www.nodeseek.com/post-250494-1
@@ -55,9 +55,9 @@ https://www.nodeseek.com/post-68951-1</description>
     </item>
     <item>
       <title>2025年2月21日 上海一日游</title>
-      <link>https://blog.qklg.net/post/20250302/</link>
+      <link>https://qklgblog.pages.dev/post/20250302/</link>
       <pubDate>Sun, 02 Mar 2025 15:48:20 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20250302/</guid>
+      <guid>https://qklgblog.pages.dev/post/20250302/</guid>
       <description>2月21日 上海一日游
 地铁+高铁
 人都快坐麻了
@@ -92,9 +92,9 @@ mujica的涂鸦，不过番剧都烂完了
     </item>
     <item>
       <title>江苏移动换华为hn8546x6n 光猫</title>
-      <link>https://blog.qklg.net/post/20250226/</link>
+      <link>https://qklgblog.pages.dev/post/20250226/</link>
       <pubDate>Wed, 26 Feb 2025 18:26:14 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20250226/</guid>
+      <guid>https://qklgblog.pages.dev/post/20250226/</guid>
       <description>1 前言 华为HN8546X6N，移动的光猫
 看中的就是它的2.5G口子，而且只要60包邮，闲鱼搞了台
 出厂日期是24年6月，我那台上海的，卖家寄过来一天就到了
@@ -127,9 +127,9 @@ tr069记得删掉，iptv什么的话看你自己了，我是不用的
     </item>
     <item>
       <title>claw looking glass汇总</title>
-      <link>https://blog.qklg.net/post/20250220/</link>
+      <link>https://qklgblog.pages.dev/post/20250220/</link>
       <pubDate>Thu, 20 Feb 2025 19:14:58 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20250220/</guid>
+      <guid>https://qklgblog.pages.dev/post/20250220/</guid>
       <description>中国优化 香港 https://lg.cn-hongkong.claw.cloud/
 Server Location: Hong Kong
 Network Type: BGP (China Optimized)
@@ -155,9 +155,9 @@ Server Location: Tokyo, Japan</description>
     </item>
     <item>
       <title>马斯克xai，冲5刀送150刀</title>
-      <link>https://blog.qklg.net/post/20250218/</link>
+      <link>https://qklgblog.pages.dev/post/20250218/</link>
       <pubDate>Tue, 18 Feb 2025 00:45:08 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20250218/</guid>
+      <guid>https://qklgblog.pages.dev/post/20250218/</guid>
       <description>1 注册 https://accounts.x.ai/sign-in
 我选的谷歌登录
 2 绑银行卡 https://console.x.ai/
@@ -172,9 +172,9 @@ billing/payment 这边添加地址和银行卡
     </item>
     <item>
       <title>cf的ddos报告分享</title>
-      <link>https://blog.qklg.net/post/20250207/</link>
+      <link>https://qklgblog.pages.dev/post/20250207/</link>
       <pubDate>Fri, 07 Feb 2025 15:03:57 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20250207/</guid>
+      <guid>https://qklgblog.pages.dev/post/20250207/</guid>
       <description>前言
 cloudflare的每个季度都有个ddos报告，原文如下
 https://blog.cloudflare.com/zh-cn/ddos-threat-report-for-2024-q4/
@@ -191,9 +191,9 @@ https://blog.cloudflare.com/zh-cn/ddos-threat-report-for-2024-q4/
     </item>
     <item>
       <title>自用脚本备份</title>
-      <link>https://blog.qklg.net/post/20250205/</link>
+      <link>https://qklgblog.pages.dev/post/20250205/</link>
       <pubDate>Wed, 05 Feb 2025 17:14:35 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20250205/</guid>
+      <guid>https://qklgblog.pages.dev/post/20250205/</guid>
       <description>更新
 apt update &amp;amp;&amp;amp; apt upgrade -y 安装curl wget sudo unzip
 apt install curl wget sudo unzip -y 2G swarp
@@ -203,9 +203,9 @@ sed -i &amp;#39;s/#precedence ::ffff:0:0\/96 100/precedence ::ffff:0:0\/96 100/&
     </item>
     <item>
       <title>拿vps跑deepseek r1</title>
-      <link>https://blog.qklg.net/post/20250129/</link>
+      <link>https://qklgblog.pages.dev/post/20250129/</link>
       <pubDate>Wed, 29 Jan 2025 17:27:13 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20250129/</guid>
+      <guid>https://qklgblog.pages.dev/post/20250129/</guid>
       <description>前言 前排提示:ollama很吃性能的，别拿你的生产力的小鸡跑
 建议内存大点的鸡上跑
 1 docker安装openwebui+ollama https://github.com/open-webui/open-webui
@@ -232,9 +232,9 @@ https://qklg.net/post/20250127/
     </item>
     <item>
       <title>用nextchat调用deepseek的api</title>
-      <link>https://blog.qklg.net/post/20250127/</link>
+      <link>https://qklgblog.pages.dev/post/20250127/</link>
       <pubDate>Mon, 27 Jan 2025 13:57:01 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20250127/</guid>
+      <guid>https://qklgblog.pages.dev/post/20250127/</guid>
       <description>1 docker搭建 compose文件如下
 OPENAI_API_KEY的话替换成你deepseek的api key，
 DeepSeek API 使用与 OpenAI 兼容的 API 格式
@@ -256,9 +256,9 @@ api key填写deepseek的api，sk开头的，生成地址 https://platform.deepse
     </item>
     <item>
       <title>哪吒探针V1启用google登录</title>
-      <link>https://blog.qklg.net/post/20250126/</link>
+      <link>https://qklgblog.pages.dev/post/20250126/</link>
       <pubDate>Sun, 26 Jan 2025 18:16:50 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20250126/</guid>
+      <guid>https://qklgblog.pages.dev/post/20250126/</guid>
       <description>1 创建google项目 ① 打开 https://console.cloud.google.com/apis/dashboard
 ② 点击新建项目创建项目
 ③ 项目名称随便取个，叫nezha完事了
@@ -291,9 +291,9 @@ oauth2: Google: clientid: &amp;#34;your id&amp;#34; clientsecret: &amp;#34;your 
     </item>
     <item>
       <title>claw 日本dns修改</title>
-      <link>https://blog.qklg.net/post/20250121/</link>
+      <link>https://qklgblog.pages.dev/post/20250121/</link>
       <pubDate>Tue, 21 Jan 2025 17:25:35 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20250121/</guid>
+      <guid>https://qklgblog.pages.dev/post/20250121/</guid>
       <description>我之前香港也遇到了
 ping google.com延迟五六十，这次日本也遇到了
 把下面文件夹下dns 8888改成1.0.0.1就好了
@@ -302,9 +302,9 @@ ping google.com延迟五六十，这次日本也遇到了
     </item>
     <item>
       <title>发现了个好玩的</title>
-      <link>https://blog.qklg.net/post/20250120/</link>
+      <link>https://qklgblog.pages.dev/post/20250120/</link>
       <pubDate>Mon, 20 Jan 2025 17:22:12 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20250120/</guid>
+      <guid>https://qklgblog.pages.dev/post/20250120/</guid>
       <description>刚想买个腾讯云200M，拉我的claw 7刀玩玩
 于是我测了claw东京到腾讯云上海的回程
 发现了个好玩的，软银在国内的pop
@@ -315,9 +315,9 @@ https://www.itdog.cn/ping/softbank221111202062.bbtec.net</description>
     </item>
     <item>
       <title>分享下全球海缆地图</title>
-      <link>https://blog.qklg.net/post/20250106/</link>
+      <link>https://qklgblog.pages.dev/post/20250106/</link>
       <pubDate>Mon, 06 Jan 2025 00:35:18 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20250106/</guid>
+      <guid>https://qklgblog.pages.dev/post/20250106/</guid>
       <description>三大运营商各自官网的，也有陆缆
 移动 https://globalresources.cmi.chinamobile.com/#/
 联通 https://www.cuguplus.com/zh-hant/globalnetwork
@@ -332,9 +332,9 @@ https://submarine-cable-map-2024.telegeography.com/</description>
     </item>
     <item>
       <title>我的哪吒探针v1安全措施</title>
-      <link>https://blog.qklg.net/post/20241231/</link>
+      <link>https://qklgblog.pages.dev/post/20241231/</link>
       <pubDate>Tue, 31 Dec 2024 19:26:19 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20241231/</guid>
+      <guid>https://qklgblog.pages.dev/post/20241231/</guid>
       <description>1 tls+cloudflare ①一键脚本搭建设置 请指定安装命令中预设的 nezha-agent 连接地址(例如 example.com:443) 域名和端口选择你套cf的域名 还有443端口
 是否希望通过 TLS 连接 Agent? (影响安装命令)[y/N] 这边输入y 启用tls
 ②反代 cf后台打开解析个ip过来，记得云朵直接打开，避免ip泄露，直接ipv6完事
@@ -365,9 +365,9 @@ https://域名/api/v1/login 其他如图
     </item>
     <item>
       <title>我的年末小鸡总结</title>
-      <link>https://blog.qklg.net/post/20241214/</link>
+      <link>https://qklgblog.pages.dev/post/20241214/</link>
       <pubDate>Sat, 14 Dec 2024 09:22:14 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20241214/</guid>
+      <guid>https://qklgblog.pages.dev/post/20241214/</guid>
       <description>2024已经过去了
 2023年的可以看这里https://www.nodeseek.com/post-583-1
 今年的如下
@@ -414,9 +414,9 @@ https://域名/api/v1/login 其他如图
     </item>
     <item>
       <title>unraid安装哪吒 v1版本agent</title>
-      <link>https://blog.qklg.net/post/20241209/</link>
+      <link>https://qklgblog.pages.dev/post/20241209/</link>
       <pubDate>Mon, 09 Dec 2024 06:24:57 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20241209/</guid>
+      <guid>https://qklgblog.pages.dev/post/20241209/</guid>
       <description>v0版本的安装可以参考我博客的旧教程
 https://qklg.net/post/20231019/
 本文参考了哪吒文档中群晖和openwrt的安装
@@ -447,9 +447,9 @@ uuid：为该 Agent 生成一个唯一标识符，不要与同一个 Dashboard �
     </item>
     <item>
       <title>哪吒v0版本面板安装，agent安装 ，文档</title>
-      <link>https://blog.qklg.net/post/20241203/</link>
+      <link>https://qklgblog.pages.dev/post/20241203/</link>
       <pubDate>Tue, 03 Dec 2024 23:48:15 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20241203/</guid>
+      <guid>https://qklgblog.pages.dev/post/20241203/</guid>
       <description>1 面板部分 ① v0面板安装脚本 curl -L https://raw.githubusercontent.com/nezhahq/scripts/refs/heads/v0/install.sh -o nezha.sh &amp;amp;&amp;amp; chmod +x nezha.sh &amp;amp;&amp;amp; sudo ./nezha.sh ② v0面板禁用更新 打开/opt/nezha/dashboard/docker-compose.yaml
 讲docker固定到:v0.20.13版本
 services: dashboard: image: ghcr.io/naiba/nezha-dashboard:v0.20.13 restart: always 感谢 https://www.nodeseek.com/post-210009-1 老哥
@@ -465,9 +465,9 @@ github仓库 https://github.com/nezhahq/nezhahq.github.io/tree/v0
     </item>
     <item>
       <title>垃圾佬的2.5G 内网升级</title>
-      <link>https://blog.qklg.net/post/20241126/</link>
+      <link>https://qklgblog.pages.dev/post/20241126/</link>
       <pubDate>Tue, 26 Nov 2024 21:47:05 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20241126/</guid>
+      <guid>https://qklgblog.pages.dev/post/20241126/</guid>
       <description>1 硬件 先来说下硬件，东西都是便宜货，螃蟹全家桶
 总成本不超过200块钱
 wifi懒得升级了，就千兆继续用算了
@@ -488,9 +488,9 @@ pcie网卡 某宝28包邮的8125b网卡，插上去我的unraid能免驱就能�
     </item>
     <item>
       <title>YouTube 官方的rss</title>
-      <link>https://blog.qklg.net/post/20241121/</link>
+      <link>https://qklgblog.pages.dev/post/20241121/</link>
       <pubDate>Thu, 21 Nov 2024 22:20:49 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20241121/</guid>
+      <guid>https://qklgblog.pages.dev/post/20241121/</guid>
       <description>https://news.ycombinator.com/item?id=32192352
 老外那边学到的新技术
 User : https://www.youtube.com/feeds/videos.xml?user=&amp;lt;XXX&amp;gt; Channel : https://www.youtube.com/feeds/videos.xml?channel_id=&amp;lt;XXX&amp;gt; Playlist : https://www.youtube.com/feeds/videos.xml?playlist_id=&amp;lt;XXX&amp;gt; 以前一直拿rsshub抓的，youtube官方其实是有rss的
@@ -508,9 +508,9 @@ https://docs.rsshub.app/routes/social-media#youtube</description>
     </item>
     <item>
       <title>给mjj看看你的hetzner的杜甫长啥样子</title>
-      <link>https://blog.qklg.net/post/20241119/</link>
+      <link>https://qklgblog.pages.dev/post/20241119/</link>
       <pubDate>Tue, 19 Nov 2024 22:14:48 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20241119/</guid>
+      <guid>https://qklgblog.pages.dev/post/20241119/</guid>
       <description>刚油管刷到的视频
 买了的mjj说下使用体验，我玩鸡好几年现在还没体验过杜甫
 顺带看看你的大杜甫长啥样子
@@ -544,9 +544,9 @@ R20多核7200
     </item>
     <item>
       <title>小钢炮变大钢炮历险记</title>
-      <link>https://blog.qklg.net/post/20241110/</link>
+      <link>https://qklgblog.pages.dev/post/20241110/</link>
       <pubDate>Sun, 10 Nov 2024 20:43:34 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20241110/</guid>
+      <guid>https://qklgblog.pages.dev/post/20241110/</guid>
       <description>小钢炮变大钢炮历险记
 1 前后对比 配置 小钢炮 大钢炮 跑分 小钢炮 https://browser.geekbench.com/v5/cpu/23042098
 大钢炮W https://browser.geekbench.com/v5/cpu/23045171
@@ -571,9 +571,9 @@ unraid里 主界面-Flash-Syslinux 配置-菜单视图
     </item>
     <item>
       <title>分享下怎么看你小鸡ip前任干过啥</title>
-      <link>https://blog.qklg.net/post/20241029/</link>
+      <link>https://qklgblog.pages.dev/post/20241029/</link>
       <pubDate>Tue, 29 Oct 2024 01:20:48 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20241029/</guid>
+      <guid>https://qklgblog.pages.dev/post/20241029/</guid>
       <description>我只发自己常用的
 等波老哥补充，我再完善下
 1 ip滥用报告
@@ -593,9 +593,9 @@ https://ipchaxun.com/</description>
     </item>
     <item>
       <title>哪吒探针关闭webssh  ＆ openwrt版的网速设置</title>
-      <link>https://blog.qklg.net/post/20241028/</link>
+      <link>https://qklgblog.pages.dev/post/20241028/</link>
       <pubDate>Mon, 28 Oct 2024 23:24:36 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20241028/</guid>
+      <guid>https://qklgblog.pages.dev/post/20241028/</guid>
       <description>1 关闭webssh 安装agent时一键命令后加入
 --disable-command-execute 参考https://www.nodeseek.com/post-31986-1
 2 opnewrt版哪吒网速设置 openwrt nezha ipk 下载地址 https://github.com/Erope/openwrt_nezha/releases/
@@ -604,9 +604,9 @@ ssh输入如下，我默认是eth0，空格选择，回车确认
     </item>
     <item>
       <title>win手动安装dig</title>
-      <link>https://blog.qklg.net/post/20241027/</link>
+      <link>https://qklgblog.pages.dev/post/20241027/</link>
       <pubDate>Sun, 27 Oct 2024 23:19:17 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20241027/</guid>
+      <guid>https://qklgblog.pages.dev/post/20241027/</guid>
       <description>dig是linux下很常见的dns工具
 win上只能手动安装了
 Note that BIND 9.18 and beyond will no longer support the native Windows(tm) operating system.
@@ -617,9 +617,9 @@ ftp://ftp.isc.org/isc/bind9/9.17.9/BIND9.17.9.x64.zip 解压缩，把文件夹�
     </item>
     <item>
       <title>Debian11 开启bbr</title>
-      <link>https://blog.qklg.net/post/20241021/</link>
+      <link>https://qklgblog.pages.dev/post/20241021/</link>
       <pubDate>Mon, 21 Oct 2024 17:34:11 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20241021/</guid>
+      <guid>https://qklgblog.pages.dev/post/20241021/</guid>
       <description>确认内核是否支持bbr
 sysctl net.ipv4.tcp_available_congestion_control 1 开启bbr
 echo &amp;#34;net.core.default_qdisc=fq&amp;#34; | sudo tee -a /etc/sysctl.conf echo &amp;#34;net.ipv4.tcp_congestion_control=bbr&amp;#34; | sudo tee -a /etc/sysctl.conf 重新加载sysctl 设置
@@ -629,9 +629,9 @@ sudo sysctl -p </description>
     </item>
     <item>
       <title>openwrt用cron定时任务装哪吒探针</title>
-      <link>https://blog.qklg.net/post/20241020/</link>
+      <link>https://qklgblog.pages.dev/post/20241020/</link>
       <pubDate>Sun, 20 Oct 2024 12:53:40 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20241020/</guid>
+      <guid>https://qklgblog.pages.dev/post/20241020/</guid>
       <description>前言 :本文使用定时任务的方式装哪吒探针，如果你觉得麻烦的话可以用ipk的方式创建哪吒探针
 项目地址https://github.com/Erope/openwrt_nezha/releases/
 下载后上传安装ipk包，然后设置就可以了
@@ -657,9 +657,9 @@ logread | grep cron 4 编辑nezha-agent 在ssh中
     </item>
     <item>
       <title>nginx搭建文件服务器当图床</title>
-      <link>https://blog.qklg.net/post/20241014/</link>
+      <link>https://qklgblog.pages.dev/post/20241014/</link>
       <pubDate>Mon, 14 Oct 2024 15:39:16 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20241014/</guid>
+      <guid>https://qklgblog.pages.dev/post/20241014/</guid>
       <description>基于1panel
 我的探针就是用1panel反代的，顺带在探针鸡上搞一下算了
 1 前置操作 ①打开路径 应用商店-已安装-openresty-进入安装目录
@@ -683,9 +683,9 @@ mkdir -p /var/pic ②容器添加图片文件夹路径 1panel面板-容器-1pane
     </item>
     <item>
       <title>分享下自用的cloudflare 图片缓存设置</title>
-      <link>https://blog.qklg.net/post/20241002/</link>
+      <link>https://qklgblog.pages.dev/post/20241002/</link>
       <pubDate>Wed, 02 Oct 2024 00:57:53 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20241002/</guid>
+      <guid>https://qklgblog.pages.dev/post/20241002/</guid>
       <description>规则-页面规则
 隔壁论坛抄过来的这个 https://linux.do/t/topic/126107/5
 缓存-Cache Rules-创建规则
@@ -694,9 +694,9 @@ mkdir -p /var/pic ②容器添加图片文件夹路径 1panel面板-容器-1pane
     </item>
     <item>
       <title>python3搭建http服务器拿来当图床</title>
-      <link>https://blog.qklg.net/post/20241001/</link>
+      <link>https://qklgblog.pages.dev/post/20241001/</link>
       <pubDate>Tue, 01 Oct 2024 02:10:30 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20241001/</guid>
+      <guid>https://qklgblog.pages.dev/post/20241001/</guid>
       <description>本文基于debian
 1 安装python3和python3-pip
 sudo apt update sudo apt install python3 sudo apt install python3-pip 检查下是否安装成功
@@ -712,9 +712,9 @@ sudo systemctl status python-http 搞完么，拿nginx，caddy或者cloudflare t
     </item>
     <item>
       <title>cloudflare 生日周新功能总结</title>
-      <link>https://blog.qklg.net/post/20240925/</link>
+      <link>https://qklgblog.pages.dev/post/20240925/</link>
       <pubDate>Wed, 25 Sep 2024 15:06:41 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20240925/</guid>
+      <guid>https://qklgblog.pages.dev/post/20240925/</guid>
       <description>先祝cf大善人 14岁生日快乐
 mjj可以去看下新增加的功能
 https://www.cloudflare.com/zh-cn/birthday-week-2024/updates/
@@ -736,9 +736,9 @@ https://blog.cloudflare.com/zh-cn/cloudflare-ai-audit-control-ai-content-crawler
     </item>
     <item>
       <title>warp移动能直连hk</title>
-      <link>https://blog.qklg.net/post/20240923/</link>
+      <link>https://qklgblog.pages.dev/post/20240923/</link>
       <pubDate>Mon, 23 Sep 2024 18:24:40 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20240923/</guid>
+      <guid>https://qklgblog.pages.dev/post/20240923/</guid>
       <description>cf赛高
 有个问题问下你们
 你们的ios和Windows电脑是不是只能练lax或者sjc
@@ -749,9 +749,9 @@ https://blog.cloudflare.com/zh-cn/cloudflare-ai-audit-control-ai-content-crawler
     </item>
     <item>
       <title>Cloudflare WARP MASQUE体验分享</title>
-      <link>https://blog.qklg.net/post/20240922/</link>
+      <link>https://qklgblog.pages.dev/post/20240922/</link>
       <pubDate>Sun, 22 Sep 2024 17:24:50 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20240922/</guid>
+      <guid>https://qklgblog.pages.dev/post/20240922/</guid>
       <description>Android 根据隔壁群大佬说的
 google play加入warp的beta测试，把app删了，重新下，下载好之后过个几分钟会有个beta更新，
 更新完之后就行了
@@ -770,9 +770,9 @@ ios ios简单，下好app
     </item>
     <item>
       <title>在无人关注的角落里，cf的ipfs公共网关无了</title>
-      <link>https://blog.qklg.net/post/20240829/</link>
+      <link>https://qklgblog.pages.dev/post/20240829/</link>
       <pubDate>Thu, 29 Aug 2024 23:49:40 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20240829/</guid>
+      <guid>https://qklgblog.pages.dev/post/20240829/</guid>
       <description>我的签名的博客本来about里有段
 可以通过Cloudflare的公共网关来访问 https://cloudflare-ipfs.com/ipfs/QmUf7b6tiz3nbxQbtcTo7e2FABn52AmZTLsBMRGzxKrJb3/ 今天博客搬家从gridea搬家到hugo上
 结果点进去发现居然打不开了
@@ -788,9 +788,9 @@ https://blog.cloudflare.com/cloudflares-public-ipfs-gateways-and-supporting-inte
     </item>
     <item>
       <title>publii部署静态博客</title>
-      <link>https://blog.qklg.net/post/20240823/</link>
+      <link>https://qklgblog.pages.dev/post/20240823/</link>
       <pubDate>Fri, 23 Aug 2024 21:55:30 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20240823/</guid>
+      <guid>https://qklgblog.pages.dev/post/20240823/</guid>
       <description>以前哥们写过一篇用gridea部署静态博客的文章
 文章链接 https://www.nodeseek.com/post-8624-1
 今天闲着无聊逛老外论坛的时候发现了一个类似的，和gridea一样，不用自己像hexo hugo那样折腾命令
@@ -827,9 +827,9 @@ https://github.com/username/username.github.io.git
     </item>
     <item>
       <title>chrome 125禁用新ui</title>
-      <link>https://blog.qklg.net/post/20240517/</link>
+      <link>https://qklgblog.pages.dev/post/20240517/</link>
       <pubDate>Fri, 17 May 2024 13:52:49 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20240517/</guid>
+      <guid>https://qklgblog.pages.dev/post/20240517/</guid>
       <description>chrome更新125了，没法在chrome://flags 里面禁用新界面了
 新界面这个右键这真的垃圾，学什么不好，学win11
 哥们找了好久,reddit上老外找的办法，快捷方式里面加一个这个
@@ -837,9 +837,9 @@ https://github.com/username/username.github.io.git
     </item>
     <item>
       <title>分享下自己用的win软件</title>
-      <link>https://blog.qklg.net/post/20240329/</link>
+      <link>https://qklgblog.pages.dev/post/20240329/</link>
       <pubDate>Fri, 29 Mar 2024 18:27:58 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20240329/</guid>
+      <guid>https://qklgblog.pages.dev/post/20240329/</guid>
       <description>分享下自己用的win软件
 我的软件都在开始菜单里，打开很方便
 google chrome上网用的，电脑浏览器用的最多了
@@ -893,9 +893,9 @@ openvpn我出门在外回家用的</description>
     </item>
     <item>
       <title>自己做字幕和翻译</title>
-      <link>https://blog.qklg.net/post/20240317/</link>
+      <link>https://qklgblog.pages.dev/post/20240317/</link>
       <pubDate>Sun, 17 Mar 2024 10:09:13 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20240317/</guid>
+      <guid>https://qklgblog.pages.dev/post/20240317/</guid>
       <description>总共两大步
 生成语音转文字和翻译
 一 原文字幕，语音转文字 ①下载WhisperDesktop https://github.com/Const-me/Whisper/releases
@@ -923,9 +923,9 @@ https://www.bilibili.com/read/cv22692287/</description>
     </item>
     <item>
       <title>将我博客的图片都转换成avif</title>
-      <link>https://blog.qklg.net/post/jiang-wo-bo-ke-de-tu-pian-dou-zhuan-huan-cheng-avif/</link>
+      <link>https://qklgblog.pages.dev/post/jiang-wo-bo-ke-de-tu-pian-dou-zhuan-huan-cheng-avif/</link>
       <pubDate>Thu, 07 Mar 2024 16:56:22 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/jiang-wo-bo-ke-de-tu-pian-dou-zhuan-huan-cheng-avif/</guid>
+      <guid>https://qklgblog.pages.dev/post/jiang-wo-bo-ke-de-tu-pian-dou-zhuan-huan-cheng-avif/</guid>
       <description>1 avif的好处 avif最大的好处就是更高的压缩性，从而省流量和存储
 我的博客已经是纯静态化的了，主要的大头是图片，变小可以更加快的打开博客
 之前的png格式的，现在转换成avif，大小只有原来21%
@@ -942,9 +942,9 @@ https://developer.aliyun.com/article/1147111</description>
     </item>
     <item>
       <title> 2023年看番总结</title>
-      <link>https://blog.qklg.net/post/20231222/</link>
+      <link>https://qklgblog.pages.dev/post/20231222/</link>
       <pubDate>Fri, 22 Dec 2023 01:54:28 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20231222/</guid>
+      <guid>https://qklgblog.pages.dev/post/20231222/</guid>
       <description>总结下今年看过的番剧
 我每季度追是十部左右
 看番就图一乐
@@ -1012,9 +1012,9 @@ https://developer.aliyun.com/article/1147111</description>
     </item>
     <item>
       <title>我该不该需要奈飞</title>
-      <link>https://blog.qklg.net/post/20240119/</link>
+      <link>https://qklgblog.pages.dev/post/20240119/</link>
       <pubDate>Tue, 19 Dec 2023 21:27:56 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20240119/</guid>
+      <guid>https://qklgblog.pages.dev/post/20240119/</guid>
       <description>前言
 最近奈飞把埃及，土耳其，尼日利亚，巴基斯坦等低价区的“垃圾客户”给清退了
 楼主就是受害者之一，今天闲着无聊，写篇帖子来讨论下我们需要奈飞吗
@@ -1050,9 +1050,9 @@ wb-dl啥的是在线流媒体上扒下来的，后面有个nf是从奈菲上下�
     </item>
     <item>
       <title>阿里云香港测试</title>
-      <link>https://blog.qklg.net/post/a-li-yun-xiang-gang-ce-shi/</link>
+      <link>https://qklgblog.pages.dev/post/a-li-yun-xiang-gang-ce-shi/</link>
       <pubDate>Wed, 01 Nov 2023 22:48:10 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/a-li-yun-xiang-gang-ce-shi/</guid>
+      <guid>https://qklgblog.pages.dev/post/a-li-yun-xiang-gang-ce-shi/</guid>
       <description>[Info] 测试路由 到 上海电信(天翼云) 中 &amp;hellip;
 traceroute to 101.227.255.45 (101.227.255.45), 30 hops max, 32 byte packets
 1 *
@@ -1066,9 +1066,9 @@ traceroute to 101.227.255.45 (101.227.255.45), 30 hops max, 32 byte packets
     </item>
     <item>
       <title>将我的博客部署到ipfs上</title>
-      <link>https://blog.qklg.net/post/20231029/</link>
+      <link>https://qklgblog.pages.dev/post/20231029/</link>
       <pubDate>Sun, 29 Oct 2023 03:22:55 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20231029/</guid>
+      <guid>https://qklgblog.pages.dev/post/20231029/</guid>
       <description>试着将签名的博客部署到ipfs上
 如果你的浏览器是支持ipfs的brave浏览器的话，可以直接点下面的跳转
 ipfs://QmVSEaN34kaZpf8CbpkWyLmTobn4gr7JQe9JZghL4AsDRt
@@ -1093,18 +1093,18 @@ https://www.planetable.xyz/
     </item>
     <item>
       <title>分享几个可以看全球海缆的网站</title>
-      <link>https://blog.qklg.net/post/20231022/</link>
+      <link>https://qklgblog.pages.dev/post/20231022/</link>
       <pubDate>Sun, 22 Oct 2023 12:36:44 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20231022/</guid>
+      <guid>https://qklgblog.pages.dev/post/20231022/</guid>
       <description>https://www.submarinecablemap.com/
 https://www.infrapedia.com/
 https://submarine-cable-map-2023.telegeography.com/</description>
     </item>
     <item>
       <title>unraid装哪吒探针</title>
-      <link>https://blog.qklg.net/post/20231019/</link>
+      <link>https://qklgblog.pages.dev/post/20231019/</link>
       <pubDate>Thu, 19 Oct 2023 23:11:58 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20231019/</guid>
+      <guid>https://qklgblog.pages.dev/post/20231019/</guid>
       <description>1下载哪吒探针的agent
 选择你的客户端下载，unraid的话一般都是linux-amd64
 https://github.com/nezhahq/agent/releases
@@ -1132,9 +1132,9 @@ https://nezha.wiki/guide/agent.html#%E5%9C%A8-%E7%BE%A4%E6%99%96dsm-%E4%B8%AD%E5
     </item>
     <item>
       <title>cc新ip，来波测试</title>
-      <link>https://blog.qklg.net/post/20231014/</link>
+      <link>https://qklgblog.pages.dev/post/20231014/</link>
       <pubDate>Sat, 14 Oct 2023 23:26:49 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20231014/</guid>
+      <guid>https://qklgblog.pages.dev/post/20231014/</guid>
       <description>cc新ip，来波测试
 cc的8.79，性能什么的没必要测了，就那样，ipv6让我关了，不用管
 204.15换的148.135的ip
@@ -1156,9 +1156,9 @@ d的时候ip加进去，面板有的
     </item>
     <item>
       <title>推荐下我正在用的docker</title>
-      <link>https://blog.qklg.net/post/20231011/</link>
+      <link>https://qklgblog.pages.dev/post/20231011/</link>
       <pubDate>Wed, 11 Oct 2023 23:29:46 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20231011/</guid>
+      <guid>https://qklgblog.pages.dev/post/20231011/</guid>
       <description>我目前用的这几个，推荐给各位mjj
 还有没有好玩的，推荐下
 1 qbittorrnet
@@ -1205,9 +1205,9 @@ https://github.com/xushier/HD-Icons
     </item>
     <item>
       <title>分享个ping主机，通知telegram bot的脚本</title>
-      <link>https://blog.qklg.net/post/20231010/</link>
+      <link>https://qklgblog.pages.dev/post/20231010/</link>
       <pubDate>Tue, 10 Oct 2023 23:30:38 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20231010/</guid>
+      <guid>https://qklgblog.pages.dev/post/20231010/</guid>
       <description>家里的黑群晖老是宕机，每次宕机都没意识到，
 所以用chatgpt写了个小东西，这玩意别说还真挺好用的
 直接ping主机，每隔15秒ping一次，ping不通就通知tg的bot
@@ -1223,18 +1223,18 @@ import subprocess import requests import time def send_notification(message): # 
     </item>
     <item>
       <title>newbing还挺好用的</title>
-      <link>https://blog.qklg.net/post/20231005/</link>
+      <link>https://qklgblog.pages.dev/post/20231005/</link>
       <pubDate>Thu, 05 Oct 2023 23:31:49 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20231005/</guid>
+      <guid>https://qklgblog.pages.dev/post/20231005/</guid>
       <description>最近更新
 支持gpt 4和图片识别了
 玩了下还挺好玩的</description>
     </item>
     <item>
       <title>infuse替代品VidHub的ios版已上线</title>
-      <link>https://blog.qklg.net/post/20230928/</link>
+      <link>https://qklgblog.pages.dev/post/20230928/</link>
       <pubDate>Thu, 28 Sep 2023 12:40:06 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20230928/</guid>
+      <guid>https://qklgblog.pages.dev/post/20230928/</guid>
       <description>https://apps.apple.com/cn/app/id1659622164
 ios版上线了，mac之前就有了，apple tv暂时还没有
 免费，infuse要订阅，而且支持阿里云盘，
@@ -1245,9 +1245,9 @@ ios的可以试下，和infuse一样，客户端刮削的，我是拿来看emby�
     </item>
     <item>
       <title>内网穿透还是cf tunnel好用</title>
-      <link>https://blog.qklg.net/post/20230927/</link>
+      <link>https://qklgblog.pages.dev/post/20230927/</link>
       <pubDate>Wed, 27 Sep 2023 23:33:18 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20230927/</guid>
+      <guid>https://qklgblog.pages.dev/post/20230927/</guid>
       <description>1 frp，结果宿迁nat老板骚操作，搞得俺不用了
 2 zerotier设置太难搞了，还要搞客户端，俺就外面拿来看片用，用不着
 3 ipv6 ddns，单位没ipv6，难搞
@@ -1258,9 +1258,9 @@ ios的可以试下，和infuse一样，客户端刮削的，我是拿来看emby�
     </item>
     <item>
       <title>江苏移动自己换光猫记录下</title>
-      <link>https://blog.qklg.net/post/20230926/</link>
+      <link>https://qklgblog.pages.dev/post/20230926/</link>
       <pubDate>Tue, 26 Sep 2023 23:35:50 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20230926/</guid>
+      <guid>https://qklgblog.pages.dev/post/20230926/</guid>
       <description>前提准备
 ①vlan id，这个原来光猫里面有，vid后面的数字就是vlan id
 ②宽带账户和密码，账户时手机号，密码直接打10086重置下就可以了，6位数字短信发给你的
@@ -1278,9 +1278,9 @@ https://www.right.com.cn/FORUM/thread-8247221-1-1.html</description>
     </item>
     <item>
       <title>国际出口18Tbps</title>
-      <link>https://blog.qklg.net/post/20230913/</link>
+      <link>https://qklgblog.pages.dev/post/20230913/</link>
       <pubDate>Wed, 13 Sep 2023 23:38:16 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20230913/</guid>
+      <guid>https://qklgblog.pages.dev/post/20230913/</guid>
       <description>之前两年没公布
 今年公布了，还把20和21年的补上去了
 https://cnnic.net.cn/NMediaFile/2023/0908/MAIN1694151810549M3LV0UWOAV.pdf
@@ -1292,9 +1292,9 @@ https://www.china-ipv6.cn/#/networkReady/networkReadySimple
     </item>
     <item>
       <title>搬瓦工vps的一点小建议</title>
-      <link>https://blog.qklg.net/post/20230912/</link>
+      <link>https://qklgblog.pages.dev/post/20230912/</link>
       <pubDate>Tue, 12 Sep 2023 23:40:20 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20230912/</guid>
+      <guid>https://qklgblog.pages.dev/post/20230912/</guid>
       <description>论坛现在全是瓦工aff，
 我来说下瓦工有啥，该怎么买
 这是the plan的切机房的图，我把优化线路都表了下
@@ -1329,9 +1329,9 @@ dc6和dc9的洛杉矶gia
     </item>
     <item>
       <title>ios,安卓和win跑流媒体解锁检测脚本</title>
-      <link>https://blog.qklg.net/post/20230910/</link>
+      <link>https://qklgblog.pages.dev/post/20230910/</link>
       <pubDate>Sun, 10 Sep 2023 23:43:32 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20230910/</guid>
+      <guid>https://qklgblog.pages.dev/post/20230910/</guid>
       <description>本文使用脚本
 github链接:https://github.com/lmc999/RegionRestrictionCheck
 脚本
@@ -1370,9 +1370,9 @@ apk add curl bash gawk python3 5运行脚本</description>
     </item>
     <item>
       <title>分享个可以看到ip的bt下载记录的网站</title>
-      <link>https://blog.qklg.net/post/20230904/</link>
+      <link>https://qklgblog.pages.dev/post/20230904/</link>
       <pubDate>Mon, 04 Sep 2023 23:49:02 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20230904/</guid>
+      <guid>https://qklgblog.pages.dev/post/20230904/</guid>
       <description>https://iknowwhatyoudownload.com/
 原理就是记录几个大的tracker，然后你bt下载的时候连那几个tracker
 你可以看到按照国家和地区的每天下啥，也能看到你邻居的口味,还有每年和每日的统计，很有趣
@@ -1380,9 +1380,9 @@ apk add curl bash gawk python3 5运行脚本</description>
     </item>
     <item>
       <title>最近折腾回家看片，分享点经验</title>
-      <link>https://blog.qklg.net/post/20230903/</link>
+      <link>https://qklgblog.pages.dev/post/20230903/</link>
       <pubDate>Sun, 03 Sep 2023 23:49:51 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20230903/</guid>
+      <guid>https://qklgblog.pages.dev/post/20230903/</guid>
       <description>鉴于移动没公网ipv4，电信联通也在日益收回v4，有兴趣的话可以看下，分享点经验
 1怎么回家，我用的ipv6回家的，本人测试了下基于tcp的openvpn和基于udp的wireguard
 配置很简单的，谷歌搜下就有了，我是在我本地1000下，100Mbps的上行的宽带下测试的，家里的openwrt的n5105的软路由上建的openwrt
@@ -1403,9 +1403,9 @@ cf tunnel国内一般分配的美西的服务器
     </item>
     <item>
       <title>给用emby的推荐几个好用的东西</title>
-      <link>https://blog.qklg.net/post/20230831/</link>
+      <link>https://qklgblog.pages.dev/post/20230831/</link>
       <pubDate>Thu, 31 Aug 2023 12:43:53 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20230831/</guid>
+      <guid>https://qklgblog.pages.dev/post/20230831/</guid>
       <description>最近折腾emby，找到了几个好东西，推荐给各位mjj试下
 1emby crx 给emby首页美化的
 github链接
@@ -1429,9 +1429,9 @@ github链接https://github.com/91270/MeiamSubtitles</description>
     </item>
     <item>
       <title>关于rn dc2变成亚马逊-只是ip所有权变了</title>
-      <link>https://blog.qklg.net/post/20230830/</link>
+      <link>https://qklgblog.pages.dev/post/20230830/</link>
       <pubDate>Wed, 30 Aug 2023 12:47:03 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20230830/</guid>
+      <guid>https://qklgblog.pages.dev/post/20230830/</guid>
       <description>我rn dc2出掉了
 但是我这台cc的8.79，ip段是204.15的，也变成亚马逊了
 测了下回程的三网路由
@@ -1444,9 +1444,9 @@ github链接https://github.com/91270/MeiamSubtitles</description>
     </item>
     <item>
       <title>关于tg收不到短信的一二件事</title>
-      <link>https://blog.qklg.net/post/20230828/</link>
+      <link>https://qklgblog.pages.dev/post/20230828/</link>
       <pubDate>Mon, 28 Aug 2023 12:49:14 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20230828/</guid>
+      <guid>https://qklgblog.pages.dev/post/20230828/</guid>
       <description>1为什么telegram收不到短信 首先，如果你是+86的国内手机号注册的话，多半是运营商原因，请联系你的运营商开通国际短信服务也好，或者别的什么的，具体怎么折腾你可以看下这哥们
 https://www.nodeseek.com/post-6982-1
 第二个原因就是你的安卓手机没有safetynet认证，苹果的话没影响
@@ -1478,9 +1478,9 @@ https://t.me/tginfoen/1598</description>
     </item>
     <item>
       <title>cloudflare停止颁发 DigiCert的证书</title>
-      <link>https://blog.qklg.net/post/20230827/</link>
+      <link>https://qklgblog.pages.dev/post/20230827/</link>
       <pubDate>Sun, 27 Aug 2023 12:51:55 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20230827/</guid>
+      <guid>https://qklgblog.pages.dev/post/20230827/</guid>
       <description>来源https://t.me/xhqcankao/6043
 Cloudflare弃用DigiCert作为所有SSL证书的证书颁发机构
 在 2023 年下半年，Cloudflare 将开始弃用 DigiCert 作为所有 SSL 证书产品(通用证书、高级证书、SSL for SaaS)的证书颁发机构。
@@ -1495,9 +1495,9 @@ cf社区https://community.cloudflare.com/t/community-update-deprecating-digicert
     </item>
     <item>
       <title>win 10上Netflix开启4K&#43;双杜比</title>
-      <link>https://blog.qklg.net/post/20230825/</link>
+      <link>https://qklgblog.pages.dev/post/20230825/</link>
       <pubDate>Fri, 25 Aug 2023 12:54:13 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20230825/</guid>
+      <guid>https://qklgblog.pages.dev/post/20230825/</guid>
       <description>前言
 你套餐还有网速得达标才能放4K和双杜比，chrome对Netflix支持很差，别试了
 需要edge
@@ -1532,9 +1532,9 @@ https://www.netflix.com/sg-zh/title/81312457
     </item>
     <item>
       <title>win10使用杜比视界</title>
-      <link>https://blog.qklg.net/post/20230824/</link>
+      <link>https://qklgblog.pages.dev/post/20230824/</link>
       <pubDate>Thu, 24 Aug 2023 12:57:17 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20230824/</guid>
+      <guid>https://qklgblog.pages.dev/post/20230824/</guid>
       <description>最近闲着无聊，折腾影音，来分享下win10怎么用杜比视界
 1hevc扩展
 https://apps.microsoft.com/store/detail/%E6%9D%A5%E8%87%AA%E8%AE%BE%E5%A4%87%E5%88%B6%E9%80%A0%E5%95%86%E7%9A%84-hevc-%E8%A7%86%E9%A2%91%E6%89%A9%E5%B1%95/9N4WGH0Z6VHQ?hl=zh-cn&amp;amp;gl=cn
@@ -1554,9 +1554,9 @@ https://drive.google.com/file/d/127yA0HCrB4vamveJ5zTWSJ5i73cAuqUL/view?usp=drive
     </item>
     <item>
       <title>来试下你的设备支持不支持杜比视界</title>
-      <link>https://blog.qklg.net/post/20230823/</link>
+      <link>https://qklgblog.pages.dev/post/20230823/</link>
       <pubDate>Wed, 23 Aug 2023 13:00:51 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20230823/</guid>
+      <guid>https://qklgblog.pages.dev/post/20230823/</guid>
       <description>B站https://www.bilibili.com/video/av419059870/ 要大会员
 支持的话球是蓝色的，
 不支持的话是绿色的
@@ -1568,9 +1568,9 @@ https://drive.google.com/file/d/127yA0HCrB4vamveJ5zTWSJ5i73cAuqUL/view?usp=drive
     </item>
     <item>
       <title>BitRemote -苹果上管理下载神器</title>
-      <link>https://blog.qklg.net/post/20230822/</link>
+      <link>https://qklgblog.pages.dev/post/20230822/</link>
       <pubDate>Tue, 22 Aug 2023 13:01:47 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20230822/</guid>
+      <guid>https://qklgblog.pages.dev/post/20230822/</guid>
       <description>可以在 Mac、iPhone、iPad 上 管理 BT、PT 下载任务
 支持
 qBittorrent
@@ -1584,9 +1584,9 @@ https://www.appinn.com/bitremote-for-apple/</description>
     </item>
     <item>
       <title>百年域名</title>
-      <link>https://blog.qklg.net/post/20230821/</link>
+      <link>https://qklgblog.pages.dev/post/20230821/</link>
       <pubDate>Mon, 21 Aug 2023 13:02:25 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20230821/</guid>
+      <guid>https://qklgblog.pages.dev/post/20230821/</guid>
       <description>WordPress 宣布提供 100 年域名托管服务
 WordPress宣布提供100年的域名托管服务，包括24小时协助和托管网站服务。
 域名注册期限最长为十年，但 WordPress 这个“百年计划”将提供 100 年的域名和 WordPress 托管，每个计划的费用为 38,000 美元。
@@ -1597,9 +1597,9 @@ https://t.me/xhqcankao/6035
     </item>
     <item>
       <title>qbittorrent用tg bot通知</title>
-      <link>https://blog.qklg.net/post/20230820/</link>
+      <link>https://qklgblog.pages.dev/post/20230820/</link>
       <pubDate>Sun, 20 Aug 2023 13:03:08 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20230820/</guid>
+      <guid>https://qklgblog.pages.dev/post/20230820/</guid>
       <description>如果你想用tg bot来管理你的qbittorrent的话
 可以试下下面这两个
 https://github.com/zeroone2numeral2/qbittorrent-bot
@@ -1623,9 +1623,9 @@ curl -X POST &amp;#34;https://api.telegram.org/bot&amp;lt;YourBotToken&amp;gt;/s
     </item>
     <item>
       <title>给各位用安卓的推荐个infuse的替代品</title>
-      <link>https://blog.qklg.net/post/20230819/</link>
+      <link>https://qklgblog.pages.dev/post/20230819/</link>
       <pubDate>Sat, 19 Aug 2023 13:04:28 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20230819/</guid>
+      <guid>https://qklgblog.pages.dev/post/20230819/</guid>
       <description>链接:https://github.com/nova-video-player/aos-AVP
 github上直接下或者google play下也行
 一般手机下arm-v8的64位的，电视机下arm-v7的32位的
@@ -1638,16 +1638,16 @@ mjj可以试下
     </item>
     <item>
       <title>高级电视用户</title>
-      <link>https://blog.qklg.net/post/20230818/</link>
+      <link>https://qklgblog.pages.dev/post/20230818/</link>
       <pubDate>Fri, 18 Aug 2023 13:06:09 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20230818/</guid>
+      <guid>https://qklgblog.pages.dev/post/20230818/</guid>
       <description> </description>
     </item>
     <item>
       <title>【宝典在手,江山我有】小白闯江湖之常用一键脚本!</title>
-      <link>https://blog.qklg.net/post/20230812/</link>
+      <link>https://qklgblog.pages.dev/post/20230812/</link>
       <pubDate>Sat, 12 Aug 2023 13:07:50 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20230812/</guid>
+      <guid>https://qklgblog.pages.dev/post/20230812/</guid>
       <description>termius订阅掉了
 换到新账户，把老的资料备份下
 顺带发给给位mjj，常用的应该都有了
@@ -1669,9 +1669,9 @@ bench.sh wget -qO- bench.sh | bash 来源:https://teddysun.com/444.html
     </item>
     <item>
       <title>给各位二次元推荐个好东西</title>
-      <link>https://blog.qklg.net/post/20230808/</link>
+      <link>https://qklgblog.pages.dev/post/20230808/</link>
       <pubDate>Tue, 08 Aug 2023 13:09:20 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20230808/</guid>
+      <guid>https://qklgblog.pages.dev/post/20230808/</guid>
       <description>AutoBangumi
 全自动追番工具
 github地址https://github.com/EstrellaXD/Auto_Bangumi
@@ -1684,9 +1684,9 @@ https://www.autobangumi.org/deploy/quick-start.html
     </item>
     <item>
       <title>将博客部署到ipfs</title>
-      <link>https://blog.qklg.net/post/20230807/</link>
+      <link>https://qklgblog.pages.dev/post/20230807/</link>
       <pubDate>Mon, 07 Aug 2023 13:11:52 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20230807/</guid>
+      <guid>https://qklgblog.pages.dev/post/20230807/</guid>
       <description>最近几天在玩ipfs，一直想把自己的博客部署到ipfs上
 看了一堆文章，发现两好玩的东西，类似于github pages，cf pages之类的静态托管站点，但是区别于他们的就是，可以把博客托管到ipfs上
 直接用github仓库部署静态博客就行
@@ -1699,9 +1699,9 @@ https://github.com/Planetable/Planet</description>
     </item>
     <item>
       <title>分享个web检测工具</title>
-      <link>https://blog.qklg.net/post/20230804/</link>
+      <link>https://qklgblog.pages.dev/post/20230804/</link>
       <pubDate>Fri, 04 Aug 2023 14:02:11 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20230804/</guid>
+      <guid>https://qklgblog.pages.dev/post/20230804/</guid>
       <description>hack news看到的，超级酷炫
 IP信息、SSL、DNS记录、Cookies、标头、域名信息等一堆内容
 网址:https://web-check.xyz/
@@ -1711,9 +1711,9 @@ IP信息、SSL、DNS记录、Cookies、标头、域名信息等一堆内容
     </item>
     <item>
       <title>关于红米ax6000的一点小小的经验</title>
-      <link>https://blog.qklg.net/post/20230730/</link>
+      <link>https://qklgblog.pages.dev/post/20230730/</link>
       <pubDate>Sun, 30 Jul 2023 13:12:59 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20230730/</guid>
+      <guid>https://qklgblog.pages.dev/post/20230730/</guid>
       <description>1这款路由器怎么样
 很牛逼，堪称千兆毕业机，缺点也就是后面只有千兆口子，没2.5G，它那颗四2.0Ghz的a53，跑千兆稍微有点浪费
 2拿来科学怎么样
@@ -1734,9 +1734,9 @@ IP信息、SSL、DNS记录、Cookies、标头、域名信息等一堆内容
     </item>
     <item>
       <title>移动宽带的一点小小的经验</title>
-      <link>https://blog.qklg.net/post/20230727/</link>
+      <link>https://qklgblog.pages.dev/post/20230727/</link>
       <pubDate>Thu, 27 Jul 2023 13:13:36 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20230727/</guid>
+      <guid>https://qklgblog.pages.dev/post/20230727/</guid>
       <description>凌晨睡不着，醒来，随便写点什么
 1怎么办便宜
 某宝或者你所在省份的运营商的贴吧去找找，有优惠
@@ -1780,9 +1780,9 @@ hs8145x6 光猫-n5105软路由拨号科学-ax6和ax6000两硬路由做ap</descri
     </item>
     <item>
       <title>serverbox-一个探针类的app</title>
-      <link>https://blog.qklg.net/post/20230725/</link>
+      <link>https://qklgblog.pages.dev/post/20230725/</link>
       <pubDate>Tue, 25 Jul 2023 13:14:19 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20230725/</guid>
+      <guid>https://qklgblog.pages.dev/post/20230725/</guid>
       <description>前几天看到的，各位mjj可以试下
 github地址
 https://github.com/lollipopkit/flutter_server_box
@@ -1792,9 +1792,9 @@ https://github.com/lollipopkit/flutter_server_box
     </item>
     <item>
       <title>pr靓仔，七毛鸡测试</title>
-      <link>https://blog.qklg.net/post/20230719/</link>
+      <link>https://qklgblog.pages.dev/post/20230719/</link>
       <pubDate>Wed, 19 Jul 2023 13:16:30 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20230719/</guid>
+      <guid>https://qklgblog.pages.dev/post/20230719/</guid>
       <description>前言
 玩具鸡，劝你们别上车，隔壁已经有人才刚买就被靓仔干了
 不过就七毛钱，买来当玩具也不错
@@ -1806,9 +1806,9 @@ yabs
     </item>
     <item>
       <title>mjj综合症候群</title>
-      <link>https://blog.qklg.net/post/20230713/</link>
+      <link>https://qklgblog.pages.dev/post/20230713/</link>
       <pubDate>Thu, 13 Jul 2023 13:17:57 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20230713/</guid>
+      <guid>https://qklgblog.pages.dev/post/20230713/</guid>
       <description>症状1 仓鼠症
 不停买小鸡，买了又吃灰
 买完鸡，付完款，测速性能测试跑一波，挂上探针，走一波流程然后吃灰
@@ -1823,9 +1823,9 @@ yabs
     </item>
     <item>
       <title>那些外币借记卡</title>
-      <link>https://blog.qklg.net/post/20230712/</link>
+      <link>https://qklgblog.pages.dev/post/20230712/</link>
       <pubDate>Wed, 12 Jul 2023 13:19:06 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20230712/</guid>
+      <guid>https://qklgblog.pages.dev/post/20230712/</guid>
       <description>本贴写给那些办不了信用卡的学生，或者不想办信用卡的
 1中国银行的visa和master card借记卡
 mjj常用的非人哉，莫奈卡，这两是master
@@ -1849,9 +1849,9 @@ https://docofcard.com/archives/foreign-debit-card/
     </item>
     <item>
       <title>vir东京37号母鸡的v6解决了</title>
-      <link>https://blog.qklg.net/post/20230711/</link>
+      <link>https://qklgblog.pages.dev/post/20230711/</link>
       <pubDate>Tue, 11 Jul 2023 13:20:38 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20230711/</guid>
+      <guid>https://qklgblog.pages.dev/post/20230711/</guid>
       <description>感谢[url=home.php?mod=space&amp;amp;uid=26740]@IDC888[/url] 和 [url=home.php?mod=space&amp;amp;uid=45426]@landscape[/url] 大佬
 virmach东京的ipv6有能用的吗？
 https://hostloc.com/thread-1186369-1-1.html
@@ -1872,9 +1872,9 @@ iface ens3 inet6 static address 2a12:a301:0:4::xxxx:xxxx netmask 64 gateway 2a12
     </item>
     <item>
       <title>用cloudflare tunnel把你的博客放在你的路由器上</title>
-      <link>https://blog.qklg.net/post/20230709/</link>
+      <link>https://qklgblog.pages.dev/post/20230709/</link>
       <pubDate>Sun, 09 Jul 2023 13:21:50 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20230709/</guid>
+      <guid>https://qklgblog.pages.dev/post/20230709/</guid>
       <description>1cf官网
 ①打开cloudflare的控制台，选择左边的zero trust，选择计划免费就行，绑完支付方式就能用了，不会扣费的，放心好了，只用tunnel的话，绑完可以去账单，付款方式里把卡删掉就可以了
 ②点击左边access-tunnels
@@ -1908,9 +1908,9 @@ service就是你路由器局域网访问ip。比方说我的博客是http://192.
     </item>
     <item>
       <title>Remove-MS-Edge – Windows 下的 Edge 卸载器</title>
-      <link>https://blog.qklg.net/post/20230708/</link>
+      <link>https://qklgblog.pages.dev/post/20230708/</link>
       <pubDate>Sat, 08 Jul 2023 13:25:48 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20230708/</guid>
+      <guid>https://qklgblog.pages.dev/post/20230708/</guid>
       <description>edge最近越来越流氓了
 用这个直接让edge滚蛋
 怎么用看隔壁小众软件上帖子
@@ -1920,17 +1920,17 @@ https://github.com/ShadowWhisperer/Remove-MS-Edge/</description>
     </item>
     <item>
       <title>tabserver,用cf worker转发本地local host</title>
-      <link>https://blog.qklg.net/post/20230703/</link>
+      <link>https://qklgblog.pages.dev/post/20230703/</link>
       <pubDate>Mon, 03 Jul 2023 13:27:16 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20230703/</guid>
+      <guid>https://qklgblog.pages.dev/post/20230703/</guid>
       <description>https://tabserve.dev/
 mjj来试下，用cf worker转发本地local host</description>
     </item>
     <item>
       <title>用cloudflare的api，关闭ipv6兼容性</title>
-      <link>https://blog.qklg.net/post/20230630/</link>
+      <link>https://qklgblog.pages.dev/post/20230630/</link>
       <pubDate>Fri, 30 Jun 2023 13:28:40 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20230630/</guid>
+      <guid>https://qklgblog.pages.dev/post/20230630/</guid>
       <description>有时候有些莫名其妙的问题，其实关闭v6就能解决，但是
 cloudflare的设置中的IPv6 兼容性开关是动不了的，需要20刀以上pro才能点
 但是我们可以用api来关闭
@@ -1945,16 +1945,16 @@ curl -X PATCH &amp;#34;https://api.cloudflare.com/client/v4/zones/域名区域id
     </item>
     <item>
       <title>推荐个可以下大图片网站</title>
-      <link>https://blog.qklg.net/post/20230629/</link>
+      <link>https://qklgblog.pages.dev/post/20230629/</link>
       <pubDate>Thu, 29 Jun 2023 13:30:39 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20230629/</guid>
+      <guid>https://qklgblog.pages.dev/post/20230629/</guid>
       <description>欧洲南方天文台，这站很多大的图https://www.eso.org/public/images/</description>
     </item>
     <item>
       <title>用api把cloudflare的证书换成自家一年的</title>
-      <link>https://blog.qklg.net/post/20230628/</link>
+      <link>https://qklgblog.pages.dev/post/20230628/</link>
       <pubDate>Wed, 28 Jun 2023 13:31:34 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20230628/</guid>
+      <guid>https://qklgblog.pages.dev/post/20230628/</guid>
       <description>cloudflare目前的话提供了四种证书，一种是自家一年的，还有let‘s的，谷歌的，都是三个月的，还有setcigo的三个月的，但是怎么没见到，之前的话一直都是一年的证书，现在基本上都是三个月的，主要是let‘s和谷歌的两种，nodeseek就是谷歌的三个月的，其实我们可以利用api来切换这，参考cloudflare的文档里的[certificate authority]https://developers.cloudflare.com/ssl/reference/certificate-authorities/)
 来切换四种证书，其实也可以完全不管，因为都是自动签的，let&amp;rsquo;s的证书的话可能会导致部分旧平台，比方说旧安卓手机和win7的电脑兼容性不好，还有国产的360浏览器不把它添加进信任列表,所以切不切其实看你自己了
 下面介绍两种办法来切证书，其实都是发起api来的，本质上一样的，只是第一种稍微简单点
@@ -1979,9 +1979,9 @@ curl -sX PATCH &amp;#34;https://api.cloudflare.com/client/v4/zones/你的域名�
     </item>
     <item>
       <title>那些免费证书</title>
-      <link>https://blog.qklg.net/post/20230626/</link>
+      <link>https://qklgblog.pages.dev/post/20230626/</link>
       <pubDate>Mon, 26 Jun 2023 13:33:59 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20230626/</guid>
+      <guid>https://qklgblog.pages.dev/post/20230626/</guid>
       <description>1 一年的单域名的证书
 都是国内云厂商提供的，都是要实名的
 第一个是华为云和阿里云的encryption everywhere
@@ -2012,9 +2012,9 @@ gcloud beta publicca external-account-keys create acme.sh --register-account --s
     </item>
     <item>
       <title>ihostart罗马尼亚灵车</title>
-      <link>https://blog.qklg.net/post/20230620/</link>
+      <link>https://qklgblog.pages.dev/post/20230620/</link>
       <pubDate>Tue, 20 Jun 2023 13:37:29 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20230620/</guid>
+      <guid>https://qklgblog.pages.dev/post/20230620/</guid>
       <description>ihostart罗马尼亚灵车
 论坛25块钱收来的
 配置如图，v4被墙了，v6坏了，拿来当玩具用
@@ -2026,9 +2026,9 @@ v4被墙了，去回程和国内三网不测了</description>
     </item>
     <item>
       <title>rclone挂载webdav,以infini-cloud为列</title>
-      <link>https://blog.qklg.net/post/20230619/</link>
+      <link>https://qklgblog.pages.dev/post/20230619/</link>
       <pubDate>Mon, 19 Jun 2023 13:35:25 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20230619/</guid>
+      <guid>https://qklgblog.pages.dev/post/20230619/</guid>
       <description>1安装rclone
 ①先去rclone官网找到你的版本
 官网链接https://rclone.org/downloads/
@@ -2062,9 +2062,9 @@ y) Yes, type in my own password：手动输入密码。 g) Generate random passw
     </item>
     <item>
       <title>virmach究竟发生了啥 </title>
-      <link>https://blog.qklg.net/post/20230615/</link>
+      <link>https://qklgblog.pages.dev/post/20230615/</link>
       <pubDate>Thu, 15 Jun 2023 13:38:57 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20230615/</guid>
+      <guid>https://qklgblog.pages.dev/post/20230615/</guid>
       <description>从https://lowendbox.com/blog/what-happened-to-virmach-anyways/#comments
 转载，用chatgpt4翻译
 总结:胖子和cc机房闹掰，人员跑路，胖子买新锐龙服务器要钱，新的机房要钱，胖子可能要跑路
@@ -2111,9 +2111,9 @@ y) Yes, type in my own password：手动输入密码。 g) Generate random passw
     </item>
     <item>
       <title>ovh网盘，来试下</title>
-      <link>https://blog.qklg.net/post/20230612/</link>
+      <link>https://qklgblog.pages.dev/post/20230612/</link>
       <pubDate>Mon, 12 Jun 2023 13:40:05 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20230612/</guid>
+      <guid>https://qklgblog.pages.dev/post/20230612/</guid>
       <description>前几天ovh老板的推特上看到的
 https://twitter.com/olesovhcom/status/1664227559976869890
 官网链接:https://shadow.tech/en-GB
@@ -2124,9 +2124,9 @@ https://twitter.com/olesovhcom/status/1664227559976869890
     </item>
     <item>
       <title>gridea部署静态博客</title>
-      <link>https://blog.qklg.net/post/20230611/</link>
+      <link>https://qklgblog.pages.dev/post/20230611/</link>
       <pubDate>Sun, 11 Jun 2023 13:42:51 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20230611/</guid>
+      <guid>https://qklgblog.pages.dev/post/20230611/</guid>
       <description>gridea是一个个静态博客的客户端
 相对于hugo和hexo啥的，最大的好处就是简单，不用配置啥复杂的东西
 缺点，就是主题很少
@@ -2185,9 +2185,9 @@ https://cloudflare.com/ 打开网站，点击注册
     </item>
     <item>
       <title>ucloud 台北测评</title>
-      <link>https://blog.qklg.net/post/20230606/</link>
+      <link>https://qklgblog.pages.dev/post/20230606/</link>
       <pubDate>Tue, 06 Jun 2023 13:47:05 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20230606/</guid>
+      <guid>https://qklgblog.pages.dev/post/20230606/</guid>
       <description>ucloud台北，刚买的，来品一品
 上车地址,没aff
 https://www.ucloud.cn/site/active/kuaijiesale.html
@@ -2222,9 +2222,9 @@ Yet-Another-Bench-Script v2023-04-23 https://github.com/masonr/yet-another-bench
     </item>
     <item>
       <title>google.com跳转解决办法</title>
-      <link>https://blog.qklg.net/post/20230528/</link>
+      <link>https://qklgblog.pages.dev/post/20230528/</link>
       <pubDate>Sun, 28 May 2023 13:49:37 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20230528/</guid>
+      <guid>https://qklgblog.pages.dev/post/20230528/</guid>
       <description>前言:给新手看的，老手应该都知道，别喷我
 由于ip被邻居定位到内地，导致https://www.google.com/访问时跳转https://www.google.com.hk/并且强制开启安全搜索的几种解决办法
 1ncr下
@@ -2248,9 +2248,9 @@ https://support.google.com/websearch/workflow/9308722</description>
     </item>
     <item>
       <title>分享个可以用chatgpt翻译整本电子书的Calibre 插件</title>
-      <link>https://blog.qklg.net/post/20230526/</link>
+      <link>https://qklgblog.pages.dev/post/20230526/</link>
       <pubDate>Fri, 26 May 2023 13:50:52 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20230526/</guid>
+      <guid>https://qklgblog.pages.dev/post/20230526/</guid>
       <description>隔壁小众软件看到的
 怎么玩隔壁都有
 https://www.appinn.com/ebook-translator/
@@ -2264,9 +2264,9 @@ https://github.com/yihong0618/bilingual_book_maker
     </item>
     <item>
       <title>分享个好玩的-curl看天气</title>
-      <link>https://blog.qklg.net/post/20230311/</link>
+      <link>https://qklgblog.pages.dev/post/20230311/</link>
       <pubDate>Sat, 11 Mar 2023 13:52:19 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20230311/</guid>
+      <guid>https://qklgblog.pages.dev/post/20230311/</guid>
       <description>github链接
 https://github.com/schachmat/wego
 安装curl
@@ -2278,9 +2278,9 @@ curl wttr.in/hkg </description>
     </item>
     <item>
       <title>google one各地流媒体检测</title>
-      <link>https://blog.qklg.net/post/20230205/</link>
+      <link>https://qklgblog.pages.dev/post/20230205/</link>
       <pubDate>Sun, 05 Feb 2023 14:04:07 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20230205/</guid>
+      <guid>https://qklgblog.pages.dev/post/20230205/</guid>
       <description>前支持地区:奥地利 澳大利亚 比利时 加拿大 丹麦 芬兰 法国 德国 冰岛 爱尔兰 意大利 日本 墨西哥 荷兰 挪威 韩国 西班牙 瑞典 瑞士 台湾 英国 美国
 试了下以下几个地方
 台湾
@@ -2290,9 +2290,9 @@ curl wttr.in/hkg </description>
     </item>
     <item>
       <title>常用的一些在线ping检测的网站</title>
-      <link>https://blog.qklg.net/post/20230204/</link>
+      <link>https://qklgblog.pages.dev/post/20230204/</link>
       <pubDate>Sat, 04 Feb 2023 13:53:32 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20230204/</guid>
+      <guid>https://qklgblog.pages.dev/post/20230204/</guid>
       <description>https://ping.pe/
 https://ping.sx/ping
 https://ping.cn/ping
@@ -2305,9 +2305,9 @@ https://boce.aliyun.com/detect/ping</description>
     </item>
     <item>
       <title>瓦工软银</title>
-      <link>https://blog.qklg.net/post/wa-gong-ruan-yin/</link>
+      <link>https://qklgblog.pages.dev/post/wa-gong-ruan-yin/</link>
       <pubDate>Thu, 02 Feb 2023 13:55:38 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/wa-gong-ruan-yin/</guid>
+      <guid>https://qklgblog.pages.dev/post/wa-gong-ruan-yin/</guid>
       <description>瓦工日本大阪软银，一起来品一品
 流媒体
 yabs
@@ -2325,9 +2325,9 @@ cn2
     </item>
     <item>
       <title>瓦工香港cmi</title>
-      <link>https://blog.qklg.net/post/wa-gong-xiang-gang-cmi/</link>
+      <link>https://qklgblog.pages.dev/post/wa-gong-xiang-gang-cmi/</link>
       <pubDate>Thu, 02 Feb 2023 13:54:48 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/wa-gong-xiang-gang-cmi/</guid>
+      <guid>https://qklgblog.pages.dev/post/wa-gong-xiang-gang-cmi/</guid>
       <description>瓦工香港cmi，一起来品一品
 流媒体
 yabs
@@ -2345,9 +2345,9 @@ cn2
     </item>
     <item>
       <title>瓦工迪拜</title>
-      <link>https://blog.qklg.net/post/wa-gong-di-bai/</link>
+      <link>https://qklgblog.pages.dev/post/wa-gong-di-bai/</link>
       <pubDate>Thu, 02 Feb 2023 02:02:23 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/wa-gong-di-bai/</guid>
+      <guid>https://qklgblog.pages.dev/post/wa-gong-di-bai/</guid>
       <description>瓦工迪拜一起品一品
 流媒体
 yabs
@@ -2366,9 +2366,9 @@ cn2
     </item>
     <item>
       <title>瓦工悉尼9929</title>
-      <link>https://blog.qklg.net/post/wa-gong-xi-ni-9929/</link>
+      <link>https://qklgblog.pages.dev/post/wa-gong-xi-ni-9929/</link>
       <pubDate>Thu, 02 Feb 2023 01:53:17 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/wa-gong-xi-ni-9929/</guid>
+      <guid>https://qklgblog.pages.dev/post/wa-gong-xi-ni-9929/</guid>
       <description>瓦工悉尼一起品一品
 ping.pe延迟
 流媒体
@@ -2388,9 +2388,9 @@ cn2
     </item>
     <item>
       <title>分享几个多出口ip查询网站</title>
-      <link>https://blog.qklg.net/post/20230201/</link>
+      <link>https://qklgblog.pages.dev/post/20230201/</link>
       <pubDate>Wed, 01 Feb 2023 13:56:23 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20230201/</guid>
+      <guid>https://qklgblog.pages.dev/post/20230201/</guid>
       <description>https://ip.orz.tools/
 http://revproxy.ustc.edu.cn:8000/
 https://ip.skk.moe/multi
@@ -2398,9 +2398,9 @@ https://ip.skk.moe/multi
     </item>
     <item>
       <title>垃圾佬的年末持有小鸡总结</title>
-      <link>https://blog.qklg.net/post/20230113/</link>
+      <link>https://qklgblog.pages.dev/post/20230113/</link>
       <pubDate>Fri, 13 Jan 2023 13:58:59 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/20230113/</guid>
+      <guid>https://qklgblog.pages.dev/post/20230113/</guid>
       <description>跟风，年末持有小鸡总结
 甲骨文首尔amd，600多天的祖传龟壳
 cc8.79
@@ -2425,9 +2425,9 @@ rn圣何塞和vir日本主力富强，剩下基本上吃灰状态
     </item>
     <item>
       <title>About</title>
-      <link>https://blog.qklg.net/about/</link>
+      <link>https://qklgblog.pages.dev/about/</link>
       <pubDate>Fri, 25 Jan 2019 19:09:48 +0000</pubDate>
-      <guid>https://blog.qklg.net/about/</guid>
+      <guid>https://qklgblog.pages.dev/about/</guid>
       <description>qklg.net by andylee 📧 邮箱: qklg@qklg.net
 🌐 探针: https://kkb.lol/
 本站托管于Cloudflare Pages https://pages.cloudflare.com/
