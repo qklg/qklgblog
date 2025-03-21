@@ -12,8 +12,307 @@
     <generator>Hugo -- 0.123.8</generator>
     <language>en</language>
     <copyright>qklg Hosted on Cloudflare Pages </copyright>
-    <lastBuildDate>Mon, 06 Jan 2025 00:35:18 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 10 Mar 2025 15:01:55 +0000</lastBuildDate>
     <atom:link href="https://blog.qklg.net/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>用api切换cf的证书</title>
+      <link>https://blog.qklg.net/post/20250310/</link>
+      <pubDate>Mon, 10 Mar 2025 15:01:55 +0000</pubDate>
+      <guid>https://blog.qklg.net/post/20250310/</guid>
+      <description>1 前言 之前写过一篇 用api把cloudflare的证书换成自家一年的
+https://qklg.net/post/20230628/
+cf的一年的digicert已经没有了， 现在多了一种三个月的ssl.com的，
+cf官方说兼容性极强，原文如下
+SSL.com 兼容性高度强，被超过 99.9% 的浏览器、平板电脑和移动设备所接受。 SSL.com 证书与 Certum ↗交叉签名，并且对中间体↗进行交叉签名的 CA来自 2004 年。 https://developers.cloudflare.com/ssl/reference/certificate-authorities/
+https://developers.cloudflare.com/api/resources/acm/subresources/total_tls/methods/get/
+2 切换办法 三种证书都可以切换，用小鸡上curl就可以了
+切换成ssl.com的 curl -sX PATCH &amp;#34;https://api.cloudflare.com/client/v4/zones/你的域名区域id/ssl/universal/settings&amp;#34; -H &amp;#34;X-Auth-Email:你的邮箱&amp;#34; -H &amp;#34;X-Auth-Key:你的global api key&amp;#34; -H &amp;#34;Content-Type: application/json&amp;#34; --data &amp;#34;{\&amp;#34;certificate_authority\&amp;#34;:\&amp;#34;ssl_com\&amp;#34;}&amp;#34; 切换成谷歌的 curl -sX PATCH &amp;#34;https://api.cloudflare.com/client/v4/zones/你的域名区域id/ssl/universal/settings&amp;#34; -H &amp;#34;X-Auth-Email:你的邮箱&amp;#34; -H &amp;#34;X-Auth-Key:你的global api key&amp;#34; -H &amp;#34;Content-Type: application/json&amp;#34; --data &amp;#34;{\&amp;#34;certificate_authority\&amp;#34;:\&amp;#34;google\&amp;#34;}&amp;#34; 切换成let&amp;rsquo;s的 curl -sX PATCH &amp;#34;https://api.cloudflare.com/client/v4/zones/你的域名区域id/ssl/universal/settings&amp;#34; -H &amp;#34;X-Auth-Email:你的邮箱&amp;#34; -H &amp;#34;X-Auth-Key:你的global api key&amp;#34; -H &amp;#34;Content-Type: application/json&amp;#34; --data &amp;#34;{\&amp;#34;certificate_authority\&amp;#34;:\&amp;#34;lets_encrypt\&amp;#34;}&amp;#34; 3 参数替换 参数的话，三个需要替换下</description>
+    </item>
+    <item>
+      <title>NodeSeek-PicGo图床上传油猴脚本</title>
+      <link>https://blog.qklg.net/post/20250309/</link>
+      <pubDate>Sun, 09 Mar 2025 02:07:11 +0000</pubDate>
+      <guid>https://blog.qklg.net/post/20250309/</guid>
+      <description>1 前言 先感谢 @哆啦B梦 大佬
+用的这个大佬的油猴脚本，拿ai稍微改了下
+https://www.nodeseek.com/post-250494-1
+2 安装地址 https://greasyfork.org/zh-CN/scripts/529221-nodeseek-picgo%E5%9B%BE%E5%BA%8A
+3 使用办法 后台记得打开picgo，直接粘贴图片就ok了
+4 原理 用的picgo的server，直接用picgo上传到图床
+所以使用的时候，要打开picgo的server，
+默认应该是开启的，没开的话picgo设置-设置server-点击设置，打开就ok了
+默认的端口是36677，我的脚本里默认也是36677
+5 优缺点 优点就是用的picgo，只要picgo支持的图床，理论上应该都支持，
+缺点就是你得开着picgo，手机上的话你也没法用
+6 具体效果的话 我试了imgur和smms这两个公共图床都是ok的，其他的等mjj反馈吧
+兰空和easyimage，mjj自用的比较多的两个等会等评论区小伙伴反馈
+7 其他 直接用油猴脚本传的话可以看下这些大佬的帖子
+https://www.nodeseek.com/post-74493-1
+https://www.nodeseek.com/post-68459-1
+其他平台上传图片到图床的话可以看下这个大佬的帖子
+【整理】归纳一下方便上传图片的脚本和APP
+https://www.nodeseek.com/post-68951-1</description>
+    </item>
+    <item>
+      <title>2025年2月21日 上海一日游</title>
+      <link>https://blog.qklg.net/post/20250302/</link>
+      <pubDate>Sun, 02 Mar 2025 15:48:20 +0000</pubDate>
+      <guid>https://blog.qklg.net/post/20250302/</guid>
+      <description>2月21日 上海一日游
+地铁+高铁
+人都快坐麻了
+1 二次元店 南京路上的百联zx
+卖手办的
+当天是小孤独的生日，店里的立牌，
+当时还有人cos那个乐队的，我没拍
+隔壁小孩姐
+元气少女缘结神，这个挺冷门的
+团长
+星野爱
+mujica的涂鸦，不过番剧都烂完了
+洛天依
+卖轻小说和漫画的，但是都好贵啊
+其实还去了趟静安大悦城，全是二游的，也没啥好发的了
+2 电影院 回来的路上看了场电影，你的颜色，山田尚子的，但是剧情不行，歌还行
+而且国内版有删减，少了五分钟
+歌词里面的阿门都删了
+不过26号，这个bd就出来了，重新又刷了一遍
+3 苹果店 vision pro
+这东西好重啊，人太多了， 我没戴
+还测了下苹果店里牛逼的上海cn2，上次有哥们问到苹果自家服务器走的是内网还是公网
+走的是公网，这东西就是个上海cn2，到cf只要40ms
+隔壁的华为旗舰店•上海南京东路
+三星的s25 ultra，摸了下也就那样子
+4 外滩 东方明珠，陆家嘴三件套
+外滩万国建筑群
+海关大楼，就是那个钟楼
+和平饭店
+外滩的一堆银行
+有兴趣的可以查下，都挺有年代的了</description>
+    </item>
+    <item>
+      <title>江苏移动换华为hn8546x6n 光猫</title>
+      <link>https://blog.qklg.net/post/20250226/</link>
+      <pubDate>Wed, 26 Feb 2025 18:26:14 +0000</pubDate>
+      <guid>https://blog.qklg.net/post/20250226/</guid>
+      <description>1 前言 华为HN8546X6N，移动的光猫
+看中的就是它的2.5G口子，而且只要60包邮，闲鱼搞了台
+出厂日期是24年6月，我那台上海的，卖家寄过来一天就到了
+记录下怎么换的
+2 恢复出厂设置 知乎上看到的 https://zhuanlan.zhihu.com/p/6800945855
+原文如下
+1、把光猫上的光纤线拔了，网线都拔了，只插电源线，保持开机状态 2、用取卡针/牙签，在光猫开机状态下，直接插入并顶住，光猫侧边的复位按钮 3、一直插着，光猫的灯会周期性的全灭、全亮 4、直到灯不亮了，再保持插3秒，接着松开取卡针/牙签 5、重置光猫完成，真正彻底恢复到出厂设置，此时默认超级密码也可用了，设备也需重新进行注册。 超级管理员密码的话
+知乎上原文给的那个错的，他首字母大写了
+我去恩山上找到了
+华为HN8546x6n使用心得
+https://www.right.com.cn/forum/forum.php?mod=viewthread&amp;amp;tid=8390400&amp;amp;fromuid=588949
+(出处: 恩山无线论坛)
+用户名：CMCCAdmin 密码：aDm8H%MdA 3 拨号 B站上找到的https://www.bilibili.com/video/BV1kw4m1k7n1
+江苏的不用改sn，我还为了找sn码，找旧光猫，翻了半天，要改的他视频里有教程的
+其实可以看我以前的教程的https://qklg.net/post/20230926/
+先用password登录
+江苏的话password的话就是手机后10位
+到40%出现已获得管理IP,正在连接省级数字家庭管理平台，就可以点右上角的返回登陆页面
+用默认的超级管理员密码登录就ok了
+tr069记得删掉，iptv什么的话看你自己了，我是不用的
+拨号界面如图，vlanid记住，旧光猫上有的
+用户名的话手机号，密码的话不行打10086重置下，六位数字
+不改光猫sn码的话会弹验证的
+打开管理 -设备管理-关闭rms跳转就ok了
+4 ipv6防火墙关闭 安全-IPv6防火墙-使能IPv6防火墙控制转发报文 关掉ipv6防火墙
+关掉我的软路由上ipv6就可以了
+5 效果 测速能突破1000M了，其他也没啥
+我家里其他2.5G设备可以看下我的这个 https://qklg.net/post/20241126/
+都是穷哥们用的机子，交换机的话可以买水星最便宜的2.5G的，那玩意带网管功能，不要买我这个公版了</description>
+    </item>
+    <item>
+      <title>claw looking glass汇总</title>
+      <link>https://blog.qklg.net/post/20250220/</link>
+      <pubDate>Thu, 20 Feb 2025 19:14:58 +0000</pubDate>
+      <guid>https://blog.qklg.net/post/20250220/</guid>
+      <description>中国优化 香港 https://lg.cn-hongkong.claw.cloud/
+Server Location: Hong Kong
+Network Type: BGP (China Optimized)
+IPv4 Address: 47.238.150.244
+IPv6 Address: 240b:4001:278:8401:ffff::
+东京 https://lg.ap-northeast-1.claw.cloud/
+Server Location: Tokyo, Japan
+Network Type: BGP (China Optimized)
+IPv4 Address: 47.74.34.123
+IPv6 Address: 240b:4009:25a:1800:ffff::
+新加坡 https://lg.ap-southeast-1.claw.cloud/
+Server Location: Singapore
+Network Type: BGP (China Optimized)
+IPv4 Address: 8.219.195.163
+IPv6 Address: 240b:4000:93:de00:ffff::
+非中国优化 香港 https://lg.cn-hongkong-intl.claw.cloud/
+Server Location: Hong Kong
+Network Type: BGP
+IPv4 Address: 47.79.18.247
+IPv6 Address: 240b:4001:278:8402::ffff
+东京 https://lg.ap-northeast-1-intl.claw.cloud/
+Server Location: Tokyo, Japan</description>
+    </item>
+    <item>
+      <title>马斯克xai，冲5刀送150刀</title>
+      <link>https://blog.qklg.net/post/20250218/</link>
+      <pubDate>Tue, 18 Feb 2025 00:45:08 +0000</pubDate>
+      <guid>https://blog.qklg.net/post/20250218/</guid>
+      <description>1 注册 https://accounts.x.ai/sign-in
+我选的谷歌登录
+2 绑银行卡 https://console.x.ai/
+billing/payment 这边添加地址和银行卡
+中国的银行卡可以绑定的我选的招行的visa，记得设置下限额，不然当心卖房
+我选的是日本区的，机子挂的绿云的日本
+记得别选欧洲的，不然没法申请额度
+地区如下
+- 奥地利, 比利时, 保加利亚, 克罗地亚, 塞浦路斯, 捷克共和国, 丹麦, 爱沙尼亚, 芬兰, 法国, 德国, 希腊, 匈牙利, 爱尔兰, 意大利, 拉脱维亚, 立陶宛, 卢森堡, 马耳他, 荷兰, 波兰, 葡萄牙, 罗马尼亚, 斯洛伐克, 斯洛文尼亚, 西班牙, 瑞典, 冰岛, 列支敦士登, 挪威, 英国 3 冲5刀 billing-credits-Prepaid credits，点Purchase credits冲5刀进去
+4 搞150刀额度 https://docs.x.ai/docs/data-sharing#how-it-woks
+官方文档，点击Enroll in data sharing加入，完事了</description>
+    </item>
+    <item>
+      <title>cf的ddos报告分享</title>
+      <link>https://blog.qklg.net/post/20250207/</link>
+      <pubDate>Fri, 07 Feb 2025 15:03:57 +0000</pubDate>
+      <guid>https://blog.qklg.net/post/20250207/</guid>
+      <description>前言
+cloudflare的每个季度都有个ddos报告，原文如下
+https://blog.cloudflare.com/zh-cn/ddos-threat-report-for-2024-q4/
+给mjj分享几个好玩的点
+1 cf的网络规模大的吓人 cf最近五年，20年的规模才35Tbps，现在	321 Tbps，近 20% 的全球网站
+2 https流量现在是大头了 cf现在接近 94% 的合法流量是https。只有 6% 是明文 HTTP（未加密)
+3 最大规模的ddos 上个月 5.6 Tbps，还是个接入Cloudflare Magic Transit的东亚isp
+来源是1.3 万个 IoT 设备，就是家里的冰箱洗衣机，其实在打别人，哈哈
+4 ddos来源 ddos来源全是mjj喜欢用的
+第一是hz，第二do，第三ovh
+前10这几个全是老面孔，除了上面这三位，还有mjj最喜欢的 良心云，龟壳 ，vultr，谷歌微软
+最大的来源国家居然是印尼，也不知道为啥是
+5 cn依然是受到ddos最多攻击的国家 以前听大佬说回国带宽都被ddos塞满了，看了cf的报告我觉得真信了</description>
+    </item>
+    <item>
+      <title>自用脚本备份</title>
+      <link>https://blog.qklg.net/post/20250205/</link>
+      <pubDate>Wed, 05 Feb 2025 17:14:35 +0000</pubDate>
+      <guid>https://blog.qklg.net/post/20250205/</guid>
+      <description>更新
+apt update &amp;amp;&amp;amp; apt upgrade -y 安装curl wget sudo unzip
+apt install curl wget sudo unzip -y 2G swarp
+sudo bash -c &amp;#34;fallocate -l 2G /swapfile &amp;amp;&amp;amp; chmod 600 /swapfile &amp;amp;&amp;amp; mkswap /swapfile &amp;amp;&amp;amp; swapon /swapfile &amp;amp;&amp;amp; echo &amp;#39;/swapfile none swap sw 0 0&amp;#39; &amp;gt;&amp;gt; /etc/fstab&amp;#34; bbr+fq
+echo &amp;#34;net.core.default_qdisc=fq&amp;#34; &amp;gt;&amp;gt; /etc/sysctl.conf echo &amp;#34;net.ipv4.tcp_congestion_control=bbr&amp;#34; &amp;gt;&amp;gt; /etc/sysctl.conf sysctl -p sysctl net.ipv4.tcp_available_congestion_control lsmod | grep bbr ipv4优先
+sed -i &amp;#39;s/#precedence ::ffff:0:0\/96 100/precedence ::ffff:0:0\/96 100/&amp;#39; /etc/gai.</description>
+    </item>
+    <item>
+      <title>拿vps跑deepseek r1</title>
+      <link>https://blog.qklg.net/post/20250129/</link>
+      <pubDate>Wed, 29 Jan 2025 17:27:13 +0000</pubDate>
+      <guid>https://blog.qklg.net/post/20250129/</guid>
+      <description>前言 前排提示:ollama很吃性能的，别拿你的生产力的小鸡跑
+建议内存大点的鸡上跑
+1 docker安装openwebui+ollama https://github.com/open-webui/open-webui
+For CPU Only: If you&amp;rsquo;re not using a GPU, use this command instead:
+docker run -d -p 3000:8080 -v ollama:/root/.ollama -v open-webui:/app/backend/data --name open-webui --restart always ghcr.io/open-webui/open-webui:ollama 2 访问及设置 ① 访问 ip:3000端口打开即可，有条件的话nginx反代下
+② 设置用户名密码邮箱 ##③ 切换语言
+点击右上角头像下面的settings-general，选择中文，save保存
+④ 添加模型 左上角选择一个模型的话可以输入你想要的模型，
+我们选择7b的，输入 deepseek-r1:7b,从ollama拉取
+下载deepseek的7b模型，小鸡的性能跑个7b还是可以的
+如果没法跑的话，可以跑1.5b的 deepseek-r1:1.5b
+其他的模型的话这边
+https://ollama.com/library/deepseek-r1
+3 闲言碎语 本人用签名探针上的家里云。配置为5600+32G内存跑的
+占用的话大概cpu在50%左右，内存吃到10G
+我的cpu的话跑分gb5单核1675多，多核8934，你可以参考下自己跑着玩
+7.5b的效果其实不怎么样，你们跑了就知道了
+其实还不如自己直接调用api来的合适
+跑api的话可以参考我这个帖子
+https://qklg.net/post/20250127/
+有条件上显卡跑，而且显存至少16G的，这种纯cpu跑的是玩具
+隔壁老哥拿12400跑72b的https://linux.do/t/topic/397701/20
+半小时才能回答一次，隔壁老哥cpu当一回时代先锋</description>
+    </item>
+    <item>
+      <title>用nextchat调用deepseek的api</title>
+      <link>https://blog.qklg.net/post/20250127/</link>
+      <pubDate>Mon, 27 Jan 2025 13:57:01 +0000</pubDate>
+      <guid>https://blog.qklg.net/post/20250127/</guid>
+      <description>1 docker搭建 compose文件如下
+OPENAI_API_KEY的话替换成你deepseek的api key，
+DeepSeek API 使用与 OpenAI 兼容的 API 格式
+deepseek的api生成地址 https://platform.deepseek.com/api_keys
+参考deepseek的文档 https://api-docs.deepseek.com/zh-cn/
+code访问密码，面板最好搞个密码
+services: chatgpt-next-web: image: yidadaa/chatgpt-next-web container_name: chatgpt-next-web ports: - &amp;#34;127.0.0.1:3000:3000&amp;#34; environment: - OPENAI_API_KEY=sk-xxxxxx - CODE=访问密码 - BASE_URL=https://api.deepseek.com - CUSTOM_MODELS=deepseek-chat - DEFAULT_MODEL=deepseek-chat restart: unless-stopped 搭建完成之后，输入ip:3000即可访问你的面板
+建议有条件的话用caddy或者nginx反代下搞下https
+使用时记得输入下面板密码和模型切换成deepseek
+2 本地客户端调用 参考 https://github.com/ChatGPTNextWeb/NextChat/issues/6037
+① 下载next chat https://github.com/ChatGPTNextWeb/NextChat/releases
+如果是win的话直接下载 exe安装即可
+② 调用 如图所示
+模型服务商 OpenAI不变
+DeepSeek API 使用与 OpenAI 兼容的 API 格式
+接口地址填写 https://api.deepseek.com
+api key填写deepseek的api，sk开头的，生成地址 https://platform.deepseek.com/api_keys
+自定义模型名称deepseek-chat</description>
+    </item>
+    <item>
+      <title>哪吒探针V1启用google登录</title>
+      <link>https://blog.qklg.net/post/20250126/</link>
+      <pubDate>Sun, 26 Jan 2025 18:16:50 +0000</pubDate>
+      <guid>https://blog.qklg.net/post/20250126/</guid>
+      <description>1 创建google项目 ① 打开 https://console.cloud.google.com/apis/dashboard
+② 点击新建项目创建项目
+③ 项目名称随便取个，叫nezha完事了
+④ 点击创建，完成创建
+2 配置OAuth ① 点击左侧的API和服务&amp;quot; → &amp;ldquo;OAuth权限请求页面&amp;rdquo;
+打开链接 https://console.cloud.google.com/apis/credentials/ 直达
+② 用户类型选择外部，点击创建
+③ 应用名称填写随便填写一个
+用户支持电子邮件，选择你自己的gmail邮箱
+应用徽标，选择一个图片传上去，
+应用网域，填写你探针的地址，列如https://nezha.example.com
+已获授权的网域填写你的哪吒探针的顶级域名 example.com
+开发者信息填写你的gmail邮箱
+保存并继续
+④ 范围的话，点添加或移除范围，选择前两个就够了，保存并继续
+⑤ 测试用户
+点击添加add users，把自己的gmail邮箱输入就ok了，保存并继续
+⑥ 显示摘要，就完成了
+3 配置OAuth凭据 ① 左侧的&amp;quot;API和服务-凭据
+点击链接直达 https://console.cloud.google.com/apis/credentials
+创建凭据-oatuth客户端id
+② 选择应用类型（Web应用)
+③ 设置已获授权的 JavaScript 来源 填写你的探针域名 https://nezha.example.com
+已获授权的重定向 URI，填写哪吒的callback地址 https://nezha.example.com/api/v1/oauth2/callback
+点击创建，获得
+clientid和clientsecret
+4 哪吒面板配置 ① 打开/opt/nezha/dashboard/data/config.yaml下加入如下
+​ clientid和clientsecret替换上面生成的，
+oauth2: Google: clientid: &amp;#34;your id&amp;#34; clientsecret: &amp;#34;your secret&amp;#34; endpoint: authurl: &amp;#34;https://accounts.</description>
+    </item>
+    <item>
+      <title>claw 日本dns修改</title>
+      <link>https://blog.qklg.net/post/20250121/</link>
+      <pubDate>Tue, 21 Jan 2025 17:25:35 +0000</pubDate>
+      <guid>https://blog.qklg.net/post/20250121/</guid>
+      <description>我之前香港也遇到了
+ping google.com延迟五六十，这次日本也遇到了
+把下面文件夹下dns 8888改成1.0.0.1就好了
+/etc/resolv.conf
+/etc/network/interfaces</description>
+    </item>
+    <item>
+      <title>发现了个好玩的</title>
+      <link>https://blog.qklg.net/post/20250120/</link>
+      <pubDate>Mon, 20 Jan 2025 17:22:12 +0000</pubDate>
+      <guid>https://blog.qklg.net/post/20250120/</guid>
+      <description>刚想买个腾讯云200M，拉我的claw 7刀玩玩
+于是我测了claw东京到腾讯云上海的回程
+发现了个好玩的，软银在国内的pop
+北京延迟5ms，这东西应该是软银在国内pop，应该是在墙外的
+以前听说过ntt在上海有pop，但是没见过
+这次真见到了，软银在北京的pop了
+https://www.itdog.cn/ping/softbank221111202062.bbtec.net</description>
+    </item>
     <item>
       <title>分享下全球海缆地图</title>
       <link>https://blog.qklg.net/post/20250106/</link>
@@ -284,28 +583,19 @@ https://iknowwhatyoudownload.com/
 3 ip以前有哪些网站
 https://site.ip138.com/
 https://tools.ipip.net/ipdomain.php
+https://ipchaxun.com/
 4 查询网站长啥样
 https://web.archive.org/
 https://archive.md/
 5 查询网站以前解析的ip
-https://viewdns.info/iphistory/?domain</description>
+https://viewdns.info/iphistory/?domain
+https://ipchaxun.com/</description>
     </item>
     <item>
       <title>哪吒探针关闭webssh  ＆ openwrt版的网速设置</title>
       <link>https://blog.qklg.net/post/20241028/</link>
       <pubDate>Mon, 28 Oct 2024 23:24:36 +0000</pubDate>
       <guid>https://blog.qklg.net/post/20241028/</guid>
-      <description>1 关闭webssh 安装agent时一键命令后加入
---disable-command-execute 参考https://www.nodeseek.com/post-31986-1
-2 opnewrt版哪吒网速设置 openwrt nezha ipk 下载地址 https://github.com/Erope/openwrt_nezha/releases/
-ssh输入如下，我默认是eth0，空格选择，回车确认
-/usr/bin/nezha-agent edit 参考 https://www.nodeseek.com/post-28904-1</description>
-    </item>
-    <item>
-      <title>哪吒探针关闭webssh  ＆ openwrt版的网速设置</title>
-      <link>https://blog.qklg.net/post/202410288/</link>
-      <pubDate>Mon, 28 Oct 2024 23:24:36 +0000</pubDate>
-      <guid>https://blog.qklg.net/post/202410288/</guid>
       <description>1 关闭webssh 安装agent时一键命令后加入
 --disable-command-execute 参考https://www.nodeseek.com/post-31986-1
 2 opnewrt版哪吒网速设置 openwrt nezha ipk 下载地址 https://github.com/Erope/openwrt_nezha/releases/
@@ -2138,10 +2428,11 @@ rn圣何塞和vir日本主力富强，剩下基本上吃灰状态
       <link>https://blog.qklg.net/about/</link>
       <pubDate>Fri, 25 Jan 2019 19:09:48 +0000</pubDate>
       <guid>https://blog.qklg.net/about/</guid>
-      <description>qklg.net by andylee
-📧 邮箱: qklg@qklg.net
-🌐 探针: https://status.qklg.net/
-本站托管于Cloudflare Pages https://pages.cloudflare.com/</description>
+      <description>qklg.net by andylee 📧 邮箱: qklg@qklg.net
+🌐 探针: https://kkb.lol/
+本站托管于Cloudflare Pages https://pages.cloudflare.com/
+满纸荒唐言，一把辛酸泪。
+都云作者痴，谁解其中味。</description>
     </item>
   </channel>
 </rss>
