@@ -1,3 +1,0 @@
-User-agent: *
-Disallow:
-Sitemap: https://qklgblog.pages.dev/sitemap.xml

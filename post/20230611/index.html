@@ -1,169 +1,137 @@
-<!doctype html><html lang=en dir=auto><head><meta charset=utf-8><meta http-equiv=X-UA-Compatible content="IE=edge"><meta name=viewport content="width=device-width,initial-scale=1,shrink-to-fit=no"><meta name=robots content="index, follow"><title>gridea部署静态博客 | qklg</title>
-<meta name=keywords content><meta name=description content="gridea是一个个静态博客的客户端
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <meta name="description" content="gridea是一个个静态博客的客户端
 相对于hugo和hexo啥的，最大的好处就是简单，不用配置啥复杂的东西
 缺点，就是主题很少
 本文用github仓库部署，可以同时直接用仓库部署到github pages，cf pages，vercel，netlify，国内访问推荐vercel
-由于这几个默认域名被墙，绑个自己的域名
-一 配置github
-①没号的先注册一个
-https://github.com/
-点击右上角singup注册一个
-②创建github仓库
-https://github.com/new
-创建个username.github.io，username就是你用户名，其实也可以不这样子，仓库名随便取，只是没法用github pages而已，不影响部署到cf pages和vercel的
-③申请token
-https://github.com/settings/tokens/new
-token时间自己爱要多久，反正我直接永久，repo勾上，token只显示一次，记得保存下
-二 配置gridea
-①下载
-https://github.com/getgridea/gridea/releases
-自己根据客户端下载
-支持mac，win，linux三大客户端
-②配置
-点击左边的远程，界面长这样子
-选择github pages，
-域名:你要绑的域名
-仓库名称:刚刚建的github的仓库的名字:username.github.io这样子
-分支，现在一般默认是main，自己看下你github仓库
-仓库用户名,你github的user name
-邮箱，你github的邮箱
-令牌，刚刚第三步申请的token
-cname这个不用github page啥的话不用管，要用的话填你要绑的域名
-然后保存，再点下检测远程连接的，显示成功的话就ok了
-③备份
-点击最左边这个按钮，点进去，有个站点源文件路径，那就是gridea的配置文件了，要备份的话直接打包上传到网盘，或者直接整个坚果云或者onedrive啥的同步直接
-④写文章
-支持markdown，点击左边的文章，自己写
-⑤点击左下角同步，同步到你github
-如果没法同步的话，设置里又http代理设置，自己填写
-三 部署到各家平台
-1github pages
-找到你username.github.io的仓库，点击setting，选择pages启用，可以绑定自己的域名，不展开讲了，自己谷歌搜下
-2部署到cf pages（推荐）
-①注册cf账户
-https://cloudflare.com/ 打开网站，点击注册
-②创建pages
-点击workes and pages
-创建应用程序，选择pages
-连接到git
-连接到github账户，选择你刚刚创建的那个github仓库
-然后点开始设置
-保存并部署
-设置自定义域，默认的pages.dev被墙了，输入你在gridea里填的域名
-然后点激活域再等会就ok了
-浏览器打开你的域名就可以访问了
-3部署到vercel
-①https://vercel.com/点击右上角singup，再点击用github登录"><meta name=author content><link rel=canonical href=https://qklgblog.pages.dev/post/20230611/><meta name=google-site-verification content="XYZabc"><meta name=yandex-verification content="XYZabc"><meta name=msvalidate.01 content="XYZabc"><link crossorigin=anonymous href=/assets/css/stylesheet.fc220c15db4aef0318bbf30adc45d33d4d7c88deff3238b23eb255afdc472ca6.css integrity="sha256-/CIMFdtK7wMYu/MK3EXTPU18iN7/MjiyPrJVr9xHLKY=" rel="preload stylesheet" as=style><link rel=icon href=https://qklgblog.pages.dev/%3Clink%20/%20abs%20url%3E><link rel=icon type=image/png sizes=16x16 href=https://qklgblog.pages.dev/%3Clink%20/%20abs%20url%3E><link rel=icon type=image/png sizes=32x32 href=https://qklgblog.pages.dev/%3Clink%20/%20abs%20url%3E><link rel=apple-touch-icon href=https://qklgblog.pages.dev/%3Clink%20/%20abs%20url%3E><link rel=mask-icon href=https://qklgblog.pages.dev/%3Clink%20/%20abs%20url%3E><meta name=theme-color content="#2e2e33"><meta name=msapplication-TileColor content="#2e2e33"><link rel=alternate hreflang=en href=https://qklgblog.pages.dev/post/20230611/><noscript><style>#theme-toggle,.top-link{display:none}</style><style>@media(prefers-color-scheme:dark){:root{--theme:rgb(29, 30, 32);--entry:rgb(46, 46, 51);--primary:rgb(218, 218, 219);--secondary:rgb(155, 156, 157);--tertiary:rgb(65, 66, 68);--content:rgb(196, 196, 197);--code-block-bg:rgb(46, 46, 51);--code-bg:rgb(55, 56, 62);--border:rgb(51, 51, 51)}.list{background:var(--theme)}.list:not(.dark)::-webkit-scrollbar-track{background:0 0}.list:not(.dark)::-webkit-scrollbar-thumb{border-color:var(--theme)}}</style></noscript><meta property="og:title" content="gridea部署静态博客"><meta property="og:description" content="gridea是一个个静态博客的客户端
-相对于hugo和hexo啥的，最大的好处就是简单，不用配置啥复杂的东西
-缺点，就是主题很少
-本文用github仓库部署，可以同时直接用仓库部署到github pages，cf pages，vercel，netlify，国内访问推荐vercel
-由于这几个默认域名被墙，绑个自己的域名
-一 配置github
-①没号的先注册一个
-https://github.com/
-点击右上角singup注册一个
-②创建github仓库
-https://github.com/new
-创建个username.github.io，username就是你用户名，其实也可以不这样子，仓库名随便取，只是没法用github pages而已，不影响部署到cf pages和vercel的
-③申请token
-https://github.com/settings/tokens/new
-token时间自己爱要多久，反正我直接永久，repo勾上，token只显示一次，记得保存下
-二 配置gridea
-①下载
-https://github.com/getgridea/gridea/releases
-自己根据客户端下载
-支持mac，win，linux三大客户端
-②配置
-点击左边的远程，界面长这样子
-选择github pages，
-域名:你要绑的域名
-仓库名称:刚刚建的github的仓库的名字:username.github.io这样子
-分支，现在一般默认是main，自己看下你github仓库
-仓库用户名,你github的user name
-邮箱，你github的邮箱
-令牌，刚刚第三步申请的token
-cname这个不用github page啥的话不用管，要用的话填你要绑的域名
-然后保存，再点下检测远程连接的，显示成功的话就ok了
-③备份
-点击最左边这个按钮，点进去，有个站点源文件路径，那就是gridea的配置文件了，要备份的话直接打包上传到网盘，或者直接整个坚果云或者onedrive啥的同步直接
-④写文章
-支持markdown，点击左边的文章，自己写
-⑤点击左下角同步，同步到你github
-如果没法同步的话，设置里又http代理设置，自己填写
-三 部署到各家平台
-1github pages
-找到你username.github.io的仓库，点击setting，选择pages启用，可以绑定自己的域名，不展开讲了，自己谷歌搜下
-2部署到cf pages（推荐）
-①注册cf账户
-https://cloudflare.com/ 打开网站，点击注册
-②创建pages
-点击workes and pages
-创建应用程序，选择pages
-连接到git
-连接到github账户，选择你刚刚创建的那个github仓库
-然后点开始设置
-保存并部署
-设置自定义域，默认的pages.dev被墙了，输入你在gridea里填的域名
-然后点激活域再等会就ok了
-浏览器打开你的域名就可以访问了
-3部署到vercel
-①https://vercel.com/点击右上角singup，再点击用github登录"><meta property="og:type" content="article"><meta property="og:url" content="https://qklgblog.pages.dev/post/20230611/"><meta property="og:image" content="https://qklgblog.pages.dev/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E"><meta property="article:section" content="posts"><meta property="article:published_time" content="2023-06-11T13:42:51+00:00"><meta property="article:modified_time" content="2023-06-11T13:42:51+00:00"><meta property="og:site_name" content="qklg"><meta name=twitter:card content="summary_large_image"><meta name=twitter:image content="https://qklgblog.pages.dev/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E"><meta name=twitter:title content="gridea部署静态博客"><meta name=twitter:description content="gridea是一个个静态博客的客户端
-相对于hugo和hexo啥的，最大的好处就是简单，不用配置啥复杂的东西
-缺点，就是主题很少
-本文用github仓库部署，可以同时直接用仓库部署到github pages，cf pages，vercel，netlify，国内访问推荐vercel
-由于这几个默认域名被墙，绑个自己的域名
-一 配置github
-①没号的先注册一个
-https://github.com/
-点击右上角singup注册一个
-②创建github仓库
-https://github.com/new
-创建个username.github.io，username就是你用户名，其实也可以不这样子，仓库名随便取，只是没法用github pages而已，不影响部署到cf pages和vercel的
-③申请token
-https://github.com/settings/tokens/new
-token时间自己爱要多久，反正我直接永久，repo勾上，token只显示一次，记得保存下
-二 配置gridea
-①下载
-https://github.com/getgridea/gridea/releases
-自己根据客户端下载
-支持mac，win，linux三大客户端
-②配置
-点击左边的远程，界面长这样子
-选择github pages，
-域名:你要绑的域名
-仓库名称:刚刚建的github的仓库的名字:username.github.io这样子
-分支，现在一般默认是main，自己看下你github仓库
-仓库用户名,你github的user name
-邮箱，你github的邮箱
-令牌，刚刚第三步申请的token
-cname这个不用github page啥的话不用管，要用的话填你要绑的域名
-然后保存，再点下检测远程连接的，显示成功的话就ok了
-③备份
-点击最左边这个按钮，点进去，有个站点源文件路径，那就是gridea的配置文件了，要备份的话直接打包上传到网盘，或者直接整个坚果云或者onedrive啥的同步直接
-④写文章
-支持markdown，点击左边的文章，自己写
-⑤点击左下角同步，同步到你github
-如果没法同步的话，设置里又http代理设置，自己填写
-三 部署到各家平台
-1github pages
-找到你username.github.io的仓库，点击setting，选择pages启用，可以绑定自己的域名，不展开讲了，自己谷歌搜下
-2部署到cf pages（推荐）
-①注册cf账户
-https://cloudflare.com/ 打开网站，点击注册
-②创建pages
-点击workes and pages
-创建应用程序，选择pages
-连接到git
-连接到github账户，选择你刚刚创建的那个github仓库
-然后点开始设置
-保存并部署
-设置自定义域，默认的pages.dev被墙了，输入你在gridea里填的域名
-然后点激活域再等会就ok了
-浏览器打开你的域名就可以访问了
-3部署到vercel
-①https://vercel.com/点击右上角singup，再点击用github登录"><script type=application/ld+json>{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Posts","item":"https://qklgblog.pages.dev/posts/"},{"@type":"ListItem","position":2,"name":"gridea部署静态博客","item":"https://qklgblog.pages.dev/post/20230611/"}]}</script><script type=application/ld+json>{"@context":"https://schema.org","@type":"BlogPosting","headline":"gridea部署静态博客","name":"gridea部署静态博客","description":"gridea是一个个静态博客的客户端\n相对于hugo和hexo啥的，最大的好处就是简单，不用配置啥复杂的东西\n缺点，就是主题很少\n本文用github仓库部署，可以同时直接用仓库部署到github pages，cf pages，vercel，netlify，国内访问推荐vercel\n由于这几个默认域名被墙，绑个自己的域名\n一 配置github\n①没号的先注册一个\nhttps://github.com/\n点击右上角singup注册一个\n②创建github仓库\nhttps://github.com/new\n创建个username.github.io，username就是你用户名，其实也可以不这样子，仓库名随便取，只是没法用github pages而已，不影响部署到cf pages和vercel的\n③申请token\nhttps://github.com/settings/tokens/new\ntoken时间自己爱要多久，反正我直接永久，repo勾上，token只显示一次，记得保存下\n二 配置gridea\n①下载\nhttps://github.com/getgridea/gridea/releases\n自己根据客户端下载\n支持mac，win，linux三大客户端\n②配置\n点击左边的远程，界面长这样子\n选择github pages，\n域名:你要绑的域名\n仓库名称:刚刚建的github的仓库的名字:username.github.io这样子\n分支，现在一般默认是main，自己看下你github仓库\n仓库用户名,你github的user name\n邮箱，你github的邮箱\n令牌，刚刚第三步申请的token\ncname这个不用github page啥的话不用管，要用的话填你要绑的域名\n然后保存，再点下检测远程连接的，显示成功的话就ok了\n③备份\n点击最左边这个按钮，点进去，有个站点源文件路径，那就是gridea的配置文件了，要备份的话直接打包上传到网盘，或者直接整个坚果云或者onedrive啥的同步直接\n④写文章\n支持markdown，点击左边的文章，自己写\n⑤点击左下角同步，同步到你github\n如果没法同步的话，设置里又http代理设置，自己填写\n三 部署到各家平台\n1github pages\n找到你username.github.io的仓库，点击setting，选择pages启用，可以绑定自己的域名，不展开讲了，自己谷歌搜下\n2部署到cf pages（推荐）\n①注册cf账户\nhttps://cloudflare.com/ 打开网站，点击注册\n②创建pages\n点击workes and pages\n创建应用程序，选择pages\n连接到git\n连接到github账户，选择你刚刚创建的那个github仓库\n然后点开始设置\n保存并部署\n设置自定义域，默认的pages.dev被墙了，输入你在gridea里填的域名\n然后点激活域再等会就ok了\n浏览器打开你的域名就可以访问了\n3部署到vercel\n①https://vercel.com/点击右上角singup，再点击用github登录","keywords":[],"articleBody":"gridea是一个个静态博客的客户端\n相对于hugo和hexo啥的，最大的好处就是简单，不用配置啥复杂的东西\n缺点，就是主题很少\n本文用github仓库部署，可以同时直接用仓库部署到github pages，cf pages，vercel，netlify，国内访问推荐vercel\n由于这几个默认域名被墙，绑个自己的域名\n一 配置github\n①没号的先注册一个\nhttps://github.com/\n点击右上角singup注册一个\n②创建github仓库\nhttps://github.com/new\n创建个username.github.io，username就是你用户名，其实也可以不这样子，仓库名随便取，只是没法用github pages而已，不影响部署到cf pages和vercel的\n③申请token\nhttps://github.com/settings/tokens/new\ntoken时间自己爱要多久，反正我直接永久，repo勾上，token只显示一次，记得保存下\n二 配置gridea\n①下载\nhttps://github.com/getgridea/gridea/releases\n自己根据客户端下载\n支持mac，win，linux三大客户端\n②配置\n点击左边的远程，界面长这样子\n选择github pages，\n域名:你要绑的域名\n仓库名称:刚刚建的github的仓库的名字:username.github.io这样子\n分支，现在一般默认是main，自己看下你github仓库\n仓库用户名,你github的user name\n邮箱，你github的邮箱\n令牌，刚刚第三步申请的token\ncname这个不用github page啥的话不用管，要用的话填你要绑的域名\n然后保存，再点下检测远程连接的，显示成功的话就ok了\n③备份\n点击最左边这个按钮，点进去，有个站点源文件路径，那就是gridea的配置文件了，要备份的话直接打包上传到网盘，或者直接整个坚果云或者onedrive啥的同步直接\n④写文章\n支持markdown，点击左边的文章，自己写\n⑤点击左下角同步，同步到你github\n如果没法同步的话，设置里又http代理设置，自己填写\n三 部署到各家平台\n1github pages\n找到你username.github.io的仓库，点击setting，选择pages启用，可以绑定自己的域名，不展开讲了，自己谷歌搜下\n2部署到cf pages（推荐）\n①注册cf账户\nhttps://cloudflare.com/ 打开网站，点击注册\n②创建pages\n点击workes and pages\n创建应用程序，选择pages\n连接到git\n连接到github账户，选择你刚刚创建的那个github仓库\n然后点开始设置\n保存并部署\n设置自定义域，默认的pages.dev被墙了，输入你在gridea里填的域名\n然后点激活域再等会就ok了\n浏览器打开你的域名就可以访问了\n3部署到vercel\n①https://vercel.com/点击右上角singup，再点击用github登录\n②点击add new project,选择你的github仓库，再点击import\n然后点击deploy直接部署\n然后就部署好了\n③设置自定义域，默认的vercel.app被墙了，输入你在gridea里填的域名\n点击setting，选择左边的domains\n在cloudflare或者别的域名解析商那里添加一个A记录到76.76.21.21\n或者cname到cname.vercel-dns.com\n都是可以的，具体怎么操作看vercel的文档\nhttps://vercel.com/docs/concepts/projects/domains/working-with-nameservers\nvercel的亚马逊aga到国内速度明显比其他的快，推荐这个部署，但是免费只有100G的流量，不过个人博客也够用了\n4部署到netlify\n①https://www.netlify.com/,点击右上角singup，选择github登录\n②点击add new site\n选择import an existing project\n选择你的github仓库，再点deploy site部署\n③设置自定义域，默认的netlify.app被墙了，输入你在gridea里填的域名\n点击domain setting，然后把你的域名cname过去就行了，具体怎么弄看netlify的文档\nhttps://docs.netlify.com/domains-https/custom-domains/\n","wordCount":"97","inLanguage":"en","image":"https://qklgblog.pages.dev/%3Clink%20or%20path%20of%20image%20for%20opengraph,%20twitter-cards%3E","datePublished":"2023-06-11T13:42:51Z","dateModified":"2023-06-11T13:42:51Z","mainEntityOfPage":{"@type":"WebPage","@id":"https://qklgblog.pages.dev/post/20230611/"},"publisher":{"@type":"Organization","name":"qklg","logo":{"@type":"ImageObject","url":"https://qklgblog.pages.dev/%3Clink%20/%20abs%20url%3E"}}}</script></head><body id=top><script>localStorage.getItem("pref-theme")==="dark"?document.body.classList.add("dark"):localStorage.getItem("pref-theme")==="light"?document.body.classList.remove("dark"):window.matchMedia("(prefers-color-scheme: dark)").matches&&document.body.classList.add("dark")</script><header class=header><nav class=nav><div class=logo><a href=https://qklgblog.pages.dev/ accesskey=h title="qklg (Alt + H)"><img src=https://qklgblog.pages.dev/apple-touch-icon.png alt aria-label=logo height=35>qklg</a><div class=logo-switches><button id=theme-toggle accesskey=t title="(Alt + T)"><svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/></svg><svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24" fill="none" stroke="currentcolor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></button></div></div><ul id=menu><li><a href=https://qklgblog.pages.dev/archives/ title=Archives><span>Archives</span></a></li><li><a href=https://qklgblog.pages.dev/tags/ title=Tags><span>Tags</span></a></li><li><a href=https://qklgblog.pages.dev/about/ title=About><span>About</span></a></li><li><a href=https://qklgblog.pages.dev/search/ title="Search (Alt + /)" accesskey=/><span>Search</span></a></li><li><a href=https://qklgblog.pages.dev/index.xml title=RSS><span>RSS</span></a></li></ul></nav></header><main class=main><article class=post-single><header class=post-header><div class=breadcrumbs><a href=https://qklgblog.pages.dev/>Home</a>&nbsp;»&nbsp;<a href=https://qklgblog.pages.dev/posts/>Posts</a></div><h1 class="post-title entry-hint-parent">gridea部署静态博客</h1><div class=post-meta><span title='2023-06-11 13:42:51 +0000 UTC'>2023-06-11</span></div></header><div class=post-content><p>gridea是一个个静态博客的客户端<br>相对于hugo和hexo啥的，最大的好处就是简单，不用配置啥复杂的东西<br>缺点，就是主题很少<br>本文用github仓库部署，可以同时直接用仓库部署到github pages，cf pages，vercel，netlify，国内访问推荐vercel<br>由于这几个默认域名被墙，绑个自己的域名</p><p>一 配置github<br>①没号的先注册一个<br><a href=https://github.com/>https://github.com/</a><br>点击右上角singup注册一个<br>②创建github仓库<br><a href=https://github.com/new>https://github.com/new</a><br>创建个username.github.io，username就是你用户名，其实也可以不这样子，仓库名随便取，只是没法用github pages而已，不影响部署到cf pages和vercel的<br>③申请token<br><a href=https://github.com/settings/tokens/new>https://github.com/settings/tokens/new</a><br><img loading=lazy src=https://s3.qklg.net/img/202310241343036.png alt><br>token时间自己爱要多久，反正我直接永久，repo勾上，token只显示一次，记得保存下</p><p>二 配置gridea<br>①下载</p><p><a href=https://github.com/getgridea/gridea/releases>https://github.com/getgridea/gridea/releases</a><br>自己根据客户端下载<br>支持mac，win，linux三大客户端<br>②配置<br><img loading=lazy src=https://s3.qklg.net/img/202310241343860.png alt><br>点击左边的远程，界面长这样子<br>选择github pages，<br>域名:你要绑的域名<br>仓库名称:刚刚建的github的仓库的名字:username.github.io这样子<br>分支，现在一般默认是main，自己看下你github仓库<br>仓库用户名,你github的user name<br>邮箱，你github的邮箱<br>令牌，刚刚第三步申请的token<br>cname这个不用github page啥的话不用管，要用的话填你要绑的域名</p><p>然后保存，再点下检测远程连接的，显示成功的话就ok了<br>③备份<br>点击最左边这个按钮，点进去，有个站点源文件路径，那就是gridea的配置文件了，要备份的话直接打包上传到网盘，或者直接整个坚果云或者onedrive啥的同步直接<br><img loading=lazy src=https://s3.qklg.net/img/202310241343543.png alt><br>④写文章<br>支持markdown，点击左边的文章，自己写<br>⑤点击左下角同步，同步到你github<br>如果没法同步的话，设置里又http代理设置，自己填写</p><p>三 部署到各家平台<br>1github pages<br>找到你username.github.io的仓库，点击setting，选择pages启用，可以绑定自己的域名，不展开讲了，自己谷歌搜下</p><p>2部署到cf pages（推荐）<br>①注册cf账户<br><a href=https://cloudflare.com/>https://cloudflare.com/</a> 打开网站，点击注册<br>②创建pages<br>点击workes and pages<br><img loading=lazy src=https://s3.qklg.net/img/202310241343855.png alt><br>创建应用程序，选择pages<br><img loading=lazy src=https://s3.qklg.net/img/202310241344413.png alt><br>连接到git<br><img loading=lazy src=https://s3.qklg.net/img/202310241344348.png alt><br>连接到github账户，选择你刚刚创建的那个github仓库<br><img loading=lazy src=https://s3.qklg.net/img/202310241344500.png alt><br>然后点开始设置<br><img loading=lazy src=https://s3.qklg.net/img/202310241344990.png alt><br>保存并部署<br><img loading=lazy src=https://s3.qklg.net/img/202310241344798.png alt><br>设置自定义域，默认的pages.dev被墙了，输入你在gridea里填的域名<br><img loading=lazy src=https://s3.qklg.net/img/202310241344995.png alt><br>然后点激活域再等会就ok了<br>浏览器打开你的域名就可以访问了</p><p>3部署到vercel<br>①<a href=https://vercel.com/>https://vercel.com/</a>点击右上角singup，再点击用github登录<br>②点击add new project,选择你的github仓库，再点击import<br><img loading=lazy src=https://s3.qklg.net/img/202310241345297.png alt><br>然后点击deploy直接部署<br><img loading=lazy src=https://s3.qklg.net/img/202310241345082.png alt><br>然后就部署好了<br>③设置自定义域，默认的vercel.app被墙了，输入你在gridea里填的域名<br>点击setting，选择左边的domains<br>在cloudflare或者别的域名解析商那里添加一个A记录到76.76.21.21<br>或者cname到cname.vercel-dns.com<br>都是可以的，具体怎么操作看vercel的文档<br><a href=https://vercel.com/docs/concepts/projects/domains/working-with-nameservers>https://vercel.com/docs/concepts/projects/domains/working-with-nameservers</a><br>vercel的亚马逊aga到国内速度明显比其他的快，推荐这个部署，但是免费只有100G的流量，不过个人博客也够用了<br>4部署到netlify<br>①<a href=https://www.netlify.com/>https://www.netlify.com/</a>,点击右上角singup，选择github登录<br>②点击add new site<br><img loading=lazy src=https://s3.qklg.net/img/202310241345834.png alt><br>选择import an existing project<br><img loading=lazy src=https://s3.qklg.net/img/202310241345347.png alt><br>选择你的github仓库，再点deploy site部署<br><img loading=lazy src=https://s3.qklg.net/img/202310241345481.png alt></p><p>③设置自定义域，默认的netlify.app被墙了，输入你在gridea里填的域名<br>点击domain setting，然后把你的域名cname过去就行了，具体怎么弄看netlify的文档<br><a href=https://docs.netlify.com/domains-https/custom-domains/>https://docs.netlify.com/domains-https/custom-domains/</a></p></div><footer class=post-footer><ul class=post-tags></ul><nav class=paginav><a class=prev href=https://qklgblog.pages.dev/post/20230612/><span class=title>« Prev</span><br><span>ovh网盘，来试下</span>
-</a><a class=next href=https://qklgblog.pages.dev/post/20230606/><span class=title>Next »</span><br><span>ucloud 台北测评</span></a></nav></footer></article></main><footer class=footer><span>qklg Hosted on <a href=https://pages.cloudflare.com/ target=_blank>Cloudflare Pages </a></span>·
-<span>Powered by
-<a href=https://gohugo.io/ rel="noopener noreferrer" target=_blank>Hugo</a> &
-        <a href=https://github.com/adityatelange/hugo-PaperMod/ rel=noopener target=_blank>PaperMod</a></span></footer><a href=#top aria-label="go to top" title="Go to Top (Alt + G)" class=top-link id=top-link accesskey=g><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentcolor"><path d="M12 6H0l6-6z"/></svg>
-</a><script>let menu=document.getElementById("menu");menu&&(menu.scrollLeft=localStorage.getItem("menu-scroll-position"),menu.onscroll=function(){localStorage.setItem("menu-scroll-position",menu.scrollLeft)}),document.querySelectorAll('a[href^="#"]').forEach(e=>{e.addEventListener("click",function(e){e.preventDefault();var t=this.getAttribute("href").substr(1);window.matchMedia("(prefers-reduced-motion: reduce)").matches?document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView():document.querySelector(`[id='${decodeURIComponent(t)}']`).scrollIntoView({behavior:"smooth"}),t==="top"?history.replaceState(null,null," "):history.pushState(null,null,`#${t}`)})})</script><script>var mybutton=document.getElementById("top-link");window.onscroll=function(){document.body.scrollTop>800||document.documentElement.scrollTop>800?(mybutton.style.visibility="visible",mybutton.style.opacity="1"):(mybutton.style.visibility="hidden",mybutton.style.opacity="0")}</script><script>document.getElementById("theme-toggle").addEventListener("click",()=>{document.body.className.includes("dark")?(document.body.classList.remove("dark"),localStorage.setItem("pref-theme","light")):(document.body.classList.add("dark"),localStorage.setItem("pref-theme","dark"))})</script><script>document.querySelectorAll("pre > code").forEach(e=>{const n=e.parentNode.parentNode,t=document.createElement("button");t.classList.add("copy-code"),t.innerHTML="copy";function s(){t.innerHTML="copied!",setTimeout(()=>{t.innerHTML="copy"},2e3)}t.addEventListener("click",t=>{if("clipboard"in navigator){navigator.clipboard.writeText(e.textContent),s();return}const n=document.createRange();n.selectNodeContents(e);const o=window.getSelection();o.removeAllRanges(),o.addRange(n);try{document.execCommand("copy"),s()}catch{}o.removeRange(n)}),n.classList.contains("highlight")?n.appendChild(t):n.parentNode.firstChild==n||(e.parentNode.parentNode.parentNode.parentNode.parentNode.nodeName=="TABLE"?e.parentNode.parentNode.parentNode.parentNode.parentNode.appendChild(t):e.parentNode.appendChild(t))})</script></body></html>
+由于这几个默认域名被墙，绑个自己的域名">  
+
+  <title>
+    
+      gridea部署静态博客
+    
+  </title>
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/" />
+  
+  
+  
+  <link rel="stylesheet" href="/css/main.65ae318a1ec6e7795879f61af92fe7a407a4b2e59adeeb02b3892f4bf792ef7945c69626b1d0e0960725e3173c7d988b1ca729bac9d9c4b3e2117f20e01be3e0.css" integrity="sha512-Za4xih7G53lYefYa&#43;S/npAeksuWa3usCs4kvS/eS73lFxpYmsdDglgcl4xc8fZiLHKcpusnZxLPiEX8g4Bvj4A==" />
+  
+</head>
+<body a="dark">
+        <main class="page-content" aria-label="Content">
+            <div class="w">
+                <div class="post-meta">
+                    <a href="/">..</a>
+
+                    <p>
+                        <time datetime="2023-06-11 13:42:51 &#43;0000 UTC">
+                            2023-06-11
+                        </time>
+                    </p>
+                </div>
+
+<article>
+    <h1>gridea部署静态博客</h1>
+
+    
+
+    <p>gridea是一个个静态博客的客户端<br>
+相对于hugo和hexo啥的，最大的好处就是简单，不用配置啥复杂的东西<br>
+缺点，就是主题很少<br>
+本文用github仓库部署，可以同时直接用仓库部署到github pages，cf pages，vercel，netlify，国内访问推荐vercel<br>
+由于这几个默认域名被墙，绑个自己的域名</p>
+<p>一   配置github<br>
+①没号的先注册一个<br>
+<a href="https://github.com/">https://github.com/</a><br>
+点击右上角singup注册一个<br>
+②创建github仓库<br>
+<a href="https://github.com/new">https://github.com/new</a><br>
+创建个username.github.io，username就是你用户名，其实也可以不这样子，仓库名随便取，只是没法用github pages而已，不影响部署到cf pages和vercel的<br>
+③申请token<br>
+<a href="https://github.com/settings/tokens/new">https://github.com/settings/tokens/new</a><br>
+<img src="https://s3.qklg.net/img/202310241343036.png" alt=""><br>
+token时间自己爱要多久，反正我直接永久，repo勾上，token只显示一次，记得保存下</p>
+<p>二 配置gridea<br>
+①下载</p>
+<p><a href="https://github.com/getgridea/gridea/releases">https://github.com/getgridea/gridea/releases</a><br>
+自己根据客户端下载<br>
+支持mac，win，linux三大客户端<br>
+②配置<br>
+<img src="https://s3.qklg.net/img/202310241343860.png" alt=""><br>
+点击左边的远程，界面长这样子<br>
+选择github pages，<br>
+域名:你要绑的域名<br>
+仓库名称:刚刚建的github的仓库的名字:username.github.io这样子<br>
+分支，现在一般默认是main，自己看下你github仓库<br>
+仓库用户名,你github的user name<br>
+邮箱，你github的邮箱<br>
+令牌，刚刚第三步申请的token<br>
+cname这个不用github page啥的话不用管，要用的话填你要绑的域名</p>
+<p>然后保存，再点下检测远程连接的，显示成功的话就ok了<br>
+③备份<br>
+点击最左边这个按钮，点进去，有个站点源文件路径，那就是gridea的配置文件了，要备份的话直接打包上传到网盘，或者直接整个坚果云或者onedrive啥的同步直接<br>
+<img src="https://s3.qklg.net/img/202310241343543.png" alt=""><br>
+④写文章<br>
+支持markdown，点击左边的文章，自己写<br>
+⑤点击左下角同步，同步到你github<br>
+如果没法同步的话，设置里又http代理设置，自己填写</p>
+<p>三 部署到各家平台<br>
+1github pages<br>
+找到你username.github.io的仓库，点击setting，选择pages启用，可以绑定自己的域名，不展开讲了，自己谷歌搜下</p>
+<p>2部署到cf pages（推荐）<br>
+①注册cf账户<br>
+<a href="https://cloudflare.com/">https://cloudflare.com/</a> 打开网站，点击注册<br>
+②创建pages<br>
+点击workes and pages<br>
+<img src="https://s3.qklg.net/img/202310241343855.png" alt=""><br>
+创建应用程序，选择pages<br>
+<img src="https://s3.qklg.net/img/202310241344413.png" alt=""><br>
+连接到git<br>
+<img src="https://s3.qklg.net/img/202310241344348.png" alt=""><br>
+连接到github账户，选择你刚刚创建的那个github仓库<br>
+<img src="https://s3.qklg.net/img/202310241344500.png" alt=""><br>
+然后点开始设置<br>
+<img src="https://s3.qklg.net/img/202310241344990.png" alt=""><br>
+保存并部署<br>
+<img src="https://s3.qklg.net/img/202310241344798.png" alt=""><br>
+设置自定义域，默认的pages.dev被墙了，输入你在gridea里填的域名<br>
+<img src="https://s3.qklg.net/img/202310241344995.png" alt=""><br>
+然后点激活域再等会就ok了<br>
+浏览器打开你的域名就可以访问了</p>
+<p>3部署到vercel<br>
+①<a href="https://vercel.com/">https://vercel.com/</a>点击右上角singup，再点击用github登录<br>
+②点击add new project,选择你的github仓库，再点击import<br>
+<img src="https://s3.qklg.net/img/202310241345297.png" alt=""><br>
+然后点击deploy直接部署<br>
+<img src="https://s3.qklg.net/img/202310241345082.png" alt=""><br>
+然后就部署好了<br>
+③设置自定义域，默认的vercel.app被墙了，输入你在gridea里填的域名<br>
+点击setting，选择左边的domains<br>
+在cloudflare或者别的域名解析商那里添加一个A记录到76.76.21.21<br>
+或者cname到cname.vercel-dns.com<br>
+都是可以的，具体怎么操作看vercel的文档<br>
+<a href="https://vercel.com/docs/concepts/projects/domains/working-with-nameservers">https://vercel.com/docs/concepts/projects/domains/working-with-nameservers</a><br>
+vercel的亚马逊aga到国内速度明显比其他的快，推荐这个部署，但是免费只有100G的流量，不过个人博客也够用了<br>
+4部署到netlify<br>
+①<a href="https://www.netlify.com/">https://www.netlify.com/</a>,点击右上角singup，选择github登录<br>
+②点击add new site<br>
+<img src="https://s3.qklg.net/img/202310241345834.png" alt=""><br>
+选择import an existing project<br>
+<img src="https://s3.qklg.net/img/202310241345347.png" alt=""><br>
+选择你的github仓库，再点deploy site部署<br>
+<img src="https://s3.qklg.net/img/202310241345481.png" alt=""></p>
+<p>③设置自定义域，默认的netlify.app被墙了，输入你在gridea里填的域名<br>
+点击domain setting，然后把你的域名cname过去就行了，具体怎么弄看netlify的文档<br>
+<a href="https://docs.netlify.com/domains-https/custom-domains/">https://docs.netlify.com/domains-https/custom-domains/</a></p>
+
+</article>
+
+            </div>
+        </main>
+    </body></html>
