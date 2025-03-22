@@ -12,8 +12,28 @@
     <generator>Hugo -- 0.123.8</generator>
     <language>en</language>
     <copyright>qklg Hosted on Cloudflare Pages </copyright>
-    <lastBuildDate>Mon, 10 Mar 2025 15:01:55 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 21 Mar 2025 21:55:04 +0000</lastBuildDate>
     <atom:link href="https://qklgblog.pages.dev/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>cloudflare新工具，文件转markdown</title>
+      <link>https://qklgblog.pages.dev/post/20250321/</link>
+      <pubDate>Fri, 21 Mar 2025 21:55:04 +0000</pubDate>
+      <guid>https://qklgblog.pages.dev/post/20250321/</guid>
+      <description>1 官网文档链接 https://developers.cloudflare.com/workers-ai/markdown-conversion/
+2 支持格式 .pdf, .jpeg, .jpg, .png, .webp, .svg, .html, .xml, .xlsx, .xlsm, .xlsb, .xls, .et, .ods, .csv, .numbers 主要就几大类，一个pdf，图片，office文档，网页啥的
+还有图片的话是要钱的，没图片的话不需要钱的
+3 获取REST API令牌 调用的话直接用REST API就可以了
+获取办法的话参考官网 https://developers.cloudflare.com/workers-ai/get-started/rest-api/
+①打开面板 https://dash.cloudflare.com/
+② ai然后打开workers ai 使用rest api
+③ 创建 workers ai api令牌 点击创建api令牌，令牌只会显示一次，记得保存下
+4 调用 curl直接就ok了
+{ACCOUNT_ID}的话再3③那里的账户id就是了
+{API_TOKEN}的话就是你上面获取的rest api令牌
+文档里面的，我稍微优化了下，直接导出到md文件
+root/pc.xlsx 自己换下文件的位置
+curl https://api.cloudflare.com/client/v4/accounts/{ACCOUNT_ID}/ai/tomarkdown \ -H &amp;#39;Authorization: Bearer {API_TOKEN}&amp;#39; \ -F files=@&amp;#34;//root/pc.xlsx&amp;#34; | jq -r &amp;#39;.result[0].data&amp;#39; &amp;gt; output.md 5 效果对比 网上随便找的装机配置单</description>
+    </item>
     <item>
       <title>用api切换cf的证书</title>
       <link>https://qklgblog.pages.dev/post/20250310/</link>
@@ -689,7 +709,7 @@ mkdir -p /var/pic ②容器添加图片文件夹路径 1panel面板-容器-1pane
       <description>规则-页面规则
 隔壁论坛抄过来的这个 https://linux.do/t/topic/126107/5
 缓存-Cache Rules-创建规则
-我的图片都是png，所以我只缓存png算了
+我的图片都是图片，所以我只缓存图片格式算了
 效果如下</description>
     </item>
     <item>
